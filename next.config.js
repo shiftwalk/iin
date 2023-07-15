@@ -1,15 +1,15 @@
 module.exports = {
-  swcMinify: true,
-  webpack: (config, { dev, isServer }) => {
-    // Replace React with Preact only in client production build
-    if (!dev && !isServer) {
-      Object.assign(config.resolve.alias, {
-        react: 'preact/compat',
-        'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat',
-      });
-    }
+  images: {
+		domains: ['cdn.sanity.io'],
+		deviceSizes: [768, 1024, 1280, 1600, 1920, 2400, 3800],
+		imageSizes: [32, 64, 96, 128, 256, 350, 500],
+	},
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"]
+    });
 
     return config;
-  },
+  }
 };

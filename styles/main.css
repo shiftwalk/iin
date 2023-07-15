@@ -15,4 +15,9 @@
 /* Simple defaults */
 body {
   @apply font-sans antialiased text-black bg-white;
+  overscroll-behavior: none!important;
+}
+
+.a11y-focus {
+  @apply outline-none ring-current focus-visible:ring-4;
 }

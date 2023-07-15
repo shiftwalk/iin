@@ -1,9 +1,5 @@
 import Layout from '@/components/layout'
-import Header from '@/components/header'
 import Footer from '@/components/footer'
-import Container from '@/components/container'
-import FancyLink from '@/components/fancyLink'
-import { fade } from '@/helpers/transitions'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 
@@ -12,31 +8,35 @@ export default function Home() {
     <Layout>
       <NextSeo title="Home" />
 
-      <Header />
-      
       <LazyMotion features={domAnimation}>
-        <m.main
-          initial="initial"
-          animate="enter"
-          exit="exit"
-          className="mb-12 md:mb-16 xl:mb-24"
-        >
-          <Container>
-            <m.article variants={fade}>
-              <h1 className="font-bold text-2xl md:text-3xl xl:text-4xl mb-4">Next x Tailwind x Motion.</h1>
-              <div className="content max-w-3xl mb-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-
-                <p>Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div>
+          <section className="">
+            <div className="w-full h-screen bg-blue flex items-center jusfify-center text-[#FF5F38]">
+              <div className="w-full text-center uppercase">
+                <span className="block text-[15vw] leading-[0.9]">Enter-</span>
+                <span className="block text-[15vw] leading-[0.9]">tainment</span>
               </div>
-              
-              <FancyLink destination="/about" a11yText="Navigate to the about page" label="About Page" />
-            </m.article>
-          </Container>
-        </m.main>
-      </LazyMotion>
+            </div>
+          </section>
 
-      <Footer />
+          <main>
+            <article>
+              <div className="bg-[#E2E0FD] p-[5vw]">
+                <div className="flex flex-wrap">
+                  <div className="w-full lg:w-1/2">
+                    <h1 className="text-4xl leading-none lg:text-4xl lg:leading-none xl:text-5xl xl:leading-none mb-4 uppercase">It's In Nottingham - <span className="font-display">For <span className="italic">everything</span> Nottingham city centre</span></h1>
+                    <div className="content max-w-3xl mb-4 text-base leading-tight lg:text-lg lg:leading-tight">
+                      <p>Discover what&apos;s going on, make plans for what&apos;s around the corner and stay up to date with everything Nottingham city centre - all in one place. Whatever your vibe, Nottingham&apos;s got it. And It&apos;s in Nottingham is the best way to find out about it.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </main>
+
+          <Footer />
+        </div>
+      </LazyMotion>
     </Layout>
   )
 }
