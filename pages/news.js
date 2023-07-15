@@ -12,9 +12,9 @@ export default function News() {
         <div>
           <main className="">
             <article>
-              <div className="w-full py-[25vw] bg-white lg:py-[20vw] xl:py-[15vw]">
+              <div className="w-full py-[50vw] bg-white lg:py-[20vw] xl:py-[15vw]">
                 <div className="w-full text-center uppercase">
-                  <h1 className="text-[9vw] leading-none text-[#FF5F38]">
+                  <h1 className="text-[12vw] lg:text-[9vw] leading-none lg:leading-none text-[#FF5F38]">
                   <span className="inline">Latest</span> <span className="inline font-display italic">News</span>
                 </h1>
                 </div>

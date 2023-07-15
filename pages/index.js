@@ -17,8 +17,8 @@ export default function Home() {
           <section className="">
             <Div100vh className="w-full h-screen bg-blue flex items-center jusfify-center text-[#FF5F38]">
               <div className="w-full text-center uppercase">
-                <span className="block text-[15vw] leading-[0.9]">Enter-</span>
-                <span className="block text-[15vw] leading-[0.9]">tainment</span>
+                <span className="block text-[17.5vw] lg:text-[15vw] leading-[0.9] lg:leading-[0.9]">Enter-</span>
+                <span className="block text-[17.5vw] lg:text-[15vw] leading-[0.9] lg:leading-[0.9]">tainment</span>
               </div>
             </Div100vh>
           </section>

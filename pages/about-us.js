@@ -13,9 +13,9 @@ export default function AboutUs() {
         <div>
           <main className="">
             <article>
-              <div className="w-full bg-[#4000B5] py-[25vw] lg:py-[20vw] xl:py-[15vw]">
+              <div className="w-full bg-[#4000B5] py-[50vw] lg:py-[20vw] xl:py-[15vw]">
                 <div className="w-full text-center uppercase">
-                  <h1 className="text-[9vw] leading-none text-[#FF5F38]">
+                  <h1 className="text-[12vw] lg:text-[9vw] leading-none lg:leading-none text-[#FF5F38]">
                   <span className="block">Making</span>
                   <span className="block">Nottingham</span>
                   <span className="block font-display italic">Thrive</span>

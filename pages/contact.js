@@ -13,12 +13,12 @@ export default function Contact() {
         <div>
           <main className="">
             <article>
-              <div className="w-full bg-[#176B75] py-[25vw] lg:py-[20vw] xl:py-[15vw]">
+              <div className="w-full bg-[#176B75] py-[50vw] lg:py-[20vw] xl:py-[15vw]">
                 <div className="w-full text-center uppercase">
-                  <h1 className="text-[9vw] leading-none text-[#EBEA00]">
+                  <h1 className="text-[13vw] lg:text-[9vw] leading-none lg:leading-none text-[#EBEA00]">
                   <span className="block">Get In</span>
                   <span className="block font-display">Touch</span>
-                  <IconZagUnderline className="w-[35%] mx-auto mt-2" />
+                  <IconZagUnderline className="w-[50%] lg:w-[35%] mx-auto mt-2" />
                 </h1>
                 </div>
               </div>

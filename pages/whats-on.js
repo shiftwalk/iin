@@ -12,9 +12,9 @@ export default function WhatsOn() {
         <div>
           <main className="">
             <article>
-              <div className="w-full bg-[#FFB4CC] py-[25vw] lg:py-[20vw] xl:py-[15vw]">
+              <div className="w-full bg-[#FFB4CC] py-[50vw] lg:py-[20vw] xl:py-[15vw]">
                 <div className="w-full text-center uppercase">
-                  <h1 className="text-[11vw] leading-none text-[#FF5F38]">Discover <span className="block font-display italic">Nottingham</span></h1>
+                  <h1 className="text-[12vw] lg:text-[11vw] leading-none lg:leading-none text-[#FF5F38]">Discover <span className="block font-display italic">Nottingham</span></h1>
                 </div>
               </div>
             </article>
