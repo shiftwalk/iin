@@ -6,10 +6,9 @@ import IconFacebook from '@/icons/facebook.svg'
 import IconInstagram from '@/icons/instagram.svg'
 import IconLinkedin from '@/icons/linkedin.svg'
 import IconTwitter from '@/icons/twitter.svg'
+import Link from 'next/link'
 import { useState } from 'react'
 import { AnimatePresence, domAnimation, LazyMotion, m, useScroll, useTransform } from 'framer-motion'
-import FancyLink from './fancyLink'
-import Link from 'next/link'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -66,7 +65,7 @@ export default function Header() {
                 <nav className="text-[10vw] lg:text-[9vh] leading-none lg:leading-none font-display text-white">
                   <li className="block"><Link onClick={()=>setMenuOpen(false)} href="/">Home</Link></li>
                   <li className="block font-sans uppercase text-[#4650E2] relative text-[11vw] leading-none lg:text-[11.5vh] lg:leading-none">
-                    <Link onClick={()=>setMenuOpen(false)} href="/whats-on">What's On</Link>
+                    <Link onClick={()=>setMenuOpen(false)} href="/whats-on">What&apos;s On</Link>
                     <IconSquiggleUnderline className="w-full" />
                   </li>
                   <li className="block"><Link onClick={()=>setMenuOpen(false)} href="/news">Latest News</Link></li>
