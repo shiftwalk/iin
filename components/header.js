@@ -38,6 +38,12 @@ export default function Header() {
     logoColor = 'text-black'
   )
 
+  router.asPath == '/whats-on' && !menuOpen && (
+    menuButtonColor = 'bg-white border-white',
+    appbuttonColor = 'bg-transparent border border-black text-black',
+    logoColor = 'text-black'
+  )
+
   return (
     <>
       <LazyMotion features={domAnimation}>

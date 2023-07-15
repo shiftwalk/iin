@@ -63,21 +63,21 @@ export default function Home() {
 
                 <div className="relative flex overflow-x-hidden text-[10vw] leading-[0] uppercase mt-[-1vw]">
                   <div className="animate-marqueeReverse will-change-transform whitespace-nowrap">
-                    <span className="relative overflow-hidden inline-block font-display italic">Shopping<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square" /></span></span>
-                    <span className="relative overflow-hidden inline-block">Leisure<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square" /></span></span>
-                    <span className="relative overflow-hidden inline-block font-display italic">Shopping<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square" /></span></span>
-                    <span className="relative overflow-hidden inline-block">Leisure<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square" /></span></span>
-                    <span className="relative overflow-hidden inline-block font-display italic">Shopping<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square" /></span></span>
-                    <span className="relative overflow-hidden inline-block">Leisure<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square" /></span></span>
+                    <span className="relative overflow-hidden inline-block font-display italic">Shopping<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse aspect-square" /></span></span>
+                    <span className="relative overflow-hidden inline-block">Leisure<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse aspect-square" /></span></span>
+                    <span className="relative overflow-hidden inline-block font-display italic">Shopping<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse aspect-square" /></span></span>
+                    <span className="relative overflow-hidden inline-block">Leisure<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse aspect-square" /></span></span>
+                    <span className="relative overflow-hidden inline-block font-display italic">Shopping<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse aspect-square" /></span></span>
+                    <span className="relative overflow-hidden inline-block">Leisure<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse aspect-square" /></span></span>
                   </div>
 
                   <div className="absolute top-0 animate-marqueeReverse2 will-change-transform whitespace-nowrap">
-                    <span className="relative overflow-hidden inline-block font-display italic">Shopping<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square" /></span></span>
-                    <span className="relative overflow-hidden inline-block">Leisure<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square" /></span></span>
-                    <span className="relative overflow-hidden inline-block font-display italic">Shopping<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square" /></span></span>
-                    <span className="relative overflow-hidden inline-block">Leisure<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square" /></span></span>
-                    <span className="relative overflow-hidden inline-block font-display italic">Shopping<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square" /></span></span>
-                    <span className="relative overflow-hidden inline-block">Leisure<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square" /></span></span>
+                    <span className="relative overflow-hidden inline-block font-display italic">Shopping<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse aspect-square" /></span></span>
+                    <span className="relative overflow-hidden inline-block">Leisure<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse aspect-square" /></span></span>
+                    <span className="relative overflow-hidden inline-block font-display italic">Shopping<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse aspect-square" /></span></span>
+                    <span className="relative overflow-hidden inline-block">Leisure<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse aspect-square" /></span></span>
+                    <span className="relative overflow-hidden inline-block font-display italic">Shopping<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse aspect-square" /></span></span>
+                    <span className="relative overflow-hidden inline-block">Leisure<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse aspect-square" /></span></span>
                   </div>
                 </div>
               </div>
