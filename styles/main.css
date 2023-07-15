@@ -14,7 +14,7 @@
 
 /* Simple defaults */
 body {
-  @apply font-sans antialiased text-black bg-white;
+  @apply font-sans antialiased text-off-black bg-white;
   overscroll-behavior: none!important;
 }
 

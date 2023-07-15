@@ -18,8 +18,12 @@ module.exports = {
     },
     extend: {
       animation: {
-        marquee: 'marquee 40s linear infinite',
-        marquee2: 'marquee2 40s linear infinite',
+        marquee: 'marquee 45s linear infinite',
+        marquee2: 'marquee2 45s linear infinite',
+        marqueeReverse: 'marqueeReverse 40s linear infinite',
+        marqueeReverse2: 'marqueeReverse2 40s linear infinite',
+        'spin-slow': 'spin 5s linear infinite',
+        'spin-slow-reverse': 'spin 3s linear infinite reverse',
       },
       keyframes: {
         marquee: {
@@ -30,9 +34,18 @@ module.exports = {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' },
         },
+        marqueeReverse: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        marqueeReverse2: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
       },
       colors: {
         'black': '#000',
+        'off-black': '#0D0D12',
         'white': '#FFF',
         'off-white': '#EBE8DF',
         'blue': '#4650E2',
