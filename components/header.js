@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { AnimatePresence, domAnimation, LazyMotion, m, useScroll, useTransform } from 'framer-motion'
 import { useRouter } from 'next/router'
-
+import Div100vh from 'react-div-100vh'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -76,48 +76,51 @@ export default function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3, ease: [0.83, 0, 0.17, 1] }}
-              className="z-[999] fixed inset-0 w-full h-screen bg-[#24D6D1] flex items-center justify-center">
-              <div className="w-full text-center flex items-center justify-center">
-                <nav className="text-[10vw] lg:text-[9vh] leading-none lg:leading-none font-display text-white">
-                  <li className={`block ${router.asPath == '/' && 'font-sans uppercase text-[#4650E2] relative text-[11vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
-                    <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/">Home</Link>
-                    { router.asPath == '/' && (
-                      <IconSquiggleUnderline className="w-full" />
-                    )}
-                  </li>
-                  <li className={`block ${router.asPath == '/whats-on' && 'font-sans uppercase text-[#4650E2] relative text-[11vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
-                    <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/whats-on">What&apos;s On</Link>
-                    { router.asPath == '/whats-on' && (
-                      <IconSquiggleUnderline className="w-full" />
-                    )}
-                  </li>
-                  <li className={`block ${router.asPath == '/news' && 'font-sans uppercase text-[#4650E2] relative text-[11vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
-                    <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/news">Latest News</Link>
-                    { router.asPath == '/news' && (
-                      <IconSquiggleUnderline className="w-full" />
-                    )}
-                  </li>
-                  <li className={`block ${router.asPath == '/about-us' && 'font-sans uppercase text-[#4650E2] relative text-[11vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
-                    <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/about-us">About Us</Link>
-                    { router.asPath == '/about-us' && (
-                      <IconSquiggleUnderline className="w-full" />
-                    )}
-                  </li>
-                  <li className={`block ${router.asPath == '/contact' && 'font-sans uppercase text-[#4650E2] relative text-[11vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
-                    <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/contact">Contact Us</Link>
-                    { router.asPath == '/contact' && (
-                      <IconSquiggleUnderline className="w-full" />
-                    )}
-                  </li>
-                </nav>
-              </div>
-
-              <div className="absolute bottom-0 left-0 right-0 w-full flex justify-center text-[#5F0EFF] p-5 lg:p-6">
-                <div>
-                  <span className="block text-white text-center mb-3">Give us a follow</span>
-                  <Socials />
+              className="z-[999] fixed inset-0"
+            >
+              <Div100vh className="w-full h-screen bg-[#24D6D1] flex items-center justify-center">
+                <div className="w-full text-center flex items-center justify-center">
+                  <nav className="text-[10vw] lg:text-[9vh] leading-none lg:leading-none font-display text-white">
+                    <li className={`block ${router.asPath == '/' && 'font-sans uppercase text-[#4650E2] relative text-[11vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
+                      <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/">Home</Link>
+                      { router.asPath == '/' && (
+                        <IconSquiggleUnderline className="w-full" />
+                      )}
+                    </li>
+                    <li className={`block ${router.asPath == '/whats-on' && 'font-sans uppercase text-[#4650E2] relative text-[11vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
+                      <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/whats-on">What&apos;s On</Link>
+                      { router.asPath == '/whats-on' && (
+                        <IconSquiggleUnderline className="w-full" />
+                      )}
+                    </li>
+                    <li className={`block ${router.asPath == '/news' && 'font-sans uppercase text-[#4650E2] relative text-[11vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
+                      <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/news">Latest News</Link>
+                      { router.asPath == '/news' && (
+                        <IconSquiggleUnderline className="w-full" />
+                      )}
+                    </li>
+                    <li className={`block ${router.asPath == '/about-us' && 'font-sans uppercase text-[#4650E2] relative text-[11vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
+                      <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/about-us">About Us</Link>
+                      { router.asPath == '/about-us' && (
+                        <IconSquiggleUnderline className="w-full" />
+                      )}
+                    </li>
+                    <li className={`block ${router.asPath == '/contact' && 'font-sans uppercase text-[#4650E2] relative text-[11vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
+                      <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/contact">Contact Us</Link>
+                      { router.asPath == '/contact' && (
+                        <IconSquiggleUnderline className="w-full" />
+                      )}
+                    </li>
+                  </nav>
                 </div>
-              </div>
+
+                <div className="absolute bottom-0 left-0 right-0 w-full flex justify-center text-[#5F0EFF] p-5 lg:p-6">
+                  <div>
+                    <span className="block text-white text-center mb-3">Give us a follow</span>
+                    <Socials />
+                  </div>
+                </div>
+              </Div100vh>
             </m.div>
           )}
         </AnimatePresence>

@@ -5,6 +5,7 @@ import IconSlattedUnderline from '@/icons/slatted-underline.svg'
 import IconSmile from '@/icons/smile.svg'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
+import Div100vh from 'react-div-100vh'
 
 export default function Home() {
   return (
@@ -14,12 +15,12 @@ export default function Home() {
       <LazyMotion features={domAnimation}>
         <div>
           <section className="">
-            <div className="w-full h-screen bg-blue flex items-center jusfify-center text-[#FF5F38]">
+            <Div100vh className="w-full h-screen bg-blue flex items-center jusfify-center text-[#FF5F38]">
               <div className="w-full text-center uppercase">
                 <span className="block text-[15vw] leading-[0.9]">Enter-</span>
                 <span className="block text-[15vw] leading-[0.9]">tainment</span>
               </div>
-            </div>
+            </Div100vh>
           </section>
 
           <main>

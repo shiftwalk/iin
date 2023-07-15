@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="absolute bottom-[3vw] left-0 right-0 w-full">
+        <div className="absolute bottom-[3vw] left-0 right-0 w-full hidden lg:block">
           <div className="mx-auto w-[20%] max-w-[190px]">
             <m.div style={{ rotateZ: rotate }}>
               <IconLogo className={`w-full transition-colors ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] text-[#FF5F38]`} />
