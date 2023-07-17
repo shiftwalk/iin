@@ -21,3 +21,30 @@ body {
 .a11y-focus {
   @apply outline-none ring-current focus-visible:ring-4;
 }
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 90%;
+  min-width: 0;
+}
+
+@screen lg {
+  .embla__slide {
+    flex: 0 0 40%;
+    min-width: 0;
+  }
+}
+
+@screen 2xl {
+  .embla__slide {
+    flex: 0 0 37%;
+    min-width: 0;
+  }
+}

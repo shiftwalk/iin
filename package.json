@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@svgr/webpack": "^8.0.1",
+    "embla-carousel-react": "^8.0.0-rc11",
     "eslint-config-next": "^13.2.4",
     "framer-motion": "^10.3.0",
     "next": "^13.2.4",

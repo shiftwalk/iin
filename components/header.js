@@ -47,17 +47,17 @@ export default function Header() {
   return (
     <>
       <LazyMotion features={domAnimation}>
-        <header className={`px-5 lg:px-8 p-5 lg:p-6 fixed top-0 left-0 right-0 w-full z-[1000] ${menuOpen ? '' : '' }`}>
+        <header className={`px-5 lg:px-8 p-5 lg:p-6 2xl:p-8 2xl:px-10 fixed top-0 left-0 right-0 w-full z-[1000] ${menuOpen ? '' : '' }`}>
           <div className="flex flex-wrap">
             <div className="flex-1 flex space-x-6">
-              <button onClick={menuToggle} className={`a11y-focus rounded-full w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] flex items-center justify-center border ${menuButtonColor}`}>
+              <button onClick={menuToggle} className={`a11y-focus rounded-full w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] flex items-center justify-center border ${menuButtonColor}`}>
                 <div className="w-full p-2 lg:p-3">
                   <span className={`transition-all ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-black ${menuOpen ? 'rotate-45' : 'mb-1 lg:mb-3' }`}></span>
                   <span className={`transition-all ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-black ${menuOpen ? '-rotate-45' : '' }`}></span>
                 </div>
               </button>
 
-              <button className={`a11y-focus rounded-full flex items-center justify-center h-[40px] lg:h-[60px] px-4 lg:px-6 transition-all ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] ${appbuttonColor}`}>
+              <button className={`a11y-focus rounded-full flex items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] 2xl:text-xl 2xl:leading-none ${appbuttonColor}`}>
                 <div className="flex space-x-2 mr-3">
                   <IconApple className="w-5" />
                   <IconAndroid className="w-5" />
@@ -67,7 +67,7 @@ export default function Header() {
               </button>
             </div>
 
-            <div className="ml-auto w-[20%] max-w-[190px]">
+            <div className="ml-auto w-[20%] max-w-[180px] 2xl:max-w-[200px]">
               <m.div style={{ rotateZ: rotate }}>
                 <IconLogo className={`w-full transition-colors ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] ${logoColor}`} />
               </m.div>
@@ -122,7 +122,7 @@ export default function Header() {
 
                 <div className="absolute bottom-0 left-0 right-0 w-full flex justify-center text-[#5F0EFF] p-5 lg:p-6">
                   <div>
-                    <span className="block text-white text-center mb-3">Give us a follow</span>
+                    <span className="block text-white text-center mb-3 2xl:mb-5 2xl:text-xl 2xl:leading-none">Drop us a follow</span>
                     <Socials />
                   </div>
                 </div>
