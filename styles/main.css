@@ -48,3 +48,7 @@ body {
     min-width: 0;
   }
 }
+
+.black-select {
+  @apply selection:bg-black selection:text-current !important;
+}

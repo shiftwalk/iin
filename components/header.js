@@ -84,34 +84,34 @@ export default function Header() {
               transition={{ duration: 0.3, ease: [0.83, 0, 0.17, 1] }}
               className="z-[999] fixed inset-0"
             >
-              <Div100vh className="w-full h-screen bg-[#24D6D1] flex items-center justify-center">
+              <Div100vh className="w-full h-screen bg-[#24D6D1] selection:bg-[#EBEA33] selection:text-[#4650E2] flex items-center justify-center">
                 <div className="w-full text-center flex items-center justify-center">
                   <nav className="text-[12.5vw] lg:text-[9vh] leading-none lg:leading-none font-display text-white">
-                    <li className={`block ${router.asPath == '/' && 'font-sans uppercase text-[#4650E2] relative text-[13.5vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
+                    <li className={`block ${router.asPath == '/' && 'font-sans uppercase text-[#4650E2] relative text-[11.5vw] leading-none lg:text-[9vh] lg:leading-none' }`}>
                       <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/">Home</Link>
                       { router.asPath == '/' && (
                         <IconSquiggleUnderline className="w-full" />
                       )}
                     </li>
-                    <li className={`block ${router.asPath == '/whats-on' && 'font-sans uppercase text-[#4650E2] relative text-[13.5vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
+                    <li className={`block ${router.asPath == '/whats-on' && 'font-sans uppercase text-[#4650E2] relative text-[11.5vw] leading-none lg:text-[9vh] lg:leading-none' }`}>
                       <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/whats-on">What&apos;s On</Link>
                       { router.asPath == '/whats-on' && (
                         <IconSquiggleUnderline className="w-full" />
                       )}
                     </li>
-                    <li className={`block ${router.asPath == '/news' && 'font-sans uppercase text-[#4650E2] relative text-[13.5vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
+                    <li className={`block ${router.asPath == '/news' && 'font-sans uppercase text-[#4650E2] relative text-[11.5vw] leading-none lg:text-[9vh] lg:leading-none' }`}>
                       <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/news">Latest News</Link>
                       { router.asPath == '/news' && (
                         <IconSquiggleUnderline className="w-full" />
                       )}
                     </li>
-                    <li className={`block ${router.asPath == '/about-us' && 'font-sans uppercase text-[#4650E2] relative text-[13.5vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
+                    <li className={`block ${router.asPath == '/about-us' && 'font-sans uppercase text-[#4650E2] relative text-[11.5vw] leading-none lg:text-[9vh] lg:leading-none' }`}>
                       <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/about-us">About Us</Link>
                       { router.asPath == '/about-us' && (
                         <IconSquiggleUnderline className="w-full" />
                       )}
                     </li>
-                    <li className={`block ${router.asPath == '/contact' && 'font-sans uppercase text-[#4650E2] relative text-[13.5vw] leading-none lg:text-[11.5vh] lg:leading-none' }`}>
+                    <li className={`block ${router.asPath == '/contact' && 'font-sans uppercase text-[#4650E2] relative text-[11.5vw] leading-none lg:text-[9vh] lg:leading-none' }`}>
                       <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/contact">Contact Us</Link>
                       { router.asPath == '/contact' && (
                         <IconSquiggleUnderline className="w-full" />

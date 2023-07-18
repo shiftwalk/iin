@@ -17,7 +17,7 @@ export default function WhatsOn() {
         <div>
           <main className="">
             <article>
-              <div className="w-full bg-[#FFB4CC] pt-[50vw] lg:pb-[16vw] lg:py-[20vw] xl:py-[15vw] relative">
+              <div className="w-full bg-[#FFB4CC] pt-[50vw] lg:pb-[16vw] lg:py-[20vw] xl:py-[15vw] relative selection:bg-off-black selection:text-[#FFB4CC]">
                 <div className="w-full text-center uppercase pb-[10vw] lg:pb-[8vw] xl:pb-[6vw]">
                   <h1 className="text-[12vw] lg:text-[11vw] leading-none lg:leading-none text-[#FF5F38]">Discover <span className="block font-display italic">Nottingham</span></h1>
                 </div>

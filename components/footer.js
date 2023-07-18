@@ -13,7 +13,7 @@ export default function Footer() {
   const rotate = useTransform(scrollY, [0, 850], ['360deg', '0deg'], { clamp: false })
 
   return (
-    <footer className="bg-off-black">
+    <footer className="bg-off-black selection:text-off-white selection:bg-[#FF5F38]">
       <div className="relative flex overflow-x-hidden text-[10vw] text-white uppercase">
         <div className="animate-marquee will-change-transform whitespace-nowrap pt-[8vw] lg:pt-[6vw] pb-[0vw] lg:pb-[2vw]">
           <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
@@ -72,9 +72,9 @@ export default function Footer() {
               <p className="mb-12 xl:text-xl xl:leading-snug max-w-[500px] md:max-w-[400px] xl:max-w-[500px] mx-auto">No spam, ever. Just occasional news, city updates, and tasty offers direct to your inbox!</p>
 
               <form className="relative xl:text-xl xl:leading-none xl:max-w-[720px] mx-auto">
-                <input type="email" placeholder="Your email address..." className="appearance-none rounded-full bg-white py-5 px-6 inline-block leading-none w-full a11y-focus focus-visible:ring-2" />
+                <input type="email" placeholder="Email address..." className="appearance-none rounded-full bg-white py-5 px-6 inline-block leading-none w-full a11y-focus focus-visible:ring-2" />
 
-                <button type="submit" className="absolute top-0 right-0 w-auto bg-[#FC6E5C] px-8 h-full flex items-center justify-center rounded-full text-white a11y-focus focus-visible:ring-2 focus-visible:ring-black">Sign me up!</button>
+                <button type="submit" className="absolute top-0 right-0 w-auto bg-[#FC6E5C] px-8 h-full flex items-center justify-center rounded-full text-white a11y-focus focus-visible:ring-2 focus-visible:ring-black">Sign&nbsp;<span className="hidden lg:inline">me&nbsp;</span>up!</button>
               </form>
             </div>
           </div>
