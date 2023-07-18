@@ -16,7 +16,7 @@ export default function NewsCarousel() {
 
   return (
     <div className="relative">
-      <button onClick={scrollNext} className="absolute top-[25vw] lg:top-[12vw] 2xl:top-[10vw] right-[5%] z-10 w-[50px] lg:w-[50px] 2xl:w-[75px] h-[50px] lg:h-[50px] 2xl:h-[75px] bg-white flex items-center justify-center rounded-full a11y-focus lg:hover:scale-[1.15] transition-transform ease-in-out duration-[300ms]">
+      <button aria-label="Move Carousel Items Along" onClick={scrollNext} className="absolute top-[25vw] lg:top-[12vw] 2xl:top-[10vw] right-[5%] z-10 w-[50px] lg:w-[50px] 2xl:w-[75px] h-[50px] lg:h-[50px] 2xl:h-[75px] bg-white flex items-center justify-center rounded-full a11y-focus lg:hover:scale-[1.15] transition-transform ease-in-out duration-[300ms]">
         <IconChevron className="w-[30%] block" />
       </button>
       <div className="embla relative mb-12 lg:mb-16 2xl:mb-20" ref={emblaRef}>
