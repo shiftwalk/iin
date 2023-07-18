@@ -23,6 +23,7 @@ export default function AboutUs() {
                 <div className="w-[33%] lg:w-[23vw] 2xl:w-[20vw] h-[52vw] lg:h-[33vw] 2xl:h-[30vw] bg-red absolute top-[10%] left-0 overflow-hidden">
                   <Image
                     fill
+                    priority
                     quality={80}
                     src="/images/about-01.jpg"
                     alt="Portrait image of Nottingham"
@@ -34,6 +35,7 @@ export default function AboutUs() {
                 <div className="w-[33%] lg:w-[25vw] h-[66vw] lg:h-[37vw] bg-red absolute top-[18%] right-0 overflow-hidden">
                   <Image
                     fill
+                    priority
                     quality={80}
                     src="/images/about-02.jpg"
                     alt="Portrait image of Nottingham"
@@ -55,6 +57,7 @@ export default function AboutUs() {
                   <div className="w-full lg:w-1/2 hidden lg:block">
                     <div className="h-[30vw] relative overflow-hidden w-full">
                       <Image
+                        priority
                         fill
                         quality={80}
                         src="/images/about-03.jpg"
@@ -103,7 +106,7 @@ export default function AboutUs() {
 
               <div className="flex flex-wrap px-5 lg:px-[7.5vw] mb-[5vw] lg:mb-[10vw]">
                 <div className="w-full lg:w-1/2 mb-8 lg:mb-0 lg:order-2">
-                  <h2 className="text-[10vw] leading-none lg:text-[5.5vw] lg:leading-none xl:leading-none uppercase text-[#FC8200] max-w-[100%] mb-6 lg:mb-10">Nottingham's <span className="font-display italic">Independant</span> Business</h2>
+                  <h2 className="text-[10vw] leading-none lg:text-[5.5vw] lg:leading-none xl:leading-none uppercase text-[#FC8200] max-w-[100%] mb-6 lg:mb-10">Nottingham&apos;s <span className="font-display italic">Independant</span> Business</h2>
 
                   <div className="content content--fancy-first mb-[3vw] max-w-[530px] 2xl:max-w-[740px]">
                     <p>Indie businesses are a crucial point of difference for Nottingham&apos;s retail and leisure offer.</p>
@@ -259,9 +262,9 @@ export default function AboutUs() {
                     </div>
 
                     <div className="text-base leading-tight lg:text-lg 2xl:text-2xl lg:leading-snug 2xl:leading-snug max-w-[530px] lg:max-w-none w-9/12 lg:w-[10/12]">
-                      <p><a href="/" className="border-b border-off-white/40">Download business plan</a></p>
-                      <p><a href="/" className="border-b border-off-white/40">Download latest review</a></p>
-                      <p><a href="/" className="border-b border-off-white/40">Download another review</a></p>
+                      <p><a href="#" className="border-b border-off-white/40">Download business plan</a></p>
+                      <p><a href="#" className="border-b border-off-white/40">Download latest review</a></p>
+                      <p><a href="#" className="border-b border-off-white/40">Download another review</a></p>
                     </div>
                   </div>
                 </div>

@@ -43,6 +43,7 @@ export default function News() {
                       <div className="w-full h-[60vw] lg:h-[22vw] bg-red mb-4 relative overflow-hidden">
                         <Image
                           fill
+                          priority
                           quality={80}
                           src="/images/carousel-01.jpg"
                           alt="Some students sat using the IIN app"
@@ -62,6 +63,7 @@ export default function News() {
                       <div className="w-full h-[60vw] lg:h-[28vw] bg-red mb-4 relative overflow-hidden">
                         <Image
                           fill
+                          priority
                           quality={80}
                           src="/images/carousel-01.jpg"
                           alt="Some students sat using the IIN app"
@@ -81,6 +83,7 @@ export default function News() {
                       <div className="w-full h-[60vw] lg:h-[23vw] bg-red mb-4 relative overflow-hidden">
                         <Image
                           fill
+                          priority
                           quality={80}
                           src="/images/carousel-01.jpg"
                           alt="Some students sat using the IIN app"

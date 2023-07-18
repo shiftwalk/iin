@@ -40,6 +40,7 @@ export default function WhatsOn() {
                   <div className="overflow-hidden relative bg-red h-[66vw] lg:h-[30vw] mb-5 lg:mb-0">
                     <Image
                       fill
+                      priority
                       quality={80}
                       src="/images/whats-on-01.jpg"
                       alt="Portrait image of Nottingham"
