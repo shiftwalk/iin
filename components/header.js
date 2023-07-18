@@ -50,7 +50,7 @@ export default function Header() {
         <header className={`px-5 lg:px-8 p-5 lg:p-6 2xl:p-8 2xl:px-10 fixed top-0 left-0 right-0 w-full z-[1000] ${menuOpen ? '' : '' }`}>
           <div className="flex flex-wrap">
             <div className="flex-1 flex space-x-6">
-              <button onClick={menuToggle} className={`a11y-focus rounded-full w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] flex items-center justify-center border ${menuButtonColor}`}>
+              <button aria-label={menuOpen ? 'Close Menu' : 'Open Menu' } onClick={menuToggle} className={`a11y-focus rounded-full w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] flex items-center justify-center border ${menuButtonColor}`}>
                 <div className="w-full p-2 lg:p-3">
                   <span className={`transition-all ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-black ${menuOpen ? 'rotate-45' : 'mb-1 lg:mb-3' }`}></span>
                   <span className={`transition-all ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-black ${menuOpen ? '-rotate-45' : '' }`}></span>
