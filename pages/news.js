@@ -94,6 +94,83 @@ export default function News() {
                         <span className="text-base lg:text-lg 2xl:text-xl leading-none lg:leading-none 2xl:leading-none border-b border-off-black border-opacity-25 inline-block pb-1">Read More</span>
                       </div>
                     </div>
+
+
+                    {/* 4 */}
+                    <div className="col-span-4 lg:col-span-1">
+                      <div className="w-full h-[60vw] lg:h-[22vw] bg-red mb-4 relative overflow-hidden">
+                        <Image
+                          fill
+                          quality={80}
+                          src="/images/carousel-01.jpg"
+                          alt="Some students sat using the IIN app"
+                          className="w-full h-full absolute inset-0 object-cover object-center"
+                          sizes="(max-width: 1024px) 100vw, 25vw"
+                        />
+                      </div>
+
+                      <div className="w-full">
+                        <span className="block text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-none 2xl:leading-none font-medium mb-1">Safe Space Pledge</span>
+                        <span className="text-base lg:text-lg 2xl:text-xl leading-none lg:leading-none 2xl:leading-none border-b border-off-black border-opacity-25 inline-block pb-1">Read More</span>
+                      </div>
+                    </div>
+                    
+                    {/* 5 */}
+                    <div className="col-span-4 lg:col-span-1">
+                      <div className="w-full h-[60vw] lg:h-[28vw] bg-red mb-4 relative overflow-hidden">
+                        <Image
+                          fill
+                          quality={80}
+                          src="/images/carousel-01.jpg"
+                          alt="Some students sat using the IIN app"
+                          className="w-full h-full absolute inset-0 object-cover object-center"
+                          sizes="(max-width: 1024px) 100vw, 25vw"
+                        />
+                      </div>
+
+                      <div className="w-full">
+                        <span className="block text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-none 2xl:leading-none font-medium mb-1">Safe Space Pledge</span>
+                        <span className="text-base lg:text-lg 2xl:text-xl leading-none lg:leading-none 2xl:leading-none border-b border-off-black border-opacity-25 inline-block pb-1">Read More</span>
+                      </div>
+                    </div>
+
+                    {/* 6 */}
+                    <div className="col-span-4 lg:col-span-1">
+                      <div className="w-full h-[60vw] lg:h-[12vw] bg-red mb-4 relative overflow-hidden">
+                        <Image
+                          fill
+                          quality={80}
+                          src="/images/carousel-01.jpg"
+                          alt="Some students sat using the IIN app"
+                          className="w-full h-full absolute inset-0 object-cover object-center"
+                          sizes="(max-width: 1024px) 100vw, 25vw"
+                        />
+                      </div>
+
+                      <div className="w-full">
+                        <span className="block text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-none 2xl:leading-none font-medium mb-1">Safe Space Pledge</span>
+                        <span className="text-base lg:text-lg 2xl:text-xl leading-none lg:leading-none 2xl:leading-none border-b border-off-black border-opacity-25 inline-block pb-1">Read More</span>
+                      </div>
+                    </div>
+
+                    {/* 7 */}
+                    <div className="col-span-4 lg:col-span-1">
+                      <div className="w-full h-[60vw] lg:h-[20vw] bg-red mb-4 relative overflow-hidden">
+                        <Image
+                          fill
+                          quality={80}
+                          src="/images/carousel-01.jpg"
+                          alt="Some students sat using the IIN app"
+                          className="w-full h-full absolute inset-0 object-cover object-center"
+                          sizes="(max-width: 1024px) 100vw, 25vw"
+                        />
+                      </div>
+
+                      <div className="w-full">
+                        <span className="block text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-none 2xl:leading-none font-medium mb-1">Safe Space Pledge</span>
+                        <span className="text-base lg:text-lg 2xl:text-xl leading-none lg:leading-none 2xl:leading-none border-b border-off-black border-opacity-25 inline-block pb-1">Read More</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
