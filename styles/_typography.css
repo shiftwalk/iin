@@ -17,6 +17,15 @@
   }
 }
 
+.content--fancy-first {
+  & > p:first-of-type {
+    @apply text-lg leading-tight lg:text-xl lg:leading-tight 2xl:text-3xl 2xl:leading-tight;
+  }
+  & > p {
+    @apply text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-2xl 2xl:leading-tight
+  }
+}
+
 /* Heading Defaults */
 h1, .h1, h2, .h2, h3, .h3 {
   @apply p-0 mb-6;

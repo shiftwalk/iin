@@ -32,7 +32,7 @@ export default function WhatsOn() {
                       <p>We&apos;ve teamed up with our partners at Visit Notts to put every event worth knowing about in one space. Even though we love having you on our website, head over to theirs to find out what&apos;s on now and in the future.</p>
                     </div>
 
-                    <Link href="/about-us" className="rounded-full border border-off-black text-off-black py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none">Check out Visit Notts!</Link>
+                    <Link href="/about-us" className="a11y-focus rounded-full border border-off-black text-off-black py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none">Check out Visit Notts!</Link>
                   </div>
                 </div>
 

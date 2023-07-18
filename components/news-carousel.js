@@ -30,7 +30,7 @@ export default function NewsCarousel() {
                     quality={80}
                     src="/images/carousel-01.jpg"
                     alt="Some students sat using the IIN app"
-                    className="w-full h-full absolute inset-0 object-cover object-center"
+                    className="w-full h-full absolute inset-0 object-cover object-center scale-[1.0025]"
                     sizes="(max-width: 1024px) 100vw, 25vw"
                   />
                 </div>
