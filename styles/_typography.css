@@ -26,6 +26,24 @@
   }
 }
 
+.content--news {
+  & > p {
+    @apply text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight
+  }
+
+  & > blockquote {
+  @apply my-6 lg:my-10;
+
+    cite {
+      @apply text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight block font-bold mb-3 lg:mb-5 not-italic;
+    }
+
+    p {
+      @apply font-display italic text-2xl lg:text-3xl xl:text-4xl leading-[1.075] lg:leading-[1.075] xl:leading-[1.075];
+    }
+  }
+}
+
 /* Heading Defaults */
 h1, .h1, h2, .h2, h3, .h3 {
   @apply p-0 mb-6;

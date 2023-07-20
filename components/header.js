@@ -32,7 +32,7 @@ export default function Header() {
     logoColor = 'text-[#EBEA33]'
   )
 
-  router.asPath == '/news' && !menuOpen && (
+  router.asPath.includes('/news') && !menuOpen && (
     menuButtonColor = 'bg-white border-black',
     appbuttonColor = 'bg-transparent border border-black text-black',
     logoColor = 'text-black'
@@ -99,9 +99,9 @@ export default function Header() {
                         <IconSquiggleUnderline className="w-full" />
                       )}
                     </li>
-                    <li className={`block ${router.asPath == '/news' && 'font-sans uppercase text-[#4650E2] relative text-[11.5vw] leading-none lg:text-[9vh] lg:leading-none' }`}>
+                    <li className={`block ${router.asPath.includes('/news') && 'font-sans uppercase text-[#4650E2] relative text-[11.5vw] leading-none lg:text-[9vh] lg:leading-none' }`}>
                       <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/news">Latest News</Link>
-                      { router.asPath == '/news' && (
+                      { router.asPath.includes('/news') && (
                         <IconSquiggleUnderline className="w-full" />
                       )}
                     </li>
