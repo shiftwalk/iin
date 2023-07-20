@@ -70,7 +70,7 @@ export default function Article() {
                       <p>Food and drink from Nottingham Street Food Club will be on offer with global flavours taking centre stage, with cuisines from Caribbean to Thai represented within Old Market Square. Food Traders include Prad Thai, Yello Yard, Carolina&apos;s Chilli and MemSaab.</p>
 
                       <blockquote>
-                        <cite>Alex Flint, CEO of It's In Nottingham said:</cite>
+                        <cite>Alex Flint, CEO of It&apos;s In Nottingham said:</cite>
                         <p>“&nbsp;The market proved to be really popular last year and played an important role in bringing people into the city centre from miles around. People who visited also went on to explore the wider city which was a great boost for businesses.”</p>
                       </blockquote>
 
