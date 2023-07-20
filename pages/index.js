@@ -1,6 +1,6 @@
 import Layout from '@/components/layout'
 import Footer from '@/components/footer'
-import { LazyMotion, domAnimation, m } from 'framer-motion'
+import { LazyMotion, domAnimation } from 'framer-motion'
 import IconSlattedUnderline from '@/icons/slatted-underline.svg'
 import IconSquiggleUnderline from '@/icons/squiggle-underline.svg'
 import IconSmile from '@/icons/smile.svg'
@@ -9,6 +9,7 @@ import Link from 'next/link'
 import Div100vh from 'react-div-100vh'
 import Image from 'next/image'
 import NewsCarousel from '@/components/news-carousel'
+import HomeHero from '@/components/home-hero'
 
 export default function Home() {
   return (
@@ -17,14 +18,7 @@ export default function Home() {
 
       <LazyMotion features={domAnimation}>
         <div>
-          <section className="">
-            <Div100vh className="w-full h-screen bg-blue flex items-center jusfify-center text-[#FF5F38]">
-              <div className="w-full text-center uppercase">
-                <span className="block text-[17.5vw] lg:text-[15vw] leading-[0.9] lg:leading-[0.9]">Enter-</span>
-                <span className="block text-[17.5vw] lg:text-[15vw] leading-[0.9] lg:leading-[0.9]">tainment</span>
-              </div>
-            </Div100vh>
-          </section>
+          <HomeHero />
 
           <main>
             <article>
@@ -167,12 +161,12 @@ export default function Home() {
                             </clipPath>
                           </defs>
                           <g data-name="Group 422">
-                            <g clip-path="url(#a)" data-name="Group 421" transform="rotate(61 31.748 53.897)">
+                            <g clipPath="url(#a)" data-name="Group 421" transform="rotate(61 31.748 53.897)">
                               <g data-name="Group 419">
-                                <path fill="none" stroke="currentColor" stroke-width="3" d="M157.615 9.238S73.325-32.828 3.725 71.231" data-name="Path 1179"/>
+                                <path fill="none" stroke="currentColor" strokeWidth="3" d="M157.615 9.238S73.325-32.828 3.725 71.231" data-name="Path 1179"/>
                               </g>
                               <g data-name="Group 420">
-                                <path fill="none" stroke="currentColor" stroke-width="3" d="M21.854 69.295 3.196 71.668.822 53.01" data-name="Path 1180"/>
+                                <path fill="none" stroke="currentColor" strokeWidth="3" d="M21.854 69.295 3.196 71.668.822 53.01" data-name="Path 1180"/>
                               </g>
                             </g>
                           </g>
