@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import IconSquiggleUnderline from '@/icons/squiggle-underline.svg'
 import Div100vh from "react-div-100vh";
 import Image from "next/image";
 
 export default function HomeHero({ isActive, position }) {
   const [videoPlaying, setVideoPlaying] = useState(false)
+  const video = useRef();
 
   const toggleVideo = () => {
     if (videoPlaying) {
       setVideoPlaying(false)
+      video.current.pause()
     } else {
       setVideoPlaying(true)
+      video.current.play()
     }
   }
 
@@ -47,7 +50,7 @@ export default function HomeHero({ isActive, position }) {
         />
       </div>
 
-      <video loop={true} autoPlay="autoplay" playsInline={videoPlaying} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-100' : 'opacity-0' }`}>
+      <video preload="true" ref={video} loop={true} className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-100' : 'opacity-0' }`}>
         <source src="/videos/iin-hero.mp4" type="video/mp4" />
 
         Sorry. Your browser does not support the video tag.
