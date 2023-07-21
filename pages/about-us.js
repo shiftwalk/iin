@@ -9,6 +9,7 @@ import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import Link from 'next/link'
 import NewsCarousel from '@/components/news-carousel'
+import ImageScale from '@/components/image-scale'
 
 export default function AboutUs() {
   return (
@@ -20,55 +21,39 @@ export default function AboutUs() {
           <main className="">
             <article>
               <div className="w-full bg-[#4000B5] pt-[50vw] pb-[16vw] lg:py-[20vw] xl:py-[15vw] mb-[5vw] lg:mb-[10vw] selection:text-[#4000B5] selection:bg-[#FF5F38] relative">
-                <div className="w-[33%] lg:w-[23vw] 2xl:w-[20vw] h-[52vw] lg:h-[33vw] 2xl:h-[30vw] bg-red absolute top-[10%] left-0 overflow-hidden">
-                  <Image
-                    fill
-                    priority
-                    quality={80}
+                <div className="w-[33%] lg:w-[19vw] 2xl:w-[18vw] h-[52vw] lg:h-[28vw] 2xl:h-[26vw] bg-red absolute top-[11%] lg:top-[8%] left-0 overflow-hidden">
+                  <ImageScale
                     src="/images/about-01.jpg"
-                    alt="Portrait image of Nottingham"
-                    className="w-full h-full absolute inset-0 object-cover object-center scale-[1.005]"
-                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
                   />
                 </div>
 
                 <div className="w-[33%] lg:w-[25vw] h-[66vw] lg:h-[37vw] bg-red absolute top-[18%] right-0 overflow-hidden">
-                  <Image
-                    fill
-                    priority
-                    quality={80}
+                  <ImageScale
                     src="/images/about-02.jpg"
-                    alt="Portrait image of Nottingham"
-                    className="w-full h-full absolute inset-0 object-cover object-center scale-[1.005]"
                     sizes="(max-width: 1024px) 100vw, 45vw"
                   />
                 </div>
                 
                 <div className="w-full text-center uppercase pb-[4vw] lg:pb-[10vw] xl:pb-[10vw] relative z-10">
-                  <h1 className="text-[13.5vw] lg:text-[9vw] 2xl:text-[10vw] leading-none lg:leading-none 2xl:leading-none text-[#FF5F38]">
-                    <span className="block">Making</span>
-                    <span className="block">Nottingham</span>
-                    <span className="block font-display italic">Thrive</span>
-                    <IconSquiggleUnderline className="w-[60%] mx-auto mt-2" />
+                  <h1 className="text-[15.5vw] lg:text-[12vw] 2xl:text-[12vw] leading-none lg:leading-none 2xl:leading-none text-[#23D6D1]">
+                    <span className="block">Get To</span>
+                    <span className="block font-display italic">Know Us</span>
+                    <IconSquiggleUnderline className="w-[80%] lg:w-[60%] mx-auto mt-2" />
                   </h1>
                 </div>
 
                 <div className="flex flex-wrap relative z-10 lg:pl-[5vw] 2xl:pl-[7.5vw]">
-                  <div className="w-full lg:w-1/2 hidden lg:block">
-                    <div className="h-[30vw] relative overflow-hidden w-full">
-                      <Image
-                        priority
-                        fill
-                        quality={80}
+                  <div className="w-full lg:w-[43%] hidden lg:block">
+                    <div className="h-[27vw] relative overflow-hidden w-full">
+                      <ImageScale
                         src="/images/about-03.jpg"
-                        alt="Portrait image of Nottingham"
-                        className="w-full h-full absolute inset-0 object-cover object-center scale-[1.005]"
-                        sizes="(max-width: 1024px) 100vw, 45vw"
+                        sizes="(max-width: 1024px) 100vw, 55vw"
                       />
                     </div>
                   </div>
-                  <div className="ml-auto w-full lg:w-1/2 px-5 lg:pl-12 2xl:pl-20">
-                    <div className="content font-display italic text-white text-[20px] lg:text-[25px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight max-w-[95%] lg:max-w-[80%] pt-[10vw]">
+                  <div className="ml-auto w-full lg:w-[54%] px-5 lg:pl-12 2xl:pl-20">
+                    <div className="content font-display italic text-white text-[20px] lg:text-[25px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight max-w-[95%] lg:max-w-[90%] pt-[10vw]">
                       <p>We are It&apos;s in Nottingham.</p>
                       <p>Our passion for Nottingham and commitment to support and promote our members will drive economic growth – creating a vibrant city centre which is a destination of choice for visitors.</p>
                       <p>Through every interaction we will build trust and inspire pride in our city centre, its businesses and its people to create a more attractive, healthier, safer, and greener place to live, work and play.</p>
@@ -92,13 +77,9 @@ export default function AboutUs() {
 
                 <div className="w-full lg:w-[37%] lg:ml-auto mb-6">
                   <div className="w-full h-[120vw] lg:h-[44vw] bg-red relative overflow-hidden">
-                    <Image
-                      fill
-                      quality={80}
+                    <ImageScale
                       src="/images/about-in-01.jpg"
-                      alt="Portrait image of Nottingham"
-                      className="w-full h-full absolute inset-0 object-cover object-center"
-                      sizes="(max-width: 1024px) 100vw, 45vw"
+                      sizes="(max-width: 1024px) 100vw, 55vw"
                     />
                   </div>
                 </div>
@@ -117,13 +98,9 @@ export default function AboutUs() {
 
                 <div className="w-full lg:w-[37%] lg:mr-auto mb-6 lg:order-1">
                   <div className="w-full h-[120vw] lg:h-[44vw] bg-red relative overflow-hidden">
-                    <Image
-                      fill
-                      quality={80}
+                    <ImageScale
                       src="/images/about-in-02.jpg"
-                      alt="Portrait image of Nottingham"
-                      className="w-full h-full absolute inset-0 object-cover object-center"
-                      sizes="(max-width: 1024px) 100vw, 45vw"
+                      sizes="(max-width: 1024px) 100vw, 55vw"
                     />
                   </div>
                 </div>
@@ -151,14 +128,10 @@ export default function AboutUs() {
                     <Link href="/" className="a11y-focus rounded-full border border-[#F5F1E1] py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none mx-auto text-[#F5F1E1]">View our latest calendar (PDF)</Link>
                   </div>
                 </div>
-                <div className="col-span-1 bg-off-black bg-opacity-50 order-1 lg:order-2 relative">
-                  <Image
-                    fill
-                    quality={80}
+                <div className="col-span-1 bg-off-black bg-opacity-50 order-1 lg:order-2 relative h-[75vw] lg:h-auto">
+                  <ImageScale
                     src="/images/about-in-03.jpg"
-                    alt="Some students sat using the IIN app"
-                    className="w-full h-full absolute inset-0 object-cover object-center"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 100vw, 55vw"
                   />
                 </div>
               </div>
@@ -176,13 +149,9 @@ export default function AboutUs() {
 
                 <div className="w-full lg:w-[37%] lg:mr-auto mb-6 lg:order-1">
                   <div className="w-full h-[120vw] lg:h-[44vw] bg-red relative overflow-hidden">
-                    <Image
-                      fill
-                      quality={80}
+                    <ImageScale
                       src="/images/about-in-04.jpg"
-                      alt="Portrait image of Nottingham"
-                      className="w-full h-full absolute inset-0 object-cover object-center"
-                      sizes="(max-width: 1024px) 100vw, 45vw"
+                      sizes="(max-width: 1024px) 100vw, 55vw"
                     />
                   </div>
                 </div>
@@ -200,27 +169,38 @@ export default function AboutUs() {
                 </div>
               </div>
 
-              <div className="bg-[#BDB800] text-[#EBEA33] py-[10vw]">
-                <div className="relative flex overflow-x-hidden text-[10vw] leading-[0] uppercase mb-12 lg:mb-20">
-                  <div className="animate-marquee will-change-transform whitespace-nowrap">
-                    <span className="relative overflow-hidden inline-block font-display italic">Our team<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                    <span className="relative overflow-hidden inline-block">Our team<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                    <span className="relative overflow-hidden inline-block font-display italic">Our team<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                    <span className="relative overflow-hidden inline-block">Our team<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                    <span className="relative overflow-hidden inline-block font-display italic">Our team<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                    <span className="relative overflow-hidden inline-block">Our team<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  </div>
+              <div className="bg-[#BDB800] text-off-black grid grid-cols-1 lg:grid-cols-2 overflow-hidden mb-[5vw] lg:mb-[10vw]">
+                <div className="col-span-1 flex items-center justify-center px-[5vw] py-10 pb-[20vw] lg:py-[8vw] lg:pb-[10vw] order-2 lg:order-2">
+                  <div className="w-full lg:px-0">
+                    <span className="text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-non 2xl:leading-none block mb-3">Our People</span>
+                    
+                    <div className="mb-8 lg:mb-12">
+                      <h2 className="text-[9.5vw] leading-none lg:text-[5vw] lg:leading-none xl:text-[5vw] xl:leading-none text-[#EBEA33] max-w-[550px] lg:max-w-[100%] mb-3">
+                        <span className="uppercase block">It&apos;s a real</span>
+                        <span className="font-display uppercase"><span className="italic">team effort</span></span>
+                      </h2>
+                      {/* <IconWaveUnderline className="w-full text-[#EBEA33] max-w-[60%]"/> */}
+                    </div>
 
-                  <div className="absolute top-0 animate-marquee2 will-change-transform whitespace-nowrap">
-                    <span className="relative overflow-hidden inline-block font-display italic">Our team<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                    <span className="relative overflow-hidden inline-block">Our team<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                    <span className="relative overflow-hidden inline-block font-display italic">Our team<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                    <span className="relative overflow-hidden inline-block">Our team<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                    <span className="relative overflow-hidden inline-block font-display italic">Our team<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                    <span className="relative overflow-hidden inline-block">Our team<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                    <div className="content text-base leading-tight lg:text-lg 2xl:text-2xl lg:leading-snug 2xl:leading-snug max-w-[530px] lg:max-w-none w-9/12 lg:w-[10/12] mb-8 lg:mb-[10%]">
+                      <p>The It&apos;s in Nottingham team are your day to day point of contact; we are dedicated to listening to your business needs and making time to communicate effectively with you.</p>
+                    </div>
+
+                    <div className="flex space-x-5">
+                      <Link href="/" className="a11y-focus rounded-full border border-off-black py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 leading-none 2xl:text-2xl 2xl:leading-none block text-off-black">Board Of Directors</Link>
+                      <Link href="/" className="a11y-focus rounded-full border border-off-black py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 leading-none 2xl:text-2xl 2xl:leading-none block text-off-black">The IIN Team</Link>
+                    </div>
                   </div>
                 </div>
-                
+                <div className="col-span-1 bg-off-black bg-opacity-50 order-1 lg:order-1 relative h-[90vw] lg:h-auto">
+                  <ImageScale
+                    src="/images/team.jpg"
+                    sizes="(max-width: 1024px) 100vw, 55vw"
+                  />
+                </div>
+              </div>
+
+              {/* <div className="bg-[#BDB800] text-[#EBEA33] py-[10vw]">
                 <h3 className="font-display italic text-off-black text-[20px] lg:text-[25px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight px-5 lg:px-[7.5vw] max-w-[90%] lg:max-w-[75%] mb-[7.5vw]">
                   <span className="block">The It&apos;s in Nottingham team are your day to day point of contact; we are dedicated to listening to your business needs and making time to communicate effectively with you.</span>
                 </h3>
@@ -249,34 +229,43 @@ export default function AboutUs() {
                     </div>
                   </div>
                 </div>
+              </div> */}
+
+              <div className="relative flex overflow-x-hidden text-[10vw] leading-[0] uppercase my-12 lg:my-[7vw] text-[#FF5F38]">
+                <div className="animate-marquee will-change-transform whitespace-nowrap">
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                </div>
+
+                <div className="absolute top-0 animate-marquee2 will-change-transform whitespace-nowrap">
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                </div>
               </div>
 
-              <div className="bg-[#176B75] text-[#F5F1E1] grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
-                <div className="col-span-1 flex items-center justify-center px-[5vw] py-10 lg:py-[8vw] lg:pb-[10vw] order-2 lg:order-1">
+              <div className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
+                <div className="col-span-1 flex items-center justify-center px-[5vw] pb-10 lg:pb-[10vw] order-2 lg:order-1">
                   <div className="w-full lg:px-0">                    
-                    <div className="mb-8 lg:mb-12">
-                      <h2 className="text-[8.5vw] leading-none lg:text-[4vw] lg:leading-none xl:text-[3.5vw] xl:leading-none text-[#EBEA33] max-w-[550px] lg:max-w-[100%] mb-3">
-                        <span className="uppercase">Key </span>
-                        <span className="font-display uppercase"><span className="italic">Resources</span></span>
-                      </h2>
+                    <h2 className="text-2xl leading-none lg:3xl lg:leading-none xl:text-4xl xl:leading-none max-w-[550px] lg:max-w-[100%] mb-3 lg:mb-4">Key Resources</h2>
+                    
+                    <div className="text-base leading-tight lg:text-lg 2xl:text-xl lg:leading-snug 2xl:leading-snug max-w-[530px] lg:max-w-none w-9/12 lg:w-[10/12] mb-6">
+                      <p>Here you can view and download our latest resources and reports. If you can&apos;t find what you&apos;re looking for contact us via info@itsinnottingham.com</p>
                     </div>
 
-                    <div className="text-base leading-tight lg:text-lg 2xl:text-2xl lg:leading-snug 2xl:leading-snug max-w-[530px] lg:max-w-none w-9/12 lg:w-[10/12]">
+                    <div className="text-base leading-tight lg:text-lg 2xl:text-xl lg:leading-snug 2xl:leading-snug max-w-[530px] lg:max-w-none w-9/12 lg:w-[10/12]">
                       <p><a href="#" className="border-b border-off-white/40">Download business plan</a></p>
                       <p><a href="#" className="border-b border-off-white/40">Download latest review</a></p>
                       <p><a href="#" className="border-b border-off-white/40">Download another review</a></p>
                     </div>
                   </div>
-                </div>
-                <div className="col-span-1 bg-off-black bg-opacity-50 order-1 lg:order-2 relative">
-                  <Image
-                    fill
-                    quality={80}
-                    src="/images/about-in-05.jpg"
-                    alt="Some students sat using the IIN app"
-                    className="w-full h-full absolute inset-0 object-cover object-center"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
                 </div>
               </div>
             </article>

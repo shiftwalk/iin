@@ -14,6 +14,7 @@ export default function Header() {
   const router = useRouter()
   const { scrollY } = useScroll()
   const rotate = useTransform(scrollY, [0, 2000], ['0deg', '360deg'], { clamp: false })
+  const scale = useTransform(scrollY, [0, 2000], ['1', '0.4'], { clamp: true })
 
   const menuToggle = () => {
     if (menuOpen) {
@@ -68,8 +69,10 @@ export default function Header() {
             </div>
 
             <div className="ml-auto w-[20%] max-w-[180px] 2xl:max-w-[200px]">
-              <m.div style={{ rotateZ: rotate }}>
-                <IconLogo className={`w-full transition-colors ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] ${logoColor}`} />
+              <m.div style={{ scale: scale }} className="origin-top-right">
+                <m.div style={{ rotateZ: rotate }} className="origin-center">
+                  <IconLogo className={`w-full transition-colors ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] ${logoColor}`} />
+                </m.div>
               </m.div>
             </div>
           </div>
@@ -84,48 +87,48 @@ export default function Header() {
               transition={{ duration: 0.3, ease: [0.83, 0, 0.17, 1] }}
               className="z-[999] fixed inset-0"
             >
-              <Div100vh className="w-full h-screen bg-[#24D6D1] selection:bg-[#EBEA33] selection:text-[#4650E2] flex items-center justify-center">
+              <Div100vh className="w-full h-screen bg-[#24D6D1] selection:bg-[#EBEA33] selection:text-[#4000B5] flex items-center justify-center ">
                 <div className="w-full text-center flex items-center justify-center">
-                  <nav className="text-[12.5vw] lg:text-[9vh] leading-none lg:leading-none font-display text-white">
-                    <li className={`block ${router.asPath == '/' && 'font-sans uppercase text-[#4650E2] relative text-[11.5vw] leading-none lg:text-[9vh] lg:leading-none' }`}>
-                      <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/">Home</Link>
-                      { router.asPath == '/' && (
+                  <nav className="text-[11.5vw] lg:text-[10vh] leading-none lg:leading-none text-[#4000B5] font-sans uppercase">
+                    <li className={`block ${router.asPath == '/' && 'font-display italic uppercase text-white relative leading-none lg:leading-none' }`}>
+                      <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/">Home</Link>
+                      {/* { router.asPath == '/' && (
                         <IconSquiggleUnderline className="w-full" />
-                      )}
+                      )} */}
                     </li>
-                    <li className={`block ${router.asPath == '/whats-on' && 'font-sans uppercase text-[#4650E2] relative text-[11.5vw] leading-none lg:text-[9vh] lg:leading-none' }`}>
-                      <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/whats-on">What&apos;s On</Link>
-                      { router.asPath == '/whats-on' && (
+                    <li className={`block ${router.asPath == '/whats-on' && 'font-display italic uppercase text-white relative leading-none lg:leading-none' }`}>
+                      <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/whats-on">What’S On</Link>
+                      {/* { router.asPath == '/whats-on' && (
                         <IconSquiggleUnderline className="w-full" />
-                      )}
+                      )} */}
                     </li>
-                    <li className={`block ${router.asPath.includes('/news') && 'font-sans uppercase text-[#4650E2] relative text-[11.5vw] leading-none lg:text-[9vh] lg:leading-none' }`}>
-                      <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/news">Latest News</Link>
-                      { router.asPath.includes('/news') && (
+                    <li className={`block ${router.asPath.includes('/news') && 'font-display italic uppercase text-white relative leading-none lg:leading-none' }`}>
+                      <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/news">Latest News</Link>
+                      {/* { router.asPath.includes('/news') && (
                         <IconSquiggleUnderline className="w-full" />
-                      )}
+                      )} */}
                     </li>
-                    <li className={`block ${router.asPath == '/about-us' && 'font-sans uppercase text-[#4650E2] relative text-[11.5vw] leading-none lg:text-[9vh] lg:leading-none' }`}>
-                      <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/about-us">About Us</Link>
-                      { router.asPath == '/about-us' && (
+                    <li className={`block ${router.asPath == '/about-us' && 'font-display italic uppercase text-white relative leading-none lg:leading-none' }`}>
+                      <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/about-us">About Us</Link>
+                      {/* { router.asPath == '/about-us' && (
                         <IconSquiggleUnderline className="w-full" />
-                      )}
+                      )} */}
                     </li>
-                    <li className={`block ${router.asPath == '/contact' && 'font-sans uppercase text-[#4650E2] relative text-[11.5vw] leading-none lg:text-[9vh] lg:leading-none' }`}>
-                      <Link onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/contact">Contact Us</Link>
-                      { router.asPath == '/contact' && (
+                    <li className={`block ${router.asPath == '/contact' && 'font-display italic uppercase text-white relative leading-none lg:leading-none' }`}>
+                      <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/contact">Get In Touch</Link>
+                      {/* { router.asPath == '/contact' && (
                         <IconSquiggleUnderline className="w-full" />
-                      )}
+                      )} */}
                     </li>
                   </nav>
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 w-full flex justify-center text-[#5F0EFF] p-5 lg:p-6">
+                {/* <div className="absolute bottom-0 left-0 right-0 w-full flex justify-center text-[#5F0EFF] p-5 lg:p-6">
                   <div>
                     <span className="block text-white text-center mb-3 2xl:mb-5 2xl:text-xl 2xl:leading-none">Drop us a follow</span>
                     <Socials />
                   </div>
-                </div>
+                </div> */}
               </Div100vh>
             </m.div>
           )}

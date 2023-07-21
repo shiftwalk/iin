@@ -4,9 +4,11 @@ import { LazyMotion, domAnimation} from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import IconSlattedUnderline from '@/icons/slatted-underline.svg'
 import IconSquiggleUnderline from '@/icons/squiggle-underline.svg'
+import IconZagUnderline from '@/icons/zag-underline.svg'
 import IconCircle from '@/icons/circle.svg'
 import Link from 'next/link'
 import Image from 'next/image'
+import ImageScale from '@/components/image-scale'
 
 export default function WhatsOn() {
   return (
@@ -19,7 +21,8 @@ export default function WhatsOn() {
             <article>
               <div className="w-full bg-[#FFB4CC] pt-[50vw] lg:pb-[16vw] lg:py-[20vw] xl:py-[15vw] relative selection:bg-off-black selection:text-[#FFB4CC]">
                 <div className="w-full text-center uppercase pb-[10vw] lg:pb-[8vw] xl:pb-[6vw]">
-                  <h1 className="text-[12vw] lg:text-[11vw] leading-none lg:leading-none text-[#FF5F38]">Discover <span className="block font-display italic">Nottingham</span></h1>
+                  <h1 className="text-[12vw] lg:text-[10.5vw] leading-none lg:leading-none text-[#BD3146]">Discover <span className="block font-display italic">Nottingham</span></h1>
+                  <IconZagUnderline className="text-[#BD3146] w-[90%] lg:w-[75%] mx-auto" />
                 </div>
 
                 <div className="flex flex-wrap px-5 lg:px-[5vw] max-w-[1800px] mx-auto mb-8 lg:mb-0">
@@ -38,14 +41,10 @@ export default function WhatsOn() {
 
                 <div className="relative lg:absolute lg:top-[58vw] 2xl:top-[57vw] lg:right-0 mb-12 lg:mb-0 w-full lg:w-[40vw] 2xl:w-[44vw]">
                   <div className="overflow-hidden relative bg-red h-[66vw] lg:h-[30vw] mb-5 lg:mb-0">
-                    <Image
-                      fill
-                      priority
-                      quality={80}
+                    <ImageScale
+                      p
                       src="/images/whats-on-01.jpg"
-                      alt="Portrait image of Nottingham"
-                      className="w-full h-full absolute inset-0 object-cover object-center scale-[1.003]"
-                      sizes="(max-width: 1024px) 100vw, 30vw"
+                      sizes="(max-width: 1024px) 100vw, 55vw"
                     />
                   </div>
 
@@ -59,13 +58,9 @@ export default function WhatsOn() {
                 <div className="w-full h-auto lg:h-[60vw] xl:h-[70vw] 2xl:h-[63vw] overflow-hidden">
                   <div className="w-full lg:w-[25vw] relative lg:absolute lg:bottom-[16vw] xl:bottom-[22vw] 2xl:bottom-[20vw] lg:left-0 overflow-hidden mb-12 lg:mb-0">
                     <div className="h-[66vw] lg:h-[38vw] bg-red relative overflow-hidden mb-5">
-                      <Image
-                        fill
-                        quality={80}
+                      <ImageScale
                         src="/images/whats-on-02.jpg"
-                        alt="Portrait image of Nottingham"
-                        className="w-full h-full absolute inset-0 object-cover object-center scale-[1.003]"
-                        sizes="(max-width: 1024px) 100vw, 30vw"
+                        sizes="(max-width: 1024px) 100vw, 33vw"
                       />
                     </div>
 
@@ -76,12 +71,8 @@ export default function WhatsOn() {
 
                   <div className="w-full lg:w-[35vw] lg:absolute lg:bottom-[7.5vw] lg:left-[44vw] overflow-hidden lg:overflow-visible flex flex-wrap">
                     <div className="w-full h-[66vw] lg:h-[24vw] bg-red relative overflow-hidden mb-5">
-                      <Image
-                        fill
-                        quality={80}
+                      <ImageScale
                         src="/images/whats-on-03.jpg"
-                        alt="Portrait image of Nottingham"
-                        className="w-full h-full absolute inset-0 object-cover object-center scale-[1.003]"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
                     </div>

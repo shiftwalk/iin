@@ -1,19 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import ImageScale from "./image-scale";
 
 export default function NewsTeaser({ image, heading, subHeading, href, className, imageHeight }) {
   return(
-    <Link href={href} className={`block ${className ? className : null}`}>
+    <Link scroll={false} href={href} className={`block ${className ? className : null}`}>
       <div className={`w-full bg-red mb-4 lg:mb-6 relative overflow-hidden ${imageHeight}`}>
         {image ? (
-          <Image
-            fill
-            priority
-            quality={80}
+          <ImageScale
             src={image}
-            alt="Some students sat using the IIN app"
-            className="w-full h-full absolute inset-0 object-cover object-center"
-            sizes="(max-width: 1024px) 100vw, 25vw"
+            sizes="(max-width: 1024px) 100vw, 35vw"
           />
         ) : (
           <div className="absolute w-full h-full inset-0 bg-[#B4C0C6]"></div>

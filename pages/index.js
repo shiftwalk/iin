@@ -10,6 +10,8 @@ import Div100vh from 'react-div-100vh'
 import Image from 'next/image'
 import NewsCarousel from '@/components/news-carousel'
 import HomeHero from '@/components/home-hero'
+import ReactCursorPosition from 'react-cursor-position';
+import ImageScale from '@/components/image-scale'
 
 export default function Home() {
   return (
@@ -17,17 +19,21 @@ export default function Home() {
       <NextSeo title="Home" />
 
       <LazyMotion features={domAnimation}>
-        <div>
-          <HomeHero />
+        <div className="relative">
+          <div className="overflow-hidden sticky top-0">
+            <ReactCursorPosition>
+              <HomeHero />
+            </ReactCursorPosition>
+          </div>
 
-          <main>
+          <main className="mt-screen bg-white relative z-[10]">
             <article>
-              <div className="bg-[#E2E0FD] p-[5vw] lg:pr-0 pb-[7vw] mb-[7.5vw] lg:mb-[15vw] lg:pb-[33vw] relative">
+              <div className="p-[5vw] lg:pr-0 pb-[7vw] mb-[7.5vw] lg:mb-[15vw] lg:pb-[33vw] relative">
                 <div className="flex flex-wrap relative">
                   <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
                     <h1 className="text-[7.5vw] leading-none lg:text-[4vw] lg:leading-none xl:leading-none mb-[1vw] uppercase text-[#FF5F38] max-w-[100%]">It&apos;s In Nottingham - <span className="font-display italic">For everything Nottingham city centre</span></h1>
                     
-                    <IconSlattedUnderline className="w-[45%] text-[#FF5F38] mb-[3vw]" />
+                    {/* <IconSlattedUnderline className="w-[45%] text-[#FF5F38] mb-[3vw]" /> */}
 
                     <div className="content mb-[3vw] text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-2xl 2xl:leading-tight max-w-[530px] 2xl:max-w-[740px]">
                       <p>Discover what&apos;s going on, make plans for what&apos;s around the corner and stay up to date with everything Nottingham city centre - all in one place. Whatever your vibe, Nottingham&apos;s got it. And <em>It&apos;s in Nottingham</em> is the best way to find out about it.</p>
@@ -37,36 +43,24 @@ export default function Home() {
                   </div>
 
                   <div className="w-full lg:w-[28vw] h-[100vw] lg:h-[40vw] bg-red relative lg:absolute top-0 right-0">
-                    <Image
-                      fill
-                      quality={80}
+                    <ImageScale
                       src="/images/index-01.jpg"
-                      alt="Portrait image of Nottingham"
-                      className="w-full h-full absolute inset-0 object-cover object-center"
                       sizes="(max-width: 1024px) 100vw, 45vw"
                     />
                   </div>
                 </div>
 
                 <div className="w-full lg:w-[25vw] lg:h-[19vw] bg-red relative lg:absolute lg:bottom-[8vw] lg:left-0 hidden lg:block">
-                  <Image
-                    fill
-                    quality={80}
+                  <ImageScale
                     src="/images/index-02.jpg"
-                    alt="Portrait image of Nottingham"
-                    className="w-full h-full absolute inset-0 object-cover object-center"
-                    sizes="(max-width: 1024px) 100vw, 30vw"
+                    sizes="(max-width: 1024px) 100vw, 45vw"
                   />
                 </div>
 
                 <div className="w-full lg:w-[38vw] lg:h-[26vw] bg-red relative lg:absolute lg:bottom-[-8vw] lg:left-[30vw] hidden lg:block">
-                  <Image
-                    fill
-                    quality={80}
+                  <ImageScale
                     src="/images/index-03.jpg"
-                    alt="Portrait image of Nottingham"
-                    className="w-full h-full absolute inset-0 object-cover object-center"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 100vw, 45vw"
                   />
                 </div>
               </div>
@@ -143,7 +137,7 @@ export default function Home() {
                       <p>Download the It&apos;s in Nottingham app for Android or iOS to find out what&apos;s going on in the city, and for exclusive partner discounts.</p>
                     </div>
 
-                    <div className="relative rotate-[-2deg] w-[165px] lg:w-[180px] xl:w-[220px] 2xl:w-[280px] aspect-square border-2 border-[#EBEA33] rounded-full flex items-center justify-center">
+                    <div className="relative rotate-[-2deg] w-[125px] lg:w-[140px] xl:w-[180px] 2xl:w-[220px] aspect-square border-2 border-[#EBEA33] rounded-full flex items-center justify-center">
                       <Image
                         quality={80}
                         width={358}
@@ -177,20 +171,18 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="col-span-1 bg-off-black bg-opacity-50 order-1 lg:order-2 relative">
-                  <Image
-                    fill
-                    quality={80}
+                  <ImageScale
                     src="/images/pocket-cta.jpg"
-                    alt="Some students sat using the IIN app"
-                    className="w-full h-full absolute inset-0 object-cover object-center"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 100vw, 65vw"
                   />
                 </div>
               </div>
             </article>
           </main>
 
-          <Footer />
+          <div className="relative z-[10]">
+            <Footer />
+          </div>
         </div>
       </LazyMotion>
     </Layout>
