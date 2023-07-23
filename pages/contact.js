@@ -1,16 +1,18 @@
 import Layout from '@/components/layout'
 import Footer from '@/components/footer'
 import { LazyMotion, domAnimation} from 'framer-motion'
-import IconZagUnderline from '@/icons/zag-underline.svg'
 import IconSlattedUnderline from '@/icons/slatted-underline.svg'
 import { NextSeo } from 'next-seo'
-import Image from 'next/image'
 import ImageScale from '@/components/image-scale'
+import { contactQuery } from '@/helpers/queries'
+import SanityPageService from '@/services/sanityPageService'
+const pageService = new SanityPageService(contactQuery)
 
-export default function Contact() {
+export default function Contact(initialData) {
+  const { data: { contact }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
-      <NextSeo title="Contact" />
+      <NextSeo title={contact.title} />
 
       <LazyMotion features={domAnimation}>
         <div>
@@ -75,4 +77,11 @@ export default function Contact() {
       </LazyMotion>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const props = await pageService.fetchQuery(context)
+  return { 
+    props: props
+  };
 }

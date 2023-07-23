@@ -10,11 +10,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import NewsCarousel from '@/components/news-carousel'
 import ImageScale from '@/components/image-scale'
+import SanityPageService from '@/services/sanityPageService'
+import { aboutQuery } from '@/helpers/queries'
+const pageService = new SanityPageService(aboutQuery)
 
-export default function AboutUs() {
+export default function AboutUs(initialData) {
+  const { data: { about }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
-      <NextSeo title="About Us" />
+      <NextSeo title={about.title} />
 
       <LazyMotion features={domAnimation}>
         <div>
@@ -276,4 +280,11 @@ export default function AboutUs() {
       </LazyMotion>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const props = await pageService.fetchQuery(context)
+  return { 
+    props: props
+  };
 }

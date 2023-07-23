@@ -3,9 +3,13 @@ import Footer from '@/components/footer'
 import { LazyMotion, domAnimation} from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import NewsTeaser from '@/components/news-teaser'
-import { news } from '@/helpers/temp-data'
+import { newsQuery } from '@/helpers/queries'
+import SanityPageService from '@/services/sanityPageService'
 
-export default function News() {
+const pageService = new SanityPageService(newsQuery)
+
+export default function News(initialData) {
+  const { data: { news }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
       <NextSeo title="Latest News" />
@@ -14,7 +18,7 @@ export default function News() {
         <div>
           <main className="">
             <article>
-              <div className="w-full py-[50vw] pb-[25vw] bg-white lg:py-[20vw] lg:pb-[10vw] xl:py-[15vw] xl:pb-[7.5vw] selection:bg-[#FF5F38] selection:text-off-white">
+              <div className="w-full py-[50vw] pb-[25vw] bg-white lg:py-[20vw] lg:pb-[10vw] xl:py-[15vw] xl:pb-[7.5vw] selection:bg-[#FF5F38] selection:text-white">
                 <div className="w-full text-center uppercase">
                   <h1 className="text-[12vw] lg:text-[10.5vw] leading-none lg:leading-none text-[#FF5F38]">
                     <span className="inline">Latest</span> <span className="inline font-display italic">News</span>
@@ -53,7 +57,7 @@ export default function News() {
                       i == 9 && ( width = 'col-span-4 lg:col-span-2', imageHeight = 'h-[60vw] lg:h-[27vw]' )
 
                       return (
-                        <NewsTeaser key={i} subHeading={e.category.title} heading={e.title} image={e.image} className={width} imageHeight={imageHeight} href={e.href} />
+                        <NewsTeaser key={i} subHeading={e.category.title} heading={e.title} image={e.image} className={width} imageHeight={imageHeight} href={`/news/${e.slug.current}/`} />
                       )
                     })}
                   </div>
@@ -67,4 +71,11 @@ export default function News() {
       </LazyMotion>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const props = await pageService.fetchQuery(context)
+  return { 
+    props: props
+  };
 }

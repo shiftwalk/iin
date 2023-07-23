@@ -2,20 +2,28 @@ import { useRef, useState } from "react";
 import IconSquiggleUnderline from '@/icons/squiggle-underline.svg'
 import Div100vh from "react-div-100vh";
 import Image from "next/image";
+import { useMotionValue, useSpring, m } from "framer-motion";
 
 export default function HomeHero({ isActive, position }) {
   const [videoPlaying, setVideoPlaying] = useState(false)
   const video = useRef();
 
+  // Function to run when the hero button is clicked
   const toggleVideo = () => {
     if (videoPlaying) {
+      // Set the state to NOT playing and pause the actual video
       setVideoPlaying(false)
       video.current.pause()
     } else {
+      // Set the state to playing and play the actual video
       setVideoPlaying(true)
       video.current.play()
     }
   }
+
+  const springX = useSpring(position.x)
+  const springY = useSpring(position.y)
+
 
   return(
     <Div100vh className="w-full h-screen bg-white flex items-center jusfify-center text-[#FF5F38]">

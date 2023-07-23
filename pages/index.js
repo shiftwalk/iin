@@ -1,22 +1,25 @@
 import Layout from '@/components/layout'
 import Footer from '@/components/footer'
 import { LazyMotion, domAnimation } from 'framer-motion'
-import IconSlattedUnderline from '@/icons/slatted-underline.svg'
 import IconSquiggleUnderline from '@/icons/squiggle-underline.svg'
 import IconSmile from '@/icons/smile.svg'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
-import Div100vh from 'react-div-100vh'
 import Image from 'next/image'
 import NewsCarousel from '@/components/news-carousel'
 import HomeHero from '@/components/home-hero'
 import ReactCursorPosition from 'react-cursor-position';
 import ImageScale from '@/components/image-scale'
+import { homeQuery } from '@/helpers/queries'
+import SanityPageService from '@/services/sanityPageService'
 
-export default function Home() {
+const pageService = new SanityPageService(homeQuery)
+
+export default function Home(initialData) {
+  const { data: { home }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
-      <NextSeo title="Home" />
+      <NextSeo title={home.title} />
 
       <LazyMotion features={domAnimation}>
         <div className="relative">
@@ -187,4 +190,11 @@ export default function Home() {
       </LazyMotion>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const props = await pageService.fetchQuery(context)
+  return { 
+    props: props
+  };
 }

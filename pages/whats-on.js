@@ -9,11 +9,16 @@ import IconCircle from '@/icons/circle.svg'
 import Link from 'next/link'
 import Image from 'next/image'
 import ImageScale from '@/components/image-scale'
+import { whatsOnQuery } from '@/helpers/queries'
+import SanityPageService from '@/services/sanityPageService'
 
-export default function WhatsOn() {
+const pageService = new SanityPageService(whatsOnQuery)
+
+export default function WhatsOn(initialData) {
+  const { data: { whatsOn }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
-      <NextSeo title="What's On" />
+      <NextSeo title={whatsOn.title} />
 
       <LazyMotion features={domAnimation}>
         <div>
@@ -93,4 +98,11 @@ export default function WhatsOn() {
       </LazyMotion>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const props = await pageService.fetchQuery(context)
+  return { 
+    props: props
+  };
 }
