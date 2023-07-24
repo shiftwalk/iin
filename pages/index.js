@@ -1,6 +1,6 @@
 import Layout from '@/components/layout'
 import Footer from '@/components/footer'
-import { LazyMotion, domAnimation } from 'framer-motion'
+import { LazyMotion, domAnimation, m } from 'framer-motion'
 import IconSquiggleUnderline from '@/icons/squiggle-underline.svg'
 import IconSmile from '@/icons/smile.svg'
 import { NextSeo } from 'next-seo'
@@ -22,7 +22,12 @@ export default function Home(initialData) {
       <NextSeo title={home.title} />
 
       <LazyMotion features={domAnimation}>
-        <div className="relative">
+        <m.div
+          className="relative"
+          initial="initial"
+          animate="enter"
+          exit="exit"
+        >
           <div className="overflow-hidden sticky top-0">
             <ReactCursorPosition>
               <HomeHero />
@@ -119,15 +124,15 @@ export default function Home(initialData) {
                 <IconSquiggleUnderline className="w-[65%] lg:w-[40%] xl:w-[33%] text-[#BDB800] translate-x-[-2vw] mb-[4vw]" />
 
                 <div className="mb-[8vw] lg:mb-[5vw]">
-                  <NewsCarousel />
+                  <NewsCarousel items={home.latestNews} />
                 </div>
 
                 <div className="text-center">
-                  <Link href="/about-us" className="a11y-focus rounded-full border border-[#B4C0C6] py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none mx-auto">View more news</Link>
+                  <Link href="/news" className="a11y-focus rounded-full border border-[#B4C0C6] py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none mx-auto">View more news</Link>
                 </div>
               </div>
 
-              <div className="bg-[#176B75] text-[#F5F1E1] grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
+              <div className="bg-[#176B75] text-[#F5F1E1] grid grid-cols-1 lg:grid-cols-2 overflow-hidden selection:bg-[#EBEA33] selection:text-[#176B75]">
                 <div className="col-span-1 flex items-center justify-center px-[5vw] py-10 pb-[20vw] lg:py-[8vw] lg:pb-[10vw] order-2 lg:order-1">
                   <div className="w-full lg:px-0">
                     <span className="text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-non 2xl:leading-none block mb-3">What&apos;s on?</span>
@@ -186,7 +191,7 @@ export default function Home(initialData) {
           <div className="relative z-[10]">
             <Footer />
           </div>
-        </div>
+        </m.div>
       </LazyMotion>
     </Layout>
   )

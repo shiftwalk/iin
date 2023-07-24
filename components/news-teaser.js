@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import ImageScale from "./image-scale";
+import SanityImageScale from "./sanity-image-scale";
 
 export default function NewsTeaser({ image, heading, subHeading, href, className, imageHeight }) {
   return(
     <Link scroll={false} href={href} className={`block ${className ? className : null}`}>
       <div className={`w-full bg-red mb-4 lg:mb-6 relative overflow-hidden ${imageHeight}`}>
         {image ? (
-          <ImageScale
-            src={image}
+          <SanityImageScale
+            image={image}
             sizes="(max-width: 1024px) 100vw, 35vw"
           />
         ) : (

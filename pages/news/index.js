@@ -5,11 +5,11 @@ import { NextSeo } from 'next-seo'
 import NewsTeaser from '@/components/news-teaser'
 import { newsQuery } from '@/helpers/queries'
 import SanityPageService from '@/services/sanityPageService'
-
+import Link from 'next/link'
 const pageService = new SanityPageService(newsQuery)
 
 export default function News(initialData) {
-  const { data: { news }  } = pageService.getPreviewHook(initialData)()
+  const { data: { news, cats }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
       <NextSeo title="Latest News" />
@@ -34,11 +34,12 @@ export default function News(initialData) {
 
                   <nav className="w-full mb-5 lg:mb-8">
                     <ul className="lg:flex lg:space-x-6 text-lg lg:text-xl 2xl:text-2xl leading-tight lg:leading-tight 2xl:leading-tight">
-                      <li className="mb-1 lg:mb-0 border-b border-off-black inline-block">All</li>
-                      <li className="mb-1 lg:mb-0 opacity-20">Events</li>
-                      <li className="mb-1 lg:mb-0 opacity-20">City Centre News</li>
-                      <li className="mb-1 lg:mb-0 opacity-20">Community</li>
-                      <li className="mb-1 lg:mb-0 opacity-20">Members</li>
+                      <li className="mb-1 lg:mb-0 border-b border-off-black inline-block"><Link href="/news">All</Link></li>
+                      {cats.map((e, i) => {
+                        return (
+                          <li key={i} className="mb-1 lg:mb-0"><Link className="text-black text-opacity-20" href={`/news/categories/${e.slug.current}`}>{e.title}</Link></li>
+                        )
+                      })}
                     </ul>
                   </nav>
 
@@ -57,7 +58,7 @@ export default function News(initialData) {
                       i == 9 && ( width = 'col-span-4 lg:col-span-2', imageHeight = 'h-[60vw] lg:h-[27vw]' )
 
                       return (
-                        <NewsTeaser key={i} subHeading={e.category.title} heading={e.title} image={e.image} className={width} imageHeight={imageHeight} href={`/news/${e.slug.current}/`} />
+                        <NewsTeaser key={i} subHeading={e.category.title} heading={e.title} image={e.teaserImage} className={width} imageHeight={imageHeight} href={`/news/${e.slug.current}/`} />
                       )
                     })}
                   </div>

@@ -24,7 +24,7 @@ export default function AboutUs(initialData) {
         <div>
           <main className="">
             <article>
-              <div className="w-full bg-[#4000B5] pt-[50vw] pb-[16vw] lg:py-[20vw] xl:py-[15vw] mb-[5vw] lg:mb-[10vw] selection:text-[#4000B5] selection:bg-[#FF5F38] relative">
+              <div className="w-full bg-[#4000B5] pt-[50vw] pb-[16vw] lg:py-[20vw] xl:py-[15vw] mb-[5vw] lg:mb-[10vw] selection:text-[#4000B5] selection:bg-[#23D6D1] relative">
                 <div className="w-[33%] lg:w-[19vw] 2xl:w-[18vw] h-[52vw] lg:h-[28vw] 2xl:h-[26vw] bg-red absolute top-[11%] lg:top-[8%] left-0 overflow-hidden">
                   <ImageScale
                     src="/images/about-01.jpg"
@@ -110,7 +110,7 @@ export default function AboutUs(initialData) {
                 </div>
               </div>
 
-              <div className="bg-[#176B75] text-[#F5F1E1] grid grid-cols-1 lg:grid-cols-2 overflow-hidden mb-[5vw] lg:mb-[10vw]">
+              <div className="bg-[#176B75] text-[#F5F1E1] grid grid-cols-1 lg:grid-cols-2 overflow-hidden mb-[5vw] lg:mb-[10vw] selection:text-[#176B75] selection:bg-[#EBEA33]">
                 <div className="col-span-1 flex items-center justify-center px-[5vw] py-10 pb-[20vw] lg:py-[8vw] lg:pb-[10vw] order-2 lg:order-1">
                   <div className="w-full lg:px-0">
                     <span className="text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-non 2xl:leading-none block mb-3">What&apos;s on?</span>
@@ -169,11 +169,11 @@ export default function AboutUs(initialData) {
                 <IconSquiggleUnderline className="w-[80%] lg:w-[38%] 2xl:w-[44%] text-off-black translate-x-[-1vw] mb-[4vw]" />
 
                 <div className="mb-[8vw] lg:mb-[5vw]">
-                  <NewsCarousel />
+                  <NewsCarousel items={about.latestNews} />
                 </div>
               </div>
 
-              <div className="bg-[#BDB800] text-off-black grid grid-cols-1 lg:grid-cols-2 overflow-hidden mb-[5vw] lg:mb-[10vw]">
+              <div className="bg-[#BDB800] text-off-black grid grid-cols-1 lg:grid-cols-2 overflow-hidden mb-[5vw] lg:mb-[10vw] selection:text-[#BDB800] selection:bg-off-black">
                 <div className="col-span-1 flex items-center justify-center px-[5vw] py-10 pb-[20vw] lg:py-[8vw] lg:pb-[10vw] order-2 lg:order-2">
                   <div className="w-full lg:px-0">
                     <span className="text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-non 2xl:leading-none block mb-3">Our People</span>

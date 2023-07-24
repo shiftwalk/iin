@@ -12,6 +12,29 @@ export const homeQuery = `{
         y
       },
     },
+    "latestNews": *[_type == "news"]{
+      title,
+      category->{
+        title,
+        slug {
+          current
+        }
+      },
+      teaserImage {
+        asset-> {
+          ...
+        },
+        caption,
+        alt,
+        hotspot {
+          x,
+          y
+        },
+      },
+      slug {
+        current
+      }
+    },
     seo {
       ...,
       shareGraphic {
@@ -24,6 +47,29 @@ export const homeQuery = `{
 export const aboutQuery = `{
   "about": *[_type == "about"][0]{
     title,
+    "latestNews": *[_type == "news"]{
+      title,
+      category->{
+        title,
+        slug {
+          current
+        }
+      },
+      teaserImage {
+        asset-> {
+          ...
+        },
+        caption,
+        alt,
+        hotspot {
+          x,
+          y
+        },
+      },
+      slug {
+        current
+      }
+    },
     seo {
       ...,
       shareGraphic {
@@ -66,6 +112,28 @@ export const newsQuery = `{
         current
       }
     },
+    teaserImage {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
+    heroImage {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
     slug {
       current
     },
@@ -75,17 +143,105 @@ export const newsQuery = `{
         asset->
       }
     }
+  },
+  "cats": *[_type == "categories"]{
+    title,
+    slug {
+      current
+    }
+  },
+}`
+
+export const catQuery = `{
+  "cat": *[_type == "categories" && slug.current == $slug][0]{
+    title,
+    slug {
+      current
+    },
+    "cats": *[_type == "categories"]{
+      title,
+      slug {
+        current
+      }
+    },
+    "news": *[_type == "news" && category->slug.current == $slug]{
+      title,
+      category->{
+        title,
+        slug {
+          current
+        }
+      },
+      teaserImage {
+        asset-> {
+          ...
+        },
+        caption,
+        alt,
+        hotspot {
+          x,
+          y
+        },
+      },
+      heroImage {
+        asset-> {
+          ...
+        },
+        caption,
+        alt,
+        hotspot {
+          x,
+          y
+        },
+      },
+      slug {
+        current
+      },
+      seo {
+        ...,
+        shareGraphic {
+          asset->
+        }
+      }
+    }
   }
 }`
 
 export const newsSlugQuery = `{
   "current": *[_type == "news" && slug.current == $slug][0]{
     title,
+    introText,
+    postDate,
     category->{
       title,
       slug {
         current
       }
+    },
+    content[] {
+      ...,
+      image {
+        asset-> {
+          ...
+        },
+        caption,
+        alt,
+        hotspot {
+          x,
+          y
+        },
+      }
+    },
+    heroImage {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
     },
     slug {
       current
@@ -94,6 +250,86 @@ export const newsSlugQuery = `{
       ...,
       shareGraphic {
         asset->
+      }
+    },
+    "more": *[_type == "news"][0..8]{
+      title,
+      category->{
+        title,
+        slug {
+          current
+        }
+      },
+      teaserImage {
+        asset-> {
+          ...
+        },
+        caption,
+        alt,
+        hotspot {
+          x,
+          y
+        },
+      },
+      heroImage {
+        asset-> {
+          ...
+        },
+        caption,
+        alt,
+        hotspot {
+          x,
+          y
+        },
+      },
+      slug {
+        current
+      },
+      seo {
+        ...,
+        shareGraphic {
+          asset->
+        }
+      }
+    },
+    "related": *[_type == "news"][0..3]{
+      title,
+      category->{
+        title,
+        slug {
+          current
+        }
+      },
+      teaserImage {
+        asset-> {
+          ...
+        },
+        caption,
+        alt,
+        hotspot {
+          x,
+          y
+        },
+      },
+      heroImage {
+        asset-> {
+          ...
+        },
+        caption,
+        alt,
+        hotspot {
+          x,
+          y
+        },
+      },
+      slug {
+        current
+      },
+      seo {
+        ...,
+        shareGraphic {
+          asset->
+        }
       }
     }
   }

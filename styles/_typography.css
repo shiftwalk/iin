@@ -31,6 +31,10 @@
     @apply text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight
   }
 
+  & > figure {
+    @apply mb-5 lg:mb-8;
+  }
+
   & > blockquote {
   @apply my-6 lg:my-10;
 
@@ -39,7 +43,7 @@
     }
 
     p {
-      @apply font-display italic text-2xl lg:text-3xl xl:text-4xl leading-[1.075] lg:leading-[1.075] xl:leading-[1.075];
+      @apply font-display italic text-2xl lg:text-3xl xl:text-4xl leading-[1.075] lg:leading-[1.075] xl:leading-[1.075] mb-5 lg:mb-8 last-of-type:mb-0;
     }
   }
 }

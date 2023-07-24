@@ -36,7 +36,7 @@ export default function Footer() {
 
       <div className="p-5 pb-[10vw] relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div className="col-span-1 aspect-square bg-[#5F0EFF] flex items-center justify-center relative">
+          <div className="col-span-1 aspect-square bg-[#5F0EFF] selection:text-[#5F0EFF] flex items-center justify-center relative">
             <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0 bg-[#5F0EFF]">
               <div className="w-[50%] h-[75%] relative mix-blend-lighten opacity-[25%] bg-off-white">
                 <Image
@@ -62,7 +62,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="col-span-1 aspect-square bg-[#EFF366] flex items-center justify-center">
+          <div className="col-span-1 aspect-square bg-[#EFF366] selection:text-[#EFF366] flex items-center justify-center">
             <div className="w-10/12 text-center text-off-black">
               <span className="block text-[9.5vw] leading-none md:text-[5vw] md:leading-none xl:text-[4.5vw] xl:leading-none mb-8">
                 <span className="uppercase relative">Sign up <IconSquiggleUnderline className="absolute bottom-0 left-[-5%] right-[-5%] w-[110%]" /></span>
@@ -95,7 +95,7 @@ export default function Footer() {
           <li className="pr-3">|</li>
           <li className="pr-3"><FancyLink destination="/" label="Cookie Policy" /></li>
           <li className="pr-3">|</li>
-          <li className="font-medium"><FancyLink destination="/" label="Branding By Cubic" /></li>
+          <li className="font-medium"><a href="https://www.cubicstudio.co.uk/" rel="noopener noreferrer" target="_blank">Branding By Cubic</a></li>
 
           <li className="ml-auto text-right"><a href="#" className="a11y-focus"><span className="hidden lg:inline">Back&nbsp;</span>To Top <IconArrow className="w-2 lg:w-3 inline ml-1" /></a></li>
         </ul>

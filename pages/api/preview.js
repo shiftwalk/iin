@@ -15,8 +15,8 @@ const checkIfAuthorized = async (slug) => {
 const checkIfSlugIsKnown = (slug) => {
   const globalSlugs = [
     'home',
-    'about',
-    'whatsOn',
+    'about-us',
+    'whats-on',
     'news',
     'contact',
     'policies'
