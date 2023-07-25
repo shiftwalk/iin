@@ -111,10 +111,10 @@ export default function Header() {
                     >
                       <m.div
                         initial={{ y: '100%' }}
-                        animate={{ y: 0, transition: { duration: 0.55, delay: 0.1, ease: [0.71,0,0.17,1]}}}
+                        animate={{ y: 0, transition: { duration: 0.55, delay: 0.2, ease: [0.71,0,0.17,1]}}}
                         exit={{ y: '100%', transition: { duration: 0.33, delay: 0.2, ease: [0.71,0,0.17,1]} }}
                       >
-                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/">Home</Link>
+                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus transition-color ease-in-out duration-[250ms] hover:text-white" href="/">Home</Link>
                       </m.div>
                       {/* { router.asPath == '/' && (
                         <IconSquiggleUnderline className="w-full" />
@@ -123,10 +123,10 @@ export default function Header() {
                     <li className={`block overflow-hidden relative mb-3 ${router.asPath == '/whats-on' && 'font-display italic uppercase text-white relative' }`}>
                       <m.div
                         initial={{ y: '100%' }}
-                        animate={{ y: 0, transition: { duration: 0.55, delay: 0.125, ease: [0.71,0,0.17,1]}}}
+                        animate={{ y: 0, transition: { duration: 0.55, delay: 0.225, ease: [0.71,0,0.17,1]}}}
                         exit={{ y: '100%', transition: { duration: 0.33, delay: 0.175, ease: [0.71,0,0.17,1]} }}
                       >
-                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/whats-on">What’S On</Link>
+                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus transition-color ease-in-out duration-[250ms] hover:text-white" href="/whats-on">What’S On</Link>
                         {/* { router.asPath == '/whats-on' && (
                           <IconSquiggleUnderline className="w-full" />
                         )} */}
@@ -135,10 +135,10 @@ export default function Header() {
                     <li className={`block overflow-hidden relative mb-3 ${router.asPath.includes('/news') && 'font-display italic uppercase text-white relative' }`}>
                       <m.div
                         initial={{ y: '100%' }}
-                        animate={{ y: 0, transition: { duration: 0.55, delay: 0.15, ease: [0.71,0,0.17,1]}}}
+                        animate={{ y: 0, transition: { duration: 0.55, delay: 0.25, ease: [0.71,0,0.17,1]}}}
                         exit={{ y: '100%', transition: { duration: 0.33, delay: 0.15, ease: [0.71,0,0.17,1]} }}
                       >
-                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/news">Latest News</Link>
+                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus transition-color ease-in-out duration-[250ms] hover:text-white" href="/news">Latest News</Link>
                         {/* { router.asPath.includes('/news') && (
                           <IconSquiggleUnderline className="w-full" />
                         )} */}
@@ -147,10 +147,10 @@ export default function Header() {
                     <li className={`block overflow-hidden relative mb-3 ${router.asPath == '/about-us' && 'font-display italic uppercase text-white relative' }`}>
                       <m.div
                         initial={{ y: '100%' }}
-                        animate={{ y: 0, transition: { duration: 0.55, delay: 0.175, ease: [0.71,0,0.17,1]}}}
+                        animate={{ y: 0, transition: { duration: 0.55, delay: 0.275, ease: [0.71,0,0.17,1]}}}
                         exit={{ y: '100%', transition: { duration: 0.33, delay: 0.125, ease: [0.71,0,0.17,1]} }}
                       >
-                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/about-us">About Us</Link>
+                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus transition-color ease-in-out duration-[250ms] hover:text-white" href="/about-us">About Us</Link>
                         {/* { router.asPath == '/about-us' && (
                           <IconSquiggleUnderline className="w-full" />
                         )} */}
@@ -159,10 +159,10 @@ export default function Header() {
                     <li className={`block overflow-hidden relative mb-3 ${router.asPath == '/contact' && 'font-display italic uppercase text-white relative' }`}>
                       <m.div
                         initial={{ y: '100%' }}
-                        animate={{ y: 0, transition: { duration: 0.55, delay: 0.2, ease: [0.71,0,0.17,1]}}}
+                        animate={{ y: 0, transition: { duration: 0.55, delay: 0.3, ease: [0.71,0,0.17,1]}}}
                         exit={{ y: '100%', transition: { duration: 0.33, delay: 0.1, ease: [0.71,0,0.17,1]} }}
                       >
-                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus" href="/contact">Get In Touch</Link>
+                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus transition-color ease-in-out duration-[250ms] hover:text-white" href="/contact">Get In Touch</Link>
                         {/* { router.asPath == '/contact' && (
                           <IconSquiggleUnderline className="w-full" />
                         )} */}

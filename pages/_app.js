@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
       <div className={`${Nantes.variable} font-sans`}>
         <Header />
 
-        <AnimatePresence mode="wait" initial={true}>
+        <AnimatePresence mode="wait" initial={false}>
           <Component {...pageProps} key={router.asPath} />
         </AnimatePresence>
       </div>
