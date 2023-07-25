@@ -125,7 +125,7 @@ export default function News(initialData) {
                       let imageHeight = 'h-[50vw] lg:h-[15vw]'
 
                       return (
-                        <NewsTeaser key={i} subHeading={e.category.title} heading={e.title} image={e.teaserImage} className={`${width} ${ i != 2 && 'mb-12'}`} imageHeight={imageHeight} href={`/news/${e.slug.current}`} />
+                        <NewsTeaser key={i} subHeading={e.category.title} heading={e.title} image={e.teaserImage} className={`${width} mb-12`} imageHeight={imageHeight} href={`/news/${e.slug.current}`} />
                       )
                     })}
                   </div>

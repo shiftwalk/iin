@@ -292,7 +292,7 @@ export const newsSlugQuery = `{
         }
       }
     },
-    "related": *[_type == "news"][0..3]{
+    "related": *[_type == "news"][0..2]{
       title,
       category->{
         title,
