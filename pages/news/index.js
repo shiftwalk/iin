@@ -1,11 +1,12 @@
 import Layout from '@/components/layout'
 import Footer from '@/components/footer'
-import { LazyMotion, domAnimation} from 'framer-motion'
+import { LazyMotion, domAnimation, m} from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import NewsTeaser from '@/components/news-teaser'
 import { newsQuery } from '@/helpers/queries'
 import SanityPageService from '@/services/sanityPageService'
 import Link from 'next/link'
+import { reveal } from '@/helpers/transitions'
 const pageService = new SanityPageService(newsQuery)
 
 export default function News(initialData) {
@@ -15,13 +16,20 @@ export default function News(initialData) {
       <NextSeo title="Latest News" />
 
       <LazyMotion features={domAnimation}>
-        <div>
+        <m.div
+          className="relative"
+          initial="initial"
+          animate="enter"
+          exit="exit"
+        >
           <main className="">
             <article>
               <div className="w-full py-[50vw] pb-[25vw] bg-white lg:py-[20vw] lg:pb-[10vw] xl:py-[15vw] xl:pb-[7.5vw] selection:bg-[#FF5F38] selection:text-white">
                 <div className="w-full text-center uppercase">
                   <h1 className="text-[12vw] lg:text-[10.5vw] leading-none lg:leading-none text-[#FF5F38]">
-                    <span className="inline">Latest</span> <span className="inline font-display italic">News</span>
+                    <span className="block overflow-hidden relative">
+                      <m.span className="block" variants={reveal}><span className="inline">Latest</span> <span className="inline font-display italic">News</span></m.span>
+                    </span>
                   </h1>
                 </div>
 
@@ -68,7 +76,7 @@ export default function News(initialData) {
           </main>
 
           <Footer />
-        </div>
+        </m.div>
       </LazyMotion>
     </Layout>
   )

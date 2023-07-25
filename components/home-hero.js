@@ -31,12 +31,13 @@ export default function HomeHero({ isActive, position }) {
   
   const svg = {
     initial: { opacity: 0 },
-    enter: { opacity: 1, transition: { delay: 0.4, duration: 0.66, ease: [0.71,0,0.17,1] }},
+    enter: { opacity: 1, transition: { delay: 0.2, duration: 0.66, ease: [0.71,0,0.17,1] }},
   };
 
   const draw = {
     initial: { pathLength: 0 },
-    enter: { pathLength: 1, transition: { delay: 0.5, duration: 0.66, ease: [0.71,0,0.17,1] }},
+    enter: { pathLength: 1, transition: { delay: 0.33, duration: 0.66, ease: [0.71,0,0.17,1] }},
+    exit: { pathLength: 0, transition: { duration: 0.33, ease: [0.71,0,0.17,1] }},
   };
 
   return(
@@ -83,7 +84,7 @@ export default function HomeHero({ isActive, position }) {
       <div className={`absolute inset-0 bg-[#5017B7] z-[2] mix-blend-multiply transition-opacity ease-in-out duration-[400ms] ${videoPlaying ? 'opacity-0' : 'opacity-30' }`}></div>
       
       <div className={`w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
-        <video preload="true" playsInline={'playsInline'} loop={true} autoPlay={true} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
+        <video poster="/videos/iin-hero-loop-poster.jpg" preload="true" playsInline={'playsInline'} loop={true} autoPlay={true} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
           <source src="/videos/iin-hero-loop.mp4" type="video/mp4" />
 
           Sorry. Your browser does not support the video tag.

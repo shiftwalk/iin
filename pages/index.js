@@ -12,8 +12,8 @@ import ReactCursorPosition from 'react-cursor-position';
 import ImageScale from '@/components/image-scale'
 import { homeQuery } from '@/helpers/queries'
 import SanityPageService from '@/services/sanityPageService'
-
 const pageService = new SanityPageService(homeQuery)
+
 
 export default function Home(initialData) {
   const { data: { home }  } = pageService.getPreviewHook(initialData)()

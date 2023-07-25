@@ -1,6 +1,6 @@
 import Layout from '@/components/layout'
 import Footer from '@/components/footer'
-import { LazyMotion, domAnimation} from 'framer-motion'
+import { LazyMotion, domAnimation, m } from 'framer-motion'
 import IconSquiggleUnderline from '@/icons/squiggle-underline.svg'
 import IconWaveUnderline from '@/icons/wave-underline.svg'
 import IconSlattedUnderline from '@/icons/slatted-underline.svg'
@@ -12,7 +12,27 @@ import NewsCarousel from '@/components/news-carousel'
 import ImageScale from '@/components/image-scale'
 import SanityPageService from '@/services/sanityPageService'
 import { aboutQuery } from '@/helpers/queries'
+import { reveal } from '@/helpers/transitions'
 const pageService = new SanityPageService(aboutQuery)
+
+const container = {
+  enter: {
+    transition: {
+      staggerChildren: 0.066
+    }
+  }
+}
+
+const svg = {
+  initial: { opacity: 0 },
+  enter: { opacity: 1, transition: { delay: 0.2, duration: 0.66, ease: [0.71,0,0.17,1] }},
+};
+
+const draw = {
+  initial: { pathLength: 0 },
+  enter: { pathLength: 1, transition: { delay: 0.3, duration: 0.66, ease: [0.71,0,0.17,1] }},
+  exit: { pathLength: 0, transition: { duration: 0.33, ease: [0.71,0,0.17,1] }},
+};
 
 export default function AboutUs(initialData) {
   const { data: { about }  } = pageService.getPreviewHook(initialData)()
@@ -21,7 +41,12 @@ export default function AboutUs(initialData) {
       <NextSeo title={about.title} />
 
       <LazyMotion features={domAnimation}>
-        <div>
+        <m.div
+          className="relative"
+          initial="initial"
+          animate="enter"
+          exit="exit"
+        >
           <main className="">
             <article>
               <div className="w-full bg-[#4000B5] pt-[50vw] pb-[16vw] lg:py-[20vw] xl:py-[15vw] mb-[5vw] lg:mb-[10vw] selection:text-[#4000B5] selection:bg-[#23D6D1] relative">
@@ -40,11 +65,20 @@ export default function AboutUs(initialData) {
                 </div>
                 
                 <div className="w-full text-center uppercase pb-[4vw] lg:pb-[10vw] xl:pb-[10vw] relative z-10">
-                  <h1 className="text-[15.5vw] lg:text-[12vw] 2xl:text-[12vw] leading-none lg:leading-none 2xl:leading-none text-[#23D6D1]">
-                    <span className="block">Get To</span>
-                    <span className="block font-display italic">Know Us</span>
-                    <IconSquiggleUnderline className="w-[80%] lg:w-[60%] mx-auto mt-2" />
-                  </h1>
+                  <m.h1 variants={container} className="text-[15.5vw] lg:text-[12vw] 2xl:text-[12vw] leading-none lg:leading-none 2xl:leading-none text-[#23D6D1]">
+                    <span className="block overflow-hidden relative">
+                      <m.span className="block" variants={reveal}>Get To</m.span>
+                    </span>
+                    <span className="block overflow-hidden relative font-display italic">
+                      <m.span className="block" variants={reveal}>Know Us</m.span>
+                    </span>
+
+                    <m.svg variants={svg} className="w-[80%] lg:w-[60%] mx-auto mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1054.61 41.078">
+                      <m.path variants={draw} stroke="currentColor" fill="none" strokeLinecap="round" strokeWidth="5" d="M1052.091 2.519S439.691 7.143 62.04 36.748c-99.9 7.827-41.862-11.468-50.6-11.237" data-name="Path 1259"/>
+                    </m.svg>
+
+                    {/* <IconSquiggleUnderline className="w-[80%] lg:w-[60%] mx-auto mt-2" /> */}
+                  </m.h1>
                 </div>
 
                 <div className="flex flex-wrap relative z-10 lg:pl-[5vw] 2xl:pl-[7.5vw]">
@@ -276,7 +310,7 @@ export default function AboutUs(initialData) {
           </main>
 
           <Footer />
-        </div>
+        </m.div>
       </LazyMotion>
     </Layout>
   )

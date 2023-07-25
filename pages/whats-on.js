@@ -1,6 +1,6 @@
 import Layout from '@/components/layout'
 import Footer from '@/components/footer'
-import { LazyMotion, domAnimation} from 'framer-motion'
+import { LazyMotion, domAnimation, m} from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import IconSlattedUnderline from '@/icons/slatted-underline.svg'
 import IconSquiggleUnderline from '@/icons/squiggle-underline.svg'
@@ -11,8 +11,23 @@ import Image from 'next/image'
 import ImageScale from '@/components/image-scale'
 import { whatsOnQuery } from '@/helpers/queries'
 import SanityPageService from '@/services/sanityPageService'
+import { reveal } from '@/helpers/transitions'
 
 const pageService = new SanityPageService(whatsOnQuery)
+
+const container = {
+  enter: {
+    transition: {
+      staggerChildren: 0.066
+    }
+  }
+}
+
+const draw = {
+  initial: { pathLength: 0 },
+  enter: { pathLength: 1, transition: { delay: 0.3, duration: 0.66, ease: [0.71,0,0.17,1] }},
+  exit: { pathLength: 0, transition: { duration: 0.33, ease: [0.71,0,0.17,1] }},
+};
 
 export default function WhatsOn(initialData) {
   const { data: { whatsOn }  } = pageService.getPreviewHook(initialData)()
@@ -21,13 +36,41 @@ export default function WhatsOn(initialData) {
       <NextSeo title={whatsOn.title} />
 
       <LazyMotion features={domAnimation}>
-        <div>
+        <m.div
+          className="relative"
+          initial="initial"
+          animate="enter"
+          exit="exit"
+        >
           <main className="">
             <article>
               <div className="w-full bg-[#FFB4CC] pt-[50vw] lg:pb-[16vw] lg:py-[20vw] xl:py-[15vw] relative selection:bg-off-black selection:text-[#FFB4CC]">
                 <div className="w-full text-center uppercase pb-[10vw] lg:pb-[8vw] xl:pb-[6vw]">
-                  <h1 className="text-[12vw] lg:text-[10.5vw] leading-none lg:leading-none text-[#BD3146]">Discover <span className="block font-display italic">Nottingham</span></h1>
-                  <IconZagUnderline className="text-[#BD3146] w-[90%] lg:w-[75%] mx-auto" />
+                  <m.h1 variants={container} className="text-[12vw] lg:text-[10.5vw] leading-none lg:leading-none text-[#BD3146]">
+                    <span className="relative overflow-hidden block">
+                      <m.span className="block" variants={reveal}>Discover</m.span>
+                    </span>
+                    <span className="block font-display italic relative overflow-hidden">
+                      <m.span className="block" variants={reveal}>Nottingham</m.span>
+                    </span>
+                  </m.h1>
+
+                  <svg className="text-[#BD3146] w-[90%] lg:w-[75%] mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1519.962 29.772">
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="none" d="M0 29.772h1519.962V0H0Z" data-name="Path 1258"/>
+                      </clipPath>
+                    </defs>
+                    <g data-name="Group 562">
+                      <g data-name="Group 561">
+                        <g clip-path="url(#a)" data-name="Group 560">
+                          <m.path variants={draw} fill="none" stroke="currentColor" stroke-miterlimit="120" stroke-width="5" d="m2.182 4.398 20.949 20.949L43.557 4.398l20.949 20.949L85.454 4.398l20.428 20.949 20.947-20.949 20.953 20.949 20.423-20.949 20.949 20.949 20.949-20.949 20.423 20.949 20.95-20.949 20.949 20.949 20.426-20.949L313.8 25.347l20.949-20.949 20.426 20.949 20.949-20.949 20.949 20.949 20.948-20.949 20.434 20.949 20.433-20.949 20.949 20.949 20.945-20.949 20.39 20.949 20.386-20.949 20.949 20.949 20.948-20.949 20.427 20.949L624.83 4.398l20.952 20.949 20.423-20.949 20.949 20.949 20.949-20.949 20.424 20.949 20.949-20.949 20.949 20.949L790.85 4.398l20.949 20.949L832.75 4.398l20.426 20.949 20.949-20.949 20.949 20.949 20.948-20.949 20.434 20.949 20.433-20.949 20.949 20.949 20.949-20.949 20.5 20.949 21.025-20.949 20.426 20.949 20.944-20.949 20.846 20.947 20.326-20.947 20.949 20.949 20.949-20.949 20.43 20.949 20.944-20.949 20.949 20.949 20.426-20.949 20.949 20.949 20.949-20.949 20.424 20.949 20.949-20.949 20.949 20.949 20.426-20.949 20.949 20.949 20.95-20.949 20.426 20.949 20.949-20.949 20.949 20.949 20.949-20.949 20.434 20.949" data-name="Path 1257"/>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+
+                  {/* <IconZagUnderline className="text-[#BD3146] w-[90%] lg:w-[75%] mx-auto" /> */}
                 </div>
 
                 <div className="flex flex-wrap px-5 lg:px-[5vw] max-w-[1800px] mx-auto mb-8 lg:mb-0">
@@ -94,7 +137,7 @@ export default function WhatsOn(initialData) {
           </main>
 
           <Footer />
-        </div>
+        </m.div>
       </LazyMotion>
     </Layout>
   )
