@@ -72,23 +72,23 @@ export default function Contact(initialData) {
                       <form className="w-full grid grid-cols-2 gap-x-10 gap-y-5 lg:gap-y-8">
                         <div className="col-span-2">
                           {/* <label for="firstName" className="text-base lg:text-xl 2xl:text-xl mb-2 block">First Name</label> */}
-                          <input type="text" id="firstName" placeholder="Your First Name..." className="a11y-focus focus-within:ring-[#EBEA00] w-full bg-white appearance-none p-4 lg:p-6 text-black text-lg lg:text-xl 2xl:text-xl" />
+                          <input type="text" id="firstName" placeholder="Your First Name..." className="a11y-focus focus-within:ring-[#4000B5] w-full bg-white appearance-none p-4 lg:p-6 text-black text-lg lg:text-xl 2xl:text-xl" />
                         </div>
                         <div className="col-span-2">
                           {/* <label for="lastName" className="text-base lg:text-xl 2xl:text-xl mb-2 block">Last Name</label> */}
-                          <input type="text" id="lastName" placeholder="Your Last Name..." className="a11y-focus focus-within:ring-[#EBEA00] w-full bg-white appearance-none p-4 lg:p-6 text-black text-base lg:text-xl 2xl:text-xl" />
+                          <input type="text" id="lastName" placeholder="Your Last Name..." className="a11y-focus focus-within:ring-[#4000B5] w-full bg-white appearance-none p-4 lg:p-6 text-black text-base lg:text-xl 2xl:text-xl" />
                         </div>
                         <div className="col-span-2">
                           {/* <label for="email" className="text-base lg:text-xl 2xl:text-xl mb-2 block">Your Email</label> */}
-                          <input type="email" id="email" placeholder="Email address..." className="a11y-focus focus-within:ring-[#EBEA00] w-full bg-white appearance-none p-4 lg:p-6 text-black text-base lg:text-xl 2xl:text-xl" />
+                          <input type="email" id="email" placeholder="Email address..." className="a11y-focus focus-within:ring-[#4000B5] w-full bg-white appearance-none p-4 lg:p-6 text-black text-base lg:text-xl 2xl:text-xl" />
                         </div>
                         <div className="col-span-2">
                           {/* <label for="name" className="text-base lg:text-xl 2xl:text-xl mb-2 block">Phone Number</label> */}
-                          <input type="number" id="name" placeholder="Optional..." className="a11y-focus focus-within:ring-[#EBEA00] w-full bg-white appearance-none p-4 lg:p-6 text-black text-base lg:text-xl 2xl:text-xl" />
+                          <input type="number" id="name" placeholder="Optional..." className="a11y-focus focus-within:ring-[#4000B5] w-full bg-white appearance-none p-4 lg:p-6 text-black text-base lg:text-xl 2xl:text-xl" />
                         </div>
                         <div className="col-span-2 lg:col-span-2">
                           {/* <label for="message" className="text-base lg:text-xl 2xl:text-xl mb-2 block">Your message</label> */}
-                          <textarea rows={10} id="message" placeholder="How can we help you..." className="a11y-focus focus-within:ring-[#EBEA00] w-full bg-white appearance-none p-4 lg:p-6 text-black text-base lg:text-xl 2xl:text-xl" />
+                          <textarea rows={10} id="message" placeholder="How can we help you..." className="a11y-focus focus-within:ring-[#4000B5] w-full bg-white appearance-none p-4 lg:p-6 text-black text-base lg:text-xl 2xl:text-xl" />
                         </div>
 
                         <div className="col-span-2">

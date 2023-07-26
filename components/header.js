@@ -64,7 +64,7 @@ export default function Header() {
   return (
     <>
       <LazyMotion features={domAnimation}>
-        <button aria-label={appDownloadOpen ? 'Close App Download Menu' : 'Open App Download Menu' } onClick={appDownloadToggle} className={`a11y-focus rounded-full flex items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] bg-[#EBEA33] border border-[#EBEA33] text-black`}>
+        <button aria-label={appDownloadOpen ? 'Close App Download Menu' : 'Open App Download Menu' } onClick={appDownloadToggle} className={`a11y-focus rounded-full flex items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] bg-[#EBEA33] border border-[#EBEA33] text-black group overflow-hidden`}>
           <div className="flex space-x-2 mr-3">
             <IconApple className="w-5" />
             <IconAndroid className="w-5" />
@@ -83,13 +83,20 @@ export default function Header() {
                 </div>
               </button>
 
-              <button aria-label={appDownloadOpen ? 'Close App Download Menu' : 'Open App Download Menu' } onClick={appDownloadToggle} className={`a11y-focus rounded-full items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none hidden lg:flex ${appbuttonColor}`}>
-                <div className="flex space-x-2 mr-3">
+              <button aria-label={appDownloadOpen ? 'Close App Download Menu' : 'Open App Download Menu' } onClick={appDownloadToggle} className={`a11y-focus rounded-full items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all 2xl:text-xl 2xl:leading-none hidden lg:flex group overflow-hidden relative hover:text-black ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] ${appbuttonColor}`}>
+                <div className="flex space-x-2 mr-3 relative z-[1]">
                   <IconApple className="w-5" />
                   <IconAndroid className="w-5" />
                 </div>
 
-                <span className="block">Download App</span>
+                <div className="relative z-[1] overflow-hidden">
+                  <span className="block transition-transform ease-[cubic-bezier(0.71,0,0.17,1)] duration-[550ms] translate-y-none group-hover:translate-y-[-105%]">Download App</span>
+                  <span className="block absolute inset-0 transition-transform ease-[cubic-bezier(0.71,0,0.17,1)] duration-[550ms] translate-y-[105%] group-hover:translate-y-0">Download App</span>
+                </div>
+
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0] opacity-0 group-hover:opacity-100 group-hover:delay-[0ms] delay-[550ms]">
+                  <div className="w-[5px] h-[5px] bg-[#EBEA33] rounded-full transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[550ms] group-hover:scale-[75] origin-center"></div>
+                </div>
               </button>
             </div>
 

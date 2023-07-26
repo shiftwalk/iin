@@ -29,15 +29,17 @@ export default function NewsCarousel({ items }) {
               <div className="embla__slide pr-3 lg:pr-5" key={i}>
                 <Link className="block" href={`/news/${e.slug.current}`}>
                   <div className="w-full h-[60vw] lg:h-[25.5vw] 2xl:h-[23.5vw] bg-red mb-4 relative overflow-hidden">
-                    <SanityImage
-                      image={e.teaserImage}
-                      sizes="(max-width: 1024px) 100vw, 25vw"
-                      className="scale-[1.0075]"
-                    />
+                    {e.teaserImage && (
+                      <SanityImage
+                        image={e.teaserImage}
+                        sizes="(max-width: 1024px) 100vw, 25vw"
+                        className="scale-[1.0075]"
+                      />
+                    )}
                   </div>
 
                   <div className="w-full">
-                    <span className="block text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-none 2xl:leading-none font-medium mb-1">{e.title}</span>
+                    <span className="block text-xl lg:text-2xl 2xl:text-3xl leading-[1.1] lg:leading-[1.1] 2xl:leading-[1.1] font-medium mb-2 lg:mb-4">{e.title}</span>
                     <span className="text-base lg:text-lg 2xl:text-xl leading-none lg:leading-none 2xl:leading-none border-b border-off-black border-opacity-25 inline-block pb-1">Read More</span>
                   </div>
                 </Link>

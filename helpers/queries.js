@@ -252,7 +252,7 @@ export const newsSlugQuery = `{
         asset->
       }
     },
-    "more": *[_type == "news"][0..8]{
+    "more": *[_type == "news"][0..6]{
       title,
       category->{
         title,

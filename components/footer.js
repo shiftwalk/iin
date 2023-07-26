@@ -50,7 +50,20 @@ export default function Footer() {
             <div className="w-10/12 text-center text-white relative z-10">
               <span className="block text-[9.5vw] leading-none md:text-[5vw] md:leading-none xl:text-[4.5vw] xl:leading-none mb-8 text-[#EFF366]">
                 <span className="uppercase">Follow us</span>
-                <span className="block font-display">on <span className="uppercase italic relative">socials<IconZagUnderline className="w-full absolute -bottom-1 left-0 right-0"/></span></span>
+                <span className="block font-display">on <span className="uppercase italic relative">socials<svg className="w-full absolute -bottom-2 left-0 right-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 431.774 17.59">
+  <defs>
+    <clipPath id="a">
+      <path fill="none" d="M0 17.592h431.774V.002H0Z" data-name="Path 1178"/>
+    </clipPath>
+  </defs>
+  <g data-name="Group 417">
+    <g clip-path="url(#a)" data-name="Group 416">
+      <g data-name="Group 415">
+        <path fill="none" stroke="#eff366" stroke-miterlimit="120" stroke-width="3" d="m1.289 2.597 12.378 12.378L25.736 2.597l12.378 12.378L50.489 2.597l12.073 12.378L74.94 2.597l12.379 12.378 12.07-12.378 12.378 12.378 12.377-12.378 12.067 12.378 12.378-12.378 12.38 12.378 12.069-12.378 12.378 12.378 12.378-12.378 12.069 12.378 12.379-12.378 12.378 12.378 12.378-12.378 12.074 12.378 12.073-12.378 12.378 12.378 12.379-12.378 12.045 12.378 12.042-12.378 12.378 12.378 12.382-12.378 12.069 12.378 12.378-12.378 12.378 12.378 12.069-12.378 12.378 12.378L418.4 2.597l12.068 12.378" data-name="Path 1177"/>
+      </g>
+    </g>
+  </g>
+</svg></span></span>
               </span>
 
               <p className="mb-12 xl:text-xl xl:leading-snug max-w-[500px] md:max-w-[400px] xl:max-w-[500px] mx-auto">Amazing food and drinks, all the shops you&apos;ll ever need, and inspirational events and activities.</p>
