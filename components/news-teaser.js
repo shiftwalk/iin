@@ -5,12 +5,13 @@ import SanityImageScale from "./sanity-image-scale";
 
 export default function NewsTeaser({ image, heading, subHeading, href, className, imageHeight }) {
   return(
-    <Link scroll={false} href={href} className={`block ${className ? className : null}`}>
+    <Link scroll={false} href={href} className={`block group ${className ? className : null}`}>
       <div className={`w-full bg-red mb-4 lg:mb-6 relative overflow-hidden ${imageHeight}`}>
         {image ? (
           <SanityImageScale
             image={image}
             sizes="(max-width: 1024px) 100vw, 35vw"
+            hoverState="group-hover:scale-[1.1]"
           />
         ) : (
           <div className="absolute w-full h-full inset-0 bg-[#B4C0C6]"></div>

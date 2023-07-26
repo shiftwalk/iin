@@ -82,7 +82,7 @@ export default function Footer() {
 
           <div className="col-span-1 aspect-square bg-[#EFF366] selection:text-[#EFF366] flex items-center justify-center relative group/main" ref={footerRef2}>
             <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0 bg-[#EFF366] opacity-0 scale-[0.75] lg:group-hover/main:opacity-100 lg:group-hover/main:scale-[1] transition-all ease-in-out duration-[550ms]">
-              <div className="w-[50%] h-[75%] relative mix-blend-darken opacity-[25%] bg-off-white overflow-hidden">
+              <div className="w-[50%] h-[75%] relative mix-blend-darken opacity-[15%] bg-[#EFF366] overflow-hidden">
                 <MouseParallax enableOnTouchDevice={false} isAbsolutelyPositioned lerpEase={0.1} strength={0.033} zIndex={20} parallaxContainerRef={footerRef2}>
                   <Image
                     fill

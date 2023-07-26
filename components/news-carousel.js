@@ -41,7 +41,7 @@ export default function NewsCarousel({ items, initiatives }) {
                       <SanityImage
                         image={e.teaserImage}
                         sizes="(max-width: 1024px) 100vw, 25vw"
-                        className="scale-[1.0075]"
+                        className="scale-[1.0075] transition-transform ease-in-out duration-[1000ms] group-hover:scale-[1.065]"
                       />
                     )}
                   </div>
