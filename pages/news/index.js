@@ -35,8 +35,8 @@ export default function News(initialData) {
 
                 <div className="flex flex-wrap justify-center px-5 lg:px-[7.5vw]">
                   <div className="w-full lg:w-8/12 mb-[20vw] lg:mb-[15vw] xl:mb-[12vw]">
-                    <div className="content font-display italic text-off-black text-[20px] lg:text-[25px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight text-center">
-                      <p>Here&apos;s the lowdown on future city centre initiatives and events, as well as the latest on Nottingham&apos;s shops and eateries and other important news.</p>
+                    <div className="content font-display text-off-black text-[20px] lg:text-[25px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight text-center">
+                      <p>Here&apos;s the <em>lowdown</em> on future city centre <em>initiatives</em> and <em>events</em>, as well as the latest on Nottingham&apos;s <em>shops</em> and <em>eateries</em> and other important news.</p>
                     </div>
                   </div>
 

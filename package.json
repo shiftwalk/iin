@@ -29,6 +29,7 @@
     "@sanity/block-content-to-react": "^3.0.0",
     "@studio-freight/react-lenis": "^0.0.23",
     "@svgr/webpack": "^8.0.1",
+    "conditional-wrap": "^1.0.2",
     "embla-carousel-react": "^8.0.0-rc11",
     "eslint-config-next": "^13.2.4",
     "framer-motion": "^10.3.0",
@@ -44,12 +45,13 @@
     "react-device-detect": "^2.2.3",
     "react-div-100vh": "^0.7.0",
     "react-dom": "^18.2.0",
+    "react-just-parallax": "^3.1.16",
     "react-portable-text": "^0.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "eslint": "8.36.0",
     "postcss": "^8.4.5",
-    "tailwindcss": "^3.0.13"
+    "tailwindcss": "^3.2.0"
   }
 }

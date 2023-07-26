@@ -26,6 +26,12 @@
   }
 }
 
+.content--no-anchor {
+  & > p > a {
+    @apply no-underline hover:text-current;
+  }
+}
+
 .content--news {
   & > p {
     @apply text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight

@@ -19,9 +19,9 @@ export default function NewsTeaser({ image, heading, subHeading, href, className
 
       <div className="w-full">
         {subHeading && (
-          <span className="text-lg lg:text-lg 2xl:text-xl leading-none lg:leading-none 2xl:leading-none font-display italic mb-1 lg:mb-3 block">{subHeading}</span>
+          <span className="text-lg lg:text-lg 2xl:text-xl leading-none lg:leading-none 2xl:leading-none font-display mb-1 lg:mb-3 block">{subHeading}</span>
         )}
-        <span className="block text-xl lg:text-xl 2xl:text-2xl leading-[1.05] lg:leading-[1.05] 2xl:leading-[1.05] font-medium">{heading}</span>
+        <span className="block text-xl lg:text-xl 2xl:text-2xl leading-[1.15] lg:leading-[1.15] 2xl:leading-[1.15] font-medium">{heading}</span>
       </div>
     </Link>
   )

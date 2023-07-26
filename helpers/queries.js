@@ -51,6 +51,27 @@ export const homeQuery = `{
 export const aboutQuery = `{
   "about": *[_type == "about"][0]{
     title,
+    crimeReductionInitiatives[] {
+      title,
+      teaserImage {
+        asset-> {
+          ...
+        },
+        caption,
+        alt,
+        hotspot {
+          x,
+          y
+        },
+      },
+      excerpt,
+      article-> {
+        title,
+        slug {
+          current
+        }
+      }
+    },
     "latestNews": *[_type == "news"]{
       title,
       category->{

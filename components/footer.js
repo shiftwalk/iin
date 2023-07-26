@@ -7,8 +7,13 @@ import { m } from 'framer-motion'
 import FancyLink from '@/components/fancyLink'
 import Socials from '@/components/socials'
 import Image from 'next/image'
+import { MouseParallax } from 'react-just-parallax'
+import { useRef } from 'react'
 
 export default function Footer() {
+  const footerRef1 = useRef()
+  const footerRef2 = useRef()
+
   return (
     <footer className="bg-off-black selection:text-off-white selection:bg-[#FF5F38] pb-16 lg:pb-0">
       <div className="relative flex overflow-x-hidden text-[10vw] text-white uppercase">
@@ -33,37 +38,40 @@ export default function Footer() {
 
       <div className="p-5 pb-[10vw] relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div className="col-span-1 aspect-square bg-[#5F0EFF] selection:text-[#5F0EFF] flex items-center justify-center relative">
-            <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0 bg-[#5F0EFF]">
-              <div className="w-[50%] h-[75%] relative mix-blend-lighten opacity-[25%] bg-off-white">
-                <Image
-                  fill
-                  quality={80}
-                  src="/images/footer-cta.jpg"
-                  alt="Nottingham during the day"
-                  className="w-full h-full absolute inset-0 object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 25vw"
-                />
+          <div className="col-span-1 aspect-square bg-[#5F0EFF] selection:text-[#5F0EFF] flex items-center justify-center relative group" ref={footerRef1}>
+            <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0 bg-[#5F0EFF] opacity-0 scale-[0.75] lg:group-hover:opacity-100 lg:group-hover:scale-[1] transition-all ease-in-out duration-[550ms]">
+                <div className="w-[50%] h-[75%] relative mix-blend-lighten opacity-[25%] bg-off-white overflow-hidden">
+                  <MouseParallax enableOnTouchDevice={false} isAbsolutelyPositioned lerpEase={0.1} strength={0.033} zIndex={20} parallaxContainerRef={footerRef1}>
+                    <Image
+                      fill
+                      quality={80}
+                      src="/images/footer-cta.jpg"
+                      alt="Nottingham during the day"
+                      className="w-full h-full absolute inset-0 object-cover object-center scale-[1.05]"
+                      sizes="(max-width: 1024px) 100vw, 25vw"
+                    />
+                  </MouseParallax>
               </div>
             </div>
 
             <div className="w-10/12 text-center text-white relative z-10">
               <span className="block text-[9.5vw] leading-none md:text-[5vw] md:leading-none xl:text-[4.5vw] xl:leading-none mb-8 text-[#EFF366]">
                 <span className="uppercase">Follow us</span>
-                <span className="block font-display">on <span className="uppercase italic relative">socials<svg className="w-full absolute -bottom-2 left-0 right-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 431.774 17.59">
+                <span className="block font-display">on <span className="uppercase italic relative">socials<svg xmlns="http://www.w3.org/2000/svg" className="absolute bottom-[-10px] left-0 right-0 w-full" viewBox="0 0 431.774 17.59">
   <defs>
-    <clipPath id="a">
-      <path fill="none" d="M0 17.592h431.774V.002H0Z" data-name="Path 1178"/>
+    <clipPath id="clip-path">
+      <path id="Path_1178" data-name="Path 1178" d="M0-1.7H431.774v-17.59H0Z" transform="translate(0 19.292)" fill="none"/>
     </clipPath>
   </defs>
-  <g data-name="Group 417">
-    <g clipPath="url(#a)" data-name="Group 416">
-      <g data-name="Group 415">
-        <path fill="none" stroke="#eff366" strokeMiterlimit="120" strokeWidth="3" d="m1.289 2.597 12.378 12.378L25.736 2.597l12.378 12.378L50.489 2.597l12.073 12.378L74.94 2.597l12.379 12.378 12.07-12.378 12.378 12.378 12.377-12.378 12.067 12.378 12.378-12.378 12.38 12.378 12.069-12.378 12.378 12.378 12.378-12.378 12.069 12.378 12.379-12.378 12.378 12.378 12.378-12.378 12.074 12.378 12.073-12.378 12.378 12.378 12.379-12.378 12.045 12.378 12.042-12.378 12.378 12.378 12.382-12.378 12.069 12.378 12.378-12.378 12.378 12.378 12.069-12.378 12.378 12.378L418.4 2.597l12.068 12.378" data-name="Path 1177"/>
+  <g id="Group_417" data-name="Group 417" transform="translate(0 19.292)">
+    <g id="Group_416" data-name="Group 416" transform="translate(0 -19.292)" clipPath="url(#clip-path)">
+      <g id="Group_415" data-name="Group 415" transform="translate(1.289 2.597)">
+        <path id="Path_1177" data-name="Path 1177" d="M0,0,12.378,12.378,24.447,0,36.825,12.378,49.2,0,61.273,12.378,73.651,0,86.03,12.378,98.1,0l12.378,12.378L122.855,0l12.067,12.378L147.3,0,159.68,12.378,171.749,0l12.378,12.378L196.505,0l12.069,12.378L220.953,0l12.378,12.378L245.709,0l12.074,12.378L269.856,0l12.378,12.378L294.613,0l12.045,12.378L318.7,0l12.378,12.378L343.46,0l12.069,12.378L367.907,0l12.378,12.378L392.354,0l12.378,12.378L417.111,0l12.068,12.378" fill="none" stroke="#eff366" strokeMiterlimit="120" strokeWidth="3"/>
       </g>
     </g>
   </g>
-</svg></span></span>
+</svg>
+</span></span>
               </span>
 
               <p className="mb-12 xl:text-xl xl:leading-snug max-w-[500px] md:max-w-[400px] xl:max-w-[500px] mx-auto">Amazing food and drinks, all the shops you&apos;ll ever need, and inspirational events and activities.</p>
@@ -72,8 +80,23 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="col-span-1 aspect-square bg-[#EFF366] selection:text-[#EFF366] flex items-center justify-center">
-            <div className="w-10/12 text-center text-off-black">
+          <div className="col-span-1 aspect-square bg-[#EFF366] selection:text-[#EFF366] flex items-center justify-center relative group/main" ref={footerRef2}>
+            <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0 bg-[#EFF366] opacity-0 scale-[0.75] lg:group-hover/main:opacity-100 lg:group-hover/main:scale-[1] transition-all ease-in-out duration-[550ms]">
+              <div className="w-[50%] h-[75%] relative mix-blend-darken opacity-[25%] bg-off-white overflow-hidden">
+                <MouseParallax enableOnTouchDevice={false} isAbsolutelyPositioned lerpEase={0.1} strength={0.033} zIndex={20} parallaxContainerRef={footerRef2}>
+                  <Image
+                    fill
+                    quality={80}
+                    src="/images/footer-cta.jpg"
+                    alt="Nottingham during the day"
+                    className="w-full h-full absolute inset-0 object-cover object-center scale-[1.05]"
+                    sizes="(max-width: 1024px) 100vw, 25vw"
+                  />
+                </MouseParallax>
+              </div>
+            </div>
+            
+            <div className="w-10/12 text-center text-off-black relative z-[10]">
               <span className="block text-[9.5vw] leading-none md:text-[5vw] md:leading-none xl:text-[4.5vw] xl:leading-none mb-8">
                 <span className="uppercase relative">Sign up <IconSquiggleUnderline className="absolute bottom-0 left-[-5%] right-[-5%] w-[110%]" /></span>
                 <span className="block font-display">for <span className="uppercase italic">updates</span></span>

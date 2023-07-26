@@ -77,8 +77,8 @@ export default function WhatsOn(initialData) {
                 <div className="relative">
                   <div className="flex flex-wrap px-5 lg:px-[5vw] max-w-[1800px] mx-auto mb-8 lg:mb-0">
                     <div className="w-full lg:w-[55%]">
-                      <div className="content font-display italic text-off-black text-[28px] lg:text-[32px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight mb-5 lg:mb-8">
-                        <p>There&apos;s always something going on in Nottingham city centre. Not only is it great for shopping, dining, nights out, sporting events and more, there&apos;s also regular events to get involved in.</p>
+                      <div className="content font-display text-off-black text-[28px] lg:text-[32px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight mb-5 lg:mb-8">
+                        <p><em>There&apos;s always something going on</em> in Nottingham city centre. Not only is it great for shopping, dining, nights out, sporting events and more, there&apos;s also regular events to get involved in.</p>
                       </div>
 
                       <div className="content text-off-black text-lg lg:text-xl 2xl:text-2xl leading-tight lg:leading-tight 2xl:leading-tight max-w-[90%] mb-5 lg:mb-8">

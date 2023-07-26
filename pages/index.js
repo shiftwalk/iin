@@ -40,7 +40,7 @@ export default function Home(initialData) {
               <div className="p-[5vw] lg:pr-0 pb-[7vw] mb-[7.5vw] lg:mb-[15vw] lg:pb-[33vw] relative">
                 <div className="flex flex-wrap relative">
                   <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
-                    <h1 className="text-[7.5vw] leading-none lg:text-[4vw] lg:leading-none xl:leading-none mb-[1vw] uppercase text-[#FF5F38] max-w-[100%]">It&apos;s In Nottingham - <span className="font-display italic">For everything Nottingham city centre</span></h1>
+                    <h1 className="text-[7.5vw] leading-none lg:text-[4vw] lg:leading-none xl:leading-none mb-[1vw] uppercase text-[#FF5F38] max-w-[100%]">It&apos;s In Nottingham - <span className="font-display">For <em>everything</em> Nottingham city centre</span></h1>
                     
                     {/* <IconSlattedUnderline className="w-[45%] text-[#FF5F38] mb-[3vw]" /> */}
 
@@ -118,13 +118,15 @@ export default function Home(initialData) {
                 </div>
               </div>
 
-              <div className="p-[5vw] pr-0 pb-[10vw]">
-                <h2 className="text-[10vw] leading-none lg:text-[6vw] lg:leading-none xl:text-[5.5vw] xl:leading-none max-w-[550px] lg:max-w-[100%] text-[#BDB800] mb-3">
-                  <span className="uppercase block">Latest</span>
-                  <span className="uppercase block">News</span>
-                </h2>
+              <div className="py-[5vw] pr-0 pb-[10vw]">
+                <div className="px-[5vw]">
+                  <h2 className="text-[10vw] leading-none lg:text-[6vw] lg:leading-none xl:text-[5.5vw] xl:leading-none max-w-[550px] lg:max-w-[100%] text-[#BDB800] mb-3">
+                    <span className="uppercase block">Latest</span>
+                    <span className="uppercase block">News</span>
+                  </h2>
 
-                <IconSquiggleUnderline className="w-[65%] lg:w-[40%] xl:w-[33%] text-[#BDB800] translate-x-[-2vw] mb-[4vw]" />
+                  <IconSquiggleUnderline className="w-[65%] lg:w-[40%] xl:w-[33%] text-[#BDB800] translate-x-[-2vw] mb-[4vw]" />
+                </div>
 
                 <div className="mb-[8vw] lg:mb-[5vw]">
                   <NewsCarousel items={home.latestNews} />

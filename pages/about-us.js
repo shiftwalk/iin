@@ -102,8 +102,8 @@ export default function AboutUs(initialData) {
                   </div>
                 </div>
                 <div className="ml-auto w-full lg:w-[54%] px-5 lg:pl-12 2xl:pl-20">
-                  <div className="content font-display italic text-white text-[20px] lg:text-[25px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight max-w-[95%] lg:max-w-[90%]">
-                    <p>We are It&apos;s in Nottingham.</p>
+                  <div className="content font-display text-white text-[20px] lg:text-[25px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight max-w-[95%] lg:max-w-[90%]">
+                    <p><em>We are It&apos;s in Nottingham.</em></p>
                     <p>Our passion for Nottingham and commitment to support and promote our members will drive economic growth – creating a vibrant city centre which is a destination of choice for visitors.</p>
                     <p>Through every interaction we will build trust and inspire pride in our city centre, its businesses and its people to create a more attractive, healthier, safer, and greener place to live, work and play.</p>
                   </div>
@@ -206,15 +206,17 @@ export default function AboutUs(initialData) {
                 </div>
               </div>
 
-              <div className="px-[5vw] pr-0 mb-[5vw] lg:mb-[10vw]">
-                <h3 className="font-display italic text-off-black text-[20px] lg:text-[25px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight mb-3">
-                  <span className="uppercase block">Our crime reduction initiatives</span>
-                </h3>
+              <div className="pr-0 mb-[5vw] lg:mb-[10vw]">
+                <div className="px-[5vw]">
+                  <h3 className="font-display text-off-black text-[24px] lg:text-[32px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight mb-3">
+                    <span className="block">Our crime reduction initiatives</span>
+                  </h3>
 
-                <IconSquiggleUnderline className="w-[80%] lg:w-[38%] 2xl:w-[44%] text-off-black translate-x-[-1vw] mb-[4vw]" />
+                  <IconSquiggleUnderline className="w-[80%] lg:w-[38%] 2xl:w-[44%] text-off-black translate-x-[-1vw] mb-[4vw]" />
+                </div>
 
                 <div className="mb-[8vw] lg:mb-[5vw]">
-                  <NewsCarousel items={about.latestNews} />
+                  <NewsCarousel items={about.crimeReductionInitiatives} initiatives />
                 </div>
               </div>
 
