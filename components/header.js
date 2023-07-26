@@ -9,7 +9,7 @@ import { AnimatePresence, domAnimation, LazyMotion, m, useScroll, useTransform }
 import { useRouter } from 'next/router'
 import Div100vh from 'react-div-100vh'
 import Image from 'next/image'
-import {AndroidView, IOSView, isAndroid, isIOS} from 'react-device-detect';
+import {isAndroid, isIOS} from 'react-device-detect';
 
 
 export default function Header() {
@@ -63,21 +63,25 @@ export default function Header() {
     logoColor = 'text-black'
   )
 
+  let appDownload = 'https://example.com'
+  isIOS && (appDownload = 'https://example.com/ios')
+  isAndroid && (appDownload = 'https://example.com/android')
+
   return (
     <>
       <LazyMotion features={domAnimation}>
-        <button aria-label={appDownloadOpen ? 'Close App Download Menu' : 'Open App Download Menu' } onClick={appDownloadToggle} className={`a11y-focus rounded-full flex items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] bg-[#EBEA33] border border-[#EBEA33] text-black group overflow-hidden`}>
+        <a href={appDownload} target="_blank" rel="noopener noreferrer" className={`a11y-focus rounded-full flex items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] bg-[#EBEA33] border border-[#EBEA33] text-black group overflow-hidden`}>
           <div className="flex space-x-2 mr-3">
-            {IOSView && (
+            {isIOS && (
               <IconApple className="w-5" />
             )}
-            {AndroidView && (
+            {isAndroid && (
               <IconAndroid className="w-5" />
             )}
           </div>
 
           <span className="block">Download App</span>
-        </button>
+        </a>
 
         <header className={`px-5 lg:px-8 p-5 lg:p-6 2xl:p-8 2xl:px-10 pb-0 lg:pb-0 2xl:pb-0 fixed top-0 left-0 right-0 w-full z-[1000] ${menuOpen ? '' : '' }`}>
           <div className="flex flex-wrap relative">

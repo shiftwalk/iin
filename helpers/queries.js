@@ -41,6 +41,10 @@ export const homeQuery = `{
         asset->
       }
     }
+  },
+  "global": *[_type == "global"][0]{
+    iOsAppDownloadLink,
+    androidAppDownloadLink
   }
 }`
 

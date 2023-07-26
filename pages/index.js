@@ -17,7 +17,7 @@ const pageService = new SanityPageService(homeQuery)
 
 
 export default function Home(initialData) {
-  const { data: { home }  } = pageService.getPreviewHook(initialData)()
+  const { data: { home, global }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
       <NextSeo title={home.title} />
