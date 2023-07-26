@@ -90,12 +90,12 @@ export default function Header() {
                 </div>
 
                 <div className="relative z-[1] overflow-hidden">
-                  <span className="block transition-transform ease-[cubic-bezier(0.71,0,0.17,1)] duration-[550ms] translate-y-none group-hover:translate-y-[-105%]">Download App</span>
-                  <span className="block absolute inset-0 transition-transform ease-[cubic-bezier(0.71,0,0.17,1)] duration-[550ms] translate-y-[105%] group-hover:translate-y-0">Download App</span>
+                  <span className="block transition-transform ease-out duration-[450ms] translate-y-none group-hover:translate-y-[-105%]">Download App</span>
+                  <span className="block absolute inset-0 transition-transform ease-out duration-[450ms] translate-y-[105%] group-hover:translate-y-0">Download App</span>
                 </div>
 
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0] opacity-0 group-hover:opacity-100 group-hover:delay-[0ms] delay-[550ms]">
-                  <div className="w-[5px] h-[5px] bg-[#EBEA33] rounded-full transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[550ms] group-hover:scale-[75] origin-center"></div>
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0] opacity-0 group-hover:opacity-100 group-hover:delay-[0ms] delay-[750ms]">
+                  <div className="w-[5px] h-[5px] bg-[#EBEA33] rounded-full transition-all ease-out duration-[400ms] group-hover:duration-[600ms] group-hover:scale-[75] origin-center"></div>
                 </div>
               </button>
             </div>
