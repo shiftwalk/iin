@@ -46,7 +46,7 @@ export default function HomeHero({ isActive, position }) {
       <span style={{ top: position.y - 50, left: position.x - 50 }} className={`w-36 h-36 items-center justify-center bg-[#EBEA33] text-off-black rounded-full absolute transition-opacity ease-in-out duration-[400ms] cursor-none pointer-events-none z-[20] uppercase text-3xl hidden lg:flex ${isActive ? 'opacity-100' : 'opacity-0' }`}>{!videoPlaying ? 'Play' : 'Pause' }</span>
       
 
-      <button onClick={() => toggleVideo()} className={`w-full text-center uppercase relative z-10 transition-opacity ease-in-out duration-[400ms] lg:cursor-none ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
+      <button onClick={() => toggleVideo()} className={`w-full text-center uppercase relative z-10 transition-opacity ease-in-out duration-[400ms] lg:cursor-none a11y-focus   ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
         <div className="relative z-10">
           <m.div variants={container}>
             <span className="block text-[12.5vw] lg:text-[12vw] leading-[0.9] lg:leading-[0.9] overflow-hidden">

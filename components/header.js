@@ -103,7 +103,7 @@ export default function Header() {
             <div className="ml-auto w-[20%] max-w-[180px] 2xl:max-w-[200px] absolute top-0 right-0 hidden lg:block">
               <m.div style={{ scale: scale }} className="origin-top-right">
                 <m.div style={{ rotateZ: rotate }} className="origin-center">
-                  <Link scroll={false} href="/" className="block">
+                  <Link scroll={false} href="/" className="block a11y-focus focus-visible:ring-white">
                     <IconLogo className={`w-full transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[700ms] ${logoColor}`} />
                   </Link>
                 </m.div>

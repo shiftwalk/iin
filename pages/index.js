@@ -12,6 +12,7 @@ import ReactCursorPosition from 'react-cursor-position';
 import ImageScale from '@/components/image-scale'
 import { homeQuery } from '@/helpers/queries'
 import SanityPageService from '@/services/sanityPageService'
+import Button from '@/components/button'
 const pageService = new SanityPageService(homeQuery)
 
 
@@ -47,7 +48,9 @@ export default function Home(initialData) {
                       <p>Discover what&apos;s going on, make plans for what&apos;s around the corner and stay up to date with everything Nottingham city centre - all in one place. Whatever your vibe, Nottingham&apos;s got it. And <em>It&apos;s in Nottingham</em> is the best way to find out about it.</p>
                     </div>
 
-                    <Link href="/about-us" className="a11y-focus rounded-full border border-[#B4C0C6] py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none">Find out more about us</Link>
+                    {/* <Link href="/about-us" className="a11y-focus rounded-full border border-[#B4C0C6] py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none">Find out more about us</Link> */}
+
+                    <Button href="/about-us" label="Find out more about us" bgColor="bg-[#FF5F38]" />
                   </div>
 
                   <div className="w-full lg:w-[28vw] h-[100vw] lg:h-[40vw] bg-red relative lg:absolute top-0 right-0">
