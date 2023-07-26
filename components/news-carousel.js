@@ -32,6 +32,7 @@ export default function NewsCarousel({ items }) {
                     <SanityImage
                       image={e.teaserImage}
                       sizes="(max-width: 1024px) 100vw, 25vw"
+                      className="scale-[1.0075]"
                     />
                   </div>
 

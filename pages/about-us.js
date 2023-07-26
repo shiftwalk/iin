@@ -49,8 +49,8 @@ export default function AboutUs(initialData) {
         >
           <main className="">
             <article>
-              <div className="w-full bg-[#4000B5] pt-[50vw] pb-[16vw] lg:py-[20vw] xl:py-[15vw] mb-[5vw] lg:mb-[10vw] selection:text-[#4000B5] selection:bg-[#23D6D1] relative">
-                <div className="w-[33%] lg:w-[19vw] 2xl:w-[18vw] h-[52vw] lg:h-[28vw] 2xl:h-[26vw] bg-red absolute top-[11%] lg:top-[8%] left-0 overflow-hidden">
+              <div className="w-full bg-[#4000B5] selection:text-[#4000B5] selection:bg-[#23D6D1] relative min-h-screen flex flex-col items-center justify-center">
+                <div className="w-[33%] lg:w-[19vw] 2xl:w-[18vw] h-[52vw] lg:h-[28vw] 2xl:h-[26vw] bg-red absolute top-[15%] lg:top-[13%] left-0 overflow-hidden">
                   <ImageScale
                     src="/images/about-01.jpg"
                     sizes="(max-width: 1024px) 100vw, 33vw"
@@ -63,8 +63,17 @@ export default function AboutUs(initialData) {
                     sizes="(max-width: 1024px) 100vw, 45vw"
                   />
                 </div>
+
+                <div className="w-[55%] lg:w-[45vw] h-[36vw] lg:h-[37vw] bg-red absolute bottom-[15%] left-[-5%] overflow-hidden block lg:hidden">
+                <div className="h-full relative overflow-hidden w-full">
+                  <ImageScale
+                    src="/images/about-03.jpg"
+                    sizes="(max-width: 1024px) 100vw, 55vw"
+                  />
+                </div>
+                </div>
                 
-                <div className="w-full text-center uppercase pb-[4vw] lg:pb-[10vw] xl:pb-[10vw] relative z-10">
+                <div className="w-full text-center uppercase relative z-10">
                   <m.h1 variants={container} className="text-[15.5vw] lg:text-[12vw] 2xl:text-[12vw] leading-none lg:leading-none 2xl:leading-none text-[#23D6D1]">
                     <span className="block overflow-hidden relative">
                       <m.span className="block" variants={reveal}>Get To</m.span>
@@ -80,22 +89,22 @@ export default function AboutUs(initialData) {
                     {/* <IconSquiggleUnderline className="w-[80%] lg:w-[60%] mx-auto mt-2" /> */}
                   </m.h1>
                 </div>
+              </div>
 
-                <div className="flex flex-wrap relative z-10 lg:pl-[5vw] 2xl:pl-[7.5vw]">
-                  <div className="w-full lg:w-[43%] hidden lg:block">
-                    <div className="h-[27vw] relative overflow-hidden w-full">
-                      <ImageScale
-                        src="/images/about-03.jpg"
-                        sizes="(max-width: 1024px) 100vw, 55vw"
-                      />
-                    </div>
+              <div className="flex flex-wrap relative z-10 lg:pl-[5vw] 2xl:pl-[7.5vw] bg-[#4000B5] pb-[16vw] lg:pb-[20vw] xl:pb-[15vw] mb-[5vw] lg:mb-[10vw] selection:text-[#4000B5] selection:bg-[#23D6D1]">
+                <div className="w-full lg:w-[43%] hidden lg:block translate-y-[-15vh]">
+                  <div className="h-[27vw] relative overflow-hidden w-full">
+                    <ImageScale
+                      src="/images/about-03.jpg"
+                      sizes="(max-width: 1024px) 100vw, 55vw"
+                    />
                   </div>
-                  <div className="ml-auto w-full lg:w-[54%] px-5 lg:pl-12 2xl:pl-20">
-                    <div className="content font-display italic text-white text-[20px] lg:text-[25px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight max-w-[95%] lg:max-w-[90%] pt-[10vw]">
-                      <p>We are It&apos;s in Nottingham.</p>
-                      <p>Our passion for Nottingham and commitment to support and promote our members will drive economic growth – creating a vibrant city centre which is a destination of choice for visitors.</p>
-                      <p>Through every interaction we will build trust and inspire pride in our city centre, its businesses and its people to create a more attractive, healthier, safer, and greener place to live, work and play.</p>
-                    </div>
+                </div>
+                <div className="ml-auto w-full lg:w-[54%] px-5 lg:pl-12 2xl:pl-20">
+                  <div className="content font-display italic text-white text-[20px] lg:text-[25px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight max-w-[95%] lg:max-w-[90%]">
+                    <p>We are It&apos;s in Nottingham.</p>
+                    <p>Our passion for Nottingham and commitment to support and promote our members will drive economic growth – creating a vibrant city centre which is a destination of choice for visitors.</p>
+                    <p>Through every interaction we will build trust and inspire pride in our city centre, its businesses and its people to create a more attractive, healthier, safer, and greener place to live, work and play.</p>
                   </div>
                 </div>
               </div>

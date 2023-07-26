@@ -31,8 +31,25 @@
     @apply text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight
   }
 
+  & > ul {
+    @apply text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight list-inside;
+
+    & > li {
+      @apply mb-2 lg:mb-3 block relative pl-4;
+
+      &::before {
+        content: " ";
+        @apply w-[6px] h-[6px] rounded-full bg-black block absolute top-2 left-0;
+      }
+    }
+  }
+
   & > figure {
-    @apply mb-5 lg:mb-8;
+    @apply mb-5 lg:mb-8 w-full;
+
+    & img {
+      @apply w-full scale-[1.01];
+    }
   }
 
   & > blockquote {

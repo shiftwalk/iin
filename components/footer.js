@@ -3,17 +3,14 @@ import IconSmile from '@/icons/smile.svg'
 import IconArrow from '@/icons/arrow.svg'
 import IconZagUnderline from '@/icons/zag-underline.svg'
 import IconSquiggleUnderline from '@/icons/squiggle-underline.svg'
-import { m, useScroll, useTransform } from 'framer-motion'
+import { m } from 'framer-motion'
 import FancyLink from '@/components/fancyLink'
 import Socials from '@/components/socials'
 import Image from 'next/image'
 
 export default function Footer() {
-  const { scrollY } = useScroll()
-  const rotate = useTransform(scrollY, [0, 850], ['360deg', '0deg'], { clamp: false })
-
   return (
-    <footer className="bg-off-black selection:text-off-white selection:bg-[#FF5F38]">
+    <footer className="bg-off-black selection:text-off-white selection:bg-[#FF5F38] pb-16 lg:pb-0">
       <div className="relative flex overflow-x-hidden text-[10vw] text-white uppercase">
         <div className="animate-marquee will-change-transform whitespace-nowrap pt-[8vw] lg:pt-[6vw] pb-[0vw] lg:pb-[2vw]">
           <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
@@ -81,10 +78,10 @@ export default function Footer() {
         </div>
 
         <div className="absolute bottom-[3vw] left-0 right-0 w-full hidden lg:block">
-          <div className="mx-auto w-[20%] max-w-[190px]">
-            <m.div style={{ rotateZ: rotate }}>
+          <div className="mx-auto w-[15%] max-w-[250px]">
+            <div className="animate-spin-slower">
               <IconLogo className={`w-full transition-colors ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] text-[#FF5F38]`} />
-            </m.div>
+            </div>
           </div>
         </div>
       </div>
@@ -97,7 +94,7 @@ export default function Footer() {
           <li className="pr-3">|</li>
           <li className="font-medium"><a href="https://www.cubicstudio.co.uk/" rel="noopener noreferrer" target="_blank">Branding By Cubic</a></li>
 
-          <li className="ml-auto text-right"><a href="#" className="a11y-focus"><span className="hidden lg:inline">Back&nbsp;</span>To Top <IconArrow className="w-2 lg:w-3 inline ml-1" /></a></li>
+          <li className="ml-auto text-right hidden lg:block"><a href="#" className="a11y-focus"><span className="hidden lg:inline">Back&nbsp;</span>To Top <IconArrow className="w-2 lg:w-3 inline ml-1" /></a></li>
         </ul>
       </nav>
     </footer>

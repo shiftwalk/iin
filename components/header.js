@@ -50,7 +50,13 @@ export default function Header() {
   )
 
   router.asPath == '/whats-on' && !menuOpen && (
-    menuButtonColor = 'bg-white border-white',
+    menuButtonColor = 'bg-white',
+    appbuttonColor = 'bg-transparent border border-black text-black',
+    logoColor = 'text-black'
+  )
+
+  router.asPath == '/contact' && !menuOpen && (
+    menuButtonColor = 'border-black',
     appbuttonColor = 'bg-transparent border border-black text-black',
     logoColor = 'text-black'
   )
@@ -58,17 +64,26 @@ export default function Header() {
   return (
     <>
       <LazyMotion features={domAnimation}>
+        <button aria-label={appDownloadOpen ? 'Close App Download Menu' : 'Open App Download Menu' } onClick={appDownloadToggle} className={`a11y-focus rounded-full flex items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] bg-[#EBEA33] border border-[#EBEA33] text-black`}>
+          <div className="flex space-x-2 mr-3">
+            <IconApple className="w-5" />
+            <IconAndroid className="w-5" />
+          </div>
+
+          <span className="block">Download App</span>
+        </button>
+
         <header className={`px-5 lg:px-8 p-5 lg:p-6 2xl:p-8 2xl:px-10 pb-0 lg:pb-0 2xl:pb-0 fixed top-0 left-0 right-0 w-full z-[1000] ${menuOpen ? '' : '' }`}>
           <div className="flex flex-wrap relative">
             <div className="flex-1 flex space-x-6">
-              <button aria-label={menuOpen ? 'Close Menu' : 'Open Menu' } onClick={menuToggle} className={`a11y-focus rounded-full w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] flex items-center justify-center border ${menuButtonColor}`}>
+              <button aria-label={menuOpen ? 'Close Menu' : 'Open Menu' } onClick={menuToggle} className={`a11y-focus rounded-full w-[50px] lg:w-[60px] h-[50px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] flex items-center justify-center border ${menuButtonColor}`}>
                 <div className="w-full p-2 lg:p-3">
                   <span className={`transition-all ease-[cubic-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-black ${menuOpen ? 'rotate-45' : 'mb-1 lg:mb-3' }`}></span>
                   <span className={`transition-all ease-[cubic-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-black ${menuOpen ? '-rotate-45' : '' }`}></span>
                 </div>
               </button>
 
-              <button aria-label={appDownloadOpen ? 'Close App Download Menu' : 'Open App Download Menu' } onClick={appDownloadToggle} className={`a11y-focus rounded-full flex items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none ${appbuttonColor}`}>
+              <button aria-label={appDownloadOpen ? 'Close App Download Menu' : 'Open App Download Menu' } onClick={appDownloadToggle} className={`a11y-focus rounded-full items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none hidden lg:flex ${appbuttonColor}`}>
                 <div className="flex space-x-2 mr-3">
                   <IconApple className="w-5" />
                   <IconAndroid className="w-5" />
@@ -78,12 +93,20 @@ export default function Header() {
               </button>
             </div>
 
-            <div className="ml-auto w-[20%] max-w-[180px] 2xl:max-w-[200px] absolute top-0 right-0">
+            <div className="ml-auto w-[20%] max-w-[180px] 2xl:max-w-[200px] absolute top-0 right-0 hidden lg:block">
               <m.div style={{ scale: scale }} className="origin-top-right">
                 <m.div style={{ rotateZ: rotate }} className="origin-center">
-                  <IconLogo className={`w-full transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[700ms] ${logoColor}`} />
+                  <Link scroll={false} href="/" className="block">
+                    <IconLogo className={`w-full transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[700ms] ${logoColor}`} />
+                  </Link>
                 </m.div>
               </m.div>
+            </div>
+
+            <div className="ml-auto w-[25%] max-w-[90px] 2xl:max-w-[200px] absolute top-0 right-0 block lg:hidden">
+              <Link scroll={false} href="/" className="origin-center block">
+                <IconLogo className={`w-full transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[700ms] ${logoColor}`} />
+              </Link>
             </div>
           </div>
         </header>
@@ -100,7 +123,7 @@ export default function Header() {
                 initial={{ scale: 1 }}
                 animate={{ scale: 100, transition: { duration: 0.75, ease: [0.71,0,0.17,1] }}}
                 exit={{ scale: 1, transition: { duration: 0.75, delay: 0.05, ease: [0.71,0,0.17,1]} }}
-                className="w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] rounded-full bg-[#24D6D1] mx-5 lg:mx-8 m-5 lg:m-6 2xl:m-8 2xl:mx-10 absolute top-0 left-0 z-[10]"
+                className="w-[50px] lg:w-[60px] h-[50px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] rounded-full bg-[#24D6D1] mx-5 lg:mx-8 m-5 lg:m-6 2xl:m-8 2xl:mx-10 absolute top-0 left-0 z-[10]"
               >
               </m.div>
               <Div100vh className="w-full h-screen selection:bg-[#EBEA33] selection:text-[#4000B5] flex items-center justify-center relative z-[11]">
