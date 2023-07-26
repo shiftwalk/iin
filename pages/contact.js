@@ -92,7 +92,16 @@ export default function Contact(initialData) {
                         </div>
 
                         <div className="col-span-2">
-                          <button type="submit" className="a11y-focus border border-[#4000B5] bg-[#4000B5] text-off-white py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 rounded-full 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none">Send Message!</button>
+                          <button type="submit" className="a11y-focus border border-[#4000B5] bg-[#4000B5] text-off-white py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 rounded-full 2xl:px-10 inline-block leading-[1.05] 2xl:text-2xl 2xl:leading-[1.05] relative group overflow-hidden">
+                            <div className="relative z-[1] overflow-hidden">
+                              <span className="block transition-transform ease-out duration-[450ms] translate-y-none group-hover:translate-y-[-105%]">Send message!</span>
+                              <span className="block absolute inset-0 transition-transform ease-out duration-[450ms] translate-y-[105%] group-hover:translate-y-0">Send message!</span>
+                            </div>
+
+                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0] opacity-0 group-hover:opacity-100 group-hover:delay-[0ms] delay-[450ms] transition-opacity ease-out duration-[100ms]">
+                              <div className={`w-[5px] h-[5px] rounded-full transition-all ease-out duration-[450ms] group-hover:duration-[600ms] group-hover:scale-[75] origin-center bg-black/20`}></div>
+                            </div>
+                          </button>
                         </div>
                       </form>
                     </div>

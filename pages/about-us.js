@@ -13,6 +13,7 @@ import ImageScale from '@/components/image-scale'
 import SanityPageService from '@/services/sanityPageService'
 import { aboutQuery } from '@/helpers/queries'
 import { reveal } from '@/helpers/transitions'
+import Button from '@/components/button'
 const pageService = new SanityPageService(aboutQuery)
 
 const container = {
@@ -172,7 +173,8 @@ export default function AboutUs(initialData) {
                       <p>Look out for seasonal activities around Halloween and Christmas, get involved in annual favourites like February&apos;s Light Night and make the most of local collaborations we&apos;re a part of such as AyUp Market, the sponsorship of Green Hustle and Pride.</p>
                     </div>
 
-                    <Link href="/" className="a11y-focus rounded-full border border-[#F5F1E1] py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none mx-auto text-[#F5F1E1]">View our latest calendar (PDF)</Link>
+
+                    <Button href="/" label="View our latest calendar (PDF)" bgColor="bg-black/30" large />
                   </div>
                 </div>
                 <div className="col-span-1 bg-off-black bg-opacity-50 order-1 lg:order-2 relative h-[75vw] lg:h-auto">
@@ -234,8 +236,9 @@ export default function AboutUs(initialData) {
                     </div>
 
                     <div className="flex space-x-5">
-                      <Link href="/" className="a11y-focus rounded-full border border-off-black py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 leading-none 2xl:text-2xl 2xl:leading-none block text-off-black">Board Of Directors</Link>
-                      <Link href="/" className="a11y-focus rounded-full border border-off-black py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 leading-none 2xl:text-2xl 2xl:leading-none block text-off-black">The IIN Team</Link>
+                      <Button href="/" label="Board Of Directors" borderColor="border-off-black" bgColor="bg-black/20" large className="w-full" />
+
+                      <Button href="/" label="The IIN Team" borderColor="border-off-black" bgColor="bg-black/20" large className="w-full" />
                     </div>
                   </div>
                 </div>

@@ -50,7 +50,7 @@ export default function Home(initialData) {
 
                     {/* <Link href="/about-us" className="a11y-focus rounded-full border border-[#B4C0C6] py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none">Find out more about us</Link> */}
 
-                    <Button href="/about-us" label="Find out more about us" bgColor="bg-[#FF5F38]" />
+                    <Button href="/about-us" label="Find out more about us" />
                   </div>
 
                   <div className="w-full lg:w-[28vw] h-[100vw] lg:h-[40vw] bg-red relative lg:absolute top-0 right-0">
@@ -131,16 +131,7 @@ export default function Home(initialData) {
                 </div>
 
                 <div className="text-center">
-                  <Link href="/news" className="a11y-focus rounded-full border border-[#B4C0C6] py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none mx-auto relative group overflow-hidden">
-                    <div className="relative z-[1] overflow-hidden">
-                      <span className="block transition-transform ease-[cubic-bezier(0.71,0,0.17,1)] duration-[550ms] translate-y-none group-hover:translate-y-[-100%]">View more news</span>
-                      <span className="block absolute inset-0 transition-transform ease-[cubic-bezier(0.71,0,0.17,1)] duration-[550ms] translate-y-full group-hover:translate-y-0 text-white">View more news</span>
-                    </div>
-
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0]">
-                      <div className="w-[1px] h-[1px] bg-blue rounded-full transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[550ms] group-hover:scale-[300] origin-center"></div>
-                    </div>
-                  </Link>
+                  <Button href="/news" label="View More News" />
                 </div>
               </div>
 

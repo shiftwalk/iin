@@ -76,10 +76,16 @@ export default function Header() {
         <header className={`px-5 lg:px-8 p-5 lg:p-6 2xl:p-8 2xl:px-10 pb-0 lg:pb-0 2xl:pb-0 fixed top-0 left-0 right-0 w-full z-[1000] ${menuOpen ? '' : '' }`}>
           <div className="flex flex-wrap relative">
             <div className="flex-1 flex space-x-6">
-              <button aria-label={menuOpen ? 'Close Menu' : 'Open Menu' } onClick={menuToggle} className={`a11y-focus rounded-full w-[50px] lg:w-[60px] h-[50px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] flex items-center justify-center border ${menuButtonColor}`}>
+              <button aria-label={menuOpen ? 'Close Menu' : 'Open Menu' } onClick={menuToggle} className={`a11y-focus rounded-full w-[50px] lg:w-[60px] h-[50px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] flex items-center justify-center border ${menuButtonColor} group relative overflow-hidden`}>
                 <div className="w-full p-2 lg:p-3">
-                  <span className={`transition-all ease-[cubic-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-black ${menuOpen ? 'rotate-45' : 'mb-1 lg:mb-3' }`}></span>
-                  <span className={`transition-all ease-[cubic-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-black ${menuOpen ? '-rotate-45' : '' }`}></span>
+                  <div className="relative z-[1] w-full">
+                    <span className={`transition-all ease-[cubic-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-black ${menuOpen ? 'rotate-45' : 'mb-1 lg:mb-3' }`}></span>
+                    <span className={`transition-all ease-[cubic-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-black ${menuOpen ? '-rotate-45' : '' }`}></span>
+                  </div>
+
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0] opacity-0 group-hover:opacity-100 group-hover:delay-[0ms] delay-[450ms] transition-opacity ease-out duration-[100ms]">
+                    <div className={`w-[5px] h-[5px] rounded-full transition-all ease-out duration-[450ms] group-hover:duration-[600ms] group-hover:scale-[25] origin-center bg-[#EBEA33]`}></div>
+                  </div>
                 </div>
               </button>
 

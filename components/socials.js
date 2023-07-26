@@ -6,17 +6,29 @@ import IconTwitter from '@/icons/twitter.svg'
 export default function Socials({ className }) {
   return(
     <div className={`flex space-x-3 ${className ? className : '' }`}>
-      <a aria-label="Navigate to our Facebook" href="https://example.com" rel="noopener noreferrer" target="_blank" className="a11y-focus w-12 h-12 flex flex-wrap items-center justify-center rounded-full bg-white hover:bg-[#EFF366] transition-colors ease-in-out duration-300">
-        <IconFacebook className="w-[25%]" />
+      <a aria-label="Navigate to our Facebook" href="https://example.com" rel="noopener noreferrer" target="_blank" className="a11y-focus w-12 h-12 flex flex-wrap items-center justify-center rounded-full bg-white relative overflow-hidden group hover:scale-[1.15] transition-transform ease-out duration-[450ms]">
+        <IconFacebook className="w-[25%] relative z-[1]" />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0] opacity-0 group-hover:opacity-100 group-hover:delay-[0ms] delay-[450ms] transition-opacity ease-out duration-[100ms]">
+          <div className={`w-[5px] h-[5px] rounded-full transition-all ease-out duration-[450ms] group-hover:duration-[600ms] group-hover:scale-[15] origin-center bg-[#EBEA33]`}></div>
+        </div>
       </a>
-      <a aria-label="Navigate to our Instagram" href="https://example.com" rel="noopener noreferrer" target="_blank" className="a11y-focus w-12 h-12 flex flex-wrap items-center justify-center rounded-full bg-white hover:bg-[#EFF366] transition-colors ease-in-out duration-300">
-        <IconInstagram className="w-[50%]" />
+      <a aria-label="Navigate to our Instagram" href="https://example.com" rel="noopener noreferrer" target="_blank" className="a11y-focus w-12 h-12 flex flex-wrap items-center justify-center rounded-full bg-white relative overflow-hidden group hover:scale-[1.15] transition-transform ease-out duration-[450ms]">
+        <IconInstagram className="w-[50%] relative z-[1]" />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0] opacity-0 group-hover:opacity-100 group-hover:delay-[0ms] delay-[450ms] transition-opacity ease-out duration-[100ms]">
+          <div className={`w-[5px] h-[5px] rounded-full transition-all ease-out duration-[450ms] group-hover:duration-[600ms] group-hover:scale-[15] origin-center bg-[#EBEA33]`}></div>
+        </div>
       </a>
-      <a aria-label="Navigate to our LinkedIn" href="https://example.com" rel="noopener noreferrer" target="_blank" className="a11y-focus w-12 h-12 flex flex-wrap items-center justify-center rounded-full bg-white hover:bg-[#EFF366] transition-colors ease-in-out duration-300">
-        <IconLinkedin className="w-[50%]" />
+      <a aria-label="Navigate to our LinkedIn" href="https://example.com" rel="noopener noreferrer" target="_blank" className="a11y-focus w-12 h-12 flex flex-wrap items-center justify-center rounded-full bg-white relative overflow-hidden group hover:scale-[1.15] transition-transform ease-out duration-[450ms]">
+        <IconLinkedin className="w-[50%] relative z-[1]" />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0] opacity-0 group-hover:opacity-100 group-hover:delay-[0ms] delay-[450ms] transition-opacity ease-out duration-[100ms]">
+          <div className={`w-[5px] h-[5px] rounded-full transition-all ease-out duration-[450ms] group-hover:duration-[600ms] group-hover:scale-[15] origin-center bg-[#EBEA33]`}></div>
+        </div>
       </a>
-      <a aria-label="Navigate to our Twitter" href="https://example.com" rel="noopener noreferrer" target="_blank" className="a11y-focus w-12 h-12 flex flex-wrap items-center justify-center rounded-full bg-white hover:bg-[#EFF366] transition-colors ease-in-out duration-300">
-        <IconTwitter className="w-[50%]" />
+      <a aria-label="Navigate to our Twitter" href="https://example.com" rel="noopener noreferrer" target="_blank" className="a11y-focus w-12 h-12 flex flex-wrap items-center justify-center rounded-full bg-white relative overflow-hidden group hover:scale-[1.15] transition-transform ease-out duration-[450ms]">
+        <IconTwitter className="w-[50%] relative z-[1]" />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0] opacity-0 group-hover:opacity-100 group-hover:delay-[0ms] delay-[450ms] transition-opacity ease-out duration-[100ms]">
+          <div className={`w-[5px] h-[5px] rounded-full transition-all ease-out duration-[450ms] group-hover:duration-[600ms] group-hover:scale-[15] origin-center bg-[#EBEA33]`}></div>
+        </div>
       </a>
     </div>
   )
