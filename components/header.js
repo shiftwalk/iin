@@ -9,6 +9,8 @@ import { AnimatePresence, domAnimation, LazyMotion, m, useScroll, useTransform }
 import { useRouter } from 'next/router'
 import Div100vh from 'react-div-100vh'
 import Image from 'next/image'
+import {AndroidView, IOSView, isAndroid, isIOS} from 'react-device-detect';
+
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -66,8 +68,12 @@ export default function Header() {
       <LazyMotion features={domAnimation}>
         <button aria-label={appDownloadOpen ? 'Close App Download Menu' : 'Open App Download Menu' } onClick={appDownloadToggle} className={`a11y-focus rounded-full flex items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] bg-[#EBEA33] border border-[#EBEA33] text-black group overflow-hidden`}>
           <div className="flex space-x-2 mr-3">
-            <IconApple className="w-5" />
-            <IconAndroid className="w-5" />
+            {IOSView && (
+              <IconApple className="w-5" />
+            )}
+            {AndroidView && (
+              <IconAndroid className="w-5" />
+            )}
           </div>
 
           <span className="block">Download App</span>
@@ -141,7 +147,7 @@ export default function Header() {
               </m.div>
               <Div100vh className="w-full h-screen selection:bg-[#EBEA33] selection:text-[#4000B5] flex items-center justify-center relative z-[11]">
                 <div className="w-full text-center flex items-center justify-center">
-                  <nav className="text-[11.5vw] lg:text-[10vh] leading-[0.825] lg:leading-[0.825] text-[#4000B5] font-sans uppercase">
+                  <nav className="text-[11.5vw] lg:text-[12.5vh] leading-[0.825] lg:leading-[0.825] text-[#4000B5] font-sans uppercase">
                     <li
                       className={`block overflow-hidden relative mb-3 ${router.asPath == '/' && 'font-display italic uppercase text-white' }`}
                     >
