@@ -81,11 +81,19 @@ export default function HomeHero({ isActive, position }) {
         </div>
       </button>
 
-      <div className={`absolute inset-0 bg-[#5017B7] z-[2] mix-blend-multiply transition-opacity ease-in-out duration-[400ms] ${videoPlaying ? 'opacity-0' : 'opacity-30' }`}></div>
+      <div className={`absolute inset-0 bg-[#5017B7] z-[2] mix-blend-multiply transition-opacity ease-in-out duration-[400ms] ${videoPlaying ? 'opacity-0' : 'opacity-20' }`}></div>
       
-      <div className={`w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
-        <video poster="/videos/iin-hero-loop-poster.jpg" preload="true" playsInline={'playsInline'} loop={true} autoPlay={true} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
-          <source src="/videos/iin-hero-loop.mp4" type="video/mp4" />
+      <div className={`w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] hidden lg:block ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
+        <video poster="/videos/hero-video-desktop-poster.jpg" preload="true" playsInline={'playsInline'} loop={true} autoPlay={true} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
+          <source src="/videos/hero-video-desktop.mp4" type="video/mp4" />
+
+          Sorry. Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div className={`w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] lg:hidden ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
+        <video poster="/videos/hero-video-mobile-poster.jpg" preload="true" playsInline={'playsInline'} loop={true} autoPlay={true} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
+          <source src="/videos/hero-video-mobile.mp4" type="video/mp4" />
 
           Sorry. Your browser does not support the video tag.
         </video>

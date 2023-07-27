@@ -1,7 +1,48 @@
 export const homeQuery = `{
   "home": *[_type == "home"][0]{
     title,
-    heroImage {
+    heroVideo,
+    heroVideoMobile,
+    heroVideoPosterDesktop {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
+    heroVideoPosterMobile {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
+    introContentHeading,
+    introContentText,
+    introContentImages[] {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
+    textTicker1Words[],
+    textTicker2Words[],
+    whatsOnSectionHeading,
+    whatsOnSectionText,
+    whatsOnSectionImage {
       asset-> {
         ...
       },
@@ -51,6 +92,75 @@ export const homeQuery = `{
 export const aboutQuery = `{
   "about": *[_type == "about"][0]{
     title,
+    heroImage[] {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
+    introText,
+    firstSectionHeading,
+    firstSectionText,
+    firstSectionImage {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
+    secondSectionHeading,
+    secondSectionText,
+    secondSectionImage {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
+    eventCalendarSectionHeading,
+    eventCalenderSectionText,
+    eventCalenderSectionPdfDownload {
+      asset-> {
+        ...
+      },
+    },
+    eventCalendarSectionImage {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
+    thirdSectionHeading,
+    thirdSectionText,
+    thirdSectionImage {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
     crimeReductionInitiatives[] {
       title,
       teaserImage {
@@ -70,6 +180,30 @@ export const aboutQuery = `{
         slug {
           current
         }
+      }
+    },
+    ourPeopleSectionHeading,
+    ourPeopleSectionText,
+    ourPeopleSectionBoardOfDirectorsLink,
+    ourPeopleSectionTheIinTeamLink,
+    ourPeopleSectionImage {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
+    keyResourcesSectionText,
+    keyResourcesDownloads[] {
+      title,
+      file {
+        asset-> {
+          ...
+        },
       }
     },
     "latestNews": *[_type == "news"]{
@@ -107,6 +241,21 @@ export const aboutQuery = `{
 export const whatsOnQuery = `{
   "whatsOn": *[_type == "whatsOn"][0]{
     title,
+    introText,
+    imageBlocks[] {
+      image {
+        asset-> {
+          ...
+        },
+        caption,
+        alt,
+        hotspot {
+          x,
+          y
+        },
+      },
+      captionText
+    },
     seo {
       ...,
       shareGraphic {
