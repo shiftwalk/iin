@@ -107,7 +107,7 @@ export default function HomeHero() {
       <div className={`absolute inset-0 bg-[#5017B7] z-[2] mix-blend-multiply transition-opacity ease-in-out duration-[400ms] ${videoPlaying ? 'opacity-0' : 'opacity-20' }`}></div>
       
       <div className={`w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] hidden lg:block ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
-        <video poster="/videos/hero-video-desktop-poster.jpg" preload="true" playsInline={'playsInline'} loop={true} autoPlay={true} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
+        <video poster="/videos/hero-video-desktop-poster-1.jpg" preload="true" playsInline={'playsInline'} loop={true} autoPlay={true} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
           <source src="/videos/hero-video-desktop.mp4" type="video/mp4" />
 
           Sorry. Your browser does not support the video tag.
@@ -115,7 +115,7 @@ export default function HomeHero() {
       </div>
 
       <div className={`w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] lg:hidden ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
-        <video poster="/videos/hero-video-mobile-poster.jpg" preload="true" playsInline={'playsInline'} loop={true} autoPlay={true} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
+        <video poster="/videos/hero-video-mobile-poster-1.jpg" preload="true" playsInline={'playsInline'} loop={true} autoPlay={true} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
           <source src="/videos/hero-video-mobile.mp4" type="video/mp4" />
 
           Sorry. Your browser does not support the video tag.
