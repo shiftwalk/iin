@@ -9,7 +9,7 @@ export default function Socials({ className, items }) {
     <div className={`flex space-x-3 ${className ? className : '' }`}>
       { items?.map((e, i) => {
         return (
-          <a aria-label="Navigate to our Facebook" href={e.url} rel="noopener noreferrer" target="_blank" className="a11y-focus w-12 h-12 flex flex-wrap items-center justify-center rounded-full bg-white relative overflow-hidden group hover:scale-[1.15] transition-transform ease-out duration-[450ms]">
+          <a aria-label="Navigate to our Facebook" href={e.url} rel="noopener noreferrer" target="_blank" className="a11y-focus w-12 h-12 flex flex-wrap items-center justify-center rounded-full bg-white relative overflow-hidden group hover:scale-[1.15] transition-transform ease-out duration-[450ms]" key={i}>
             {((e.name == 'Facebook' || e.name == 'facebook') &&
                 <IconFacebook className="w-[25%] relative z-[1]" />)
             || ((e.name == 'Instagram' || e.name == 'instagram') &&

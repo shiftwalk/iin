@@ -288,7 +288,7 @@ export default function Header() {
                       <h3 className="text-[4.33vw] leading-none block w-full uppercase text-[#176B75] mb-5 pb-0">Get the <span className="font-display">app</span></h3>
                       <IconSquiggleUnderline className="w-[80%] text-[#176B75] mb-[3.3vw] rotate-[-3deg] mx-auto translate-x-[-5%]" />
 
-                      <p className="text-lg xl:text-xl leading-[1.25] xl:leading-[1.25] mb-[5vw] text-center">Discover what's going on, make plans for what's around the corner and stay up to date with everything Nottingham city centre - all in one place. Whatever your vibe, Nottingham's got it. And It's In Nottingham is the best way to find out about it. Scan the QR code below with your phone to get started.</p>
+                      <p className="text-lg xl:text-xl leading-[1.25] xl:leading-[1.25] mb-[5vw] text-center">Discover what&apos;s going on, make plans for what&apos;s around the corner and stay up to date with everything Nottingham city centre - all in one place. Whatever your vibe, Nottingham&apos;s got it. And It&apos;s In Nottingham is the best way to find out about it. Scan the QR code below with your phone to get started.</p>
 
                       <div className="relative rotate-[-2deg] w-[125px] lg:w-[33%] lg:max-w-[200px] aspect-square mx-auto">
                         <Image
