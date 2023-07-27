@@ -73,3 +73,9 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
    pointer-events: none;
 } 
+
+.lenis-scrolling {
+  .follow-wrapper {
+    pointer-events: none !important;
+  }
+}

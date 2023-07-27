@@ -2,13 +2,13 @@ import IconLogo from '@/icons/logo.svg'
 import IconApple from '@/icons/apple.svg'
 import IconAndroid from '@/icons/android.svg'
 import Link from 'next/link'
-import {  useState } from 'react'
+import { useState } from 'react'
 import { AnimatePresence, domAnimation, LazyMotion, m, useScroll, useTransform } from 'framer-motion'
 import { useRouter } from 'next/router'
 import Div100vh from 'react-div-100vh'
 import Image from 'next/image'
 import {isAndroid, isIOS} from 'react-device-detect';
-
+import IconSquiggleUnderline from '@/icons/squiggle-underline.svg'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -44,6 +44,12 @@ export default function Header() {
   )
 
   router.asPath.includes('/news') && !menuOpen && (
+    menuButtonColor = 'bg-white border-black',
+    appbuttonColor = 'bg-transparent border border-black text-black',
+    logoColor = 'text-black'
+  )
+
+  router.asPath.includes('/policies') && !menuOpen && (
     menuButtonColor = 'bg-white border-black',
     appbuttonColor = 'bg-transparent border border-black text-black',
     logoColor = 'text-black'
@@ -236,7 +242,7 @@ export default function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3, ease: [0.71,0,0.17,1] }}
-              className="fixed inset-0 flex flex-col items-center justify-center z-[1000]"
+              className="fixed inset-0 flex-col items-center justify-center z-[1000] hidden lg:flex"
             >
               <button
                 aria-label="Close App Download Menu" onClick={appDownloadToggle}
@@ -248,46 +254,74 @@ export default function Header() {
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.5 }}
                 transition={{ duration: 0.3, ease: [0.71,0,0.17,1] }}
-                className="bg-white w-10/12 lg:w-[40%] h-[50vh] shadow-xl rounded-3xl flex flex-col items-center justify-center relative z-[1002]"
+                className="bg-white w-10/12 lg:w-[75%] h-[75vh] shadow-xl rounded-3xl relative z-[1002] overflow-hidden"
               >
-                <button aria-label="Close App Download Menu" onClick={appDownloadToggle} className={`a11y-focus rounded-full w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] flex items-center justify-center border absolute top-5 right-5`}>
+                <button aria-label="Close App Download Menu" onClick={appDownloadToggle} className={`a11y-focus rounded-full w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] flex items-center justify-center border absolute top-5 right-5 bg-[#176B75] z-[2000]`}>
                   <div className="w-full p-2 lg:p-3">
-                    <span className={`transition-all ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-black rotate-45`}></span>
-                    <span className={`transition-all ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-black -rotate-45`}></span>
+                    <span className={`transition-all ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-white rotate-45`}></span>
+                    <span className={`transition-all ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-white -rotate-45`}></span>
                   </div>
                 </button>
 
-                <div className="w-full flex items-center justify-center">
-                  <div className="relative rotate-[-2deg] w-[125px] lg:w-[33%] lg:max-w-[240px] aspect-square translate-x-[-60%] translate-y-[-2vh]">
+                <div className="w-full flex h-full">
+                  <div className="w-1/2 bg-black/20 relative overflow-hidden">
                     <Image
-                      quality={80}
-                      width={358}
-                      height={356}
-                      src="/images/qr.jpg"
-                      alt="QR Code to download the app"
-                      className="w-full"
+                      src="/images/pocket-cta.jpg"
+                      alt="Some people in the park using the IIN app"
+                      fill
+                      className="absolute inset-0 object-cover object-center w-full h-full"
                     />
+                  </div>
+                  <div className="w-1/2 flex items-center justify-center relative">
+                    <div className="block absolute bottom-0 left-0 p-5">
+                      <div className="flex space-x-2 mb-1">
+                        <div className="w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center bg-[#176B75] text-white rounded-full">
+                          <IconApple className="w-[38%]" />
+                        </div>
+                        <div className="w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center bg-[#176B75] text-white rounded-full">
+                          <IconAndroid className="w-[40%]" />
+                        </div>
+                      </div>
+                      <span className="block font-display text-lg xl:text-xl">Available on Android and iOS</span>
+                    </div>
+                    <div className="w-[80%]">
+                      <h3 className="text-[4.33vw] leading-none block w-full uppercase text-[#176B75] mb-5 pb-0">Get the <span className="font-display">app</span></h3>
+                      <IconSquiggleUnderline className="w-[80%] text-[#176B75] mb-[3.3vw] rotate-[-3deg] mx-auto translate-x-[-5%]" />
 
-                    <span className="text-sm lg:text-lg xl:text-xl 2xl:text-2xl leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-off-black block uppercase absolute bottom-[-50px] lg:bottom-[-50px] xl:bottom-[-65px] right-[-190px] lg:right-[-260px] xl:right-[-300px] rotate-[-2deg] xl:rotate-[-5deg] w-[180px] lg:w-[250px] xl:w-[270px] text-center">
-                      <svg className="w-[50%] lg:w-[45%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.089 173.374">
-                        <defs>
-                          <clipPath id="a">
-                            <path fill="none" d="M0 0h157.986v72.6H0Z" data-name="Path 1181"/>
-                          </clipPath>
-                        </defs>
-                        <g data-name="Group 422">
-                          <g clipPath="url(#a)" data-name="Group 421" transform="rotate(61 31.748 53.897)">
-                            <g data-name="Group 419">
-                              <path fill="none" stroke="currentColor" strokeWidth="3" d="M157.615 9.238S73.325-32.828 3.725 71.231" data-name="Path 1179"/>
+                      <p className="text-lg xl:text-xl leading-[1.25] xl:leading-[1.25] mb-[5vw] text-center">Discover what's going on, make plans for what's around the corner and stay up to date with everything Nottingham city centre - all in one place. Whatever your vibe, Nottingham's got it. And It's In Nottingham is the best way to find out about it. Scan the QR code below with your phone to get started.</p>
+
+                      <div className="relative rotate-[-2deg] w-[125px] lg:w-[33%] lg:max-w-[200px] aspect-square mx-auto">
+                        <Image
+                          quality={80}
+                          width={358}
+                          height={356}
+                          src="/images/qr.jpg"
+                          alt="QR Code to download the app"
+                          className="w-full"
+                        />
+
+                        {/* <span className="text-sm lg:text-lg xl:text-xl 2xl:text-2xl leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-off-black block uppercase absolute bottom-[-50px] lg:bottom-[-50px] xl:bottom-[-65px] right-[-190px] lg:right-[-260px] xl:right-[-300px] rotate-[-2deg] xl:rotate-[-5deg] w-[180px] lg:w-[250px] xl:w-[270px] text-center">
+                          <svg className="w-[50%] lg:w-[45%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.089 173.374">
+                            <defs>
+                              <clipPath id="a">
+                                <path fill="none" d="M0 0h157.986v72.6H0Z" data-name="Path 1181"/>
+                              </clipPath>
+                            </defs>
+                            <g data-name="Group 422">
+                              <g clipPath="url(#a)" data-name="Group 421" transform="rotate(61 31.748 53.897)">
+                                <g data-name="Group 419">
+                                  <path fill="none" stroke="currentColor" strokeWidth="3" d="M157.615 9.238S73.325-32.828 3.725 71.231" data-name="Path 1179"/>
+                                </g>
+                                <g data-name="Group 420">
+                                  <path fill="none" stroke="currentColor" strokeWidth="3" d="M21.854 69.295 3.196 71.668.822 53.01" data-name="Path 1180"/>
+                                </g>
+                              </g>
                             </g>
-                            <g data-name="Group 420">
-                              <path fill="none" stroke="currentColor" strokeWidth="3" d="M21.854 69.295 3.196 71.668.822 53.01" data-name="Path 1180"/>
-                            </g>
-                          </g>
-                        </g>
-                      </svg>
-                      <span className="font-display"><span className="italic">Scan me</span></span> with your phone camera to download!
-                    </span>
+                          </svg>
+                          <span className="font-display"><span className="italic">Scan me</span></span> with your phone camera to download!
+                        </span> */}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </m.div>

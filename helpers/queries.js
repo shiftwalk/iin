@@ -86,6 +86,19 @@ export const homeQuery = `{
   "global": *[_type == "global"][0]{
     iOsAppDownloadLink,
     androidAppDownloadLink
+  },
+  "policies": *[_type == "policies"] {
+    title,
+    slug {
+      current
+    }
+  },
+  "contact": *[_type == "contact"][0] {
+    emailAddresss,
+    socials[] {
+      name,
+      url
+    }
   }
 }`
 
@@ -235,6 +248,19 @@ export const aboutQuery = `{
         asset->
       }
     }
+  },
+  "policies": *[_type == "policies"] {
+    title,
+    slug {
+      current
+    }
+  },
+  "contact": *[_type == "contact"][0] {
+    emailAddress,
+    socials[] {
+      name,
+      url
+    }
   }
 }`
 
@@ -262,17 +288,42 @@ export const whatsOnQuery = `{
         asset->
       }
     }
+  },
+  "policies": *[_type == "policies"] {
+    title,
+    slug {
+      current
+    }
+  },
+  "contact": *[_type == "contact"][0] {
+    emailAddress,
+    socials[] {
+      name,
+      url
+    }
   }
 }`
 
 export const contactQuery = `{
   "contact": *[_type == "contact"][0]{
+    emailAddresss,
+    formIntroText,
     title,
+    socials[] {
+      name,
+      url
+    },
     seo {
       ...,
       shareGraphic {
         asset->
       }
+    }
+  },
+  "policies": *[_type == "policies"] {
+    title,
+    slug {
+      current
     }
   }
 }`
@@ -318,12 +369,25 @@ export const newsQuery = `{
       }
     }
   },
-  "cats": *[_type == "categories"]{
+  "policies": *[_type == "policies"] {
     title,
     slug {
       current
     }
   },
+  "contact": *[_type == "contact"][0] {
+    emailAddress,
+    socials[] {
+      name,
+      url
+    }
+  },
+  "cats": *[_type == "categories"]{
+    title,
+    slug {
+      current
+    }
+  }
 }`
 
 export const catQuery = `{
@@ -377,6 +441,19 @@ export const catQuery = `{
           asset->
         }
       }
+    }
+  },
+  "policies": *[_type == "policies"] {
+    title,
+    slug {
+      current
+    }
+  },
+  "contact": *[_type == "contact"][0] {
+    emailAddress,
+    socials[] {
+      name,
+      url
     }
   }
 }`
@@ -506,6 +583,19 @@ export const newsSlugQuery = `{
         }
       }
     }
+  },
+  "policies": *[_type == "policies"] {
+    title,
+    slug {
+      current
+    }
+  },
+  "contact": *[_type == "contact"][0] {
+    emailAddress,
+    socials[] {
+      name,
+      url
+    }
   }
 }`
 
@@ -520,6 +610,35 @@ export const policiesQuery = `{
       shareGraphic {
         asset->
       }
+    }
+  }
+}`
+
+export const policiesSlugQuery = `{
+  "current": *[_type == "policies" && slug.current == $slug][0]{
+    title,
+    slug {
+      current
+    },
+    content,
+    seo {
+      ...,
+      shareGraphic {
+        asset->
+      }
+    }
+  },
+  "policies": *[_type == "policies"] {
+    title,
+    slug {
+      current
+    }
+  },
+  "contact": *[_type == "contact"][0] {
+    emailAddress,
+    socials[] {
+      name,
+      url
     }
   }
 }`

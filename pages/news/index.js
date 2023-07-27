@@ -10,7 +10,7 @@ import { reveal } from '@/helpers/transitions'
 const pageService = new SanityPageService(newsQuery)
 
 export default function News(initialData) {
-  const { data: { news, cats }  } = pageService.getPreviewHook(initialData)()
+  const { data: { contact, policies, news, cats }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
       <NextSeo title="Latest News" />
@@ -75,7 +75,7 @@ export default function News(initialData) {
             </article>
           </main>
 
-          <Footer />
+          <Footer policies={policies} contact={contact} />
         </m.div>
       </LazyMotion>
     </Layout>

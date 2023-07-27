@@ -8,9 +8,9 @@ import FancyLink from '@/components/fancyLink'
 import Socials from '@/components/socials'
 import Image from 'next/image'
 import { MouseParallax } from 'react-just-parallax'
-import { useRef } from 'react'
+import { Fragment, useRef } from 'react'
 
-export default function Footer() {
+export default function Footer({ policies, contact }) {
   const footerRef1 = useRef()
   const footerRef2 = useRef()
 
@@ -76,7 +76,7 @@ export default function Footer() {
 
               <p className="mb-12 xl:text-xl xl:leading-snug max-w-[500px] md:max-w-[400px] xl:max-w-[500px] mx-auto">Amazing food and drinks, all the shops you&apos;ll ever need, and inspirational events and activities.</p>
 
-              <Socials className="text-off-black mx-auto justify-center" />
+              <Socials items={contact?.socials} className="text-off-black mx-auto justify-center" />
             </div>
           </div>
 
@@ -133,10 +133,14 @@ export default function Footer() {
 
       <nav className="p-5">
         <ul className="flex text-white text-xs lg:text-sm w-full">
-          <li className="pr-3"><FancyLink destination="/" label="Privacy Policy" /></li>
-          <li className="pr-3">|</li>
-          <li className="pr-3"><FancyLink destination="/" label="Cookie Policy" /></li>
-          <li className="pr-3">|</li>
+          {policies?.map((e, i) => {
+            return (
+              <Fragment key={i}>
+              <li className="pr-3"><FancyLink destination={`/policies/${e.slug.current}`} label={e.title} /></li>
+              <li className="pr-3">|</li>
+              </Fragment>
+            )
+          })}
           <li className="font-medium"><a href="https://www.cubicstudio.co.uk/" rel="noopener noreferrer" target="_blank">Branding By Cubic</a></li>
 
           <li className="ml-auto text-right hidden lg:block"><a href="#" className="a11y-focus"><span className="hidden lg:inline">Back&nbsp;</span>To Top <IconArrow className="w-2 lg:w-3 inline ml-1" /></a></li>

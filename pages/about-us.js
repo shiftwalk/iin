@@ -16,6 +16,7 @@ import { reveal } from '@/helpers/transitions'
 import Button from '@/components/button'
 import SanityImageScale from '@/components/sanity-image-scale'
 import PortableText from 'react-portable-text'
+import LerpImage from '@/components/lerp-image'
 const pageService = new SanityPageService(aboutQuery)
 
 const container = {
@@ -38,7 +39,7 @@ const draw = {
 };
 
 export default function AboutUs(initialData) {
-  const { data: { about }  } = pageService.getPreviewHook(initialData)()
+  const { data: { contact, policies, about }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
       <NextSeo title={about.title} />
@@ -53,31 +54,31 @@ export default function AboutUs(initialData) {
           <main className="">
             <article>
               <div className="w-full bg-[#4000B5] selection:text-[#4000B5] selection:bg-[#23D6D1] relative min-h-screen flex flex-col items-center justify-center">
-                <div className="w-[33%] lg:w-[19vw] 2xl:w-[18vw] h-[52vw] lg:h-[28vw] 2xl:h-[26vw] bg-red absolute top-[15%] lg:top-[13%] left-0 overflow-hidden">
-                  <ImageScale
-                    src="/images/about-01.jpg"
-                    sizes="(max-width: 1024px) 100vw, 33vw"
+                <LerpImage className="w-[33%] lg:w-[19vw] 2xl:w-[18vw] h-[52vw] lg:h-[28vw] 2xl:h-[26vw] absolute top-[15%] lg:top-[13%] left-0 overflow-hidden" amount="500%">
+                  <SanityImageScale
+                    image={about.heroImage[0]}
+                    sizes="(max-width: 1024px) 100vw, 35vw"
                   />
-                </div>
+                </LerpImage>
 
                 {about.heroImage[0] && (
-                  <div className="w-[33%] lg:w-[25vw] h-[66vw] lg:h-[37vw] bg-red absolute top-[18%] right-0 overflow-hidden">
+                  <LerpImage amount="-250%" className="w-[33%] lg:w-[25vw] h-[66vw] lg:h-[37vw] absolute top-[18%] right-0 overflow-hidden">
                     <SanityImageScale
-                      image={about.heroImage[0]}
+                      image={about.heroImage[2]}
                       sizes="(max-width: 1024px) 100vw, 45vw"
                     />
-                  </div>
+                  </LerpImage>
                 )}
 
                 {about.heroImage[1] && (
-                  <div className="w-[55%] lg:w-[45vw] h-[36vw] lg:h-[37vw] bg-red absolute bottom-[15%] left-[-5%] overflow-hidden block lg:hidden">
+                  <LerpImage amount="-250%" className="w-[55%] lg:w-[45vw] h-[36vw] lg:h-[37vw] absolute bottom-[15%] left-[-5%] overflow-hidden block lg:hidden">
                     <div className="h-full relative overflow-hidden w-full">
                       <SanityImageScale
                         image={about.heroImage[1]}
                         sizes="(max-width: 1024px) 100vw, 55vw"
                       />
                     </div>
-                  </div>
+                  </LerpImage>
                 )}
                 
                 <div className="w-full text-center uppercase relative z-10">
@@ -98,18 +99,18 @@ export default function AboutUs(initialData) {
                 </div>
               </div>
 
-              <div className="flex flex-wrap relative z-10 lg:pl-[5vw] 2xl:pl-[7.5vw] bg-[#4000B5] pb-[16vw] lg:pb-[20vw] xl:pb-[15vw] mb-[5vw] lg:mb-[10vw] selection:text-[#4000B5] selection:bg-[#23D6D1]">
+              <div className="flex flex-wrap relative lg:pl-[5vw] 2xl:pl-[7.5vw] bg-[#4000B5] pb-[16vw] lg:pb-[20vw] xl:pb-[15vw] mb-[5vw] lg:mb-[10vw] selection:text-[#4000B5] selection:bg-[#23D6D1] z-[10]">
                 {about.heroImage[2] && (
                   <div className="w-full lg:w-[43%] hidden lg:block translate-y-[-15vh]">
-                    <div className="h-[27vw] relative overflow-hidden w-full">
+                    <LerpImage amount="-100%" className="h-[27vw] relative overflow-hidden w-full">
                       <SanityImageScale
-                        image={about.heroImage[2]}
+                        image={about.heroImage[1]}
                         sizes="(max-width: 1024px) 100vw, 55vw"
                       />
-                    </div>
+                    </LerpImage>
                   </div>
                 )}
-                <div className="ml-auto w-full lg:w-[54%] px-5 lg:pl-12 2xl:pl-20">
+                <div className="ml-auto w-full lg:w-[54%] px-5 lg:pl-12 2xl:pl-20 relative z-[20]">
                   <div className="content font-display text-white text-[20px] lg:text-[25px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight max-w-[95%] lg:max-w-[90%]">
                     <PortableText
                       className="content"
@@ -131,7 +132,7 @@ export default function AboutUs(initialData) {
                 </div>
 
                 <div className="w-full lg:w-[37%] lg:ml-auto mb-6">
-                  <div className="w-full h-[120vw] lg:h-[44vw] bg-red relative overflow-hidden">
+                  <div className="w-full h-[120vw] lg:h-[44vw]  relative overflow-hidden">
                     <SanityImageScale
                       image={about.firstSectionImage}
                       sizes="(max-width: 1024px) 100vw, 55vw"
@@ -150,7 +151,7 @@ export default function AboutUs(initialData) {
                 </div>
 
                 <div className="w-full lg:w-[37%] lg:mr-auto mb-6 lg:order-1">
-                  <div className="w-full h-[120vw] lg:h-[44vw] bg-red relative overflow-hidden">
+                  <div className="w-full h-[120vw] lg:h-[44vw]  relative overflow-hidden">
                     <SanityImageScale
                       image={about.secondSectionImage}
                       sizes="(max-width: 1024px) 100vw, 55vw"
@@ -208,7 +209,7 @@ export default function AboutUs(initialData) {
                 </div>
 
                 <div className="w-full lg:w-[37%] lg:mr-auto mb-6 lg:order-1">
-                  <div className="w-full h-[120vw] lg:h-[44vw] bg-red relative overflow-hidden">
+                  <div className="w-full h-[120vw] lg:h-[44vw]  relative overflow-hidden">
                     <SanityImageScale
                       image={about.thirdSectionImage}
                       sizes="(max-width: 1024px) 100vw, 55vw"
@@ -339,7 +340,7 @@ export default function AboutUs(initialData) {
             </article>
           </main>
 
-          <Footer />
+          <Footer policies={policies} contact={contact} />
         </m.div>
       </LazyMotion>
     </Layout>

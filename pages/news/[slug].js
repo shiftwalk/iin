@@ -16,7 +16,7 @@ import Blockquote from '@/components/blockquote'
 const pageService = new SanityPageService(newsSlugQuery)
 
 export default function News(initialData) {
-  const { data: { current }  } = pageService.getPreviewHook(initialData)()
+  const { data: { contact, policies, current }  } = pageService.getPreviewHook(initialData)()
   let mainD = new Date(current.postDate);
   let mainYe = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(mainD);
   let mainMo = new Intl.DateTimeFormat('en', { month: 'short' }).format(mainD);
@@ -163,7 +163,7 @@ export default function News(initialData) {
             </article>
           </main>
 
-          <Footer />
+          <Footer policies={policies} contact={contact} />
         </div>
       </LazyMotion>
     </Layout>

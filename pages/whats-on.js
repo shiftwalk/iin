@@ -33,7 +33,7 @@ const draw = {
 };
 
 export default function WhatsOn(initialData) {
-  const { data: { whatsOn }  } = pageService.getPreviewHook(initialData)()
+  const { data: { contact, policies, whatsOn }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
       <NextSeo title={whatsOn.title} />
@@ -92,7 +92,7 @@ export default function WhatsOn(initialData) {
                   
                   {whatsOn.imageBlocks[0] && (
                     <div className="relative lg:absolute lg:top-[8%] 2xl:top-[7%] lg:right-0 mb-12 lg:mb-0 w-full lg:w-[40vw] 2xl:w-[44vw]">
-                      <div className="overflow-hidden relative bg-red h-[66vw] lg:h-[30vw] mb-5 lg:mb-0">
+                      <div className="overflow-hidden relative  h-[66vw] lg:h-[30vw] mb-5 lg:mb-0">
                         <SanityImageScale
                           p
                           image={whatsOn.imageBlocks[0].image}
@@ -114,7 +114,7 @@ export default function WhatsOn(initialData) {
                   <div className="w-full h-auto lg:h-[70vw] xl:h-[80vw] 2xl:h-[75vw] overflow-hidden">
                     {whatsOn.imageBlocks[0] && (
                       <div className="w-full lg:w-[25vw] relative lg:absolute lg:bottom-[8%] xl:bottom-[15%] lg:left-0 overflow-hidden mb-12 lg:mb-0">
-                        <div className="h-[66vw] lg:h-[38vw] bg-red relative overflow-hidden mb-5">
+                        <div className="h-[66vw] lg:h-[38vw]  relative overflow-hidden mb-5">
                           <SanityImageScale
                             image={whatsOn.imageBlocks[1].image}
                             sizes="(max-width: 1024px) 100vw, 33vw"
@@ -132,7 +132,7 @@ export default function WhatsOn(initialData) {
                     
                     {whatsOn.imageBlocks[2] && (
                       <div className="w-full lg:w-[35vw] lg:absolute lg:bottom-[7%] lg:left-[44vw] overflow-hidden lg:overflow-visible flex flex-wrap">
-                        <div className="w-full h-[66vw] lg:h-[24vw] bg-red relative overflow-hidden mb-5">
+                        <div className="w-full h-[66vw] lg:h-[24vw]  relative overflow-hidden mb-5">
                           <SanityImageScale
                             image={whatsOn.imageBlocks[2].image}
                             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -155,7 +155,7 @@ export default function WhatsOn(initialData) {
             </article>
           </main>
 
-          <Footer />
+          <Footer policies={policies} contact={contact} />
         </m.div>
       </LazyMotion>
     </Layout>

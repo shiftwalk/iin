@@ -32,7 +32,7 @@ export default function SanityImage({ image, className, alt, priority, widthOver
 		  <Image
         src={imageProps.src}
         loader={imageProps.loader}
-        className={`absolute inset-0 w-full h-full object-center object-cover will-change-transform transition-all ease-in-out duration-[1500ms] ${imageIsLoaded ? 'scale-1' : 'scale-[1.05]'} ${priority ? 'opacity-100' : ''}`}
+        className={`absolute inset-0 w-full h-full object-center object-cover will-change-transform transition-all ease-in-out duration-[1500ms] ${imageIsLoaded ? 'scale-1 opacity-100' : 'scale-[1.05] opacity-0'} ${priority ? 'opacity-100' : ''}`}
         {...(priority ? {
           priority: true} : {}
         )}
@@ -43,12 +43,7 @@ export default function SanityImage({ image, className, alt, priority, widthOver
 
         onLoad={event => {
           const target = event.target;
-            if (priority) {
-              setTimeout(() => {
-                setImageIsLoaded(true)
-              }, 2000)
-            }
-            else if (target.src.indexOf('data:image/gif;base64') < 0) {
+            if (target.src.indexOf('data:image/gif;base64') < 0) {
             setImageIsLoaded(true)
           }
         }}

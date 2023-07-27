@@ -9,7 +9,7 @@ import Link from 'next/link'
 const pageService = new SanityPageService(catQuery)
 
 export default function NewsCat(initialData) {
-  const { data: { cat }  } = pageService.getPreviewHook(initialData)()
+  const { data: { contact, policies, cat }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
       <NextSeo title={cat.title} />
@@ -73,7 +73,7 @@ export default function NewsCat(initialData) {
             </article>
           </main>
 
-          <Footer />
+          <Footer policies={policies} contact={contact} />
         </div>
       </LazyMotion>
     </Layout>

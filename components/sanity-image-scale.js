@@ -1,10 +1,9 @@
 import { m, useScroll, useTransform } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import SanityImage from '@/components/sanity-image';
 
 export default function SanityImageScale({ image, p, sizes, alt, q, hoverState}) {
   const ref = useRef(null)
-  const [imageIsLoaded, setImageIsLoaded] = useState(false)
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -23,7 +22,7 @@ export default function SanityImageScale({ image, p, sizes, alt, q, hoverState})
             sizes={sizes ? sizes : null}
             alt={alt ? alt : 'No image description'}
             quality={q ? q : 80}
-            className={`w-full h-full absolute inset-0 object-cover object-center transition-all ease-in-out duration-[1000ms] will-change-transform z-1 ${imageIsLoaded ? 'scale-1' : 'scale-105' } ${hoverState ? hoverState : ''}`}
+            className={`w-full h-full absolute inset-0 object-cover object-center transition-all ease-in-out duration-[1000ms] will-change-transform z-1 ${hoverState ? hoverState : ''}`}
           />
         </div>
       </m.div>

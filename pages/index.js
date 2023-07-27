@@ -8,7 +8,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import NewsCarousel from '@/components/news-carousel'
 import HomeHero from '@/components/home-hero'
-import ReactCursorPosition from 'react-cursor-position';
 import ImageScale from '@/components/image-scale'
 import { homeQuery } from '@/helpers/queries'
 import SanityPageService from '@/services/sanityPageService'
@@ -27,9 +26,9 @@ export default function Home(initialData) {
   })
   
   const x = useTransform(scrollYProgress,[0, 1],['-35%', '35%'],{ clamp: true })
-  const x2 = useTransform(scrollYProgress,[0, 1],['0', '-50%'],{ clamp: true })
+  const x2 = useTransform(scrollYProgress,[0, 1],['0', '-90%'],{ clamp: true })
 
-  const { data: { home, global }  } = pageService.getPreviewHook(initialData)()
+  const { data: { contact, policies, home, global }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
       <NextSeo title={home.title} />
@@ -42,9 +41,7 @@ export default function Home(initialData) {
           exit="exit"
         >
           <div className="overflow-hidden sticky top-0">
-            <ReactCursorPosition>
-              <HomeHero />
-            </ReactCursorPosition>
+            <HomeHero />
           </div>
 
           <main className="mt-screen bg-white relative z-[10]">
@@ -75,7 +72,7 @@ export default function Home(initialData) {
                     <Button href="/about-us" label="Find out more about us" />
                   </div>
 
-                  <div className="w-full lg:w-[28vw] h-[100vw] lg:h-[40vw] bg-red relative lg:absolute top-0 right-0">
+                  <div className="w-full lg:w-[28vw] h-[100vw] lg:h-[40vw] relative lg:absolute top-0 right-0">
                     <SanityImageScale
                       image={home.introContentImages[0]}
                       sizes="(max-width: 1024px) 100vw, 45vw"
@@ -83,14 +80,14 @@ export default function Home(initialData) {
                   </div>
                 </div>
 
-                <div className="w-full lg:w-[25vw] lg:h-[19vw] bg-red relative lg:absolute lg:bottom-[8vw] lg:left-0 hidden lg:block">
+                <div className="w-full lg:w-[25vw] lg:h-[19vw] relative lg:absolute lg:bottom-[8vw] lg:left-0 hidden lg:block">
                   <SanityImageScale
                     image={home.introContentImages[1]}
                     sizes="(max-width: 1024px) 100vw, 45vw"
                   />
                 </div>
 
-                <div className="w-full lg:w-[38vw] lg:h-[26vw] bg-red relative lg:absolute lg:bottom-[-8vw] lg:left-[30vw] hidden lg:block">
+                <div className="w-full lg:w-[38vw] lg:h-[26vw] relative lg:absolute lg:bottom-[-8vw] lg:left-[30vw] hidden lg:block">
                   <SanityImageScale
                     image={home.introContentImages[2]}
                     sizes="(max-width: 1024px) 100vw, 45vw"
@@ -230,7 +227,7 @@ export default function Home(initialData) {
           </main>
 
           <div className="relative z-[10]">
-            <Footer />
+            <Footer policies={policies} contact={contact} />
           </div>
         </m.div>
       </LazyMotion>

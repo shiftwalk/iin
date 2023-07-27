@@ -36,7 +36,7 @@ export default function NewsCarousel({ items, initiatives }) {
                     </Link>
                   )}
                 >
-                  <div className="w-full h-[60vw] lg:h-[25.5vw] 2xl:h-[23.5vw] bg-red mb-5 relative overflow-hidden">
+                  <div className="w-full h-[60vw] lg:h-[25.5vw] 2xl:h-[23.5vw] mb-5 relative overflow-hidden">
                     {e.teaserImage && (
                       <SanityImage
                         image={e.teaserImage}
@@ -81,9 +81,9 @@ export default function NewsCarousel({ items, initiatives }) {
         </div>
       </div>
       
-      <div className="w-[50vw] lg:w-[25vw] h-[4px] lg:h-[5px] bg-[#B4C0C6] bg-opacity-20 mx-auto flex">
+      {/* <div className="w-[50vw] lg:w-[25vw] h-[4px] lg:h-[5px] bg-[#B4C0C6] bg-opacity-20 mx-auto flex">
         <div className="w-[25%] h-full bg-off-black/30"></div>
-      </div>
+      </div> */}
     </div>
   )
 }

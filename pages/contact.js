@@ -7,6 +7,7 @@ import ImageScale from '@/components/image-scale'
 import { contactQuery } from '@/helpers/queries'
 import SanityPageService from '@/services/sanityPageService'
 import { reveal } from '@/helpers/transitions'
+import PortableText from 'react-portable-text'
 const pageService = new SanityPageService(contactQuery)
 
 const container = {
@@ -29,7 +30,7 @@ const draw = {
 };
 
 export default function Contact(initialData) {
-  const { data: { contact }  } = pageService.getPreviewHook(initialData)()
+  const { data: { policies, contact }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
       <NextSeo title={contact.title} />
@@ -66,7 +67,7 @@ export default function Contact(initialData) {
                   <div className="flex flex-wrap bg-black/20">
                     <div className="w-full lg:w-1/2 px-5 py-10 lg:p-[7.5vw] order-2 lg:order-1">
                       <div className="content content--no-anchor font-display text-[20px] lg:text-[24px] 2xl:text-[32px] leading-tight lg:leading-tight 2xl:leading-tight mb-[5vw]">
-                        <p>Contact us at <a href="mailto:info@itsinnottingham.com" className="italic">info@itsinnottingham.com</a> or complete the form below and we&apos;ll be back in touch with you as soon as we can.</p>
+                        <PortableText content={contact.formIntroText} />
                       </div>
 
                       <form className="w-full grid grid-cols-2 gap-x-10 gap-y-5 lg:gap-y-8">
@@ -117,7 +118,7 @@ export default function Contact(initialData) {
             </article>
           </main>
 
-          <Footer />
+          <Footer policies={policies} contact={contact} />
         </m.div>
       </LazyMotion>
     </Layout>
