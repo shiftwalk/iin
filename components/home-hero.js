@@ -64,7 +64,7 @@ export default function HomeHero() {
   };
 
   return(
-    <Div100vh className="w-full h-screen bg-white flex items-center jusfify-center text-[#FF5F38] group">
+    <div className="w-full h-screen bg-white flex items-center jusfify-center text-[#FF5F38] group">
 
       <span style={{ top: mousePosition.y - 50, left: mousePosition.x - 50 }} className={`fixed w-36 h-36 items-center justify-center bg-[#EBEA33] text-off-black rounded-full transition-transform ease-out duration-[200ms] cursor-none pointer-events-none uppercase text-3xl hidden lg:flex z-[30] group-hover:scale-[1] scale-0`}>{!videoPlaying ? 'Play' : 'Pause' }</span>
       
@@ -127,6 +127,6 @@ export default function HomeHero() {
 
         Sorry. Your browser does not support the video tag.
       </video>
-    </Div100vh>
+    </div>
   )
 }
