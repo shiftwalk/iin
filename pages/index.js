@@ -25,8 +25,8 @@ export default function Home(initialData) {
     offset: ["start end", "end start"]
   })
   
-  const x = useTransform(scrollYProgress,[0, 1],['-35%', '35%'],{ clamp: true })
-  const x2 = useTransform(scrollYProgress,[0, 1],['0', '-90%'],{ clamp: true })
+  const x = useTransform(scrollYProgress,[0, 1],['-100%', '75%'],{ clamp: true })
+  const x2 = useTransform(scrollYProgress,[0, 1],['-25%', '-100%'],{ clamp: true })
 
   const { data: { contact, policies, home, global }  } = pageService.getPreviewHook(initialData)()
   return (
@@ -40,17 +40,17 @@ export default function Home(initialData) {
           animate="enter"
           exit="exit"
         >
-          <div className="overflow-hidden sticky top-0">
+          <div className="overflow-hidden relative lg:sticky lg:top-0">
             <HomeHero />
           </div>
 
           <main className="mt-screen bg-white relative z-[10]">
             <article>
-              <div className="p-[5vw] lg:pr-0 pb-[7vw] mb-[7.5vw] lg:mb-[15vw] lg:pb-[33vw] relative">
+              <div className="p-[5vw] pt-8 lg:pr-0 pb-[7vw] mb-[10vw] lg:mb-[15vw] lg:pb-[33vw] lg:pt-[5vw] relative">
                 <div className="flex flex-wrap relative">
                   <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
                     {home.introContentHeading && (
-                      <h1 className="text-[7.5vw] leading-none lg:text-[4vw] lg:leading-none xl:leading-none mb-[1vw] uppercase text-[#FF5F38] max-w-[100%]">
+                      <h1 className="text-[9.5vw] leading-none lg:text-[4vw] lg:leading-[0.9] xl:leading-[0.9] uppercase text-[#FF5F38] max-w-[100%] mb-5 lg:mb-[2vw]">
                         <PortableText
                           content={home.introContentHeading}
                         />
@@ -60,16 +60,16 @@ export default function Home(initialData) {
                     {/* <IconSlattedUnderline className="w-[45%] text-[#FF5F38] mb-[3vw]" /> */}
                     
                     {home.introContentText && (
-                      <div className="content mb-[3vw] text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-2xl 2xl:leading-tight max-w-[530px] 2xl:max-w-[740px]">
+                      <div className="content mb-5 lg:mb-[3vw] text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-2xl 2xl:leading-tight max-w-[530px] 2xl:max-w-[740px]">
                         <PortableText
                           content={home.introContentText}
                         />
                       </div>
                     )}
 
-                    {/* <Link href="/about-us" className="a11y-focus rounded-full border border-[#B4C0C6] py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none">Find out more about us</Link> */}
+                    {/* <Link href="/about" className="a11y-focus rounded-full border border-[#B4C0C6] py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none">Find out more about us</Link> */}
 
-                    <Button href="/about-us" label="Find out more about us" />
+                    <Button href="/whats-on" label="Discover what's on" className="block lg:inline-block w-full lg:w-auto" />
                   </div>
 
                   <div className="w-full lg:w-[28vw] h-[100vw] lg:h-[40vw] relative lg:absolute top-0 right-0">
@@ -95,17 +95,17 @@ export default function Home(initialData) {
                 </div>
               </div>
 
-              <div className="mb-[5vw]">
-                <div className="relative flex overflow-x-hidden text-[10vw] leading-[0] uppercase">
+              <div className="mb-[10vw] lg:mb-[5vw]">
+                <div className="relative flex overflow-x-hidden text-[14vw] lg:text-[10vw] leading-[0] uppercase">
                   <m.div style={{ x: x }} className="will-change-transform whitespace-nowrap">
                     {home.textTicker1Words.map((e, i) => {
                       return (
-                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                     {home.textTicker1Words.map((e, i) => {
                       return (
-                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                   </m.div>
@@ -120,16 +120,21 @@ export default function Home(initialData) {
                   </div> */}
                 </div>
 
-                <div className="relative flex overflow-x-hidden text-[10vw] leading-[0] uppercase mt-[-1vw]">
+                <div className="relative flex overflow-x-hidden text-[14vw] leading-[0] lg:text-[10vw] lg:leading-[0] uppercase mt-[-1vw]">
                   <m.div style={{ x: x2 }} className="will-change-transform whitespace-nowrap">
                     {home.textTicker2Words.map((e, i) => {
                       return (
-                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                     {home.textTicker2Words.map((e, i) => {
                       return (
-                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                      )
+                    })}
+                    {home.textTicker2Words.map((e, i) => {
+                      return (
+                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                   </m.div>
@@ -146,9 +151,9 @@ export default function Home(initialData) {
                 </div>
               </div>
 
-              <div className="py-[5vw] pr-0 pb-[10vw]">
+              <div className="py-[5vw] pr-0 lg:pb-[10vw]">
                 <div className="px-[5vw]">
-                  <h2 className="text-[10vw] leading-none lg:text-[6vw] lg:leading-none xl:text-[5.5vw] xl:leading-none max-w-[550px] lg:max-w-[100%] text-[#BDB800] mb-3">
+                  <h2 className="text-[9.5vw] leading-none lg:text-[6vw] lg:leading-[0.9] xl:text-[5.5vw] xl:leading-[0.9] max-w-[550px] lg:max-w-[100%] text-[#BDB800] mb-3">
                     <span className="uppercase block">Latest</span>
                     <span className="uppercase block">News</span>
                   </h2>
@@ -160,16 +165,16 @@ export default function Home(initialData) {
                   <NewsCarousel items={home.latestNews} />
                 </div>
 
-                <div className="text-center">
-                  <Button href="/news" label="View More News" />
+                <div className="lg:text-center px-4 lg:px-0">
+                  <Button href="/news" label="View More News" className="block lg:inline-block w-full lg:w-auto" />
                 </div>
               </div>
 
               <div className="bg-[#176B75] text-[#F5F1E1] grid grid-cols-1 lg:grid-cols-2 overflow-hidden selection:bg-[#EBEA33] selection:text-[#176B75]">
-                <div className="col-span-1 flex items-center justify-center px-[5vw] py-10 pb-[20vw] lg:py-[8vw] lg:pb-[10vw] order-2 lg:order-1">
+                <div className="col-span-1 flex items-center justify-center px-[5vw] py-16 lg:py-[8vw] pb-6 lg:pb-[10vw] order-2 lg:order-1">
                   <div className="w-full lg:px-0">
-                    <span className="text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-non 2xl:leading-none block mb-3">What&apos;s on?</span>
-                    <h2 className="text-[9.5vw] leading-none lg:text-[5vw] lg:leading-none xl:text-[4.5vw] xl:leading-none mb-8 text-[#EBEA33] max-w-[550px] xl:max-w-[85%]">
+                    <span className="text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-non 2xl:leading-none block mb-6 lg:mb-3">What&apos;s on?</span>
+                    <h2 className="text-[10.9vw] leading-none lg:text-[5vw] lg:leading-[0.9] xl:text-[4.5vw] xl:leading-[0.9] mb-8 text-[#EBEA33] max-w-[550px] xl:max-w-[85%]">
                       <PortableText
                         content={home.whatsOnSectionHeading}
                       />
@@ -177,42 +182,49 @@ export default function Home(initialData) {
                       <span className="font-display"><span className="italic">in your</span> pocket</span> */}
                     </h2>
 
-                    <div className="content text-base leading-tight lg:text-lg 2xl:text-2xl lg:leading-snug 2xl:leading-snug max-w-[530px] lg:max-w-none w-9/12 lg:w-[10/12] mb-8 lg:mb-[10%]">
+                    <div className="content text-base leading-tight lg:text-lg 2xl:text-2xl lg:leading-snug 2xl:leading-snug max-w-[530px] lg:max-w-[530px] w-full lg:w-[10/12] mb-8 lg:mb-[10%]">
                       <PortableText
                         content={home.whatsOnSectionText}
                       />
                     </div>
+                  
+                    <div className="hidden lg:block">
+                      <div className="relative rotate-[-2deg] w-[125px] lg:w-[140px] xl:w-[180px] 2xl:w-[220px] aspect-square border-2 border-[#EBEA33] rounded-full flex items-center justify-center">
+                        
+                          <Image
+                            quality={80}
+                            width={358}
+                            height={356}
+                            src="/images/qr.jpg"
+                            alt="QR Code to download the app"
+                            className="w-[65%]"
+                          />
 
-                    <div className="relative rotate-[-2deg] w-[125px] lg:w-[140px] xl:w-[180px] 2xl:w-[220px] aspect-square border-2 border-[#EBEA33] rounded-full flex items-center justify-center">
-                      <Image
-                        quality={80}
-                        width={358}
-                        height={356}
-                        src="/images/qr.jpg"
-                        alt="QR Code to download the app"
-                        className="w-[65%]"
-                      />
-
-                      <span className="text-sm lg:text-lg xl:text-xl 2xl:text-2xl leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-[#EBEA33] block uppercase absolute bottom-[-50px] lg:bottom-[-50px] xl:bottom-[-65px] right-[-190px] lg:right-[-260px] xl:right-[-300px] rotate-[-2deg] xl:rotate-[-5deg] w-[180px] lg:w-[250px] xl:w-[270px] text-center">
-                        <svg className="w-[50%] lg:w-[45%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.089 173.374">
-                          <defs>
-                            <clipPath id="a">
-                              <path fill="none" d="M0 0h157.986v72.6H0Z" data-name="Path 1181"/>
-                            </clipPath>
-                          </defs>
-                          <g data-name="Group 422">
-                            <g clipPath="url(#a)" data-name="Group 421" transform="rotate(61 31.748 53.897)">
-                              <g data-name="Group 419">
-                                <path fill="none" stroke="currentColor" strokeWidth="3" d="M157.615 9.238S73.325-32.828 3.725 71.231" data-name="Path 1179"/>
-                              </g>
-                              <g data-name="Group 420">
-                                <path fill="none" stroke="currentColor" strokeWidth="3" d="M21.854 69.295 3.196 71.668.822 53.01" data-name="Path 1180"/>
+                        <span className="text-sm lg:text-lg xl:text-xl 2xl:text-2xl leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-[#EBEA33] block uppercase absolute bottom-[-50px] lg:bottom-[-50px] xl:bottom-[-65px] right-[-190px] lg:right-[-260px] xl:right-[-300px] rotate-[-2deg] xl:rotate-[-5deg] w-[180px] lg:w-[250px] xl:w-[270px] text-center">
+                          <svg className="w-[50%] lg:w-[45%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.089 173.374">
+                            <defs>
+                              <clipPath id="a">
+                                <path fill="none" d="M0 0h157.986v72.6H0Z" data-name="Path 1181"/>
+                              </clipPath>
+                            </defs>
+                            <g data-name="Group 422">
+                              <g clipPath="url(#a)" data-name="Group 421" transform="rotate(61 31.748 53.897)">
+                                <g data-name="Group 419">
+                                  <path fill="none" stroke="currentColor" strokeWidth="3" d="M157.615 9.238S73.325-32.828 3.725 71.231" data-name="Path 1179"/>
+                                </g>
+                                <g data-name="Group 420">
+                                  <path fill="none" stroke="currentColor" strokeWidth="3" d="M21.854 69.295 3.196 71.668.822 53.01" data-name="Path 1180"/>
+                                </g>
                               </g>
                             </g>
-                          </g>
-                        </svg>
-                        <span className="font-display"><span className="italic">Scan me</span></span> with your phone camera to download!
-                      </span>
+                          </svg>
+                          <span className="font-display"><span className="italic">Scan me</span></span> with your phone camera to download!
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="lg:hidden">
+                      <a href="https://qrco.de/be9W9S" target="_blank" rel="noopener noreferrer" className="a11y-focus block w-full rounded-full border border-[#B4C0C6] py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 leading-[1.025] 2xl:text-2xl 2xl:leading-[1.025] mx-auto relative group overflow-hidden text-center">Download The App</a>
                     </div>
                   </div>
                 </div>

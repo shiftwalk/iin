@@ -6,10 +6,23 @@ import NewsTeaser from '@/components/news-teaser'
 import { catQuery } from '@/helpers/queries'
 import SanityPageService from '@/services/sanityPageService'
 import Link from 'next/link'
+import PortableText from 'react-portable-text'
+import { useState } from 'react'
 const pageService = new SanityPageService(catQuery)
 
 export default function NewsCat(initialData) {
   const { data: { contact, policies, cat }  } = pageService.getPreviewHook(initialData)()
+
+  const [showFilters, setShowFilters] = useState(false)
+
+  const filterToggle = () => {
+    if (showFilters) {
+      setShowFilters(false)
+    } else {
+      setShowFilters(true)
+    }
+  }
+
   return (
     <Layout>
       <NextSeo title={cat.title} />
@@ -20,24 +33,43 @@ export default function NewsCat(initialData) {
             <article>
               <div className="w-full py-[50vw] pb-[25vw] bg-white lg:py-[20vw] lg:pb-[10vw] xl:py-[15vw] xl:pb-[7.5vw] selection:bg-[#FF5F38] selection:text-white">
                 <div className="w-full text-center uppercase">
-                  <h1 className="text-[12vw] lg:text-[10.5vw] leading-[0.9] lg:leading-[0.9] text-[#FF5F38]">
+                <h1 className="text-[8.5vw] lg:text-[7.5vw] leading-[0.9] lg:leading-[0.9] text-[#FF5F38]">
                     <span className="inline">{cat.title}</span>
                   </h1>
                 </div>
 
                 <div className="flex flex-wrap justify-center px-5 lg:px-[7.5vw]">
                   <div className="w-full lg:w-8/12 mb-[20vw] lg:mb-[15vw] xl:mb-[12vw]">
-                    <div className="content font-display text-off-black text-[20px] lg:text-[25px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight text-center">
-                      <p>Here&apos;s the <em>lowdown</em> on future city centre <em>initiatives</em> and <em>events</em>, as well as the latest on Nottingham&apos;s <em>shops</em> and <em>eateries</em> and other important news.</p>
+                    <div className="content font-display text-off-black text-[20px] lg:text-[24px] 2xl:text-[36px] leading-tight lg:leading-tight 2xl:leading-tight text-center">
+                      {cat.heroText ? (
+                        <PortableText content={cat.heroText} className="content" />
+                      ) : (
+                        <p>Here&apos;s the <em>lowdown</em> on future city centre <em>initiatives</em> and <em>events</em>, as well as the latest on Nottingham&apos;s <em>shops</em> and <em>eateries</em> and other important news.</p>
+                      )}
                     </div>
                   </div>
 
                   <nav className="w-full mb-5 lg:mb-8">
-                    <ul className="lg:flex lg:space-x-6 text-lg lg:text-xl 2xl:text-2xl leading-tight lg:leading-tight 2xl:leading-tight">
-                      <li className="mb-1 lg:mb-0 text-opacity-20 text-black inline-block"><Link href="/news">All</Link></li>
+
+                  <button onClick={()=> filterToggle()} className="a11y-focus text-lg lg:text-xl 2xl:text-2xl leading-tight lg:leading-tight 2xl:leading-tight block lg:hidden">{showFilters ? 'Hide Filters -' : 'Show Filters +'}</button>
+
+                  { showFilters && ( 
+                  
+                    <ul className="block lg:hidden lg:space-x-6 text-lg lg:text-xl 2xl:text-2xl leading-tight lg:leading-tight 2xl:leading-tight mt-3 lg:mt-5">
+                      <li className="mb-1 lg:mb-0 text-opacity-20 text-black inline-block"><Link className="group text-black opacity-20 group hover:opacity-100 " href="/news">All <span className="border-b border-off-black block w-0 group-hover:w-full "></span></Link></li>
                       {cat.cats.map((e, i) => {
                         return (
-                          <li key={i} className="mb-1 lg:mb-0"><Link className={`text-black  ${e.slug.current == cat.slug.current ? 'text-opacity-100 border-b border-off-black' : 'text-opacity-20' }`} href={`/news/categories/${e.slug.current}`}>{e.title}</Link></li>
+                          <li key={i} className="mb-1 lg:mb-0"><Link className={`group text-black  group lg:hover:opacity-100   ${e.slug.current == cat.slug.current ? 'border-b border-off-black' : 'opacity-20' }`} href={`/news/categories/${e.slug.current}`}>{e.title} {e.slug.current !== cat.slug.current && (<span className="border-b border-off-black block w-0 lg:group-hover:w-full "></span>)}</Link></li>
+                        )
+                      })}
+                    </ul>
+                  )}
+
+                  <ul className="hidden lg:flex lg:space-x-6 text-lg lg:text-xl 2xl:text-2xl leading-tight lg:leading-tight 2xl:leading-tight">
+                      <li className="mb-1 lg:mb-0 text-opacity-20 text-black inline-block"><Link className="group text-black opacity-20 group hover:opacity-100 " href="/news">All <span className="border-b border-off-black block w-0 group-hover:w-full "></span></Link></li>
+                      {cat.cats.map((e, i) => {
+                        return (
+                          <li key={i} className="mb-1 lg:mb-0"><Link className={`group text-black  group lg:hover:opacity-100  ${e.slug.current == cat.slug.current ? 'border-b border-off-black' : 'opacity-20' }`} href={`/news/categories/${e.slug.current}`}>{e.title} {e.slug.current !== cat.slug.current && (<span className="border-b border-off-black block w-0 lg:group-hover:w-full "></span>)}</Link></li>
                         )
                       })}
                     </ul>

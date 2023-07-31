@@ -49,7 +49,7 @@ export default function WhatsOn(initialData) {
             <article>
               <div className="w-full bg-[#ffc3d6] relative selection:bg-off-black selection:text-[#ffc3d6]">
                 <div className="w-full text-center uppercase min-h-screen flex flex-col items-center justify-center">
-                  <m.h1 variants={container} className="text-[12vw] lg:text-[11.5vw] leading-none lg:leading-none text-[#BD3146]">
+                  <m.h1 variants={container} className="text-[12vw] lg:text-[11.5vw] leading-none lg:leading-none text-[#BD3146] mb-2 lg:mb-5">
                     <span className="relative overflow-hidden block">
                       <m.span className="block" variants={reveal}>Discover</m.span>
                     </span>
@@ -77,16 +77,16 @@ export default function WhatsOn(initialData) {
                 </div>
 
                 <div className="relative">
-                  <div className="flex flex-wrap px-5 lg:px-[5vw] max-w-[1800px] mx-auto mb-8 lg:mb-0">
+                  <div className="flex flex-wrap px-5 lg:px-[5vw] max-w-[1800px] mx-auto mb-5 lg:mb-0">
                     <div className="w-full lg:w-[55%]">
-                      <div className="text-off-black mb-5 lg:mb-8">
+                      <div className="text-off-black mb-3 lg:mb-8 lg:max-w-[90%]">
                         <PortableText
                           className="content content--whats-on"
                           content={whatsOn.introText}
                         />
                       </div>
 
-                      <Button href="/about-us" label="Check out Visit Notts!" borderColor="border-black"  />
+                      {/* <Button href="/about" label="Check out Visit Notts!" borderColor="border-black" className="w-full lg:w-auto block lg:inline-block"  /> */}
                     </div>
                   </div>
                   
@@ -121,7 +121,7 @@ export default function WhatsOn(initialData) {
                           />
                         </div>
 
-                        <h2 className="px-5 lg:px-[10%] text-[6.5vw] leading-none lg:text-[2.5vw] 2xl:text-[2vw] lg:leading-none xl:leading-none 2xl:leading-none mb-[1vw] uppercase text-[#437256] max-w-[75%] lg:max-w-none"><PortableText
+                        <h2 className="px-5 lg:px-[10%] text-[6.5vw] leading-none lg:text-[2.5vw] 2xl:text-[2vw] lg:leading-none xl:leading-none 2xl:leading-none mb-3 lg:mb-[1vw] uppercase text-[#437256] max-w-[75%] lg:max-w-none"><PortableText
                             className="whats-on-image-text"
                             content={whatsOn.imageBlocks[1].captionText}
                           /></h2>
@@ -140,12 +140,12 @@ export default function WhatsOn(initialData) {
                         </div>
 
                         <div className="lg:translate-x-[-20px]">
-                          <h2 className="px-5 text-[6.5vw] leading-none lg:text-[2.5vw] 2xl:text-[2vw] lg:leading-none xl:leading-none 2xl:leading-none mb-[2vw] lg:mb-[1vw] uppercase text-[#FC8200] max-w-[65%]"><PortableText
+                          <h2 className="px-5 text-[6.5vw] leading-none lg:text-[2.5vw] 2xl:text-[2vw] lg:leading-none xl:leading-none 2xl:leading-none mb-3 lg:mb-[1vw] uppercase text-[#FC8200] max-w-[65%]"><PortableText
                             className="whats-on-image-text"
                             content={whatsOn.imageBlocks[2].captionText}
                           /></h2>
 
-                          <IconSquiggleUnderline className="mx-5 w-[70%] lg:w-[75%] xl:w-[60%] text-[#FC8200] mb-5" />
+                          <IconSquiggleUnderline className="mx-5 w-[70%] lg:w-[75%] xl:w-[60%] text-[#FC8200] mb-16 lg:mb-3" />
                         </div>
                       </div>
                     )}

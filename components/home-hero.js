@@ -72,17 +72,17 @@ export default function HomeHero() {
       <button onClick={() => toggleVideo()} className={`w-full text-center uppercase relative z-10 transition-opacity ease-in-out duration-[400ms] lg:cursor-none a11y-focus   ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
         <div className="relative z-10">
           <m.div variants={container}>
-            <span className="block text-[12.5vw] lg:text-[12vw] leading-[0.9] lg:leading-[0.9] overflow-hidden">
+            <span className="block text-[13.5vw] lg:text-[12vw] leading-[0.9] lg:leading-[0.9] overflow-hidden">
               <m.span variants={reveal} className="block">
                 Making
               </m.span>
             </span>
-            <span className="block text-[12.5vw] lg:text-[12vw] leading-[0.9] lg:leading-[0.9] overflow-hidden">
+            <span className="block text-[13.5vw] lg:text-[12vw] leading-[0.9] lg:leading-[0.9] overflow-hidden">
               <m.span variants={reveal} className="block">
                 Nottingham
               </m.span>
             </span>
-            <span className="block text-[12.5vw] lg:text-[12vw] leading-[0.9] lg:leading-[0.9] overflow-hidden font-display italic">
+            <span className="block text-[13.5vw] lg:text-[12vw] leading-[0.9] lg:leading-[0.9] overflow-hidden font-display italic">
               <m.span variants={reveal} className="block">
                 Thrive
               </m.span>
@@ -98,7 +98,7 @@ export default function HomeHero() {
             {/* <IconSquiggleUnderline className="w-[60%] mx-auto mt-2 mb-8 lg:mb-0" /> */}
           </m.div>
 
-          <span className={`w-20 h-20 items-center bg-[#EBEA33] text-off-black rounded-full uppercase text-xl flex lg:hidden justify-center mx-auto tion-opacity ease-in-out duration-[400ms] z-[10] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
+          <span className={`w-24 h-24 lg:w-20 lg:h-20 items-center bg-[#EBEA33] text-off-black rounded-full uppercase text-lg lg:text-xl flex lg:hidden justify-center mx-auto tion-opacity ease-in-out duration-[400ms] z-[10] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
             <span className="block">Play</span>
           </span>
         </div>

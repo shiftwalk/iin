@@ -23,7 +23,7 @@ module.exports = {
         marqueeReverse: 'marqueeReverse 40s linear infinite',
         marqueeReverse2: 'marqueeReverse2 40s linear infinite',
         'spin-slow': 'spin 5s linear infinite',
-        'spin-slower': 'spin 7.5s linear infinite',
+        'spin-slower': 'spin 25s linear infinite',
         'spin-slow-reverse': 'spin 3s linear infinite reverse',
       },
       keyframes: {

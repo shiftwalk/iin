@@ -132,6 +132,11 @@ export const aboutQuery = `{
     },
     secondSectionHeading,
     secondSectionText,
+    secondSectionButtonLink-> {
+      slug {
+        current
+      }
+    },
     secondSectionImage {
       asset-> {
         ...
@@ -195,6 +200,11 @@ export const aboutQuery = `{
         }
       }
     },
+    crimeReductionButtonLink-> {
+      slug {
+        current
+      }
+    },
     ourPeopleSectionHeading,
     ourPeopleSectionText,
     ourPeopleSectionBoardOfDirectorsLink,
@@ -213,6 +223,7 @@ export const aboutQuery = `{
     keyResourcesSectionText,
     keyResourcesDownloads[] {
       title,
+      link,
       file {
         asset-> {
           ...
@@ -393,6 +404,7 @@ export const newsQuery = `{
 export const catQuery = `{
   "cat": *[_type == "categories" && slug.current == $slug][0]{
     title,
+    heroText,
     slug {
       current
     },

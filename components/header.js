@@ -71,7 +71,7 @@ export default function Header() {
     <>
       <LazyMotion features={domAnimation}>
         {isIOS && (
-          <a href={'https://example.com/ios'} target="_blank" rel="noopener noreferrer" className={`a11y-focus rounded-full flex items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] bg-[#EBEA33] border border-[#EBEA33] text-black group overflow-hidden`}>
+          <a href={'https://qrco.de/be9W9S'} target="_blank" rel="noopener noreferrer" className={`a11y-focus rounded-full flex items-center justify-center h-[50px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] group overflow-hidden ${router.asPath == '/contact' ? 'bg-[#176B75] border border-[#176B75] text-white' : 'bg-[#EBEA33] border border-[#EBEA33] text-black' }`}>
             <div className="flex space-x-2 mr-3">
               <IconApple className="w-5" />
             </div>
@@ -81,7 +81,7 @@ export default function Header() {
         )}
 
         {isAndroid && (
-          <a href={'https://example.com/android'} target="_blank" rel="noopener noreferrer" className={`a11y-focus rounded-full flex items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] bg-[#EBEA33] border border-[#EBEA33] text-black group overflow-hidden`}>
+          <a href={'https://qrco.de/be9W9S'} target="_blank" rel="noopener noreferrer" className={`a11y-focus rounded-full flex items-center justify-center h-[50px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] group overflow-hidden ${router.asPath == '/contact' ? 'bg-[#176B75] border border-[#176B75] text-white' : 'bg-[#EBEA33] border border-[#EBEA33] text-black' }`}>
             <div className="flex space-x-2 mr-3">
               <IconAndroid className="w-5" />
             </div>
@@ -158,7 +158,7 @@ export default function Header() {
               </m.div>
               <Div100vh className="w-full h-screen selection:bg-[#EBEA33] selection:text-[#4000B5] flex items-center justify-center relative z-[11]">
                 <div className="w-full text-center flex items-center justify-center">
-                  <nav className="text-[11.5vw] lg:text-[12.5vh] leading-[0.825] lg:leading-[0.825] text-[#4000B5] font-sans uppercase">
+                  <nav className="text-[12vw] lg:text-[12.5vh] leading-[0.825] lg:leading-[0.825] text-[#4000B5] font-sans uppercase">
                     <li
                       className={`block overflow-hidden relative mb-3 ${router.asPath == '/' && 'font-display italic uppercase text-white' }`}
                     >
@@ -167,7 +167,7 @@ export default function Header() {
                         animate={{ y: 0, transition: { duration: 0.55, delay: 0.2, ease: [0.71,0,0.17,1]}}}
                         exit={{ y: '100%', transition: { duration: 0.33, delay: 0.2, ease: [0.71,0,0.17,1]} }}
                       >
-                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus transition-color ease-in-out duration-[250ms] hover:text-white" href="/">Home</Link>
+                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus  lg:hover:text-white" href="/">Home</Link>
                       </m.div>
                       {/* { router.asPath == '/' && (
                         <IconSquiggleUnderline className="w-full" />
@@ -179,7 +179,7 @@ export default function Header() {
                         animate={{ y: 0, transition: { duration: 0.55, delay: 0.225, ease: [0.71,0,0.17,1]}}}
                         exit={{ y: '100%', transition: { duration: 0.33, delay: 0.175, ease: [0.71,0,0.17,1]} }}
                       >
-                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus transition-color ease-in-out duration-[250ms] hover:text-white" href="/whats-on">What’S On</Link>
+                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus  lg:hover:text-white" href="/whats-on">What’S On</Link>
                         {/* { router.asPath == '/whats-on' && (
                           <IconSquiggleUnderline className="w-full" />
                         )} */}
@@ -191,20 +191,20 @@ export default function Header() {
                         animate={{ y: 0, transition: { duration: 0.55, delay: 0.25, ease: [0.71,0,0.17,1]}}}
                         exit={{ y: '100%', transition: { duration: 0.33, delay: 0.15, ease: [0.71,0,0.17,1]} }}
                       >
-                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus transition-color ease-in-out duration-[250ms] hover:text-white" href="/news">Latest News</Link>
+                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus  lg:hover:text-white" href="/news">Latest News</Link>
                         {/* { router.asPath.includes('/news') && (
                           <IconSquiggleUnderline className="w-full" />
                         )} */}
                       </m.div>
                     </li>
-                    <li className={`block overflow-hidden relative mb-3 ${router.asPath == '/about-us' && 'font-display italic uppercase text-white relative' }`}>
+                    <li className={`block overflow-hidden relative mb-3 ${router.asPath == '/about' && 'font-display italic uppercase text-white relative' }`}>
                       <m.div
                         initial={{ y: '100%' }}
                         animate={{ y: 0, transition: { duration: 0.55, delay: 0.275, ease: [0.71,0,0.17,1]}}}
                         exit={{ y: '100%', transition: { duration: 0.33, delay: 0.125, ease: [0.71,0,0.17,1]} }}
                       >
-                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus transition-color ease-in-out duration-[250ms] hover:text-white" href="/about-us">About Us</Link>
-                        {/* { router.asPath == '/about-us' && (
+                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus  lg:hover:text-white" href="/about">About Us</Link>
+                        {/* { router.asPath == '/about' && (
                           <IconSquiggleUnderline className="w-full" />
                         )} */}
                       </m.div>
@@ -215,7 +215,7 @@ export default function Header() {
                         animate={{ y: 0, transition: { duration: 0.55, delay: 0.3, ease: [0.71,0,0.17,1]}}}
                         exit={{ y: '100%', transition: { duration: 0.33, delay: 0.1, ease: [0.71,0,0.17,1]} }}
                       >
-                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus transition-color ease-in-out duration-[250ms] hover:text-white" href="/contact">Get In Touch</Link>
+                        <Link scroll={false} onClick={()=>setMenuOpen(false)} className="a11y-focus  lg:hover:text-white" href="/contact">Get In Touch</Link>
                         {/* { router.asPath == '/contact' && (
                           <IconSquiggleUnderline className="w-full" />
                         )} */}
@@ -291,14 +291,16 @@ export default function Header() {
                       <p className="text-lg xl:text-xl leading-[1.25] xl:leading-[1.25] mb-[5vw] text-center">Discover what&apos;s going on, make plans for what&apos;s around the corner and stay up to date with everything Nottingham city centre - all in one place. Whatever your vibe, Nottingham&apos;s got it. And It&apos;s In Nottingham is the best way to find out about it. Scan the QR code below with your phone to get started.</p>
 
                       <div className="relative rotate-[-2deg] w-[125px] lg:w-[33%] lg:max-w-[200px] aspect-square mx-auto">
-                        <Image
-                          quality={80}
-                          width={358}
-                          height={356}
-                          src="/images/qr.jpg"
-                          alt="QR Code to download the app"
-                          className="w-full"
-                        />
+                        <a href="https://qrco.de/be9W9S" target="_blank" rel="noopener noreferrer">
+                          <Image 
+                            quality={80}
+                            width={358}
+                            height={356}
+                            src="/images/qr.jpg"
+                            alt="QR Code to download the app"
+                            className="w-full"
+                          />
+                        </a>
 
                         {/* <span className="text-sm lg:text-lg xl:text-xl 2xl:text-2xl leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-off-black block uppercase absolute bottom-[-50px] lg:bottom-[-50px] xl:bottom-[-65px] right-[-190px] lg:right-[-260px] xl:right-[-300px] rotate-[-2deg] xl:rotate-[-5deg] w-[180px] lg:w-[250px] xl:w-[270px] text-center">
                           <svg className="w-[50%] lg:w-[45%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.089 173.374">

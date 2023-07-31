@@ -29,14 +29,14 @@ export default function News(initialData) {
         <div>
           <main className="">
             <article>
-              <div className="w-full selection:text-white selection:bg-[#176B75] pt-[25vw] lg:pt-[15vw] xl:pt-[10vw]">
-                <div className="font-display italic text-lg lg:text-xl xl:text-2xl flex justify-center mb-8 lg:mb-12">
+              <div className="w-full selection:text-white selection:bg-[#176B75] pt-[33vw] lg:pt-[15vw] xl:pt-[10vw]">
+                <div className="font-display italic text-base lg:text-xl xl:text-2xl flex justify-center mb-5 lg:mb-12">
                   <div>
                     <Link href="/news">IIN News</Link><span>&nbsp;/&nbsp;{current.category.title}</span>
                   </div>
                 </div>
                 <div className="w-full text-center uppercase px-5 lg:px-[10vw] pb-[3.3vw]">
-                  <h1 className="text-[9vw] lg:text-[5.5vw] leading-[0.9] lg:leading-[0.9] text-[#437256]">{current.title}</h1>
+                  <h1 className="text-[10.5vw] lg:text-[5.5vw] leading-[0.9] lg:leading-[0.9] text-[#437256]">{current.title}</h1>
                 </div>
               </div>
 
@@ -57,7 +57,7 @@ export default function News(initialData) {
                 <div className="w-full lg:w-[72%] mb-8 lg:mb-0">
                   <div className="w-[95%] lg:w-[80%]">
                     {current.introText && (
-                      <h2 className="font-display italic text-[5.25vw] lg:text-[3vw] xl:text-[2.8vw] leading-[1.075] lg:leading-[1.075] xl:leading-[1.075] mb-8 lg:mb-12">{current.introText}</h2>
+                      <h2 className="font-display italic text-[5.25vw] lg:text-[3vw] xl:text-[2.8vw] leading-[1.25] lg:leading-[1.25] xl:leading-[1.075] mb-8 lg:mb-12">{current.introText}</h2>
                     )}
 
                     <p className="text-base lg:text-lg xl:text-xl leading-none lg:leading-none xl:leading-none mb-6 lg:mb-12"><strong>Posted:</strong> {mainMo} {mainYe}</p>
@@ -156,9 +156,9 @@ export default function News(initialData) {
                   })}
                 </div>
 
-                <div className="w-full flex items-center justify-center">
+                {/* <div className="w-full flex items-center justify-center">
                   <Link href="/news" className="a11y-focus rounded-full border border-off-black py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-none 2xl:text-2xl 2xl:leading-none">View all stories</Link>
-                </div>
+                </div> */}
               </div>
             </article>
           </main>

@@ -19,7 +19,7 @@
 
 .content--fancy-first {
   & > p:first-of-type {
-    @apply text-lg leading-tight lg:text-xl lg:leading-tight 2xl:text-3xl 2xl:leading-tight;
+    @apply text-base leading-tight lg:text-xl lg:leading-tight 2xl:text-3xl 2xl:leading-tight;
   }
   & > p {
     @apply text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-2xl 2xl:leading-tight
@@ -62,18 +62,18 @@
   @apply my-6 lg:my-10;
 
     cite {
-      @apply text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight block font-bold mb-3 lg:mb-5 not-italic;
+      @apply text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-xl 2xl:leading-tight block  mb-3 lg:mb-5 not-italic;
     }
 
     p {
-      @apply font-display italic text-2xl lg:text-3xl xl:text-4xl leading-[1.075] lg:leading-[1.075] xl:leading-[1.075] mb-5 lg:mb-8 last-of-type:mb-0;
+      @apply font-display italic text-[5.25vw] lg:text-3xl xl:text-4xl leading-[1.2] lg:leading-[1.2] xl:leading-[1.2] mb-5 lg:mb-8 last-of-type:mb-0;
     }
   }
 }
 
 .content--whats-on {
   & > p {
-    @apply first-of-type:font-display first-of-type:text-[28px] first-of-type:lg:text-[32px] first-of-type:2xl:text-[40px] first-of-type:leading-[1.15] first-of-type:lg:leading-[1.15] first-of-type:2xl:leading-[1.15] text-lg lg:text-xl 2xl:text-2xl leading-tight lg:leading-tight 2xl:leading-tight first-of-type:max-w-[100%] max-w-[90%];
+    @apply first-of-type:font-display first-of-type:text-[24px] first-of-type:lg:text-[32px] first-of-type:2xl:text-[40px] first-of-type:leading-[1.15] first-of-type:lg:leading-[1.15] first-of-type:2xl:leading-[1.15] text-base lg:text-xl 2xl:text-2xl leading-tight lg:leading-tight 2xl:leading-tight first-of-type:max-w-[100%] max-w-[90%];
   }
 }
 

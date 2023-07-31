@@ -15,24 +15,24 @@ export default function Footer({ policies, contact }) {
   const footerRef2 = useRef()
 
   return (
-    <footer className="bg-off-black selection:text-off-white selection:bg-[#FF5F38] pb-16 lg:pb-0">
-      <div className="relative flex overflow-x-hidden text-[10vw] text-white uppercase">
+    <footer className="bg-off-black selection:text-off-white selection:bg-[#FF5F38] pb-24 lg:pb-0">
+      <div className="relative flex overflow-x-hidden text-[13vw] lg:text-[10vw] text-white uppercase">
         <div className="animate-marquee will-change-transform whitespace-nowrap pt-[8vw] lg:pt-[6vw] pb-[0vw] lg:pb-[2vw]">
-          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
         </div>
 
         <div className="absolute top-0 animate-marquee2 will-change-transform whitespace-nowrap pt-[8vw] lg:pt-[6vw] pb-[0vw] lg:pb-[2vw]">
-          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
         </div>
       </div>
 
@@ -54,8 +54,8 @@ export default function Footer({ policies, contact }) {
               </div>
             </div>
 
-            <div className="w-10/12 text-center text-white relative z-10">
-              <span className="block text-[9.5vw] leading-none md:text-[5vw] md:leading-none xl:text-[4.5vw] xl:leading-none mb-8 text-[#EFF366]">
+            <div className="w-11/12 lg:w-10/12 text-center text-white relative z-10">
+              <span className="block text-[9.5vw] leading-none md:text-[5vw] md:leading-none xl:text-[4.5vw] xl:leading-none mb-12 lg:mb-16 text-[#EFF366]">
                 <span className="uppercase">Follow us</span>
                 <span className="block font-display">on <span className="uppercase italic relative">socials<svg xmlns="http://www.w3.org/2000/svg" className="absolute bottom-[-10px] left-0 right-0 w-full" viewBox="0 0 431.774 17.59">
   <defs>
@@ -74,7 +74,7 @@ export default function Footer({ policies, contact }) {
 </span></span>
               </span>
 
-              <p className="mb-12 xl:text-xl xl:leading-snug max-w-[500px] md:max-w-[400px] xl:max-w-[500px] mx-auto">Amazing food and drinks, all the shops you&apos;ll ever need, and inspirational events and activities.</p>
+              <p className="mb-12 lg:mb-16 leading-[1.25] xl:text-xl xl:leading-[1.25] max-w-[] md:max-w-[400px] xl:max-w-[500px] mx-auto">Amazing food and drinks, all the shops you&apos;ll ever need, and inspirational events and activities.</p>
 
               <Socials items={contact?.socials} className="text-off-black mx-auto justify-center" />
             </div>
@@ -87,7 +87,7 @@ export default function Footer({ policies, contact }) {
                   <Image
                     fill
                     quality={80}
-                    src="/images/footer-cta.jpg"
+                    src="/images/footer-cta-2.jpg"
                     alt="Nottingham during the day"
                     className="w-full h-full absolute inset-0 object-cover object-center scale-[1.05]"
                     sizes="(max-width: 1024px) 100vw, 25vw"
@@ -96,16 +96,16 @@ export default function Footer({ policies, contact }) {
               </div>
             </div>
             
-            <div className="w-10/12 text-center text-off-black relative z-[10]">
-              <span className="block text-[9.5vw] leading-none md:text-[5vw] md:leading-none xl:text-[4.5vw] xl:leading-none mb-8">
-                <span className="uppercase relative">Sign up <IconSquiggleUnderline className="absolute bottom-0 left-[-5%] right-[-5%] w-[110%]" /></span>
-                <span className="block font-display">for <span className="uppercase italic">updates</span></span>
+            <div className="w-11/12 lg:w-10/12 text-center text-off-black relative z-[10]">
+              <span className="block text-[9.5vw] leading-none md:text-[5vw] md:leading-none xl:text-[4.5vw] xl:leading-none mb-10 lg:mb-16">
+                <span className="uppercase relative">Sign up </span>
+                <span className="block font-display">for <span className="uppercase italic relative">updates <IconSquiggleUnderline className="absolute bottom-[-5px] left-[-5%] right-[-5%] w-[110%]" /></span></span>
               </span>
 
-              <p className="mb-12 xl:text-xl xl:leading-snug max-w-[500px] md:max-w-[400px] xl:max-w-[500px] mx-auto">No spam, ever. Just occasional news, city updates, and tasty offers direct to your inbox!</p>
+              <p className="mb-12 lg:mb-16 leading-[1.25] xl:text-xl xl:leading-[1.25] max-w-[] md:max-w-[400px] xl:max-w-[500px] mx-auto">No spam, ever. Just occasional news, city updates, and tasty offers direct to your inbox!</p>
 
               <form className="relative xl:text-xl xl:leading-none xl:max-w-[720px] mx-auto">
-                <input type="email" placeholder="Email address..." className="appearance-none rounded-full bg-white py-5 px-6 inline-block leading-none w-full a11y-focus focus-visible:ring-2" />
+                <input type="email" placeholder="Email address..." className="appearance-none rounded-full bg-white py-4 lg:py-5 px-6 inline-block leading-none w-full a11y-focus focus-visible:ring-2" />
 
                 <button type="submit" className="absolute top-0 right-0 w-auto bg-[#FC6E5C] px-8 h-full flex items-center justify-center rounded-full text-white a11y-focus focus-visible:ring-2 focus-visible:ring-black group overflow-hidden leading-[1.1]">
                   <div className="relative z-[1] overflow-hidden">
@@ -132,7 +132,7 @@ export default function Footer({ policies, contact }) {
       </div>
 
       <nav className="p-5">
-        <ul className="flex text-white text-xs lg:text-sm w-full">
+        <ul className="flex text-white text-xs lg:text-sm w-full justify-center lg:justify-start">
           {policies?.map((e, i) => {
             return (
               <Fragment key={i}>

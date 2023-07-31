@@ -7,10 +7,20 @@ import { newsQuery } from '@/helpers/queries'
 import SanityPageService from '@/services/sanityPageService'
 import Link from 'next/link'
 import { reveal } from '@/helpers/transitions'
+import { useState } from 'react'
 const pageService = new SanityPageService(newsQuery)
 
 export default function News(initialData) {
   const { data: { contact, policies, news, cats }  } = pageService.getPreviewHook(initialData)()
+  const [showFilters, setShowFilters] = useState(false)
+
+  const filterToggle = () => {
+    if (showFilters) {
+      setShowFilters(false)
+    } else {
+      setShowFilters(true)
+    }
+  }
   return (
     <Layout>
       <NextSeo title="Latest News" />
@@ -26,7 +36,7 @@ export default function News(initialData) {
             <article>
               <div className="w-full py-[50vw] pb-[25vw] bg-white lg:py-[20vw] lg:pb-[10vw] xl:py-[15vw] xl:pb-[7.5vw] selection:bg-[#FF5F38] selection:text-white">
                 <div className="w-full text-center uppercase">
-                  <h1 className="text-[12vw] lg:text-[10.5vw] leading-none lg:leading-none text-[#FF5F38]">
+                  <h1 className="text-[16.5vw] lg:text-[9.5vw] leading-none lg:leading-none text-[#FF5F38]">
                     <span className="block overflow-hidden relative">
                       <m.span className="block" variants={reveal}><span className="inline">Latest</span> <span className="inline font-display italic">News</span></m.span>
                     </span>
@@ -34,21 +44,34 @@ export default function News(initialData) {
                 </div>
 
                 <div className="flex flex-wrap justify-center px-5 lg:px-[7.5vw]">
-                  <div className="w-full lg:w-8/12 mb-[20vw] lg:mb-[15vw] xl:mb-[12vw]">
-                    <div className="content font-display text-off-black text-[20px] lg:text-[25px] 2xl:text-[40px] leading-tight lg:leading-tight 2xl:leading-tight text-center">
+                  <div className="w-full lg:w-9/12 mb-[20vw] lg:mb-[15vw] xl:mb-[12vw]">
+                    <div className="content font-display text-off-black text-[20px] lg:text-[24px] 2xl:text-[36px] leading-tight lg:leading-tight 2xl:leading-tight text-center">
                       <p>Here&apos;s the <em>lowdown</em> on future city centre <em>initiatives</em> and <em>events</em>, as well as the latest on Nottingham&apos;s <em>shops</em> and <em>eateries</em> and other important news.</p>
                     </div>
                   </div>
 
-                  <nav className="w-full mb-5 lg:mb-8">
-                    <ul className="lg:flex lg:space-x-6 text-lg lg:text-xl 2xl:text-2xl leading-tight lg:leading-tight 2xl:leading-tight">
-                      <li className="mb-1 lg:mb-0 border-b border-off-black inline-block"><Link href="/news">All</Link></li>
-                      {cats.map((e, i) => {
-                        return (
-                          <li key={i} className="mb-1 lg:mb-0"><Link className="text-black text-opacity-20" href={`/news/categories/${e.slug.current}`}>{e.title}</Link></li>
-                        )
-                      })}
-                    </ul>
+                  <nav className="w-full mb-3 lg:mb-8">
+                    <button onClick={()=> filterToggle()} className="a11y-focus text-lg lg:text-xl 2xl:text-2xl leading-tight lg:leading-tight 2xl:leading-tight block lg:hidden">{showFilters ? 'Hide Filters -' : 'Show Filters +'}</button>
+
+                    { showFilters && ( 
+                      <ul className="block lg:hidden lg:space-x-6 text-lg lg:text-xl 2xl:text-2xl leading-tight lg:leading-tight 2xl:leading-tight pt-4 lg:pt-0">
+                        <li className="mb-1 lg:mb-0 inline-block relative"><Link href="/news">All <span className="border-b border-off-black block w-full"></span></Link></li>
+                        {cats.map((e, i) => {
+                          return (
+                            <li key={i} className="mb-1 lg:mb-0"><Link className="text-black opacity-20 group lg:hover:opacity-100 " href={`/news/categories/${e.slug.current}`}>{e.title} <span className="border-b border-off-black block w-0 lg:group-hover:w-full"></span></Link></li>
+                          )
+                        })}
+                      </ul>
+                    )}
+
+                      <ul className="lg:flex lg:space-x-6 text-lg lg:text-xl 2xl:text-2xl leading-tight lg:leading-tight 2xl:leading-tight pt-4 lg:pt-0 hidden">
+                        <li className="mb-1 lg:mb-0 inline-block relative"><Link href="/news">All <span className="border-b border-off-black block w-full"></span></Link></li>
+                        {cats.map((e, i) => {
+                          return (
+                            <li key={i} className="mb-1 lg:mb-0"><Link className="text-black opacity-20 group lg:hover:opacity-100 " href={`/news/categories/${e.slug.current}`}>{e.title} <span className="border-b border-off-black block w-0 lg:group-hover:w-full"></span></Link></li>
+                          )
+                        })}
+                      </ul>
                   </nav>
 
                   <div className="w-full grid grid-cols-4 gap-12 mb-[5vw]">
