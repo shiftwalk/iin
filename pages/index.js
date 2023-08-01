@@ -96,16 +96,16 @@ export default function Home(initialData) {
               </div>
 
               <div className="mb-[10vw] lg:mb-[5vw]">
-                <div className="relative flex overflow-hidden text-[14vw] lg:text-[10vw] leading-[0] uppercase">
+                <div className="relative flex overflow-hidden text-[17vw] lg:text-[10vw] leading-[0] uppercase">
                   <m.div style={{ x: x }} className="will-change-transform whitespace-nowrap">
                     {home.textTicker1Words.map((e, i) => {
                       return (
-                        <span key={i} className={`relative overflow-hidden ${(i % 2) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className={`relative overflow-hidden ${(i % 2) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                     {home.textTicker1Words.map((e, i) => {
                       return (
-                        <span key={i} className={`relative overflow-hidden ${(i % 0) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className={`relative overflow-hidden ${(i % 0) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                   </m.div>
@@ -120,21 +120,21 @@ export default function Home(initialData) {
                   </div> */}
                 </div>
 
-                <div className="relative flex overflow-hidden text-[14vw] leading-[0] lg:text-[10vw] lg:leading-[0] uppercase mt-[-1vw]">
+                <div className="relative flex overflow-hidden text-[17vw] leading-[0] lg:text-[10vw] lg:leading-[0] uppercase mt-[-1vw]">
                   <m.div style={{ x: x2 }} className="will-change-transform whitespace-nowrap">
                     {home.textTicker2Words.map((e, i) => {
                       return (
-                        <span key={i} className={`relative overflow-hidden ${(i % 3) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className={`relative overflow-hidden ${(i % 3) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                     {home.textTicker2Words.map((e, i) => {
                       return (
-                        <span key={i} className={`relative overflow-hidden ${(i % 3) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className={`relative overflow-hidden ${(i % 3) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                     {home.textTicker2Words.map((e, i) => {
                       return (
-                        <span key={i} className={`relative overflow-hidden ${(i % 3) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className={`relative overflow-hidden ${(i % 3) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                   </m.div>

@@ -308,23 +308,23 @@ export default function AboutUs(initialData) {
                 </div>
               </div> */}
 
-              <div className="relative flex overflow-x-hidden text-[13vw] lg:text-[10vw] leading-[0] uppercase my-12 lg:my-[7vw] text-[#FF5F38]">
+              <div className="relative flex overflow-x-hidden text-[17vw] lg:text-[10vw] leading-[0] uppercase my-12 lg:my-[7vw] text-[#FF5F38]">
                 <div className="animate-marquee will-change-transform whitespace-nowrap">
-                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
                 </div>
 
                 <div className="absolute top-0 animate-marquee2 will-change-transform whitespace-nowrap">
-                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
                 </div>
               </div>
 

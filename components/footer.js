@@ -16,23 +16,23 @@ export default function Footer({ policies, contact }) {
 
   return (
     <footer className="bg-off-black selection:text-off-white selection:bg-[#FF5F38] pb-24 lg:pb-0">
-      <div className="relative flex overflow-x-hidden text-[13vw] lg:text-[10vw] text-white uppercase">
+      <div className="relative flex overflow-x-hidden text-[17vw] lg:text-[10vw] text-white uppercase">
         <div className="animate-marquee will-change-transform whitespace-nowrap pt-[8vw] lg:pt-[6vw] pb-[0vw] lg:pb-[2vw]">
-          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
         </div>
 
         <div className="absolute top-0 animate-marquee2 will-change-transform whitespace-nowrap pt-[8vw] lg:pt-[6vw] pb-[0vw] lg:pb-[2vw]">
-          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
-          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[13vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block font-display italic">Be In The Know<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
+          <span className="relative overflow-hidden inline-block">Be In The Know<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-7%] ml-2"><IconSmile className="inline-block animate-spin-slow-reverse" /></span></span>
         </div>
       </div>
 
