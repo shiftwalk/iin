@@ -49,7 +49,7 @@ export default function WhatsOn(initialData) {
             <article>
               <div className="w-full bg-[#ffc3d6] relative selection:bg-off-black selection:text-[#ffc3d6]">
                 <div className="w-full text-center uppercase min-h-screen flex flex-col items-center justify-center">
-                  <m.h1 variants={container} className="text-[12vw] lg:text-[11.5vw] leading-none lg:leading-none text-[#BD3146] mb-2 lg:mb-5">
+                  <m.h1 variants={container} className="text-[12vw] lg:text-[11.5vw] leading-none lg:leading-none text-[#BD3146] mb-2 lg:mb-5 translate-x-[-1vw] lg:translate-x-0">
                     <span className="relative overflow-hidden block">
                       <m.span className="block" variants={reveal}>Discover</m.span>
                     </span>
@@ -126,7 +126,7 @@ export default function WhatsOn(initialData) {
                             content={whatsOn.imageBlocks[1].captionText}
                           /></h2>
                         
-                        <IconSlattedUnderline className="w-[90%] text-[#437256] mx-5 lg:mx-[8%]" />
+                        <IconSlattedUnderline className="w-[60%] lg:w-[90%] text-[#437256] mx-5 lg:mx-[8%]" />
                       </div>
                     )}
                     
@@ -140,7 +140,7 @@ export default function WhatsOn(initialData) {
                         </div>
 
                         <div className="lg:translate-x-[-20px]">
-                          <h2 className="px-5 text-[6.5vw] leading-none lg:text-[2.5vw] 2xl:text-[2vw] lg:leading-none xl:leading-none 2xl:leading-none mb-3 lg:mb-[1vw] uppercase text-[#FC8200] max-w-[65%]"><PortableText
+                          <h2 className="px-5 text-[6.5vw] leading-none lg:text-[2.5vw] 2xl:text-[2vw] lg:leading-none xl:leading-none 2xl:leading-none mb-3 lg:mb-[1vw] uppercase text-[#FC8200] max-w-[80%]"><PortableText
                             className="whats-on-image-text"
                             content={whatsOn.imageBlocks[2].captionText}
                           /></h2>

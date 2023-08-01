@@ -87,7 +87,7 @@ export default function Footer({ policies, contact }) {
                   <Image
                     fill
                     quality={80}
-                    src="/images/footer-cta-2.jpg"
+                    src="/images/footer-cta-3.jpg"
                     alt="Nottingham during the day"
                     className="w-full h-full absolute inset-0 object-cover object-center scale-[1.05]"
                     sizes="(max-width: 1024px) 100vw, 25vw"

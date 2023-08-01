@@ -46,7 +46,7 @@ export default function Contact(initialData) {
             <article>
               <div className="w-full">
                 <div className="w-full text-center uppercase min-h-screen bg-[#EBEA33] selection:text-[#EBEA33] selection:bg-[#176B75] flex flex-col items-center justify-center">
-                  <m.h1 variants={container} className="text-[13.4vw] lg:text-[11vw] leading-[0.9] lg:leading-[0.9] text-[#176B75]">
+                  <m.h1 variants={container} className="text-[13.4vw] lg:text-[11vw] leading-[0.9] lg:leading-[0.9] text-[#176B75] translate-x-[-1vw] lg:translate-x-0">
                     <span className="block relative overflow-hidden">
                       <m.span className="block" variants={reveal}>Let’s Talk</m.span>
                     </span>

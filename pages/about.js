@@ -54,7 +54,7 @@ export default function AboutUs(initialData) {
           <main className="">
             <article>
               <div className="w-full bg-[#4000B5] selection:text-[#4000B5] selection:bg-[#23D6D1] relative min-h-screen flex flex-col items-center justify-center">
-                <LerpImage className="w-[33%] lg:w-[19vw] 2xl:w-[18vw] h-[52vw] lg:h-[28vw] 2xl:h-[26vw] absolute top-[15%] lg:top-[13%] left-0 overflow-hidden" amount="500%">
+                <LerpImage className="w-[40%] lg:w-[19vw] 2xl:w-[18vw] h-[60vw] lg:h-[28vw] 2xl:h-[26vw] absolute top-[13%] lg:top-[13%] left-0 overflow-hidden" amount="500%">
                   <SanityImageScale
                     image={about.heroImage[0]}
                     sizes="(max-width: 1024px) 100vw, 35vw"
@@ -71,7 +71,7 @@ export default function AboutUs(initialData) {
                 )}
 
                 {about.heroImage[1] && (
-                  <LerpImage amount="-250%" className="w-[55%] lg:w-[45vw] h-[36vw] lg:h-[37vw] absolute bottom-[15%] left-[-5%] overflow-hidden block lg:hidden">
+                  <LerpImage amount="-250%" className="w-[65%] lg:w-[45vw] h-[43vw] lg:h-[37vw] absolute bottom-[10%] left-[-5%] overflow-hidden block lg:hidden">
                     <div className="h-full relative overflow-hidden w-full">
                       <SanityImageScale
                         image={about.heroImage[1]}
@@ -99,7 +99,7 @@ export default function AboutUs(initialData) {
                 </div>
               </div>
 
-              <div className="flex flex-wrap relative lg:pl-[5vw] 2xl:pl-[7.5vw] bg-[#4000B5] pb-[16vw] lg:pb-[20vw] xl:pb-[15vw] mb-[5vw] lg:mb-[10vw] selection:text-[#4000B5] selection:bg-[#23D6D1] z-[10]">
+              <div className="flex flex-wrap relative lg:pl-[5vw] 2xl:pl-[7.5vw] bg-[#4000B5] pb-[16vw] lg:pb-[100px] xl:pb-[120px] mb-[5vw] lg:mb-[10vw] selection:text-[#4000B5] selection:bg-[#23D6D1] z-[10]">
                 {about.heroImage[2] && (
                   <div className="w-full lg:w-[43%] hidden lg:block translate-y-[-15vh]">
                     <LerpImage amount="-100%" className="h-[27vw] relative overflow-hidden w-full">
@@ -228,7 +228,7 @@ export default function AboutUs(initialData) {
                     <span className="block">Our crime reduction initiatives</span>
                   </h3>
 
-                  <IconSquiggleUnderline className="w-[80%] lg:w-[38%] 2xl:w-[44%] text-off-black translate-x-[-1vw] mb-8 lg:mb-[4vw]" />
+                  <IconSquiggleUnderline className="w-[90%] lg:w-[36%] 2xl:w-[38%] max-w-[570px] text-off-black translate-x-[-1vw] mb-8 lg:mb-[4vw]" />
                 </div>
 
                 <div className="mb-[8vw] lg:mb-[5vw]">
@@ -236,7 +236,7 @@ export default function AboutUs(initialData) {
                   
                   {about.crimeReductionButtonLink && (
                     <div className="lg:flex lg:justify-center px-5">
-                      <Button href={`/news/${about.crimeReductionButtonLink.slug.current}`} label="Find Out More" className="w-full lg:w-auto" />
+                      <Button href={`/news/${about.crimeReductionButtonLink.slug.current}`} label="Find Out More" className="w-full lg:w-1/3" />
                     </div>
                   )}
                 </div>

@@ -48,7 +48,7 @@ export default function Home(initialData) {
             <article>
               <div className="p-[5vw] pt-8 lg:pr-0 pb-[7vw] mb-[10vw] lg:mb-[15vw] lg:pb-[33vw] lg:pt-[5vw] relative">
                 <div className="flex flex-wrap relative">
-                  <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
+                  <div className="w-full lg:w-1/2 mb-16 lg:mb-0">
                     {home.introContentHeading && (
                       <h1 className="text-[9.5vw] leading-none lg:text-[4vw] lg:leading-[0.9] xl:leading-[0.9] uppercase text-[#FF5F38] max-w-[100%] mb-5 lg:mb-[2vw]">
                         <PortableText
@@ -96,16 +96,16 @@ export default function Home(initialData) {
               </div>
 
               <div className="mb-[10vw] lg:mb-[5vw]">
-                <div className="relative flex overflow-x-hidden text-[14vw] lg:text-[10vw] leading-[0] uppercase">
+                <div className="relative flex overflow-hidden text-[14vw] lg:text-[10vw] leading-[0] uppercase">
                   <m.div style={{ x: x }} className="will-change-transform whitespace-nowrap">
                     {home.textTicker1Words.map((e, i) => {
                       return (
-                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className={`relative overflow-hidden ${(i % 2) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                     {home.textTicker1Words.map((e, i) => {
                       return (
-                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className={`relative overflow-hidden ${(i % 0) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                   </m.div>
@@ -120,21 +120,21 @@ export default function Home(initialData) {
                   </div> */}
                 </div>
 
-                <div className="relative flex overflow-x-hidden text-[14vw] leading-[0] lg:text-[10vw] lg:leading-[0] uppercase mt-[-1vw]">
+                <div className="relative flex overflow-hidden text-[14vw] leading-[0] lg:text-[10vw] lg:leading-[0] uppercase mt-[-1vw]">
                   <m.div style={{ x: x2 }} className="will-change-transform whitespace-nowrap">
                     {home.textTicker2Words.map((e, i) => {
                       return (
-                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className={`relative overflow-hidden ${(i % 3) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                     {home.textTicker2Words.map((e, i) => {
                       return (
-                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className={`relative overflow-hidden ${(i % 3) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                     {home.textTicker2Words.map((e, i) => {
                       return (
-                        <span key={i} className="relative overflow-hidden inline-block font-display italic">{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
+                        <span key={i} className={`relative overflow-hidden ${(i % 3) === 0 ? 'font-display italic' : '' }`}>{e}<span className="inline-block w-[15vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>    
                       )
                     })}
                   </m.div>
@@ -153,20 +153,23 @@ export default function Home(initialData) {
 
               <div className="py-[5vw] pr-0 lg:pb-[10vw]">
                 <div className="px-[5vw]">
-                  <h2 className="text-[9.5vw] leading-none lg:text-[6vw] lg:leading-[0.9] xl:text-[5.5vw] xl:leading-[0.9] max-w-[550px] lg:max-w-[100%] text-[#BDB800] mb-3">
+                  <h2 className="text-[9.5vw] leading-none lg:text-[6vw] lg:leading-[0.9] xl:text-[5.5vw] xl:leading-[0.9] max-w-[550px] lg:max-w-[100%] text-[#BDB800] mb-2">
                     <span className="uppercase block">Latest</span>
                     <span className="uppercase block">News</span>
                   </h2>
 
-                  <IconSquiggleUnderline className="w-[65%] lg:w-[40%] xl:w-[33%] text-[#BDB800] translate-x-[-2vw] mb-[4vw]" />
+                  {/* <IconSquiggleUnderline className="w-[50%] lg:w-[40%] xl:w-[33%] text-[#BDB800] lg:translate-x-[-2vw] mb-[4vw]" /> */}
+                  <svg className="w-[50%] lg:w-[40%] xl:w-[33%] text-[#BDB800] lg:translate-x-[-2vw] mb-6 lg:mb-[4vw]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1054.61 41.078">
+                    <path  stroke="currentColor" fill="none" strokeLinecap="round" strokeWidth="5" d="M1052.091 2.519S439.691 7.143 62.04 36.748c-99.9 7.827-41.862-11.468-50.6-11.237" data-name="Path 1259"/>
+                  </svg>
                 </div>
 
                 <div className="mb-[8vw] lg:mb-[5vw]">
                   <NewsCarousel items={home.latestNews} />
                 </div>
 
-                <div className="lg:text-center px-4 lg:px-0">
-                  <Button href="/news" label="View More News" className="block lg:inline-block w-full lg:w-auto" />
+                <div className="lg:text-center px-4 lg:px-0 pb-5 lg:pb-0">
+                  <Button href="/news" label="View More News" className="block w-full lg:w-1/3" />
                 </div>
               </div>
 
@@ -204,7 +207,7 @@ export default function Home(initialData) {
                           <svg className="w-[50%] lg:w-[45%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.089 173.374">
                             <defs>
                               <clipPath id="a">
-                                <path fill="none" d="M0 0h157.986v72.6H0Z" data-name="Path 1181"/>
+                              <path fill="none" d="M0 0h157.986v72.6H0Z" data-name="Path 1181"/>
                               </clipPath>
                             </defs>
                             <g data-name="Group 422">
@@ -223,7 +226,7 @@ export default function Home(initialData) {
                       </div>
                     </div>
 
-                    <div className="lg:hidden">
+                    <div className="lg:hidden mb-6">
                       <a href="https://qrco.de/be9W9S" target="_blank" rel="noopener noreferrer" className="a11y-focus block w-full rounded-full border border-[#B4C0C6] py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 leading-[1.025] 2xl:text-2xl 2xl:leading-[1.025] mx-auto relative group overflow-hidden text-center">Download The App</a>
                     </div>
                   </div>

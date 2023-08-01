@@ -515,7 +515,7 @@ export const newsSlugQuery = `{
         asset->
       }
     },
-    "more": *[_type == "news"][0..6]{
+    "more": *[_type == "news" && slug.current != $slug][0..6]{
       title,
       category->{
         title,
@@ -555,7 +555,7 @@ export const newsSlugQuery = `{
         }
       }
     },
-    "related": *[_type == "news"][0..2]{
+    "related": *[_type == "news" && slug.current != $slug][0..2]{
       title,
       category->{
         title,
