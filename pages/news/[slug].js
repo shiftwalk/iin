@@ -14,6 +14,7 @@ import SanityPageService from '@/services/sanityPageService'
 import SanityImageResponsive from '@/components/sanity-image-responsive'
 import PortableText from 'react-portable-text'
 import Blockquote from '@/components/blockquote'
+import Head from 'next/head'
 const pageService = new SanityPageService(newsSlugQuery)
 
 export default function News(initialData) {
@@ -24,7 +25,32 @@ export default function News(initialData) {
 
   return (
     <Layout>
-      <NextSeo title={current.title} />
+      <NextSeo
+        title={current.seo?.metaTitle ? current.seo?.metaTitle : current.title}
+        description={current.seo?.metaDesc ? current.seo?.metaDesc : null}
+        openGraph={{
+          title: current.seo?.metaTitle ? current.seo?.metaTitle : current.title,
+          description: current.seo?.metaDesc ? current.seo?.metaDesc : null,
+          images: current.seo?.shareGraphic?.asset ? [
+            {
+              url: current.seo?.shareGraphic?.asset.url ? current.seo?.shareGraphic?.asset.url : null,
+              width: current.seo?.shareGraphic?.asset.metadata.dimensions.width ? current.seo?.shareGraphic?.asset.metadata.dimensions.width : null,
+              height: current.seo?.shareGraphic?.asset.metadata.dimensions.height ? current.seo?.shareGraphic?.asset.metadata.dimensions.height : null,
+              type: 'image/jpeg',
+            }
+          ] : null
+        }}
+      />
+
+      {current.seo?.jsonLd && (
+        <Head>
+          <script
+            type="applicurrention/ld+json"
+            dangerouslySetInnerHTML={{ __html: current.seo.jsonLd }}
+            key="product-jsonld"
+          />
+        </Head>
+      )}
 
       <LazyMotion features={domAnimation}>
         <div>

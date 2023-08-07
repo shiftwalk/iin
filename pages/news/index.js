@@ -8,10 +8,12 @@ import SanityPageService from '@/services/sanityPageService'
 import Link from 'next/link'
 import { reveal } from '@/helpers/transitions'
 import { useState } from 'react'
+import PortableText from 'react-portable-text'
+import Head from 'next/head'
 const pageService = new SanityPageService(newsQuery)
 
 export default function News(initialData) {
-  const { data: { contact, policies, news, cats }  } = pageService.getPreviewHook(initialData)()
+  const { data: { contact, policies, newsLanding, news, cats }  } = pageService.getPreviewHook(initialData)()
   const [showFilters, setShowFilters] = useState(false)
 
   const filterToggle = () => {
@@ -23,7 +25,32 @@ export default function News(initialData) {
   }
   return (
     <Layout>
-      <NextSeo title="Latest News" />
+      <NextSeo
+        title={newsLanding.seo?.metaTitle ? newsLanding.seo?.metaTitle : newsLanding.title}
+        description={newsLanding.seo?.metaDesc ? newsLanding.seo?.metaDesc : null}
+        openGraph={{
+          title: newsLanding.seo?.metaTitle ? newsLanding.seo?.metaTitle : newsLanding.title,
+          description: newsLanding.seo?.metaDesc ? newsLanding.seo?.metaDesc : null,
+          images: newsLanding.seo?.shareGraphic?.asset ? [
+            {
+              url: newsLanding.seo?.shareGraphic?.asset.url ? newsLanding.seo?.shareGraphic?.asset.url : null,
+              width: newsLanding.seo?.shareGraphic?.asset.metadata.dimensions.width ? newsLanding.seo?.shareGraphic?.asset.metadata.dimensions.width : null,
+              height: newsLanding.seo?.shareGraphic?.asset.metadata.dimensions.height ? newsLanding.seo?.shareGraphic?.asset.metadata.dimensions.height : null,
+              type: 'image/jpeg',
+            }
+          ] : null
+        }}
+      />
+
+      {newsLanding.seo?.jsonLd && (
+        <Head>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: newsLanding.seo.jsonLd }}
+            key="product-jsonld"
+          />
+        </Head>
+      )}
 
       <LazyMotion features={domAnimation}>
         <m.div
@@ -46,7 +73,11 @@ export default function News(initialData) {
                 <div className="flex flex-wrap justify-center px-5 lg:px-[7.5vw]">
                   <div className="w-full lg:w-9/12 mb-[20vw] lg:mb-[15vw] xl:mb-[12vw]">
                     <div className="content font-display text-off-black text-[20px] lg:text-[24px] 2xl:text-[36px] leading-tight lg:leading-tight 2xl:leading-tight text-center">
-                      <p>Here&apos;s the <em>lowdown</em> on future city centre <em>initiatives</em> and <em>events</em>, as well as the latest on Nottingham&apos;s <em>shops</em> and <em>eateries</em> and other important news.</p>
+                      {newsLanding.heroText ? (
+                        <PortableText content={newsLanding.heroText} className="content" />
+                      ) : (
+                        <p>Here&apos;s the <em>lowdown</em> on future city centre <em>initiatives</em> and <em>events</em>, as well as the latest on Nottingham&apos;s <em>shops</em> and <em>eateries</em> and other important news.</p>
+                      )}
                     </div>
                   </div>
 
@@ -87,6 +118,14 @@ export default function News(initialData) {
                       i == 5 && ( imageHeight = 'h-[60vw] lg:h-[12.5vw]' )
                       i == 8 && ( imageHeight = 'h-[60vw] lg:h-[22vw]' )
                       i == 9 && ( width = 'col-span-4 lg:col-span-2', imageHeight = 'h-[60vw] lg:h-[27vw]' )
+                      i == 10 && ( width = 'col-span-4 lg:col-span-2' )
+                      i == 11 && ( imageHeight = 'h-[60vw] lg:h-[28vw]' )
+                      i == 12 && ( imageHeight = 'h-[60vw] lg:h-[24vw]' )
+                      i == 13 && ( imageHeight = 'h-[60vw] lg:h-[14vw]' )
+                      i == 14 && ( imageHeight = 'h-[60vw] lg:h-[25vw]' )
+                      i == 15 && ( imageHeight = 'h-[60vw] lg:h-[12.5vw]' )
+                      i == 18 && ( imageHeight = 'h-[60vw] lg:h-[22vw]' )
+                      i == 19 && ( width = 'col-span-4 lg:col-span-2', imageHeight = 'h-[60vw] lg:h-[27vw]' )
 
                       return (
                         <NewsTeaser key={i} subHeading={e.category.title} heading={e.title} image={e.teaserImage} className={width} imageHeight={imageHeight} href={`/news/${e.slug.current}/`} />

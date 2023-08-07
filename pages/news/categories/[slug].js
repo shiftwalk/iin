@@ -8,6 +8,7 @@ import SanityPageService from '@/services/sanityPageService'
 import Link from 'next/link'
 import PortableText from 'react-portable-text'
 import { useState } from 'react'
+import Head from 'next/head'
 const pageService = new SanityPageService(catQuery)
 
 export default function NewsCat(initialData) {
@@ -25,7 +26,32 @@ export default function NewsCat(initialData) {
 
   return (
     <Layout>
-      <NextSeo title={cat.title} />
+      <NextSeo
+        title={cat.seo?.metaTitle ? cat.seo?.metaTitle : cat.title}
+        description={cat.seo?.metaDesc ? cat.seo?.metaDesc : null}
+        openGraph={{
+          title: cat.seo?.metaTitle ? cat.seo?.metaTitle : cat.title,
+          description: cat.seo?.metaDesc ? cat.seo?.metaDesc : null,
+          images: cat.seo?.shareGraphic?.asset ? [
+            {
+              url: cat.seo?.shareGraphic?.asset.url ? cat.seo?.shareGraphic?.asset.url : null,
+              width: cat.seo?.shareGraphic?.asset.metadata.dimensions.width ? cat.seo?.shareGraphic?.asset.metadata.dimensions.width : null,
+              height: cat.seo?.shareGraphic?.asset.metadata.dimensions.height ? cat.seo?.shareGraphic?.asset.metadata.dimensions.height : null,
+              type: 'image/jpeg',
+            }
+          ] : null
+        }}
+      />
+
+      {cat.seo?.jsonLd && (
+        <Head>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: cat.seo.jsonLd }}
+            key="product-jsonld"
+          />
+        </Head>
+      )}
 
       <LazyMotion features={domAnimation}>
         <div>

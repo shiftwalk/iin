@@ -15,6 +15,7 @@ import { reveal } from '@/helpers/transitions'
 import Button from '@/components/button'
 import PortableText from 'react-portable-text'
 import SanityImageScale from '@/components/sanity-image-scale'
+import Head from 'next/head'
 
 const pageService = new SanityPageService(whatsOnQuery)
 
@@ -36,7 +37,32 @@ export default function WhatsOn(initialData) {
   const { data: { contact, policies, whatsOn }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
-      <NextSeo title={whatsOn.title} />
+      <NextSeo
+        title={whatsOn.seo?.metaTitle ? whatsOn.seo?.metaTitle : whatsOn.title}
+        description={whatsOn.seo?.metaDesc ? whatsOn.seo?.metaDesc : null}
+        openGraph={{
+          title: whatsOn.seo?.metaTitle ? whatsOn.seo?.metaTitle : whatsOn.title,
+          description: whatsOn.seo?.metaDesc ? whatsOn.seo?.metaDesc : null,
+          images: whatsOn.seo?.shareGraphic?.asset ? [
+            {
+              url: whatsOn.seo?.shareGraphic?.asset.url ? whatsOn.seo?.shareGraphic?.asset.url : null,
+              width: whatsOn.seo?.shareGraphic?.asset.metadata.dimensions.width ? whatsOn.seo?.shareGraphic?.asset.metadata.dimensions.width : null,
+              height: whatsOn.seo?.shareGraphic?.asset.metadata.dimensions.height ? whatsOn.seo?.shareGraphic?.asset.metadata.dimensions.height : null,
+              type: 'image/jpeg',
+            }
+          ] : null
+        }}
+      />
+
+      {whatsOn.seo?.jsonLd && (
+        <Head>
+          <script
+            type="appliwhatsOnion/ld+json"
+            dangerouslySetInnerHTML={{ __html: whatsOn.seo.jsonLd }}
+            key="product-jsonld"
+          />
+        </Head>
+      )}
 
       <LazyMotion features={domAnimation}>
         <m.div
@@ -48,7 +74,7 @@ export default function WhatsOn(initialData) {
           <main className="">
             <article>
               <div className="w-full bg-[#ffc3d6] relative selection:bg-off-black selection:text-[#ffc3d6]">
-                <div className="w-full text-center uppercase min-h-screen flex flex-col items-center justify-center">
+                <div className="w-full text-center uppercase lg:min-h-screen flex flex-col items-center justify-center pt-[25vh] lg:pt-0">
                   <m.h1 variants={container} className="text-[12vw] lg:text-[11.5vw] leading-none lg:leading-none text-[#BD3146] mb-2 lg:mb-5 translate-x-[-1vw] lg:translate-x-0">
                     <span className="relative overflow-hidden block">
                       <m.span className="block" variants={reveal}>Discover</m.span>
@@ -58,7 +84,7 @@ export default function WhatsOn(initialData) {
                     </span>
                   </m.h1>
 
-                  <svg className="text-[#BD3146] w-[90%] lg:w-[82%] mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1519.962 29.772">
+                  <svg className="text-[#BD3146] w-[90%] lg:w-[82%] mx-auto mb-24 lg:mb-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1519.962 29.772">
                     <defs>
                       <clipPath id="a">
                         <path fill="none" d="M0 29.772h1519.962V0H0Z" data-name="Path 1258"/>

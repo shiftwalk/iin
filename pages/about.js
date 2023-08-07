@@ -3,19 +3,17 @@ import Footer from '@/components/footer'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import IconSquiggleUnderline from '@/icons/squiggle-underline.svg'
 import IconWaveUnderline from '@/icons/wave-underline.svg'
-import IconSlattedUnderline from '@/icons/slatted-underline.svg'
 import IconSmile from '@/icons/smile.svg'
 import { NextSeo } from 'next-seo'
-import Image from 'next/image'
 import Link from 'next/link'
 import NewsCarousel from '@/components/news-carousel'
-import ImageScale from '@/components/image-scale'
 import SanityPageService from '@/services/sanityPageService'
 import { aboutQuery } from '@/helpers/queries'
 import { reveal } from '@/helpers/transitions'
 import Button from '@/components/button'
 import SanityImageScale from '@/components/sanity-image-scale'
 import PortableText from 'react-portable-text'
+import Head from 'next/head';
 import LerpImage from '@/components/lerp-image'
 const pageService = new SanityPageService(aboutQuery)
 
@@ -42,7 +40,32 @@ export default function AboutUs(initialData) {
   const { data: { contact, policies, about }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
-      <NextSeo title={about.title} />
+       <NextSeo
+        title={about.seo?.metaTitle ? about.seo?.metaTitle : about.title}
+        description={about.seo?.metaDesc ? about.seo?.metaDesc : null}
+        openGraph={{
+          title: about.seo?.metaTitle ? about.seo?.metaTitle : about.title,
+          description: about.seo?.metaDesc ? about.seo?.metaDesc : null,
+          images: about.seo?.shareGraphic?.asset ? [
+            {
+              url: about.seo?.shareGraphic?.asset.url ? about.seo?.shareGraphic?.asset.url : null,
+              width: about.seo?.shareGraphic?.asset.metadata.dimensions.width ? about.seo?.shareGraphic?.asset.metadata.dimensions.width : null,
+              height: about.seo?.shareGraphic?.asset.metadata.dimensions.height ? about.seo?.shareGraphic?.asset.metadata.dimensions.height : null,
+              type: 'image/jpeg',
+            }
+          ] : null
+        }}
+      />
+
+      {about.seo?.jsonLd && (
+        <Head>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: about.seo.jsonLd }}
+            key="product-jsonld"
+          />
+        </Head>
+      )}
 
       <LazyMotion features={domAnimation}>
         <m.div
@@ -82,7 +105,7 @@ export default function AboutUs(initialData) {
                 )}
                 
                 <div className="w-full text-center uppercase relative z-10">
-                  <m.h1 variants={container} className="text-[18.5vw] lg:text-[12vw] 2xl:text-[12vw] leading-none lg:leading-none 2xl:leading-none text-[#23D6D1]">
+                  <m.h1 variants={container} className="text-[15vw] lg:text-[12vw] 2xl:text-[12vw] leading-none lg:leading-none 2xl:leading-none text-[#23D6D1]">
                     <span className="block overflow-hidden relative">
                       <m.span className="block" variants={reveal}>Get To</m.span>
                     </span>
@@ -90,7 +113,7 @@ export default function AboutUs(initialData) {
                       <m.span className="block" variants={reveal}>Know Us</m.span>
                     </span>
 
-                    <m.svg variants={svg} className="w-[90%] lg:w-[60%] mx-auto mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1054.61 41.078">
+                    <m.svg variants={svg} className="w-[75%] lg:w-[60%] mx-auto mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1054.61 41.078">
                       <m.path variants={draw} stroke="currentColor" fill="none" strokeLinecap="round" strokeWidth="5" d="M1052.091 2.519S439.691 7.143 62.04 36.748c-99.9 7.827-41.862-11.468-50.6-11.237" data-name="Path 1259"/>
                     </m.svg>
 

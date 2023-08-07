@@ -15,6 +15,7 @@ import Button from '@/components/button'
 import { useRef } from 'react'
 import PortableText from 'react-portable-text'
 import SanityImageScale from '@/components/sanity-image-scale'
+import Head from 'next/head'
 const pageService = new SanityPageService(homeQuery)
 
 export default function Home(initialData) {
@@ -31,7 +32,32 @@ export default function Home(initialData) {
   const { data: { contact, policies, home, global }  } = pageService.getPreviewHook(initialData)()
   return (
     <Layout>
-      <NextSeo title={home.title} />
+      <NextSeo
+        title={home.seo?.metaTitle ? home.seo?.metaTitle : home.title}
+        description={home.seo?.metaDesc ? home.seo?.metaDesc : null}
+        openGraph={{
+          title: home.seo?.metaTitle ? home.seo?.metaTitle : home.title,
+          description: home.seo?.metaDesc ? home.seo?.metaDesc : null,
+          images: home.seo?.shareGraphic?.asset ? [
+            {
+              url: home.seo?.shareGraphic?.asset.url ? home.seo?.shareGraphic?.asset.url : null,
+              width: home.seo?.shareGraphic?.asset.metadata.dimensions.width ? home.seo?.shareGraphic?.asset.metadata.dimensions.width : null,
+              height: home.seo?.shareGraphic?.asset.metadata.dimensions.height ? home.seo?.shareGraphic?.asset.metadata.dimensions.height : null,
+              type: 'image/jpeg',
+            }
+          ] : null
+        }}
+      />
+
+      {home.seo?.jsonLd && (
+        <Head>
+          <script
+            type="applihomeion/ld+json"
+            dangerouslySetInnerHTML={{ __html: home.seo.jsonLd }}
+            key="product-jsonld"
+          />
+        </Head>
+      )}
 
       <LazyMotion features={domAnimation}>
         <m.div

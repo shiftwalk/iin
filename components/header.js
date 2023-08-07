@@ -71,7 +71,7 @@ export default function Header() {
     <>
       <LazyMotion features={domAnimation}>
         {isIOS && (
-          <a href={'https://qrco.de/be9W9S'} target="_blank" rel="noopener noreferrer" className={`a11y-focus rounded-full flex items-center justify-center h-[50px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] group overflow-hidden ${router.asPath == '/contact' ? 'bg-[#176B75] border border-[#176B75] text-white' : 'bg-[#EBEA33] border border-[#EBEA33] text-black' }`}>
+          <a href={'https://apps.apple.com/us/app/its-in-nottingham/id6444342293?uo=4'} target="_blank" rel="noopener noreferrer" className={`a11y-focus rounded-full flex items-center justify-center h-[50px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] group overflow-hidden ${router.asPath == '/contact' ? 'bg-[#176B75] border border-[#176B75] text-white' : 'bg-[#EBEA33] border border-[#EBEA33] text-black' }`}>
             <div className="flex space-x-2 mr-3">
               <IconApple className="w-5" />
             </div>
@@ -81,7 +81,7 @@ export default function Header() {
         )}
 
         {isAndroid && (
-          <a href={'https://qrco.de/be9W9S'} target="_blank" rel="noopener noreferrer" className={`a11y-focus rounded-full flex items-center justify-center h-[50px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] group overflow-hidden ${router.asPath == '/contact' ? 'bg-[#176B75] border border-[#176B75] text-white' : 'bg-[#EBEA33] border border-[#EBEA33] text-black' }`}>
+          <a href={'https://play.google.com/store/apps/details?id=com.loqiva.itsinnottingham&pli=1'} target="_blank" rel="noopener noreferrer" className={`a11y-focus rounded-full flex items-center justify-center h-[50px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] 2xl:text-xl 2xl:leading-none lg:hidden fixed bottom-5 left-5 right-5 z-[10000] group overflow-hidden ${router.asPath == '/contact' ? 'bg-[#176B75] border border-[#176B75] text-white' : 'bg-[#EBEA33] border border-[#EBEA33] text-black' }`}>
             <div className="flex space-x-2 mr-3">
               <IconAndroid className="w-5" />
             </div>

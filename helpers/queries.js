@@ -340,6 +340,16 @@ export const contactQuery = `{
 }`
 
 export const newsQuery = `{
+  "newsLanding": *[_type == "newsLanding"][0]{
+    title,
+    heroText,
+    seo {
+      ...,
+      shareGraphic {
+        asset->
+      }
+    }
+  },
   "news": *[_type == "news"]{
     title,
     category->{
