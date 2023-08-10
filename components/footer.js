@@ -107,7 +107,7 @@ export default function Footer({ policies, contact }) {
 
               <div id="mc_embed_shell">
                 <div id="mc_embed_signup">
-                  <form action="https://itsinnottingham.us12.list-manage.com/subscribe/post?u=a2589d6638b3851af61d31af5&amp;id=ab842ef9a9&amp;f_id=00fec2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" className="relative xl:text-xl xl:leading-none xl:max-w-[720px] mx-auto">
+                  <form action="https://itsinnottingham.us12.list-manage.com/subscribe/post?u=a2589d6638b3851af61d31af5&amp;id=ab842ef9a9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" className="relative xl:text-xl xl:leading-none xl:max-w-[720px] mx-auto">
                     <div id="mc_embed_signup_scroll">
                       <div className="w-full">
                         {/* <label for="mce-EMAIL">Email Address <span className="asterisk">*</span></label> */}
