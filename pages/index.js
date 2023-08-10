@@ -67,7 +67,13 @@ export default function Home(initialData) {
           exit="exit"
         >
           <div className="overflow-hidden relative lg:sticky lg:top-0">
-            <HomeHero />
+            <HomeHero
+              heroVideoFull={home.heroVideoFull}
+              heroVideoMobile={home.heroVideoMobile}
+              heroVideoDesktop={home.heroVideo}
+              heroVideoPosterDesktop={home.heroVideoPosterDesktop.asset.url}
+              heroVideoPosterMobile={home.heroVideoPosterMobile.asset.url}
+            />
           </div>
 
           <main className="mt-screen bg-white relative z-[10]">

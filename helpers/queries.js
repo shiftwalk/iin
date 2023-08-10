@@ -1,6 +1,7 @@
 export const homeQuery = `{
   "home": *[_type == "home"][0]{
     title,
+    heroVideoFull,
     heroVideo,
     heroVideoMobile,
     heroVideoPosterDesktop {

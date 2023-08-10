@@ -4,7 +4,7 @@ import Div100vh from "react-div-100vh";
 import { reveal } from "@/helpers/transitions";
 import { m } from 'framer-motion'
 
-export default function HomeHero() {
+export default function HomeHero({ heroVideoDesktop, heroVideoPosterDesktop, heroVideoPosterMobile, heroVideoMobile, heroVideoFull }) {
   const [videoPlaying, setVideoPlaying] = useState(false)
   const video = useRef();
 
@@ -66,8 +66,7 @@ export default function HomeHero() {
   return(
     <div className="w-full h-[100dvh] bg-white flex items-center jusfify-center text-[#FF5F38] group">
 
-      <span style={{ top: mousePosition.y - 50, left: mousePosition.x - 50 }} className={`fixed w-36 h-36 items-center justify-center bg-[#EBEA33] text-off-black rounded-full transition-transform ease-out duration-[200ms] cursor-none pointer-events-none uppercase text-3xl hidden lg:flex z-[30] group-hover:scale-[1] scale-0`}>{!videoPlaying ? 'Play' : 'Pause' }</span>
-      
+      <span style={{ top: mousePosition.y - 50, left: mousePosition.x - 50 }} className={`fixed w-36 h-36 items-center justify-center bg-[#EBEA33] text-off-black rounded-full transition-transform ease-out duration-[200ms] cursor-none pointer-events-none uppercase text-3xl hidden lg:flex z-[30] group-hover:scale-[1] scale-0`}>{!videoPlaying ? 'Play' : 'Pause' }</span>      
 
       <button onClick={() => toggleVideo()} className={`w-full text-center uppercase relative z-10 transition-opacity ease-in-out duration-[400ms] lg:cursor-none a11y-focus   ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
         <div className="relative z-10">
@@ -107,23 +106,23 @@ export default function HomeHero() {
       <div className={`absolute inset-0 bg-[#5017B7] z-[2] mix-blend-multiply transition-opacity ease-in-out duration-[400ms] ${videoPlaying ? 'opacity-0' : 'opacity-20' }`}></div>
       
       <div className={`w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] hidden lg:block ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
-        <video poster="/videos/hero-video-desktop-poster-1.jpg" preload="true" playsInline={'playsInline'} loop={true} autoPlay={true} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
-          <source src="/videos/hero-video-desktop.mp4" type="video/mp4" />
+        <video poster={heroVideoPosterDesktop} preload="true" playsInline={'playsInline'} loop={true} autoPlay={true} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
+          <source src={heroVideoDesktop} type="video/mp4" />
 
           Sorry. Your browser does not support the video tag.
         </video>
       </div>
 
       <div className={`w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] lg:hidden ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
-        <video poster="/videos/hero-video-mobile-poster-1.jpg" preload="true" playsInline={'playsInline'} loop={true} autoPlay={true} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
-          <source src="/videos/hero-video-mobile.mp4" type="video/mp4" />
+        <video poster={heroVideoPosterMobile} preload="true" playsInline={'playsInline'} loop={true} autoPlay={true} muted className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-0' : 'opacity-100' }`}>
+          <source src={heroVideoMobile} type="video/mp4" />
 
           Sorry. Your browser does not support the video tag.
         </video>
       </div>
 
       <video preload="true" ref={video} loop={true} className={`object-cover object-center w-full h-full absolute inset-0 transition-opacity ease-in-out duration-[400ms] z-[1] ${videoPlaying ? 'opacity-100' : 'opacity-0' }`}>
-        <source src="/videos/iin-hero.mp4" type="video/mp4" />
+        <source src={heroVideoFull} type="video/mp4" />
 
         Sorry. Your browser does not support the video tag.
       </video>
