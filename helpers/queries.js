@@ -279,6 +279,17 @@ export const aboutQuery = `{
 export const whatsOnQuery = `{
   "whatsOn": *[_type == "whatsOn"][0]{
     title,
+    mobileHeroImage {
+      asset-> {
+        ...
+      },
+      caption,
+      alt,
+      hotspot {
+        x,
+        y
+      },
+    },
     introText,
     imageBlocks[] {
       image {

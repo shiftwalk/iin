@@ -254,7 +254,7 @@ export default function Header() {
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.5 }}
                 transition={{ duration: 0.3, ease: [0.71,0,0.17,1] }}
-                className="bg-white w-10/12 lg:w-[75%] h-[75vh] shadow-xl rounded-3xl relative z-[1002] overflow-hidden"
+                className="bg-white w-10/12 lg:w-[75%] h-[82vh] shadow-xl rounded-3xl relative z-[1002] overflow-hidden"
               >
                 <button aria-label="Close App Download Menu" onClick={appDownloadToggle} className={`a11y-focus rounded-full w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] flex items-center justify-center border absolute top-5 right-5 bg-[#176B75] z-[2000]`}>
                   <div className="w-full p-2 lg:p-3">
@@ -264,7 +264,7 @@ export default function Header() {
                 </button>
 
                 <div className="w-full flex h-full">
-                  <div className="w-1/2 bg-black/20 relative overflow-hidden">
+                  <div className="w-[45%] xl:w-1/2 bg-black/20 relative overflow-hidden">
                     <Image
                       src="/images/pocket-cta.jpg"
                       alt="Some people in the park using the IIN app"
@@ -285,18 +285,18 @@ export default function Header() {
                       <span className="block font-display text-lg xl:text-xl">Available on Android and iOS</span>
                     </div>
                     <div className="w-[80%]">
-                      <h3 className="text-[4.33vw] leading-none block w-full uppercase text-[#176B75] mb-5 pb-0">Get the <span className="font-display">app</span></h3>
-                      <IconSquiggleUnderline className="w-[80%] text-[#176B75] mb-[3.3vw] rotate-[-3deg] mx-auto translate-x-[-5%]" />
+                      <h3 className="text-[5vh] leading-none block w-full uppercase text-[#176B75] mb-3 pb-0 text-center">Get the <span className="font-display">app</span></h3>
+                      <IconSquiggleUnderline className="w-[80%] text-[#176B75] mb-[2.5vh] rotate-[-3deg] mx-auto" />
 
-                      <p className="text-lg xl:text-xl leading-[1.25] xl:leading-[1.25] mb-[5vw] text-center">Discover what&apos;s going on, make plans for what&apos;s around the corner and stay up to date with everything Nottingham city centre - all in one place. Whatever your vibe, Nottingham&apos;s got it. And It&apos;s In Nottingham is the best way to find out about it. Scan the QR code below with your phone to get started.</p>
+                      <p className="text-lg 2xl:text-xl leading-[1.25] 2xl:leading-[1.25] mb-[5vh] text-center">Discover what&apos;s going on, make plans for what&apos;s around the corner and stay up to date with everything Nottingham city centre - all in one place. Whatever your vibe, Nottingham&apos;s got it. And It&apos;s In Nottingham is the best way to find out about it. Scan the QR code below with your phone to get started.</p>
 
-                      <div className="relative rotate-[-2deg] w-[125px] lg:w-[33%] lg:max-w-[200px] aspect-square mx-auto">
+                      <div className="relative rotate-[-2deg] w-[110px] xl:w-[33%] lg:max-w-[200px] aspect-square mx-auto">
                         <a href="https://qrco.de/be9W9S" target="_blank" rel="noopener noreferrer">
                           <Image 
                             quality={80}
                             width={358}
                             height={356}
-                            src="/images/qr.jpg"
+                            src="/icons/qr.svg"
                             alt="QR Code to download the app"
                             className="w-full"
                           />

@@ -16,6 +16,7 @@ import Button from '@/components/button'
 import PortableText from 'react-portable-text'
 import SanityImageScale from '@/components/sanity-image-scale'
 import Head from 'next/head'
+import SanityImage from '@/components/sanity-image'
 
 const pageService = new SanityPageService(whatsOnQuery)
 
@@ -74,6 +75,15 @@ export default function WhatsOn(initialData) {
           <main className="">
             <article>
               <div className="w-full bg-[#ffc3d6] relative selection:bg-off-black selection:text-[#ffc3d6]">
+                <div className="absolute inset-0 w-full h-[60vh] lg:h-screen">
+                  <SanityImage
+                    p
+                    image={whatsOn.mobileHeroImage}
+                    fill
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 w-full h-[33vh] bg-gradient-to-t from-[#ffc3d6] via-[#ffc3d6] to-transparent"></div>
+                </div>
+
                 <div className="w-full text-center uppercase lg:min-h-screen flex flex-col items-center justify-center pt-[25vh] lg:pt-0">
                   <m.h1 variants={container} className="text-[12vw] lg:text-[11.5vw] leading-none lg:leading-none text-[#BD3146] mb-2 lg:mb-5 translate-x-[-1vw] lg:translate-x-0">
                     <span className="relative overflow-hidden block">

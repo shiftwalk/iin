@@ -3,12 +3,16 @@ import IconArrow from '@/icons/arrow.svg'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useCallback } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import SanityImage from './sanity-image'
 import ConditionalWrap from 'conditional-wrap';
 
 export default function NewsCarousel({ items, initiatives }) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' })
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: 'start' })
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [scrollSnaps, setScrollSnaps] = useState([])
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev()
@@ -18,9 +22,34 @@ export default function NewsCarousel({ items, initiatives }) {
     if (emblaApi) emblaApi.scrollNext()
   }, [emblaApi])
 
+  const onInit = useCallback((emblaApi) => {
+    setScrollSnaps(emblaApi.scrollSnapList())
+  }, [])
+
+  const onSelect = useCallback((emblaApi) => {
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+    setPrevBtnDisabled(!emblaApi.canScrollPrev())
+    setNextBtnDisabled(!emblaApi.canScrollNext())
+  }, [])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    onInit(emblaApi)
+    onSelect(emblaApi)
+    emblaApi.on('reInit', onInit)
+    emblaApi.on('reInit', onSelect)
+    emblaApi.on('select', onSelect)
+  }, [emblaApi, onInit, onSelect])
+
   return (
     <div className="relative">
-      <button aria-label="Move Carousel Items Along" onClick={scrollNext} className="absolute top-[25vw] lg:top-[12vw] 2xl:top-[10vw] right-[5%] z-10 w-[50px] lg:w-[50px] 2xl:w-[75px] h-[50px] lg:h-[50px] 2xl:h-[75px] bg-white flex items-center justify-center rounded-full a11y-focus lg:hover:scale-[1.15] transition-transform ease-in-out duration-[300ms]">
+      
+      <button aria-label="Move Carousel Items Along Backwards" onClick={scrollPrev} className={`absolute top-[25vw] lg:top-[12vw] 2xl:top-[10vw] left-[5%] z-10 w-[50px] lg:w-[50px] 2xl:w-[75px] h-[50px] lg:h-[50px] 2xl:h-[75px] bg-white flex items-center justify-center rounded-full a11y-focus lg:hover:scale-[1.15]  ${prevBtnDisabled ? 'opacity-0' : 'opacity-100'} transition-all ease-in-out duration-[330ms]`}>
+        <IconArrow className="w-[30%] block rotate-[-90deg]" />
+      </button>
+
+      <button aria-label="Move Carousel Items Along" onClick={scrollNext} className={`absolute top-[25vw] lg:top-[12vw] 2xl:top-[10vw] right-[5%] z-10 w-[50px] lg:w-[50px] 2xl:w-[75px] h-[50px] lg:h-[50px] 2xl:h-[75px] bg-white flex items-center justify-center rounded-full a11y-focus lg:hover:scale-[1.15] ${nextBtnDisabled ? 'opacity-0' : 'opacity-100'} transition-all ease-in-out duration-[330ms]`}>
         <IconArrow className="w-[30%] block rotate-90" />
       </button>
 

@@ -134,9 +134,9 @@ export default function AboutUs(initialData) {
                   </div>
                 )}
                 <div className="ml-auto w-full lg:w-[54%] px-5 lg:pl-12 2xl:pl-20 relative z-[20]">
-                  <div className="content font-display text-white text-[20px] lg:text-[25px] xl:text-[30px] 2xl:text-[36px] leading-tight lg:leading-tight 2xl:leading-tight max-w-[95%] lg:max-w-[90%]">
+                  <div className="content content--small font-display text-white text-[20px] lg:text-[25px] xl:text-[30px] 2xl:text-[36px] leading-[1.2] lg:leading-[1.2] 2xl:leading-[1.2] max-w-[95%] lg:max-w-[90%]">
                     <PortableText
-                      className="content"
+                      className="content content--small"
                       content={about.introText}
                     />
                   </div>
@@ -193,10 +193,10 @@ export default function AboutUs(initialData) {
                     <span className="text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-non 2xl:leading-none block mb-5 lg:mb-6">What&apos;s on?</span>
                     
                     <div className="mb-8 lg:mb-12">
-                      <h2 className="text-[12.5vw] leading-none lg:text-[5vw] lg:leading-[0.9] xl:text-[4.5vw] xl:leading-[0.9] text-[#EBEA33] max-w-[550px] lg:max-w-[100%] mb-3">
+                      <h2 className="text-[12.5vw] leading-none lg:text-[5.5vw] lg:leading-[0.9] xl:text-[5.5vw] xl:leading-[0.9] text-[#EBEA33] max-w-[550px] lg:max-w-[100%] mb-3">
                         <span className="uppercase block"><PortableText content={about.eventCalendarSectionHeading} /></span>
                       </h2>
-                      <IconWaveUnderline className="w-full text-[#EBEA33] max-w-[80%] lg:max-w-[60%]"/>
+                      <IconWaveUnderline className="w-full text-[#EBEA33] max-w-[80%] lg:max-w-[75%]"/>
                     </div>
 
                     <div className="text-base leading-tight lg:text-lg 2xl:text-2xl lg:leading-snug 2xl:leading-snug lg:max-w-none w-11/12 lg:w-[10/12] mb-8 lg:mb-12">
@@ -212,7 +212,7 @@ export default function AboutUs(initialData) {
                         </div>
 
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0] opacity-0 group-hover:opacity-100 group-hover:delay-[0ms] delay-[450ms] transition-opacity ease-out duration-[100ms]">
-                          <div className={`w-[5px] h-[5px] rounded-full transition-all ease-out duration-[450ms] group-hover:duration-[600ms] group-hover:scale-[120] origin-center bg-black/30`}></div>
+                          <div className={`w-[5px] h-[5px] rounded-full transition-all ease-out duration-[450ms] group-hover:duration-[1200ms] group-hover:scale-[120] origin-center bg-black/30`}></div>
                         </div>
                       </Link>
                     )}
@@ -259,7 +259,7 @@ export default function AboutUs(initialData) {
                   
                   {about.crimeReductionButtonLink && (
                     <div className="lg:flex lg:justify-center px-5">
-                      <Button href={`/news/${about.crimeReductionButtonLink.slug.current}`} label="Find Out More" className="w-full lg:w-1/3" />
+                      <Button href={`/news/categories/managed-city`} label="Find Out More" className="w-full lg:w-1/3" large />
                     </div>
                   )}
                 </div>
@@ -271,7 +271,7 @@ export default function AboutUs(initialData) {
                     <span className="text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-non 2xl:leading-none block mb-5 lg:mb-10">Our People</span>
                     
                     <div className="mb-8 lg:mb-12">
-                      <h2 className="text-[12.5vw] leading-none lg:text-[5vw] lg:leading-[0.9] xl:text-[5vw] xl:leading-[0.9] text-[#EBEA33] max-w-[550px] lg:max-w-[100%] mb-3">
+                      <h2 className="text-[12.5vw] leading-none lg:text-[5.6vw] lg:leading-[0.9] xl:text-[5.6vw] xl:leading-[0.9] text-[#EBEA33] max-w-[550px] lg:max-w-[100%] mb-3">
                         <span className="uppercase block"><PortableText content={about.ourPeopleSectionHeading } /></span>
                       </h2>
                       {/* <IconWaveUnderline className="w-full text-[#EBEA33] max-w-[60%]"/> */}
@@ -283,7 +283,16 @@ export default function AboutUs(initialData) {
 
                     <div className="">
                       {about.ourPeopleSectionBoardOfDirectorsLink && (
-                        <Button href="/" label="Meet Our Board" borderColor="border-off-black" bgColor="bg-black/20" large className="w-full lg:w-auto" />
+                        <a target="_blank" rel="noopener noreferrer" href={about.ourPeopleSectionBoardOfDirectorsLink} className="w-full lg:w-auto border border-off-black a11y-focus rounded-full py-4 lg:py-6 2xl:py-8 px-6 lg:px-8 2xl:px-10 inline-block leading-[1.025] 2xl:text-2xl 2xl:leading-[1.025] mx-auto relative group overflow-hidden text-center">
+                          <div className="relative z-[1] overflow-hidden">
+                            <span className="block transition-transform ease-out duration-[450ms] translate-y-none group-hover:translate-y-[-105%]">Meet Our Board</span>
+                            <span className="block absolute inset-0 transition-transform ease-out duration-[450ms] translate-y-[105%] group-hover:translate-y-0">Meet Our Board</span>
+                          </div>
+
+                          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0] opacity-0 group-hover:opacity-100 group-hover:delay-[0ms] delay-[450ms] transition-opacity ease-out duration-[100ms]">
+                            <div className={`w-[5px] h-[5px] rounded-full transition-all ease-out duration-[450ms] lg:group-hover:duration-[600ms] lg:group-hover:scale-[75] origin-center bg-black/20`}></div>
+                          </div>
+                        </a>
                       )}
 
                       {/* {about.ourPeopleSectionTheIinTeamLink && (
@@ -333,21 +342,21 @@ export default function AboutUs(initialData) {
 
               <div className="relative flex overflow-x-hidden text-[17vw] lg:text-[10vw] leading-[0] uppercase my-12 lg:my-[7vw] text-[#FF5F38]">
                 <div className="animate-marquee will-change-transform whitespace-nowrap">
-                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">Read All About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">Read All About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">Read All About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
                 </div>
 
                 <div className="absolute top-0 animate-marquee2 will-change-transform whitespace-nowrap">
-                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block font-display italic">Read All<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
-                  <span className="relative overflow-hidden inline-block">About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">Read All About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">Read All About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block font-display italic">Read All About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
+                  <span className="relative overflow-hidden inline-block">Read All About It<span className="inline-block w-[17vw] lg:w-[10vw] translate-y-[-9%] ml-2"><IconSmile className="inline-block animate-spin-slow aspect-square-reverse" /></span></span>
                 </div>
               </div>
 
