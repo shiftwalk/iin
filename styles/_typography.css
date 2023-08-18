@@ -19,7 +19,7 @@
 
 .content--fancy-first {
   & > p:first-of-type {
-    @apply text-base leading-tight lg:text-xl lg:leading-tight 2xl:text-3xl 2xl:leading-tight;
+    @apply text-base leading-tight lg:text-2xl lg:leading-tight 2xl:text-3xl 2xl:leading-tight;
   }
   & > p {
     @apply text-base leading-tight lg:text-lg lg:leading-tight 2xl:text-2xl 2xl:leading-tight

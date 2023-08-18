@@ -183,7 +183,7 @@ export default function Home(initialData) {
                 </div>
               </div>
 
-              <div className="py-[5vw] pr-0 lg:pb-[10vw] bg-[#fcfaef]">
+              <div className="py-[5vw] pr-0 lg:pb-[10vw] bg-[#f3f3ed]">
                 <div className="px-[5vw]">
                   <h2 className="text-[9.5vw] leading-none lg:text-[6vw] lg:leading-[0.9] xl:text-[5.5vw] xl:leading-[0.9] max-w-[550px] lg:max-w-[100%] text-[#BDB800] mb-2">
                     <span className="uppercase block">Latest</span>
@@ -208,7 +208,7 @@ export default function Home(initialData) {
               <div className="bg-[#176B75] text-[#F5F1E1] grid grid-cols-1 lg:grid-cols-2 overflow-hidden selection:bg-[#EBEA33] selection:text-[#176B75]">
                 <div className="col-span-1 flex items-center justify-center px-[5vw] py-16 lg:py-[8vw] pb-6 lg:pb-[10vw] order-2 lg:order-1">
                   <div className="w-full lg:px-0">
-                    <span className="text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-non 2xl:leading-none block mb-6 lg:mb-3">What&apos;s on?</span>
+                    <span className="text-2xl lg:text-3xl 2xl:text-4xl leading-none lg:leading-none 2xl:leading-none block mb-6 lg:mb-3">What&apos;s on?</span>
                     <h2 className="text-[10.9vw] leading-none lg:text-[5vw] lg:leading-[0.9] xl:text-[5vw] xl:leading-[0.9] mb-8 text-[#EBEA33] max-w-[550px] xl:max-w-[95%]">
                       <PortableText
                         content={home.whatsOnSectionHeading}

@@ -285,7 +285,7 @@ export default function Header() {
                       <span className="block font-display text-lg xl:text-xl">Available on Android and iOS</span>
                     </div>
                     <div className="w-[80%]">
-                      <h3 className="text-[5vh] leading-none block w-full uppercase text-[#176B75] mb-3 pb-0 text-center">Get the <span className="font-display">app</span></h3>
+                      <h3 className="text-[6.6vh] leading-none block w-full uppercase text-[#176B75] mb-3 pb-0 text-center">Download the <span className="font-display">app</span></h3>
                       <IconSquiggleUnderline className="w-[80%] text-[#176B75] mb-[2.5vh] rotate-[-3deg] mx-auto" />
 
                       <p className="text-lg 2xl:text-xl leading-[1.25] 2xl:leading-[1.25] mb-[5vh] text-center">Discover what&apos;s going on, make plans for what&apos;s around the corner and stay up to date with everything Nottingham city centre - all in one place. Whatever your vibe, Nottingham&apos;s got it. And It&apos;s In Nottingham is the best way to find out about it. Scan the QR code below with your phone to get started.</p>

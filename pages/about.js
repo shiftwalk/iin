@@ -15,6 +15,7 @@ import SanityImageScale from '@/components/sanity-image-scale'
 import PortableText from 'react-portable-text'
 import Head from 'next/head';
 import LerpImage from '@/components/lerp-image'
+import SanityImage from '@/components/sanity-image'
 const pageService = new SanityPageService(aboutQuery)
 
 const container = {
@@ -302,7 +303,7 @@ export default function AboutUs(initialData) {
                   </div>
                 </div>
                 <div className="col-span-1 bg-off-black bg-opacity-50 order-1 lg:order-1 relative h-[90vw] lg:h-auto">
-                  <SanityImageScale
+                  <SanityImage
                     image={about.ourPeopleSectionImage}
                     sizes="(max-width: 1024px) 100vw, 55vw"
                   />

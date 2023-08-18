@@ -75,16 +75,16 @@ export default function WhatsOn(initialData) {
           <main className="">
             <article>
               <div className="w-full bg-[#ffc3d6] relative selection:bg-off-black selection:text-[#ffc3d6]">
-                <div className="absolute inset-0 w-full h-[60vh] lg:h-screen">
+                <div className="absolute inset-0 w-full h-[100vh] lg:h-screen lg:opacity-0">
                   <SanityImage
                     p
                     image={whatsOn.mobileHeroImage}
                     fill
                   />
-                  <div className="absolute bottom-0 left-0 right-0 w-full h-[33vh] bg-gradient-to-t from-[#ffc3d6] via-[#ffc3d6] to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 w-full h-[] bg-gradient-to-t from-[#ffc3d6] via-[#ffc3d6] to-transparent"></div>
                 </div>
 
-                <div className="w-full text-center uppercase lg:min-h-screen flex flex-col items-center justify-center pt-[25vh] lg:pt-0 relative z-[10]">
+                <div className="w-full text-center uppercase min-h-screen flex flex-col items-center justify-center pt-[25vh] lg:pt-0 relative z-[10] translate-y-[-5vh] lg:translate-y-0">
                   <m.h1 variants={container} className="text-[12vw] lg:text-[11.5vw] leading-none lg:leading-none text-[#BD3146] mb-2 lg:mb-5 translate-x-[-1vw] lg:translate-x-0">
                     <span className="relative overflow-hidden block">
                       <m.span className="block" variants={reveal}>Discover</m.span>
@@ -112,7 +112,7 @@ export default function WhatsOn(initialData) {
                   {/* <IconZagUnderline className="text-[#BD3146] w-[90%] lg:w-[75%] mx-auto" /> */}
                 </div>
 
-                <div className="relative">
+                <div className="relative pt-8">
                   <div className="flex flex-wrap px-5 lg:px-[5vw] max-w-[1800px] mx-auto mb-5 lg:mb-0">
                     <div className="w-full lg:w-[55%]">
                       <div className="text-off-black mb-3 lg:mb-8 lg:max-w-[90%]">
@@ -149,7 +149,7 @@ export default function WhatsOn(initialData) {
 
                   <div className="w-full h-auto lg:h-[70vw] xl:h-[80vw] 2xl:h-[75vw] overflow-hidden">
                     {whatsOn.imageBlocks[0] && (
-                      <div className="w-full lg:w-[25vw] relative lg:absolute lg:bottom-[8%] xl:bottom-[15%] lg:left-0 overflow-hidden mb-12 lg:mb-0">
+                      <div className="w-full lg:w-[31vw] 2xl:w-[25vw] relative lg:absolute lg:bottom-[8%] xl:bottom-[15%] lg:left-0 overflow-hidden mb-12 lg:mb-0">
                         <div className="h-[66vw] lg:h-[38vw]  relative overflow-hidden mb-5">
                           <SanityImageScale
                             image={whatsOn.imageBlocks[1].image}
