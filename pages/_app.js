@@ -13,10 +13,10 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
   
   useEffect(() => {
-    if (getCookieConsentValue()){
+    // if (getCookieConsentValue()){
       const handleRouteChange = (url) => {
         gtag.pageview(url)
-    }
+    // }
       router.events.on('routeChangeComplete', handleRouteChange)
       return () => {
         router.events.off('routeChangeComplete', handleRouteChange)
