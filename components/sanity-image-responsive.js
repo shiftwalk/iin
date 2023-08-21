@@ -3,7 +3,7 @@ import sanity from '@/services/sanity'
 import { useState } from 'react';
 import { useNextSanityImage } from 'next-sanity-image';
 
-export default function SanityImageResponsive({ image, className, alt, priority }) {
+export default function SanityImageResponsive({ image, className, alt, priority, quality, sizes }) {
   const [imageIsLoaded, setImageIsLoaded] = useState(priority ? priority : false)
   const imageProps = useNextSanityImage(
 		sanity.config,
@@ -15,8 +15,9 @@ export default function SanityImageResponsive({ image, className, alt, priority 
     <figure className={`image bg-black/10 ${className} relative overflow-hidden`}>
       <Image
         src={imageProps?.src}
+        sizes={sizes ? sizes : `(max-width: 1024px) 100vw,90vw`}
         className={`${className} will-change-transform ${imageIsLoaded ? 'opacity-100 scale-1' : 'opacity-100 scale-[1.05]'} ${priority ? 'opacity-100' : 'transition-all ease-in-out duration-[2000ms]'}`}
-        quality={75}
+        quality={quality ? quality : 75}
         width={image?.asset.metadata.dimensions.width / 1.5}
         height={image?.asset.metadata.dimensions.height / 1.5}
         {...(priority ? {priority: true} : {})}

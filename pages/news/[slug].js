@@ -72,9 +72,10 @@ export default function News(initialData) {
                 {current.heroImage && (
                   <SanityImageResponsive
                     priority
-                    quality={80}
+                    quality={75}
                     image={current.heroImage}
                     className="w-full"
+                    sizes={`(max-width: 1024px) 100vw, 89vw`}
                   />
                 )}
               </div>
