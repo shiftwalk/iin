@@ -9,6 +9,7 @@ import Socials from '@/components/socials'
 import Image from 'next/image'
 import { MouseParallax } from 'react-just-parallax'
 import { Fragment, useRef } from 'react'
+import FooterFlick from './footer-flick'
 
 export default function Footer({ policies, contact }) {
   const footerRef1 = useRef()
@@ -42,14 +43,7 @@ export default function Footer({ policies, contact }) {
             <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0 bg-[#5F0EFF] opacity-0 scale-[0.75] lg:group-hover/main:opacity-100 lg:group-hover/main:scale-[1] transition-all ease-in-out duration-[550ms]">
                 <div className="w-[50%] h-[75%] relative mix-blend-lighten opacity-[25%] bg-off-white overflow-hidden">
                   <MouseParallax enableOnTouchDevice={false} isAbsolutelyPositioned lerpEase={0.1} strength={0.033} zIndex={20} parallaxContainerRef={footerRef1}>
-                    <Image
-                      fill
-                      quality={80}
-                      src="/images/footer-cta.jpg"
-                      alt="Nottingham during the day"
-                      className="w-full h-full absolute inset-0 object-cover object-center scale-[1.05]"
-                      sizes="(max-width: 1024px) 100vw, 25vw"
-                    />
+                    <FooterFlick images={['/images/footer-flick-01.jpg','/images/footer-flick-02.jpg','/images/footer-flick-03.jpg']} />
                   </MouseParallax>
               </div>
             </div>
@@ -84,14 +78,7 @@ export default function Footer({ policies, contact }) {
             <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0 bg-[#EFF366] opacity-0 scale-[0.75] lg:group-hover/main:opacity-100 lg:group-hover/main:scale-[1] transition-all ease-in-out duration-[550ms]">
               <div className="w-[50%] h-[75%] relative mix-blend-darken opacity-[15%] bg-[#EFF366] overflow-hidden">
                 <MouseParallax enableOnTouchDevice={false} isAbsolutelyPositioned lerpEase={0.1} strength={0.033} zIndex={20} parallaxContainerRef={footerRef2}>
-                  <Image
-                    fill
-                    quality={80}
-                    src="/images/footer-cta-3.jpg"
-                    alt="Nottingham during the day"
-                    className="w-full h-full absolute inset-0 object-cover object-center scale-[1.05]"
-                    sizes="(max-width: 1024px) 100vw, 25vw"
-                  />
+                  <FooterFlick images={['/images/footer-flick2-01.jpg','/images/footer-flick2-02.jpg','/images/footer-flick2-03.jpg']} />
                 </MouseParallax>
               </div>
             </div>

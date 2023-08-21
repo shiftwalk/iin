@@ -32,6 +32,7 @@ export const homeQuery = `{
       asset-> {
         ...
       },
+      vimeoVideo,
       caption,
       alt,
       hotspot {
@@ -47,6 +48,7 @@ export const homeQuery = `{
       asset-> {
         ...
       },
+      vimeoVideo,
       caption,
       alt,
       hotspot {
@@ -298,6 +300,7 @@ export const whatsOnQuery = `{
         },
         caption,
         alt,
+        vimeoVideo,
         hotspot {
           x,
           y

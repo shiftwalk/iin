@@ -256,10 +256,14 @@ export default function Header() {
                 transition={{ duration: 0.3, ease: [0.71,0,0.17,1] }}
                 className="bg-white w-10/12 lg:w-[75%] h-[82vh] shadow-xl rounded-3xl relative z-[1002] overflow-hidden"
               >
-                <button aria-label="Close App Download Menu" onClick={appDownloadToggle} className={`a11y-focus rounded-full w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] flex items-center justify-center border absolute top-5 right-5 bg-[#176B75] z-[2000]`}>
-                  <div className="w-full p-2 lg:p-3">
+                <button aria-label="Close App Download Menu" onClick={appDownloadToggle} className={`a11y-focus rounded-full w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] flex items-center justify-center border absolute top-5 right-5 bg-[#176B75] z-[2000] group overflow-hidden`}>
+                  <div className="w-full p-2 lg:p-3 relative z-[10]">
                     <span className={`transition-all ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-white rotate-45`}></span>
                     <span className={`transition-all ease-[cubib-bezier(0.83,0,0.17,1)] duration-[300ms] block w-full h-[1px] bg-white -rotate-45`}></span>
+                  </div>
+
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0] opacity-0 group-hover:opacity-100 group-hover:delay-[0ms] delay-[450ms] transition-opacity ease-out duration-[330ms]">
+                    <div className={`w-[5px] h-[5px] rounded-full transition-all ease-out duration-[450ms] group-hover:duration-[600ms] group-hover:scale-[20] origin-center bg-black/30`}></div>
                   </div>
                 </button>
 
@@ -285,7 +289,7 @@ export default function Header() {
                       <span className="block font-display text-lg xl:text-xl">Available on Android and iOS</span>
                     </div>
                     <div className="w-[80%]">
-                      <h3 className="text-[6.6vh] leading-none block w-full uppercase text-[#176B75] mb-3 pb-0 text-center">Download the <span className="font-display">app</span></h3>
+                      <h3 className="text-[5vw] leading-none block w-full uppercase text-[#176B75] mb-3 pb-0 text-center">Download the <span className="font-display">app</span></h3>
                       <IconSquiggleUnderline className="w-[80%] text-[#176B75] mb-[2.5vh] rotate-[-3deg] mx-auto" />
 
                       <p className="text-lg 2xl:text-xl leading-[1.25] 2xl:leading-[1.25] mb-[5vh] text-center">Discover what&apos;s going on, make plans for what&apos;s around the corner and stay up to date with everything Nottingham city centre - all in one place. Whatever your vibe, Nottingham&apos;s got it. And It&apos;s In Nottingham is the best way to find out about it. Scan the QR code below with your phone to get started.</p>

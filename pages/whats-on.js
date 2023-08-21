@@ -72,7 +72,7 @@ export default function WhatsOn(initialData) {
           animate="enter"
           exit="exit"
         >
-          <main className="">
+          <main className="overflow-hidden">
             <article>
               <div className="w-full bg-[#ffc3d6] relative selection:bg-off-black selection:text-[#ffc3d6]">
                 <div className="absolute inset-0 w-full h-[100vh] lg:h-screen lg:opacity-0">
@@ -84,7 +84,7 @@ export default function WhatsOn(initialData) {
                   <div className="absolute bottom-0 left-0 right-0 w-full h-[] bg-gradient-to-t from-[#ffc3d6] via-[#ffc3d6] to-transparent"></div>
                 </div>
 
-                <div className="w-full text-center uppercase min-h-screen flex flex-col items-center justify-center pt-[25vh] lg:pt-0 relative z-[10] translate-y-[-5vh] lg:translate-y-0">
+                <div className="w-full text-center uppercase min-h-screen flex flex-col items-center justify-center pt-[25vh] lg:pt-0 relative z-[10] ">
                   <m.h1 variants={container} className="text-[12vw] lg:text-[11.5vw] leading-none lg:leading-none text-[#BD3146] mb-2 lg:mb-5 translate-x-[-1vw] lg:translate-x-0">
                     <span className="relative overflow-hidden block">
                       <m.span className="block" variants={reveal}>Discover</m.span>
@@ -121,6 +121,41 @@ export default function WhatsOn(initialData) {
                           content={whatsOn.introText}
                         />
                       </div>
+
+                      <div className="hidden lg:block">
+                      <div className="relative rotate-[-2deg] w-[125px] lg:w-[140px] xl:w-[180px] 2xl:w-[220px] aspect-square border-2 border-[#FF5F38] rounded-full flex items-center justify-center">
+                        
+                          <Image
+                            quality={80}
+                            width={358}
+                            height={356}
+                            src="/icons/qr.svg"
+                            alt="QR Code to download the app"
+                            className="w-[65%]"
+                          />
+
+                        <span className="text-sm lg:text-lg xl:text-xl 2xl:text-2xl leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-[#FF5F38] block uppercase absolute bottom-[-50px] lg:bottom-[-50px] xl:bottom-[-65px] right-[-190px] lg:right-[-260px] xl:right-[-300px] rotate-[-2deg] xl:rotate-[-5deg] w-[180px] lg:w-[250px] xl:w-[270px] text-center z-[100]">
+                        <svg className="w-[50%] lg:w-[45%]" xmlns="http://www.w3.org/2000/svg" width="140.089" height="173.374" viewBox="0 0 140.089 173.374">
+                          <defs>
+                            <clipPath id="clip-path">
+                              <path id="Path_1181" data-name="Path 1181" d="M0,0H157.986V72.6H0Z" fill="none"/>
+                            </clipPath>
+                          </defs>
+                          <g id="Group_422" data-name="Group 422" transform="translate(63.496) rotate(61)">
+                            <g id="Group_421" data-name="Group 421" transform="translate(0 0)" clip-path="url(#clip-path)">
+                              <g id="Group_419" data-name="Group 419" transform="translate(3.725 0.831)">
+                                <path id="Path_1179" data-name="Path 1179" d="M153.89,8.407S69.6-33.659,0,70.4" fill="none" stroke="currentColor" stroke-width="3"/>
+                              </g>
+                              <g id="Group_420" data-name="Group 420" transform="translate(0.822 53.01)">
+                                <path id="Path_1180" data-name="Path 1180" d="M21.032,16.285,2.374,18.658,0,0" fill="none" stroke="currentColor" stroke-width="3"/>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                          <span className="font-display"><span className="italic">Scan me</span></span> with your phone camera to download!
+                        </span>
+                      </div>
+                    </div>
 
                       {/* <Button href="/about" label="Check out Visit Notts!" borderColor="border-black" className="w-full lg:w-auto block lg:inline-block"  /> */}
                     </div>

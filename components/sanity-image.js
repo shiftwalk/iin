@@ -27,7 +27,35 @@ export default function SanityImage({ image, className, alt, priority, widthOver
   if (image.alt) { attributes.alt = image.alt } else { attributes.alt = 'MISSING ALT TEXT' }
   if (priority) { attributes.priority = true } else { attributes.priority = false }
 
-	return(
+	return image.vimeoVideo ? (
+    <figure className={`image bg-black/20 ${className} cover-image absolute inset-0 w-full h-full object-cover object-center`}>
+      <video loop={true} autoPlay="autoplay" playsInline={true} muted className={`object-cover object-center w-full h-full absolute inset-0 z-[10]`}>
+        <source src={ image.vimeoVideo } type="video/mp4" />
+
+        Sorry. Your browser does not support the video tag.
+      </video>
+      
+		  <Image
+        src={imageProps.src}
+        loader={imageProps.loader}
+        className={`absolute inset-0 w-full h-full object-center object-cover will-change-transform transition-all ease-in-out duration-[1500ms] ${imageIsLoaded ? 'scale-1 opacity-100' : 'scale-[1.05] opacity-0'} ${priority ? 'opacity-100' : ''}`}
+        {...(priority ? {
+          priority: true} : {}
+        )}
+        sizes={sizes ? sizes : `(max-width: 1024px) 100vw,90vw`}
+        fill
+        quality={quality ? quality : 75}
+        alt={image.alt ? image.alt : 'MISSING ALT TEXT'}
+
+        onLoad={event => {
+          const target = event.target;
+            if (target.src.indexOf('data:image/gif;base64') < 0) {
+            setImageIsLoaded(true)
+          }
+        }}
+      />
+    </figure>
+  ): (
     <figure className={`image bg-black/20 ${className} cover-image absolute inset-0 w-full h-full object-cover object-center`}>
 		  <Image
         src={imageProps.src}

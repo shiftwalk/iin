@@ -191,9 +191,25 @@ export default function Home(initialData) {
                   </h2>
 
                   {/* <IconSquiggleUnderline className="w-[50%] lg:w-[40%] xl:w-[33%] text-[#BDB800] lg:translate-x-[-2vw] mb-[4vw]" /> */}
-                  <svg className="w-[50%] lg:w-[40%] xl:w-[33%] text-[#BDB800] lg:translate-x-[-2vw] mb-6 lg:mb-[4vw]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1054.61 41.078">
-                    <path  stroke="currentColor" fill="none" strokeLinecap="round" strokeWidth="5" d="M1052.091 2.519S439.691 7.143 62.04 36.748c-99.9 7.827-41.862-11.468-50.6-11.237" data-name="Path 1259"/>
+
+                  <svg className="w-[50%] lg:w-[40%] xl:w-[33%] text-[#BDB800] lg:translate-x-[-2vw] mb-6 lg:mb-[4vw]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 332.568 14.617">
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="none" d="M0 14.617h332.568V0H0Z" data-name="Path 1260"/>
+                      </clipPath>
+                    </defs>
+                    <g data-name="Group 565">
+                      <g clip-path="url(#a)" data-name="Group 564">
+                        <g data-name="Group 563">
+                          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M331.786.881S138.656 2.527 19.558 13.068c-31.5 2.787-13.2-4.083-15.959-4" data-name="Path 1259"/>
+                        </g>
+                      </g>
+                    </g>
                   </svg>
+
+                  {/* <svg className="w-[50%] lg:w-[40%] xl:w-[33%] text-[#BDB800] lg:translate-x-[-2vw] mb-6 lg:mb-[4vw]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1054.61 41.078">
+                    <path  stroke="currentColor" fill="none" strokeLinecap="round" strokeWidth="5" d="M1052.091 2.519S439.691 7.143 62.04 36.748c-99.9 7.827-41.862-11.468-50.6-11.237" data-name="Path 1259"/>
+                  </svg> */}
                 </div>
 
                 <div className="mb-[8vw] lg:mb-[5vw]">
@@ -236,7 +252,26 @@ export default function Home(initialData) {
                           />
 
                         <span className="text-sm lg:text-lg xl:text-xl 2xl:text-2xl leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-[#EBEA33] block uppercase absolute bottom-[-50px] lg:bottom-[-50px] xl:bottom-[-65px] right-[-190px] lg:right-[-260px] xl:right-[-300px] rotate-[-2deg] xl:rotate-[-5deg] w-[180px] lg:w-[250px] xl:w-[270px] text-center">
-                          <svg className="w-[50%] lg:w-[45%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.089 173.374">
+                        <svg className="w-[50%] lg:w-[45%]" xmlns="http://www.w3.org/2000/svg" width="140.089" height="173.374" viewBox="0 0 140.089 173.374">
+                          <defs>
+                            <clipPath id="clip-path">
+                              <path id="Path_1181" data-name="Path 1181" d="M0,0H157.986V72.6H0Z" fill="none"/>
+                            </clipPath>
+                          </defs>
+                          <g id="Group_422" data-name="Group 422" transform="translate(63.496) rotate(61)">
+                            <g id="Group_421" data-name="Group 421" transform="translate(0 0)" clip-path="url(#clip-path)">
+                              <g id="Group_419" data-name="Group 419" transform="translate(3.725 0.831)">
+                                <path id="Path_1179" data-name="Path 1179" d="M153.89,8.407S69.6-33.659,0,70.4" fill="none" stroke="#ebea33" stroke-width="3"/>
+                              </g>
+                              <g id="Group_420" data-name="Group 420" transform="translate(0.822 53.01)">
+                                <path id="Path_1180" data-name="Path 1180" d="M21.032,16.285,2.374,18.658,0,0" fill="none" stroke="#ebea33" stroke-width="3"/>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+
+
+                          {/* <svg className="w-[50%] lg:w-[45%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.089 173.374">
                             <defs>
                               <clipPath id="a">
                               <path fill="none" d="M0 0h157.986v72.6H0Z" data-name="Path 1181"/>
@@ -252,7 +287,7 @@ export default function Home(initialData) {
                                 </g>
                               </g>
                             </g>
-                          </svg>
+                          </svg> */}
                           <span className="font-display"><span className="italic">Scan me</span></span> with your phone camera to download!
                         </span>
                       </div>
