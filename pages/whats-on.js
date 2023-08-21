@@ -84,30 +84,32 @@ export default function WhatsOn(initialData) {
                   <div className="absolute bottom-0 left-0 right-0 w-full h-[] bg-gradient-to-t from-[#ffc3d6] via-[#ffc3d6] to-transparent"></div>
                 </div>
 
-                <div className="w-full text-center uppercase min-h-screen flex flex-col items-center justify-center pt-[25vh] lg:pt-0 relative z-[10] ">
-                  <m.h1 variants={container} className="text-[12vw] lg:text-[11.5vw] leading-none lg:leading-none text-[#BD3146] mb-2 lg:mb-5 translate-x-[-1vw] lg:translate-x-0">
-                    <span className="relative overflow-hidden block">
-                      <m.span className="block" variants={reveal}>Discover</m.span>
-                    </span>
-                    <span className="block font-display italic relative overflow-hidden">
-                      <m.span className="block" variants={reveal}>Nottingham</m.span>
-                    </span>
-                  </m.h1>
+                <div className="w-full text-center uppercase min-h-screen flex flex-col items-center justify-center pt-[25vh] lg:pt-0 relative z-[10]">
+                  <div className="translate-y-[-40%] lg:translate-y-0">
+                    <m.h1 variants={container} className="text-[12vw] lg:text-[11.5vw] leading-none lg:leading-none text-[#BD3146] mb-2 lg:mb-5 translate-x-[-1vw] lg:translate-x-0">
+                      <span className="relative overflow-hidden block">
+                        <m.span className="block" variants={reveal}>Discover</m.span>
+                      </span>
+                      <span className="block font-display italic relative overflow-hidden">
+                        <m.span className="block" variants={reveal}>Nottingham</m.span>
+                      </span>
+                    </m.h1>
 
-                  <svg className="text-[#BD3146] w-[90%] lg:w-[82%] mx-auto mb-24 lg:mb-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1519.962 29.772">
-                    <defs>
-                      <clipPath id="a">
-                        <path fill="none" d="M0 29.772h1519.962V0H0Z" data-name="Path 1258"/>
-                      </clipPath>
-                    </defs>
-                    <g data-name="Group 562">
-                      <g data-name="Group 561">
-                        <g clipPath="url(#a)" data-name="Group 560">
-                          <m.path variants={draw} fill="none" stroke="currentColor" strokeMiterlimit="120" strokeWidth="5" d="m2.182 4.398 20.949 20.949L43.557 4.398l20.949 20.949L85.454 4.398l20.428 20.949 20.947-20.949 20.953 20.949 20.423-20.949 20.949 20.949 20.949-20.949 20.423 20.949 20.95-20.949 20.949 20.949 20.426-20.949L313.8 25.347l20.949-20.949 20.426 20.949 20.949-20.949 20.949 20.949 20.948-20.949 20.434 20.949 20.433-20.949 20.949 20.949 20.945-20.949 20.39 20.949 20.386-20.949 20.949 20.949 20.948-20.949 20.427 20.949L624.83 4.398l20.952 20.949 20.423-20.949 20.949 20.949 20.949-20.949 20.424 20.949 20.949-20.949 20.949 20.949L790.85 4.398l20.949 20.949L832.75 4.398l20.426 20.949 20.949-20.949 20.949 20.949 20.948-20.949 20.434 20.949 20.433-20.949 20.949 20.949 20.949-20.949 20.5 20.949 21.025-20.949 20.426 20.949 20.944-20.949 20.846 20.947 20.326-20.947 20.949 20.949 20.949-20.949 20.43 20.949 20.944-20.949 20.949 20.949 20.426-20.949 20.949 20.949 20.949-20.949 20.424 20.949 20.949-20.949 20.949 20.949 20.426-20.949 20.949 20.949 20.95-20.949 20.426 20.949 20.949-20.949 20.949 20.949 20.949-20.949 20.434 20.949" data-name="Path 1257"/>
+                    <svg className="text-[#BD3146] w-[90%] lg:w-[82%] mx-auto mb-24 lg:mb-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1519.962 29.772">
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="none" d="M0 29.772h1519.962V0H0Z" data-name="Path 1258"/>
+                        </clipPath>
+                      </defs>
+                      <g data-name="Group 562">
+                        <g data-name="Group 561">
+                          <g clipPath="url(#a)" data-name="Group 560">
+                            <m.path variants={draw} fill="none" stroke="currentColor" strokeMiterlimit="120" strokeWidth="5" d="m2.182 4.398 20.949 20.949L43.557 4.398l20.949 20.949L85.454 4.398l20.428 20.949 20.947-20.949 20.953 20.949 20.423-20.949 20.949 20.949 20.949-20.949 20.423 20.949 20.95-20.949 20.949 20.949 20.426-20.949L313.8 25.347l20.949-20.949 20.426 20.949 20.949-20.949 20.949 20.949 20.948-20.949 20.434 20.949 20.433-20.949 20.949 20.949 20.945-20.949 20.39 20.949 20.386-20.949 20.949 20.949 20.948-20.949 20.427 20.949L624.83 4.398l20.952 20.949 20.423-20.949 20.949 20.949 20.949-20.949 20.424 20.949 20.949-20.949 20.949 20.949L790.85 4.398l20.949 20.949L832.75 4.398l20.426 20.949 20.949-20.949 20.949 20.949 20.948-20.949 20.434 20.949 20.433-20.949 20.949 20.949 20.949-20.949 20.5 20.949 21.025-20.949 20.426 20.949 20.944-20.949 20.846 20.947 20.326-20.947 20.949 20.949 20.949-20.949 20.43 20.949 20.944-20.949 20.949 20.949 20.426-20.949 20.949 20.949 20.949-20.949 20.424 20.949 20.949-20.949 20.949 20.949 20.426-20.949 20.949 20.949 20.95-20.949 20.426 20.949 20.949-20.949 20.949 20.949 20.949-20.949 20.434 20.949" data-name="Path 1257"/>
+                          </g>
                         </g>
                       </g>
-                    </g>
-                  </svg>
+                    </svg>
+                  </div>
 
                   {/* <IconZagUnderline className="text-[#BD3146] w-[90%] lg:w-[75%] mx-auto" /> */}
                 </div>
@@ -123,7 +125,7 @@ export default function WhatsOn(initialData) {
                       </div>
 
                       <div className="hidden lg:block">
-                      <div className="relative rotate-[-2deg] w-[125px] lg:w-[140px] xl:w-[180px] 2xl:w-[220px] aspect-square border-2 border-[#FF5F38] rounded-full flex items-center justify-center">
+                      <div className="relative rotate-[-2deg] w-[125px] lg:w-[140px] xl:w-[180px] 2xl:w-[220px] aspect-square border-2 border-[#BD3146] rounded-full flex items-center justify-center">
                         
                           <Image
                             quality={80}
@@ -134,7 +136,7 @@ export default function WhatsOn(initialData) {
                             className="w-[65%]"
                           />
 
-                        <span className="text-sm lg:text-lg xl:text-xl 2xl:text-2xl leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-[#FF5F38] block uppercase absolute bottom-[-50px] lg:bottom-[-50px] xl:bottom-[-65px] right-[-190px] lg:right-[-260px] xl:right-[-300px] rotate-[-2deg] xl:rotate-[-5deg] w-[180px] lg:w-[250px] xl:w-[270px] text-center z-[100]">
+                        <span className="text-sm lg:text-lg xl:text-xl 2xl:text-2xl leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-[#BD3146] block uppercase absolute bottom-[-50px] lg:bottom-[-50px] xl:bottom-[-65px] right-[-190px] lg:right-[-260px] xl:right-[-300px] rotate-[-2deg] xl:rotate-[-5deg] w-[180px] lg:w-[250px] xl:w-[270px] text-center z-[100]">
                         <svg className="w-[50%] lg:w-[45%]" xmlns="http://www.w3.org/2000/svg" width="140.089" height="173.374" viewBox="0 0 140.089 173.374">
                           <defs>
                             <clipPath id="clip-path">

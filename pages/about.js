@@ -77,7 +77,7 @@ export default function AboutUs(initialData) {
         >
           <main className="">
             <article>
-              <div className="w-full bg-[#4000B5] selection:text-[#4000B5] selection:bg-[#23D6D1] relative min-h-screen flex flex-col lg:items-center lg:justify-center">
+              <div className="w-full bg-[#4000B5] selection:text-[#4000B5] selection:bg-[#23D6D1] relative min-h-[120vh] lg:min-h-screen flex flex-col lg:items-center lg:justify-center">
                 <LerpImage className="w-[40%] lg:w-[19vw] 2xl:w-[18vw] h-[55vw] lg:h-[28vw] 2xl:h-[26vw] absolute top-[33%] lg:top-[13%] left-0 overflow-hidden" amount="500%">
                   <SanityImageScale
                     image={about.heroImage[0]}
@@ -95,7 +95,7 @@ export default function AboutUs(initialData) {
                 )}
 
                 {about.heroImage[1] && (
-                  <LerpImage amount="-250%" className="w-[58%] lg:w-[45vw] h-[37vw] lg:h-[37vw] absolute bottom-[6%] lg:bottom-[10%] left-[-5%] overflow-hidden block lg:hidden">
+                  <LerpImage amount="-250%" className="w-[58%] lg:w-[45vw] h-[37vw] lg:h-[37vw] absolute bottom-[12%] lg:bottom-[10%] left-[-5%] overflow-hidden block lg:hidden">
                     <div className="h-full relative overflow-hidden w-full">
                       <SanityImageScale
                         image={about.heroImage[1]}
@@ -105,7 +105,7 @@ export default function AboutUs(initialData) {
                   </LerpImage>
                 )}
                 
-                <div className="w-full text-center uppercase relative z-10 pt-[30vw] lg:pt-0">
+                <div className="w-full text-center uppercase relative z-10 pt-[55%] lg:pt-0">
                   <m.h1 variants={container} className="text-[15vw] lg:text-[12vw] 2xl:text-[12vw] leading-none lg:leading-none 2xl:leading-none text-[#23D6D1]">
                     <span className="block overflow-hidden relative">
                       <m.span className="block" variants={reveal}>Get To</m.span>
@@ -252,7 +252,22 @@ export default function AboutUs(initialData) {
                     <span className="block">Our crime reduction initiatives</span>
                   </h3>
 
-                  <IconSquiggleUnderline className="w-[90%] lg:w-[36%] 2xl:w-[38%] max-w-[570px] text-off-black translate-x-[-1vw] mb-8 lg:mb-[4vw]" />
+                  <svg className="w-[98%] lg:w-[50%] 2xl:w-[38%] max-w-[440px] text-off-black mb-8 lg:mb-[4vw]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 332.568 14.617">
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="none" d="M0 14.617h332.568V0H0Z" data-name="Path 1260"/>
+                      </clipPath>
+                    </defs>
+                    <g data-name="Group 565">
+                      <g clip-path="url(#a)" data-name="Group 564">
+                        <g data-name="Group 563">
+                          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M331.786.881S138.656 2.527 19.558 13.068c-31.5 2.787-13.2-4.083-15.959-4" data-name="Path 1259"/>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+
+                  {/* <IconSquiggleUnderline className="w-[90%] lg:w-[36%] 2xl:w-[38%] max-w-[570px] text-off-black translate-x-[-1vw] mb-8 lg:mb-[4vw]" /> */}
                 </div>
 
                 <div className="mb-[8vw] lg:mb-[5vw]">
@@ -269,7 +284,7 @@ export default function AboutUs(initialData) {
               <div className="bg-[#BDB800] text-off-black grid grid-cols-1 lg:grid-cols-2 overflow-hidden mb-[5vw] lg:mb-[10vw] selection:text-[#BDB800] selection:bg-off-black">
                 <div className="col-span-1 flex items-center justify-center px-[5vw] py-10 pb-6 lg:py-[10vw] lg:pb-[10vw] order-2 lg:order-2">
                   <div className="w-full lg:px-0">
-                    <span className="text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-non 2xl:leading-none block mb-5 lg:mb-10">Our People</span>
+                    <span className="text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-non 2xl:leading-none block mb-5 lg:mb-5">Our People</span>
                     
                     <div className="mb-8 lg:mb-12">
                       <h2 className="text-[12.5vw] leading-none lg:text-[5.6vw] lg:leading-[0.9] xl:text-[5.6vw] xl:leading-[0.9] text-[#EBEA33] max-w-[550px] lg:max-w-[100%] mb-3">
