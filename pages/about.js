@@ -78,7 +78,7 @@ export default function AboutUs(initialData) {
           <main className="">
             <article>
               <div className="w-full bg-[#4000B5] selection:text-[#4000B5] selection:bg-[#23D6D1] relative min-h-[110vh] lg:min-h-screen flex flex-col lg:items-center lg:justify-center">
-                <LerpImage className="w-[40%] lg:w-[19vw] 2xl:w-[18vw] h-[55vw] lg:h-[28vw] 2xl:h-[26vw] absolute top-[33%] lg:top-[13%] left-0 overflow-hidden" amount="500%">
+                <LerpImage className="w-[40%] lg:w-[19vw] 2xl:w-[18vw] h-[55vw] lg:h-[28vw] 2xl:h-[26vw] absolute top-[36%] lg:top-[13%] left-0 overflow-hidden" amount="500%">
                   <SanityImageScale
                     image={about.heroImage[0]}
                     sizes="(max-width: 1024px) 100vw, 35vw"
