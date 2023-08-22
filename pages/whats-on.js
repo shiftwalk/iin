@@ -85,7 +85,7 @@ export default function WhatsOn(initialData) {
                 </div>
 
                 <div className="w-full text-center uppercase min-h-screen flex flex-col items-center justify-center pt-[25vh] lg:pt-0 relative z-[10]">
-                  <div className="translate-y-[-40%] lg:translate-y-0">
+                  <div className="translate-y-[-50%] lg:translate-y-0">
                     <m.h1 variants={container} className="text-[12vw] lg:text-[11.5vw] leading-none lg:leading-none text-[#BD3146] mb-2 lg:mb-5 translate-x-[-1vw] lg:translate-x-0">
                       <span className="relative overflow-hidden block">
                         <m.span className="block" variants={reveal}>Discover</m.span>

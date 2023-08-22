@@ -95,7 +95,7 @@ export default function AboutUs(initialData) {
                 )}
 
                 {about.heroImage[1] && (
-                  <LerpImage amount="-250%" className="w-[58%] lg:w-[45vw] h-[37vw] lg:h-[37vw] absolute bottom-[12%] lg:bottom-[10%] left-[-5%] overflow-hidden block lg:hidden">
+                  <LerpImage amount="-250%" className="w-[58%] lg:w-[45vw] h-[37vw] lg:h-[37vw] absolute bottom-[5%] lg:bottom-[10%] left-[-5%] overflow-hidden block lg:hidden">
                     <div className="h-full relative overflow-hidden w-full">
                       <SanityImageScale
                         image={about.heroImage[1]}
@@ -191,7 +191,7 @@ export default function AboutUs(initialData) {
               <div className="bg-[#176B75] text-[#F5F1E1] grid grid-cols-1 lg:grid-cols-2 overflow-hidden mb-[5vw] lg:mb-[10vw] selection:text-[#176B75] selection:bg-[#EBEA33]">
                 <div className="col-span-1 flex items-center justify-center px-[5vw] py-10 pb-6 lg:py-[8vw] lg:pb-[10vw] order-1 lg:order-2">
                   <div className="w-full lg:px-0">
-                    <span className="text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-non 2xl:leading-none block mb-5 lg:mb-6">What&apos;s on?</span>
+                    <span className="text-xl lg:text-2xl 2xl:text-3xl leading-none lg:leading-non 2xl:leading-none block mb-5 lg:mb-6">What’s on?</span>
                     
                     <div className="mb-8 lg:mb-12">
                       <h2 className="text-[12.5vw] leading-none lg:text-[5.5vw] lg:leading-[0.9] xl:text-[5.5vw] xl:leading-[0.9] text-[#EBEA33] max-w-[550px] lg:max-w-[100%] mb-3">
