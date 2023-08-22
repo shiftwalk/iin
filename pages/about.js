@@ -77,7 +77,7 @@ export default function AboutUs(initialData) {
         >
           <main className="">
             <article>
-              <div className="w-full bg-[#4000B5] selection:text-[#4000B5] selection:bg-[#23D6D1] relative min-h-[120vh] lg:min-h-screen flex flex-col lg:items-center lg:justify-center">
+              <div className="w-full bg-[#4000B5] selection:text-[#4000B5] selection:bg-[#23D6D1] relative min-h-[110vh] lg:min-h-screen flex flex-col lg:items-center lg:justify-center">
                 <LerpImage className="w-[40%] lg:w-[19vw] 2xl:w-[18vw] h-[55vw] lg:h-[28vw] 2xl:h-[26vw] absolute top-[33%] lg:top-[13%] left-0 overflow-hidden" amount="500%">
                   <SanityImageScale
                     image={about.heroImage[0]}
@@ -95,7 +95,7 @@ export default function AboutUs(initialData) {
                 )}
 
                 {about.heroImage[1] && (
-                  <LerpImage amount="-250%" className="w-[58%] lg:w-[45vw] h-[37vw] lg:h-[37vw] absolute bottom-[5%] lg:bottom-[10%] left-[-5%] overflow-hidden block lg:hidden">
+                  <LerpImage amount="-250%" className="w-[70%] lg:w-[45vw] h-[47vw] lg:h-[37vw] absolute bottom-[5%] lg:bottom-[10%] left-[-5%] overflow-hidden block lg:hidden">
                     <div className="h-full relative overflow-hidden w-full">
                       <SanityImageScale
                         image={about.heroImage[1]}
