@@ -365,8 +365,9 @@ export const newsQuery = `{
       }
     }
   },
-  "news": *[_type == "news"]{
+  "news": *[_type == "news"] | order(orderRank asc){
     title,
+    orderRank,
     category->{
       title,
       slug {
