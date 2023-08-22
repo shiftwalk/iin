@@ -95,7 +95,7 @@ export default function WhatsOn(initialData) {
                       </span>
                     </m.h1>
 
-                    <svg className="text-[#BD3146] w-[90%] lg:w-[82%] mx-auto mb-24 lg:mb-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1519.962 29.772">
+                    <svg className="text-[#BD3146] w-[100%] lg:w-[100%] mx-auto mb-24 lg:mb-0 translate-x-[-1vw] lg:translate-x-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1519.962 29.772">
                       <defs>
                         <clipPath id="a">
                           <path fill="none" d="M0 29.772h1519.962V0H0Z" data-name="Path 1258"/>
