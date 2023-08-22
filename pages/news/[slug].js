@@ -99,7 +99,8 @@ export default function News(initialData) {
                           className="content content--news"
                           serializers={{
                             Quote: (props) => <Blockquote quote={props.quote} author={props.author} />,
-                            Image: (props) => <SanityImageResponsive image={props.image} />
+                            Image: (props) => <SanityImageResponsive image={props.image} />,
+                            link: (props) => <a target="_blank" rel="noopener noreferrer" href={props.href}>{props.children}</a>
                           }}
                         />
                       ) : (
