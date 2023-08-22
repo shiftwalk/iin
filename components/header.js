@@ -273,6 +273,8 @@ export default function Header() {
                       src="/images/pocket-cta.jpg"
                       alt="Some people in the park using the IIN app"
                       fill
+                      quality={65}
+                      sizes={`(max-width: 1024px) 100vw,55vw`}
                       className="absolute inset-0 object-cover object-center w-full h-full"
                     />
                   </div>
