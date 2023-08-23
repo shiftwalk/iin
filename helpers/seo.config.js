@@ -1,7 +1,7 @@
 export default {
-  defaultTitle: "Creating A Vibrant City Centre | It's In Nottingham",
-  description: "We are It's in Nottingham. Our passion for Nottingham and commitment to support and promote our members will drive economic growth - creating a vibrant city centre which is a destination of choice for visitors. Through every interaction we will build trust and inspire pride in our city centre, its businesses and its people to create a more attractive, healthier, safer, and greener place to live, work and play.",
-  titleTemplate: "%s | It's In Nottingham",
+  defaultTitle: "Creating A Vibrant City Centre | It's in Nottingham",
+  description: "Whether you're looking for events, shopping or food and drink offerings. It's in Nottingham is your comprehensive guide to everything in the city.",
+  titleTemplate: "%s | It's in Nottingham",
   openGraph: {
     type: 'website',
     locale: 'en_GB',
