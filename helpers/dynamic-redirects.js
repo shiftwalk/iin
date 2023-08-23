@@ -33,7 +33,7 @@ module.exports = async () => {
     destination: '/whats-on',
     permanent: true,
   },{
-    source: '/directory/shopping',
+    source: '/directory/shopping/:slug',
     destination: '/news/shopping',
     permanent: true,
   })
