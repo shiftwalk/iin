@@ -77,8 +77,8 @@ export default function AboutUs(initialData) {
         >
           <main className="">
             <article>
-              <div className="w-full bg-[#4000B5] selection:text-[#4000B5] selection:bg-[#23D6D1] relative min-h-[110vh] lg:min-h-screen flex flex-col lg:items-center lg:justify-center">
-                <LerpImage className="w-[40%] lg:w-[19vw] 2xl:w-[18vw] h-[55vw] lg:h-[28vw] 2xl:h-[26vw] absolute top-[36%] lg:top-[13%] left-0 overflow-hidden" amount="500%">
+              <div className="w-full bg-[#4000B5] selection:text-[#4000B5] selection:bg-[#23D6D1] relative min-h-screen flex flex-col lg:items-center lg:justify-center">
+                <LerpImage className="w-[40%] lg:w-[19vw] 2xl:w-[18vw] h-[55vw] lg:h-[28vw] 2xl:h-[26vw] absolute top-[36%] lg:top-[13%] left-0 overflow-hidden hidden lg:block" amount="500%">
                   <SanityImageScale
                     image={about.heroImage[0]} 
                     sizes="(max-width: 1024px) 100vw, 35vw"
@@ -86,7 +86,7 @@ export default function AboutUs(initialData) {
                 </LerpImage>
 
                 {about.heroImage[0] && (
-                  <LerpImage amount="-250%" className="w-[40%] lg:w-[25vw] h-[66vw] lg:h-[37vw] absolute top-[40%] lg:top-[18%] right-0 overflow-hidden">
+                  <LerpImage amount="-250%" className="w-[40%] lg:w-[25vw] h-[66vw] lg:h-[37vw] absolute top-[40%] lg:top-[18%] right-0 overflow-hidden hidden lg:block">
                     <SanityImageScale
                       image={about.heroImage[2]}
                       sizes="(max-width: 1024px) 100vw, 45vw"
@@ -95,7 +95,7 @@ export default function AboutUs(initialData) {
                 )}
 
                 {about.heroImage[1] && (
-                  <LerpImage amount="-250%" className="w-[70%] lg:w-[45vw] h-[47vw] lg:h-[37vw] absolute bottom-[5%] lg:bottom-[10%] left-[-5%] overflow-hidden block lg:hidden">
+                  <LerpImage amount="-250%" className="w-[100%] lg:w-[45vw] h-[47vw] lg:h-[37vw] absolute bottom-[5%] lg:bottom-[10%] lg:left-[-5%] overflow-hidden hidden lg:hidden">
                     <div className="h-full relative overflow-hidden w-full">
                       <SanityImageScale
                         image={about.heroImage[1]}
@@ -103,6 +103,17 @@ export default function AboutUs(initialData) {
                       />
                     </div>
                   </LerpImage>
+                )}
+
+                {about.heroImage[1] && (
+                  <div className="w-[100%] lg:w-[45vw] h-[65vw] lg:h-[37vw] absolute bottom-[0%] lg:bottom-[10%] lg:left-[-5%] overflow-hidden block lg:hidden">
+                    <div className="h-full relative overflow-hidden w-full">
+                      <SanityImageScale
+                        image={about.heroImage[1]}
+                        sizes="(max-width: 1024px) 100vw, 55vw"
+                      />
+                    </div>
+                  </div>
                 )}
                 
                 <div className="w-full text-center uppercase relative z-10 pt-[55%] lg:pt-0">
@@ -123,7 +134,7 @@ export default function AboutUs(initialData) {
                 </div>
               </div>
 
-              <div className="flex flex-wrap relative lg:pl-[5vw] 2xl:pl-[7.5vw] bg-[#4000B5] pb-[16vw] lg:pb-[100px] xl:pb-[120px] mb-[5vw] lg:mb-[10vw] selection:text-[#4000B5] selection:bg-[#23D6D1] z-[10]">
+              <div className="flex flex-wrap relative lg:pl-[5vw] 2xl:pl-[7.5vw] bg-[#4000B5] pb-[16vw] lg:pb-[100px] xl:pb-[120px] mb-[5vw] lg:mb-[10vw] selection:text-[#4000B5] selection:bg-[#23D6D1] z-[10] pt-10 lg:pt-0">
                 {about.heroImage[2] && (
                   <div className="w-full lg:w-[43%] hidden lg:block translate-y-[-15vh]">
                     <LerpImage amount="-100%" className="h-[27vw] relative overflow-hidden w-full">
