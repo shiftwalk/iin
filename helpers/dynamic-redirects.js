@@ -41,6 +41,18 @@ module.exports = async () => {
     destination: '/whats-on',
     permanent: true,
   },{
+    source: '/whats-on/:slug/:slug',
+    destination: '/whats-on',
+    permanent: true,
+  },{
+    source: '/offers/:slug',
+    destination: '/news/student-discount-nottingham',
+    permanent: true,
+  },{
+    source: '/offers/:slug/:slug',
+    destination: '/news/student-discount-nottingham',
+    permanent: true,
+  },{
     source: '/directory/:slug/:slug',
     destination: '/whats-on',
     permanent: true,
