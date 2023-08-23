@@ -116,7 +116,7 @@ export default function AboutUs(initialData) {
                   </div>
                 )}
                 
-                <div className="w-full text-center uppercase relative z-10 pt-[55%] lg:pt-0">
+                <div className="w-full text-center uppercase relative z-10 pt-[50%] lg:pt-0">
                   <m.h1 variants={container} className="text-[15vw] lg:text-[12vw] 2xl:text-[12vw] leading-none lg:leading-none 2xl:leading-none text-[#23D6D1]">
                     <span className="block overflow-hidden relative">
                       <m.span className="block" variants={reveal}>Get To</m.span>
