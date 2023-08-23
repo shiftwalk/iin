@@ -21,6 +21,10 @@ module.exports = async () => {
   const redirects = await getClient().fetch(query);
 
   redirects.push({
+    source: '/directory/shopping/:slug',
+    destination: '/news/shopping',
+    permanent: true,
+  },{
     source: '/directory/:slug',
     destination: '/whats-on',
     permanent: true,
@@ -31,10 +35,6 @@ module.exports = async () => {
   },{
     source: '/directory/:slug/:slug/:slug',
     destination: '/whats-on',
-    permanent: true,
-  },{
-    source: '/directory/shopping/:slug',
-    destination: '/news/shopping',
     permanent: true,
   })
 
