@@ -19,5 +19,12 @@ module.exports = async () => {
   }
 `;
   const redirects = await getClient().fetch(query);
+
+  redirects.push({
+    source: '/some-old-test',
+    destination: '/some-new-test',
+    permanent: true,
+  })
+
   return redirects;
 };
