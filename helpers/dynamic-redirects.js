@@ -29,7 +29,7 @@ module.exports = async () => {
     destination: '/news/shopping',
     permanent: true,
   },{
-    source: '/directory/:slug/:slug(student-discount)',
+    source: '/directory/:slug/:slug(\\student-discount)',
     destination: '/news/:slug', 
     permanent: false,
   },{
