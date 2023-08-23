@@ -30,8 +30,8 @@ module.exports = async () => {
     permanent: true,
   },{
     source: '/directory/:slug/:slug(\\student-discount)',
-    destination: '/news/:slug', 
-    permanent: false,
+    destination: '/news/student-discount-nottingham', 
+    permanent: true,
   },{
     source: '/directory/:slug',
     destination: '/whats-on',
