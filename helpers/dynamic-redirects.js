@@ -22,15 +22,19 @@ module.exports = async () => {
 
   redirects.push({
     source: '/directory/:slug',
-    destination: '/whats-on', // Matched parameters can be used in the destination
+    destination: '/whats-on',
     permanent: true,
   },{
     source: '/directory/:slug/:slug',
-    destination: '/whats-on', // Matched parameters can be used in the destination
+    destination: '/whats-on',
     permanent: true,
   },{
     source: '/directory/:slug/:slug/:slug',
-    destination: '/whats-on', // Matched parameters can be used in the destination
+    destination: '/whats-on',
+    permanent: true,
+  },{
+    source: '/directory/shopping',
+    destination: '/news/shopping',
     permanent: true,
   })
 
