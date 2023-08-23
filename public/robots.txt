@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://iin-staging.vercel.app/
+
+# Sitemaps
+Sitemap: https://iin-staging.vercel.app/sitemap.xml
