@@ -106,7 +106,7 @@ export default function Header() {
                 </div>
               </button>
 
-              <button id="download-button" aria-label={appDownloadOpen ? 'Close App Download Menu' : 'Open App Download Menu' } onClick={appDownloadToggle} className={`a11y-focus rounded-full items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all 2xl:text-xl 2xl:leading-none hidden lg:flex group overflow-hidden relative hover:text-black ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] delay-[25ms] hover:delay-[0ms] ${appbuttonColor}`}>
+              <button aria-label={appDownloadOpen ? 'Close App Download Menu' : 'Open App Download Menu' } onClick={appDownloadToggle} className={`a11y-focus rounded-full items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all 2xl:text-xl 2xl:leading-none hidden lg:flex group overflow-hidden relative hover:text-black ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] delay-[25ms] hover:delay-[0ms] ${appbuttonColor}`}>
                 <div className="flex space-x-2 mr-3 relative z-[1]">
                   <IconApple className="w-5" />
                   <IconAndroid className="w-5" />
@@ -254,6 +254,7 @@ export default function Header() {
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.5 }}
                 transition={{ duration: 0.3, ease: [0.71,0,0.17,1] }}
+                id="download-button"
                 className="bg-white w-10/12 lg:w-[75%] h-[82vh] shadow-xl rounded-3xl relative z-[1002] overflow-hidden"
               >
                 <button aria-label="Close App Download Menu" onClick={appDownloadToggle} className={`a11y-focus rounded-full w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] 2xl:w-[68px] 2xl:h-[68px] flex items-center justify-center border absolute top-5 right-5 bg-[#176B75] z-[2000] group overflow-hidden`}>
