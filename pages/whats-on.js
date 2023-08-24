@@ -85,7 +85,7 @@ export default function WhatsOn(initialData) {
                   <div className="absolute bottom-0 left-0 right-0 w-full h-[] bg-gradient-to-t from-[#ffc3d6] via-[#ffc3d6] to-transparent"></div>
                 </div> */}
 
-                <div className="w-full text-center uppercase lg:min-h-screen flex flex-col items-center justify-center pt-[33vh] lg:pt-0 relative z-[10]">
+                <div className="w-full text-center uppercase lg:min-h-screen flex flex-col items-center justify-center pt-[37vh] lg:pt-0 relative z-[10]">
                   <div className="translate-y-[-50%] lg:translate-y-0">
                     <m.h1 variants={container} className="text-[12vw] lg:text-[11.5vw] leading-none lg:leading-none text-[#BD3146] mb-2 lg:mb-5 translate-x-[-1vw] lg:translate-x-0">
                       <span className="relative overflow-hidden block">

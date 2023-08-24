@@ -26,7 +26,7 @@ module.exports = async () => {
   redirects.push({
     // Anything with 'student-discount' in the last part of the URL
     source: '/directory/:slug*/:slug*(student-discount)',
-    destination: '/news/student-discount-nottingham', 
+    destination: '/news/student-discounts-nottingham', 
     permanent: true,
   },{
     source: '/directory/food/:slug',
@@ -66,11 +66,11 @@ module.exports = async () => {
     permanent: true,
   },{
     source: '/offers/:slug',
-    destination: '/news/student-discount-nottingham',
+    destination: '/news/student-discounts-nottingham',
     permanent: true,
   },{
     source: '/offers/:slug/:slug',
-    destination: '/news/student-discount-nottingham',
+    destination: '/news/student-discounts-nottingham',
     permanent: true,
   },{
     source: '/directory/:slug/:slug',
