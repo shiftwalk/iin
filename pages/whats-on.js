@@ -17,6 +17,7 @@ import PortableText from 'react-portable-text'
 import SanityImageScale from '@/components/sanity-image-scale'
 import Head from 'next/head'
 import SanityImage from '@/components/sanity-image'
+import SanityImageResponsive from '@/components/sanity-image-responsive'
 
 const pageService = new SanityPageService(whatsOnQuery)
 
@@ -75,16 +76,16 @@ export default function WhatsOn(initialData) {
           <main className="overflow-hidden">
             <article>
               <div className="w-full bg-[#ffc3d6] relative selection:bg-off-black selection:text-[#ffc3d6]">
-                <div className="absolute inset-0 w-full h-[100vh] lg:h-screen lg:opacity-0">
+                {/* <div className="absolute inset-0 w-full h-[100vh] lg:h-screen lg:opacity-0">
                   <SanityImage
                     p
                     image={whatsOn.mobileHeroImage}
                     fill
                   />
                   <div className="absolute bottom-0 left-0 right-0 w-full h-[] bg-gradient-to-t from-[#ffc3d6] via-[#ffc3d6] to-transparent"></div>
-                </div>
+                </div> */}
 
-                <div className="w-full text-center uppercase min-h-screen flex flex-col items-center justify-center pt-[25vh] lg:pt-0 relative z-[10]">
+                <div className="w-full text-center uppercase lg:min-h-screen flex flex-col items-center justify-center pt-[33vh] lg:pt-0 relative z-[10]">
                   <div className="translate-y-[-50%] lg:translate-y-0">
                     <m.h1 variants={container} className="text-[12vw] lg:text-[11.5vw] leading-none lg:leading-none text-[#BD3146] mb-2 lg:mb-5 translate-x-[-1vw] lg:translate-x-0">
                       <span className="relative overflow-hidden block">
@@ -112,6 +113,15 @@ export default function WhatsOn(initialData) {
                   </div>
 
                   {/* <IconZagUnderline className="text-[#BD3146] w-[90%] lg:w-[75%] mx-auto" /> */}
+                </div>
+
+                <div className="w-full h-[75vw] lg:opacity-0 lg:hidden relative overflow-hidden">
+                  <SanityImage
+                    p
+                    image={whatsOn.mobileHeroImage}
+                    fill
+                    className="w-full h-[55vw]"
+                  />
                 </div>
 
                 <div className="relative pt-8">

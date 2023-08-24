@@ -106,7 +106,7 @@ export default function AboutUs(initialData) {
                 )}
 
                 {about.heroImage[1] && (
-                  <div className="w-[100%] lg:w-[45vw] h-[65vw] lg:h-[37vw] absolute bottom-[0%] lg:bottom-[10%] lg:left-[-5%] overflow-hidden block lg:hidden">
+                  <div className="w-[100%] lg:w-[45vw] h-[75vw] lg:h-[37vw] absolute bottom-[0%] lg:bottom-[10%] lg:left-[-5%] overflow-hidden block lg:hidden">
                     <div className="h-full relative overflow-hidden w-full">
                       <SanityImageScale
                         image={about.heroImage[1]}
