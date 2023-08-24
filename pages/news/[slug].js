@@ -16,6 +16,7 @@ import PortableText from 'react-portable-text'
 import Blockquote from '@/components/blockquote'
 import Head from 'next/head'
 const pageService = new SanityPageService(newsSlugQuery)
+var slugify = require('slugify')
 
 export default function News(initialData) {
   const { data: { contact, policies, current }  } = pageService.getPreviewHook(initialData)()
@@ -100,7 +101,26 @@ export default function News(initialData) {
                           serializers={{
                             Quote: (props) => <Blockquote quote={props.quote} author={props.author} />,
                             Image: (props) => <SanityImageResponsive image={props.image} />,
-                            link: (props) => <a target="_blank" rel="noopener noreferrer" href={props.href}>{props.children}</a>
+                            internalLink: (props) => {
+                              const {slug = {}} = props
+                              
+                              // Prefix
+                              let prefix = '/'
+                              props.type == 'categories' && (prefix = '/news/categories/')
+                              props.type == 'news' && (prefix = '/news/')
+                              props.type == 'policies' && (prefix = '/policies/')
+                      
+                              // HREF
+                              const href = `${prefix}${ slug ? slug.current : slugify(props.title, { lower: true, remove: /[*+~.()'"!:@]/g})}`
+                      
+                              return <Link href={href}>{props.children}</Link>
+                            },
+                            link: (props) => {
+                              const { blank, href, children } = props
+                              return blank ?
+                                <a href={href} target="_blank" rel="noopener">{children}</a>
+                                : <a href={href}>{children}</a>
+                            }
                           }}
                         />
                       ) : (
@@ -127,7 +147,7 @@ export default function News(initialData) {
                     </a>
                     
                     <a href={`http://twitter.com/share?text=${current.title}&url=https://iin-staging.vercel.app/news/${current.slug.current}`} rel="noopener noreferrer" target="_blank" className="a11y-focus w-12 h-12 flex flex-wrap items-center justify-center rounded-full bg-[#B4C0C6] bg-opacity-40 relative overflow-hidden group hover:scale-[1.15] transition-transform ease-out duration-[450ms] text-off-black">
-                      <IconTwitter className="w-[45%] relative z-10" />
+                      <IconTwitter className="w-[70%] relative z-10" />
                       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[0] opacity-0 group-hover:opacity-100 group-hover:delay-[0ms] delay-[450ms] transition-opacity ease-out duration-[100ms]">
                         <div className={`w-[5px] h-[5px] rounded-full transition-all ease-out duration-[450ms] group-hover:duration-[600ms] group-hover:scale-[15] origin-center bg-[#EBEA33]`}></div>
                       </div>

@@ -106,7 +106,7 @@ export default function Header() {
                 </div>
               </button>
 
-              <button aria-label={appDownloadOpen ? 'Close App Download Menu' : 'Open App Download Menu' } onClick={appDownloadToggle} className={`a11y-focus rounded-full items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all 2xl:text-xl 2xl:leading-none hidden lg:flex group overflow-hidden relative hover:text-black ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] delay-[25ms] hover:delay-[0ms] ${appbuttonColor}`}>
+              <button id="download-button" aria-label={appDownloadOpen ? 'Close App Download Menu' : 'Open App Download Menu' } onClick={appDownloadToggle} className={`a11y-focus rounded-full items-center justify-center h-[40px] lg:h-[60px] 2xl:h-[68px] px-4 lg:px-6 transition-all 2xl:text-xl 2xl:leading-none hidden lg:flex group overflow-hidden relative hover:text-black ease-[cubic-bezier(0.71,0,0.17,1)] duration-[450ms] delay-[25ms] hover:delay-[0ms] ${appbuttonColor}`}>
                 <div className="flex space-x-2 mr-3 relative z-[1]">
                   <IconApple className="w-5" />
                   <IconAndroid className="w-5" />

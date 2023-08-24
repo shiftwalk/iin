@@ -509,6 +509,14 @@ export const newsSlugQuery = `{
     },
     content[] {
       ...,
+      markDefs[]{
+        ...,
+        _type == "internalLink" => {
+          "slug": @.reference->slug,
+          "type": @.reference->_type,
+          "title": @.reference->title
+        }
+      },
       image {
         asset-> {
           ...

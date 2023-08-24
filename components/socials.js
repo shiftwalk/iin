@@ -17,7 +17,7 @@ export default function Socials({ className, items }) {
             || ((e.name == 'LinkedIn' || e.name == 'Linkedin' || e.name == 'linkedin') &&
                 <IconLinkedin className="w-[50%] relative z-[1]" />)
             || ((e.name == 'Twitter' || e.name == 'twitter') &&
-                <IconTwitter className="w-[50%] relative z-[1]" />)
+                <IconTwitter className="w-[75%] relative z-[1]" />)
             ||
                 <></>
             }

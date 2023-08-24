@@ -17,7 +17,7 @@ export default {
     ],
   },
   twitter: {
-    handle: '@samuelgoddard',
+    handle: '@itsinnottingham',
     site: '@site',
     cardType: 'summary_large_image',
   },
