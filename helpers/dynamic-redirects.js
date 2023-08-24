@@ -11,26 +11,46 @@ const previewClient = createClient({
 const getClient = () => previewClient;
 
 module.exports = async () => {
+  // pipe in manual unique redirects from the CMS (highest priority)
   const query = `
   *[_type == "redirect"]{ 
     destination,
     source,
     permanent
   }
-`;
+  `;
+
   const redirects = await getClient().fetch(query);
 
+  // Wildcard/regex matching automated redirects (lower priorty, with specific stuff higher)
   redirects.push({
+    // Anything with 'student-discount' in the last part of the URL
+    source: '/directory/:slug*/:slug*(student-discount)',
+    destination: '/news/student-discount-nottingham', 
+    permanent: true,
+  },{
+    source: '/directory/food/:slug',
+    destination: '/news/places-to-eat-nottingham-city-centre',
+    permanent: true,
+  },{
+    source: '/directory/food/:slug*',
+    destination: '/news/places-to-eat-nottingham-city-centre',
+    permanent: true,
+  },{
+    source: '/directory/food/:slug*/:slug*',
+    destination: '/news/places-to-eat-nottingham-city-centre',
+    permanent: true,
+  },{
+    source: '/directory/shopping/:slug*(fashion)',
+    destination: '/news/clothes-shops-in-nottingham-city-centre',
+    permanent: true,
+  },{
     source: '/directory/shopping/:slug',
     destination: '/news/shopping',
     permanent: true,
   },{
     source: '/directory/shopping/:slug/:slug',
     destination: '/news/shopping',
-    permanent: true,
-  },{
-    source: '/directory/:slug*/:slug*(student-discount)',
-    destination: '/news/student-discount-nottingham', 
     permanent: true,
   },{
     source: '/directory/:slug',
@@ -67,6 +87,19 @@ module.exports = async () => {
   },{
     source: '/directory/:slug/:slug/:slug',
     destination: '/whats-on',
+    permanent: true,
+  },{
+    source: '/green-healthy-city/:slug',
+    destination: '/news/categories/green-healthy-city', 
+    permanent: true,
+  },{
+    source: '/news-and-opportunities/:slug*',
+    destination: '/news', 
+    permanent: true,
+  },{
+    // Anything with 'student-discount' in the last part of the URL
+    source: '/news-and-opportunities/:slug*(page)',
+    destination: '/news', 
     permanent: true,
   })
 
