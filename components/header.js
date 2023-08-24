@@ -271,8 +271,7 @@ export default function Header() {
                 <div className="w-full flex h-full">
                   <div className="w-[45%] xl:w-1/2 bg-black/20 relative overflow-hidden">
                     <Image
-                      src="/images/pocket-cta.jpg"
-                      alt="Some people in the park using the IIN app"
+                      src="/images/modal.jpg"
                       fill
                       quality={65}
                       sizes={`(max-width: 1024px) 100vw,55vw`}
@@ -295,7 +294,7 @@ export default function Header() {
                       <h3 className="text-[5vw] leading-none block w-full uppercase text-[#176B75] mb-3 pb-0 text-center">Download the <span className="font-display">app</span></h3>
                       <IconSquiggleUnderline className="w-[80%] text-[#176B75] mb-[2.5vh] rotate-[-3deg] mx-auto" />
 
-                      <p className="text-lg 2xl:text-xl leading-[1.25] 2xl:leading-[1.25] mb-[5vh] text-center">Discover what&apos;s going on, make plans for what&apos;s around the corner and stay up to date with everything Nottingham city centre - all in one place. Whatever your vibe, Nottingham&apos;s got it. And It&apos;s In Nottingham is the best way to find out about it. Scan the QR code below with your phone to get started.</p>
+                      <p className="text-lg 2xl:text-xl leading-[1.25] 2xl:leading-[1.25] mb-[5vh] text-center">Discover what&apos;s going on, make plans for what&apos;s around the corner and stay up to date with everything Nottingham city centre - all in one place. Whatever your vibe, Nottingham&apos;s got it. And It&apos;s in Nottingham is the best way to find out about it. Scan the QR code below with your phone to get started.</p>
 
                       <div className="relative rotate-[-2deg] w-[110px] xl:w-[33%] lg:max-w-[200px] aspect-square mx-auto">
                         <a href="https://qrco.de/be9W9S" target="_blank" rel="noopener noreferrer">
