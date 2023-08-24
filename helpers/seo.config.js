@@ -5,11 +5,11 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://iin-staging.vercel.app/',
+    url: 'https://www.itsinnottingham.com/',
     site_name: "It's in Nottingham",
     images: [
       {
-        url: 'https://iin-staging.vercel.app/images/social.jpg',
+        url: 'https://www.itsinnottingham.com/images/social.jpg',
         width: 1200,
         height: 630,
         alt: `It's in Nottingham Logo`,

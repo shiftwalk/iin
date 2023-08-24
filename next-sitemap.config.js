@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://iin-staging.vercel.app/',
+  siteUrl: 'https://www.itsinnottingham.com/',
   generateRobotsTxt: true, // (optional)
   // ...other options
 }

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://iin-staging.vercel.app/
+Host: https://www.itsinnottingham.com/
 
 # Sitemaps
-Sitemap: https://iin-staging.vercel.app/sitemap.xml
+Sitemap: https://www.itsinnottingham.com/sitemap.xml
