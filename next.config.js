@@ -5,6 +5,7 @@ module.exports = {
     const sanityRedirects = await redirects();
     return sanityRedirects;
   },
+  trailingSlash: true,
   images: {
 		domains: ['cdn.sanity.io'],
 		deviceSizes: [768, 1024, 1280, 1600, 1920, 2400],
