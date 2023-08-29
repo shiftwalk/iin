@@ -53,7 +53,7 @@ export default function Footer({ policies, contact }) {
                 <span className="uppercase">Follow us</span>
                 <span className="block font-display relative">on <span className="uppercase italic">socials
               </span></span>
-              <svg className="absolute bottom-0 right-[-17%] w-[90%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 431.774 17.59">
+              <svg className="absolute bottom-0 right-[-15%] lg:right-[-17%] w-[85%] lg:w-[90%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 431.774 17.59">
                   <defs>
                   <clipPath id="a">
                   <path fill="none" d="M0 17.592h431.774V.002H0Z" data-name="Path 1178"/>
