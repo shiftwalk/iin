@@ -49,23 +49,25 @@ export default function Footer({ policies, contact }) {
             </div>
 
             <div className="w-11/12 lg:w-10/12 text-center text-white relative z-10">
-              <span className="block text-[9.5vw] leading-none md:text-[5vw] md:leading-none xl:text-[4.5vw] xl:leading-none mb-12 lg:mb-16 text-[#EFF366]">
+              <span className="block text-[9.5vw] leading-none md:text-[5vw] md:leading-none xl:text-[4.5vw] xl:leading-none mb-12 lg:mb-16 text-[#EFF366] relative overflow-hidden pb-[12px] lg:pb-[20px]">
                 <span className="uppercase">Follow us</span>
-                <span className="block font-display relative">on <span className="uppercase italic">socials<svg className="absolute bottom-[-12px] lg:bottom-[-20px]  right-[6%] w-[60%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 431.774 17.59">
-  <defs>
-    <clipPath id="a">
-      <path fill="none" d="M0 17.592h431.774V.002H0Z" data-name="Path 1178"/>
-    </clipPath>
-  </defs>
-  <g data-name="Group 417">
-    <g clip-path="url(#a)" data-name="Group 416">
-      <g data-name="Group 415">
-        <path fill="none" stroke="#eff366" stroke-miterlimit="120" stroke-width="3" d="m1.289 2.597 12.378 12.378L25.736 2.597l12.378 12.378L50.489 2.597l12.073 12.378L74.94 2.597l12.379 12.378 12.07-12.378 12.378 12.378 12.377-12.378 12.067 12.378 12.378-12.378 12.38 12.378 12.069-12.378 12.378 12.378 12.378-12.378 12.069 12.378 12.379-12.378 12.378 12.378 12.378-12.378 12.074 12.378 12.073-12.378 12.378 12.378 12.379-12.378 12.045 12.378 12.042-12.378 12.378 12.378 12.382-12.378 12.069 12.378 12.378-12.378 12.378 12.378 12.069-12.378 12.378 12.378L418.4 2.597l12.068 12.378" data-name="Path 1177"/>
-      </g>
-    </g>
-  </g>
-</svg>
-</span></span></span>
+                <span className="block font-display relative">on <span className="uppercase italic">socials
+              </span></span>
+              <svg className="absolute bottom-0 right-[6%] w-[60%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 431.774 17.59">
+                  <defs>
+                  <clipPath id="a">
+                  <path fill="none" d="M0 17.592h431.774V.002H0Z" data-name="Path 1178"/>
+                  </clipPath>
+                  </defs>
+                  <g data-name="Group 417">
+                  <g clip-path="url(#a)" data-name="Group 416">
+                  <g data-name="Group 415">
+                    <path fill="none" stroke="#eff366" stroke-miterlimit="120" stroke-width="3" d="m1.289 2.597 12.378 12.378L25.736 2.597l12.378 12.378L50.489 2.597l12.073 12.378L74.94 2.597l12.379 12.378 12.07-12.378 12.378 12.378 12.377-12.378 12.067 12.378 12.378-12.378 12.38 12.378 12.069-12.378 12.378 12.378 12.378-12.378 12.069 12.378 12.379-12.378 12.378 12.378 12.378-12.378 12.074 12.378 12.073-12.378 12.378 12.378 12.379-12.378 12.045 12.378 12.042-12.378 12.378 12.378 12.382-12.378 12.069 12.378 12.378-12.378 12.378 12.378 12.069-12.378 12.378 12.378L418.4 2.597l12.068 12.378" data-name="Path 1177"/>
+                  </g>
+                  </g>
+                  </g>
+                </svg>
+              </span>
 
               <p className="mb-12 lg:mb-16 leading-[1.25] xl:text-xl xl:leading-[1.25] max-w-[] md:max-w-[400px] xl:max-w-[500px] mx-auto">Amazing food and drinks, all the shops you&apos;ll ever need, and inspirational events and activities.</p>
 
