@@ -49,11 +49,11 @@ export default function Footer({ policies, contact }) {
             </div>
 
             <div className="w-11/12 lg:w-10/12 text-center text-white relative z-10">
-              <span className="block text-[9.5vw] leading-none md:text-[5vw] md:leading-none xl:text-[4.5vw] xl:leading-none mb-12 lg:mb-16 text-[#EFF366] relative overflow-hidden pb-[12px] lg:pb-[20px]">
+              <span className="inline-block text-[9.5vw] leading-none md:text-[5vw] md:leading-none xl:text-[4.5vw] xl:leading-none mb-12 lg:mb-16 text-[#EFF366] relative overflow-hidden pb-[15px] lg:pb-[28px]">
                 <span className="uppercase">Follow us</span>
                 <span className="block font-display relative">on <span className="uppercase italic">socials
               </span></span>
-              <svg className="absolute bottom-0 right-[6%] w-[60%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 431.774 17.59">
+              <svg className="absolute bottom-0 right-[-17%] w-[90%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 431.774 17.59">
                   <defs>
                   <clipPath id="a">
                   <path fill="none" d="M0 17.592h431.774V.002H0Z" data-name="Path 1178"/>
