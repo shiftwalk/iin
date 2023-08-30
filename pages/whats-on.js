@@ -41,6 +41,7 @@ export default function WhatsOn(initialData) {
     <Layout>
       <NextSeo
         title={whatsOn.seo?.metaTitle ? whatsOn.seo?.metaTitle : whatsOn.title}
+        canonical={`https://www.itsinnottingham.com/whats-on`}
         description={whatsOn.seo?.metaDesc ? whatsOn.seo?.metaDesc : null}
         openGraph={{
           title: whatsOn.seo?.metaTitle ? whatsOn.seo?.metaTitle : whatsOn.title,

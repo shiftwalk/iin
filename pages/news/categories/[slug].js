@@ -28,6 +28,7 @@ export default function NewsCat(initialData) {
     <Layout>
       <NextSeo
         title={cat.seo?.metaTitle ? cat.seo?.metaTitle : cat.title}
+        canonical={`https://www.itsinnottingham.com/news/categories/${cat.slug.current}`}
         description={cat.seo?.metaDesc ? cat.seo?.metaDesc : null}
         openGraph={{
           title: cat.seo?.metaTitle ? cat.seo?.metaTitle : cat.title,

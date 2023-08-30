@@ -27,6 +27,7 @@ export default function News(initialData) {
     <Layout>
       <NextSeo
         title={newsLanding.seo?.metaTitle ? newsLanding.seo?.metaTitle : newsLanding.title}
+        canonical={`https://www.itsinnottingham.com/news`}
         description={newsLanding.seo?.metaDesc ? newsLanding.seo?.metaDesc : null}
         openGraph={{
           title: newsLanding.seo?.metaTitle ? newsLanding.seo?.metaTitle : newsLanding.title,

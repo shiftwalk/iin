@@ -43,6 +43,7 @@ export default function AboutUs(initialData) {
     <Layout>
        <NextSeo
         title={about.seo?.metaTitle ? about.seo?.metaTitle : about.title}
+        canonical = 'https://www.itsinnottingham.com/about'
         description={about.seo?.metaDesc ? about.seo?.metaDesc : null}
         openGraph={{
           title: about.seo?.metaTitle ? about.seo?.metaTitle : about.title,

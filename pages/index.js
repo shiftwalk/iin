@@ -35,6 +35,7 @@ export default function Home(initialData) {
       <NextSeo
         title={home.seo?.metaTitle ? home.seo?.metaTitle : home.title}
         description={home.seo?.metaDesc ? home.seo?.metaDesc : null}
+        canonical = 'https://www.itsinnottingham.com'
         openGraph={{
           title: home.seo?.metaTitle ? home.seo?.metaTitle : home.title,
           description: home.seo?.metaDesc ? home.seo?.metaDesc : null,

@@ -30,15 +30,15 @@ module.exports = async () => {
     permanent: true,
   },{
     source: '/directory/food/:slug',
-    destination: '/news/places-to-eat-nottingham-city-centre',
+    destination: '/news/places-to-eat-in-nottingham-city-centre/',
     permanent: true,
   },{
     source: '/directory/food/:slug*',
-    destination: '/news/places-to-eat-nottingham-city-centre',
+    destination: '/news/places-to-eat-in-nottingham-city-centre/',
     permanent: true,
   },{
     source: '/directory/food/:slug*/:slug*',
-    destination: '/news/places-to-eat-nottingham-city-centre',
+    destination: '/news/places-to-eat-in-nottingham-city-centre/',
     permanent: true,
   },{
     source: '/directory/shopping/:slug*(fashion)',
