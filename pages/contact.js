@@ -38,7 +38,7 @@ export default function Contact(initialData) {
       <NextSeo
         title={contact.seo?.metaTitle ? contact.seo?.metaTitle : contact.title}
         description={contact.seo?.metaDesc ? contact.seo?.metaDesc : null}
-        canonical = 'https://www.itsinnottingham.com/contact'
+        canonical = 'https://www.itsinnottingham.com/contact/'
         openGraph={{
           title: contact.seo?.metaTitle ? contact.seo?.metaTitle : contact.title,
           description: contact.seo?.metaDesc ? contact.seo?.metaDesc : null,

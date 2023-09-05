@@ -20,7 +20,7 @@ export default function News(initialData) {
 
   return (
     <Layout>
-      <NextSeo canonical={`https://www.itsinnottingham.com/policies/${current.slug.current}`} title={current.title} />
+      <NextSeo canonical={`https://www.itsinnottingham.com/policies/${current.slug.current}/`} title={current.title} />
 
       <LazyMotion features={domAnimation}>
         <div>
