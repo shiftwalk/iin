@@ -509,6 +509,9 @@ export const newsSlugQuery = `{
     },
     content[] {
       ...,
+      embed {
+        ...
+      },
       markDefs[]{
         ...,
         _type == "internalLink" => {

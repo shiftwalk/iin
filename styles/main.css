@@ -86,3 +86,7 @@ html.lenis {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0)
 }
+
+iframe {
+  @apply my-8 lg:my-12 w-full aspect-video !important;
+}
