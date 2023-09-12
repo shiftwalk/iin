@@ -7,6 +7,10 @@
   & > p > a {
     @apply underline hover:text-orange focus:text-orange outline-none ring-current focus-visible:ring-4;
   }
+  
+  & > p > strong > a {
+    @apply underline hover:text-orange focus:text-orange outline-none ring-current focus-visible:ring-4;
+  }
 
   & > h1, & > .h1 {
     @apply text-3xl md:text-4xl mt-10;
