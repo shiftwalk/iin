@@ -302,7 +302,7 @@ export default function Header() {
                             quality={80}
                             width={358}
                             height={356}
-                            src="/icons/qr.svg"
+                            src="/icons/qr-popup.svg"
                             alt="QR Code to download the app"
                             className="w-full"
                           />

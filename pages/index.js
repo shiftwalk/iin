@@ -247,7 +247,7 @@ export default function Home(initialData) {
                             quality={80}
                             width={358}
                             height={356}
-                            src="/icons/qr.svg"
+                            src="/icons/qr-home.svg"
                             alt="QR Code to download the app"
                             className="w-[65%]"
                           />
