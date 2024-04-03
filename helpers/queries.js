@@ -524,6 +524,7 @@ export const newsSlugQuery = `{
         asset-> {
           ...
         },
+        wrapText,
         caption,
         alt,
         hotspot {

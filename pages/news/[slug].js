@@ -102,7 +102,7 @@ export default function News(initialData) {
                           serializers={{
                             Quote: (props) => <Blockquote quote={props.quote} author={props.author} />,
                             Embed: (props) => <div className="w-full" dangerouslySetInnerHTML={{__html: props.code}} />,
-                            Image: (props) => <SanityImageResponsive image={props.image} />,
+                            Image: (props) => <SanityImageResponsive image={props.image} wrap={props.wrapText} />,
                             internalLink: (props) => {
                               const {slug = {}} = props
                               

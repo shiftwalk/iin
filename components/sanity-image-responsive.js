@@ -3,16 +3,24 @@ import sanity from '@/services/sanity'
 import { useState } from 'react';
 import { useNextSanityImage } from 'next-sanity-image';
 
-export default function SanityImageResponsive({ image, className, alt, priority, quality, sizes }) {
+export default function SanityImageResponsive({ image, className, alt, priority, quality, sizes, wrap }) {
   const [imageIsLoaded, setImageIsLoaded] = useState(priority ? priority : false)
   const imageProps = useNextSanityImage(
 		sanity.config,
 		image
 	);
   
+  let wrapClass = ''
 
+  if (wrap == 'wrapleft') {
+    wrapClass = 'wrap left'
+  }
+  if (wrap == 'wrapright') {
+    wrapClass = 'wrap right'
+  }
+  
 	return (
-    <figure className={`image bg-black/10 ${className} relative overflow-hidden`}>
+    <figure className={`image bg-black/10 ${className} relative overflow-hidden ${wrapClass}`}>
       <Image
         src={imageProps?.src}
         sizes={sizes ? sizes : `(max-width: 1024px) 100vw,90vw`}
