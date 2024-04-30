@@ -2,8 +2,10 @@ import Image from 'next/image'
 import sanity from '@/services/sanity'
 import { useState } from 'react';
 import { useNextSanityImage } from 'next-sanity-image';
+import Link from 'next/link';
+import slugify from 'slugify';
 
-export default function SanityImageResponsive({ image, className, alt, priority, quality, sizes, wrap }) {
+export default function SanityImageResponsive({ image, className, alt, priority, quality, sizes, wrap, customLink }) {
   const [imageIsLoaded, setImageIsLoaded] = useState(priority ? priority : false)
   const imageProps = useNextSanityImage(
 		sanity.config,
@@ -11,6 +13,7 @@ export default function SanityImageResponsive({ image, className, alt, priority,
 	);
   
   let wrapClass = ''
+  let internalHref = ''
 
   if (wrap == 'wrapleft') {
     wrapClass = 'wrap left'
@@ -18,8 +21,18 @@ export default function SanityImageResponsive({ image, className, alt, priority,
   if (wrap == 'wrapright') {
     wrapClass = 'wrap right'
   }
+
+  // Prefix
+  let prefix = '/'
+  if (customLink?.internalLink) {
+    customLink.internalLink._type == 'categories' && (prefix = '/news/categories/')
+    customLink.internalLink._type == 'news' && (prefix = '/news/')
+    customLink.internalLink._type == 'policies' && (prefix = '/policies/')
+    // HREF
+    internalHref = `${prefix}${ customLink.internalLink.slug ? customLink.internalLink.slug.current : slugify(customLink.internalLink.title, { lower: true, remove: /[*+~.()'"!:@]/g})}`
+  }
   
-	return (
+	return !customLink ? (
     <figure className={`image bg-black/10 ${className} relative overflow-hidden ${wrapClass}`}>
       <Image
         src={imageProps?.src}
@@ -43,5 +56,61 @@ export default function SanityImageResponsive({ image, className, alt, priority,
         </figcaption>
       )}
     </figure> 
+  ) : (
+    <>
+    {customLink.internalLink ? (
+      <Link href={internalHref} className={`${className} ${wrapClass} float`}>
+        <figure className={`image bg-black/10 ${className} relative overflow-hidden`}>
+          <Image
+            src={imageProps?.src}
+            sizes={sizes ? sizes : `(max-width: 1024px) 100vw,90vw`}
+            className={`${className} will-change-transform ${imageIsLoaded ? 'opacity-100 scale-1' : 'opacity-100 scale-[1.05]'} ${priority ? 'opacity-100' : 'transition-all ease-in-out duration-[2000ms]'}`}
+            quality={quality ? quality : 75}
+            width={image?.asset.metadata.dimensions.width / 1.5}
+            height={image?.asset.metadata.dimensions.height / 1.5}
+            {...(priority ? {priority: true} : {})}
+            alt={image.alt ? image.alt : 'MISSING ALT TEXT'}
+            onLoad={event => {
+              const target = event.target;
+              if (target.src.indexOf('data:image/gif;base64') < 0) {
+                setImageIsLoaded(true)
+              }
+            }}
+          />
+          {image.caption && (
+            <figcaption className="bg-white py-2 italic text-black/50 text-sm lg:text-base">
+              - {image.caption}
+            </figcaption>
+          )}
+        </figure> 
+      </Link>
+      ) : ( 
+        <a href={customLink.externalLink} target="_blank" rel="noopener noreferrer" className={`${className} ${wrapClass} float`}>
+        <figure className={`image bg-black/10 ${className} relative overflow-hidden`}>
+          <Image
+            src={imageProps?.src}
+            sizes={sizes ? sizes : `(max-width: 1024px) 100vw,90vw`}
+            className={`${className} will-change-transform ${imageIsLoaded ? 'opacity-100 scale-1' : 'opacity-100 scale-[1.05]'} ${priority ? 'opacity-100' : 'transition-all ease-in-out duration-[2000ms]'}`}
+            quality={quality ? quality : 75}
+            width={image?.asset.metadata.dimensions.width / 1.5}
+            height={image?.asset.metadata.dimensions.height / 1.5}
+            {...(priority ? {priority: true} : {})}
+            alt={image.alt ? image.alt : 'MISSING ALT TEXT'}
+            onLoad={event => {
+              const target = event.target;
+              if (target.src.indexOf('data:image/gif;base64') < 0) {
+                setImageIsLoaded(true)
+              }
+            }}
+          />
+          {image.caption && (
+            <figcaption className="bg-white py-2 italic text-black/50 text-sm lg:text-base">
+              - {image.caption}
+            </figcaption>
+          )}
+        </figure> 
+      </a>
+      )}
+    </>
   )
 }

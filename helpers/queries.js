@@ -509,6 +509,17 @@ export const newsSlugQuery = `{
     },
     content[] {
       ...,
+      customLink {
+        internalLink->{
+          _type,
+          title,
+          slug {
+            current
+          }
+        },
+        externalLink,
+        external
+      },
       embed {
         ...
       },
@@ -520,11 +531,20 @@ export const newsSlugQuery = `{
           "title": @.reference->title
         }
       },
-      image {
+      image{
         asset-> {
           ...
         },
         wrapText,
+        customLink {
+          internalLink->{
+            slug {
+              current
+            }
+          },
+          externalLink,
+          external
+        },
         caption,
         alt,
         hotspot {

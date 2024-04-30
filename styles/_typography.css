@@ -84,6 +84,18 @@
     @apply md:ml-5 md:float-right;
   }
 
+  & > .wrap {
+    @apply mb-5 md:w-1/2 md:float-left;
+  }
+
+  & > .wrap.left {
+    @apply md:mr-5 md:float-left;
+  }
+
+  & > .wrap.right {
+    @apply md:ml-5 md:float-right;
+  }
+
   & > blockquote {
   @apply my-6 lg:my-10;
 
