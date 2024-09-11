@@ -113,7 +113,7 @@ export default function News(initialData) {
                               props.type == 'policies' && (prefix = '/policies/')
                       
                               // HREF
-                              const href = `${prefix}${ slug ? slug.current : slugify(props.title, { lower: true, remove: /[*+~.()'"!:@]/g})}`
+                              const href = `${prefix}${ slug ? slug.current : slugify(JSON.stringify(props.title), { lower: true, remove: /[*+~.()'"!:@]/g})}`
                       
                               return <Link href={href}>{props.children}</Link>
                             },
